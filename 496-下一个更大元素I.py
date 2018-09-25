@@ -8,15 +8,15 @@ class Solution(object):
         """
         rs = []
         for i, val_i in enumerate(findNums):
-        flag = 0
-        for j, val_j in enumerate(nums):
-        if (val_j == val_i):
-        flag = 1
-        if (flag and val_j > val_i):
-        rs.append(val_j)
-        break
-        if (j == len(nums) - 1):
-        rs.append(-1)
+            flag = 0
+            for j, val_j in enumerate(nums):
+                if (val_j == val_i):
+                    flag = 1
+                if (flag and val_j > val_i):
+                    rs.append(val_j)
+                    break
+                if (j == len(nums) - 1):
+                    rs.append(-1)
         return rs
 
 
