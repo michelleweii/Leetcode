@@ -5,14 +5,20 @@ class Solution(object):
         :rtype: int
         """
         length = len(nums)
-        for i in range(length-1):
+        print(length)
+        for i in range(len(nums)-2):
             if nums[i]==nums[i+1]:
                 length-=1
+                nums.remove(nums[i])
+            else:
+                continue
+        # print(nums)
+        return length
 
 
 
 def main():
-    nums = [1,1,2]
+    nums = [0,0,1,1,1,2,2,3,3,4]
     myResult = Solution()
     print(myResult.removeDuplicates(nums))
 
