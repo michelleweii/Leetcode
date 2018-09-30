@@ -1,3 +1,4 @@
+# 此题gg
 class Solution(object):
     def isMonotonic(self, A):
         """
