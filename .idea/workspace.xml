@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="698d30e3-58b9-4d4e-92a0-1b119132d59e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/27-移除元素.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/283-移动零.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/26-删除排序数组中的重复项.py" beforeDir="false" afterPath="$PROJECT_DIR$/26-删除排序数组中的重复项.py" afterDir="false" />
-    </list>
+    <list default="true" id="698d30e3-58b9-4d4e-92a0-1b119132d59e" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +16,7 @@
     <session id="1877629964">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="1" />
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.opened" value="2" />
         </counts>
@@ -135,7 +130,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="179" />
-    <option name="y" value="510" />
+    <option name="y" value="442" />
     <option name="width" value="1389" />
     <option name="height" value="877" />
   </component>
@@ -330,7 +325,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-46" y="23" width="1389" height="877" extended-state="0" />
+    <frame x="179" y="442" width="1389" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2624269" />
@@ -338,7 +333,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.08280255" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.08280255" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3987261" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
