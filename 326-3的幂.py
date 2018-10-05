@@ -1,4 +1,6 @@
 # 利用pow(a, b)函数即可。需要开a的r次方则pow(a, 1/r)。
+# 用取余！ python除法/都保留小数点后的数字的
+
 class Solution(object):
     def isPowerOfThree(self, n):
         """
