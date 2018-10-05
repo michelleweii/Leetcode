@@ -13,7 +13,7 @@ class Solution(object):
             if k!=n:
                 if nums1[i] == 0:
                     nums1[i] = nums2[k]
-                    k+=1
+                    k += 1
 
 
 
