@@ -11,4 +11,6 @@ for i in range(4):
 n=1
 
 print(n//3)
-
+nums = [10,3,8,9,4]
+nums.sort()
+print(nums)

@@ -1,20 +1,22 @@
-# 用dict
+# i从1循环至字符串长度的一半，所有字符串长度能整除的i即代表所有可能的子字符串长度；
+# 判断子字符串延长给定倍数后是否等于原字符串；
+
 class Solution(object):
     def repeatedSubstringPattern(self, s):
         """
         :type s: str
         :rtype: bool
         """
-        coms = list(set(s))
-        len_coms = len(coms)
-        for i in range(len(s)):
-            if s[i:i+len_coms] != coms:
-                return False
-            i = i+coms
+        for i in range(1,len(s)//2+1):
+            if len(s)%i == 0:
+                if s[:i]*(len(s)//i) == s:
+                    return True
+
+        return False
 
 
 def main():
-    s = "ababba"
+    s = "ababab"
     myResult = Solution()
     print(myResult.repeatedSubstringPattern(s))
 
