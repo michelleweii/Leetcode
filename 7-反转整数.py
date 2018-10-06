@@ -1,30 +1,44 @@
+from pythonds.basic.stack import Stack
+
 class Solution(object):
     def reverse(self, x):
         """
         :type x: int
         :rtype: int
         """
-        flag = 0
+
         rs = []
-        strx = str(x)
-        l = list(strx)
-        if l[0]=='-':
+        pos = 0
+        flag=0
+        # listx = list(map(int, str(x)))
+        if str(x)[0]=='-':
             flag = 1
-        tmp = l[::-1]
-        for i in range(len(tmp)):
-            if l[::-1][0] == 0:
-                continue
-            else:
-                rs.append(l[i])
+            x = str(x)[1:]
 
-        print(rs)
-
-
-
+        listx = list(map(int, str(x)))
+        revlistx = listx[::-1]
+        # print(revlistx)
+        for i in range(len(revlistx)):
+            if revlistx[i]!=0:
+                pos = i
+                break
+        # print(pos)
+        for j in range(pos,len(listx)):
+            rs.append(revlistx[j])
+        # print(rs)
+        tmp = ''.join(list(map(str,rs)))
+        # print(tmp)
+        if flag:
+            if int('-'+tmp)>-2**31 and int('-'+tmp)<2**31-1:
+                return int('-'+tmp)
+            else: return 0
+        if int(tmp) > -2 ** 31 and int(tmp) < 2 ** 31 - 1:
+            return int(tmp)
+        else: return 0
 
 
 def main():
-    x = 120
+    x = -123
     myResult = Solution()
     print(myResult.reverse(x))
 
