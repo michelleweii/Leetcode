@@ -1,3 +1,4 @@
+import numpy as np
 a = "loveleetcode"
 print(a[-5::-1]) # octeelevol
 
@@ -14,3 +15,7 @@ print(n//3)
 nums = [10,3,8,9,4]
 nums.sort()
 print(nums)
+
+print("-----------")
+scales = 2**np.arange(3,6)
+print(scales)
