@@ -17,6 +17,7 @@ class Solution(object):
                 i+=1
 
         return -1
+
 def main():
     A = "abcds"
     B = "cdabcdab"
