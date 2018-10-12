@@ -19,3 +19,7 @@ print(nums)
 print("-----------")
 scales = 2**np.arange(3,6)
 print(scales)
+
+import re
+a = "Hello world!How are you?My friend.Tom"
+print(re.split(" |!|\?|\.", a))
