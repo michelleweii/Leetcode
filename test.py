@@ -1,5 +1,6 @@
 import numpy as np
 a = "loveleetcode"
+print(a[:-1])
 print(a[-5::-1]) # octeelevol
 
 nums1 = [1,2,3]
@@ -23,3 +24,8 @@ print(scales)
 import re
 a = "Hello world!How are you?My friend.Tom"
 print(re.split(" |!|\?|\.", a))
+
+sss = "abc"
+print(sss[2:3]) #c
+print(sss[2:4]) #c
+print(sss[2:5]) #c

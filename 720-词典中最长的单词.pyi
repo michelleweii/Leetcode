@@ -7,7 +7,33 @@ class Solution(object):
         :type words: List[str]
         :rtype: str
         """
+        result = ""
+        wordset = list(set(words))
+        for word in wordset:
+            if (len(word)>len(result) or len(word)==len(result) and word<result):
+                if all(word[:k] in wordset for k in range(1,len(word))):
+                    result = word
+        return result
 
+
+
+        # rs = []
+        # if not words:
+        #     return ""
+        # for word in words:
+        #     new_word = word
+        #     while new_word in word:
+        #         new_word = word[:-1]
+        #
+        #     if not new_word:
+        #         rs.append(word)
+        #
+        # result = ""
+        # for key in rs:
+        #     if len(key)>len(result) or len(key)==len(result) and key>result:
+        #         result = key
+        #
+        # return result
 
 
 
@@ -18,3 +44,6 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
