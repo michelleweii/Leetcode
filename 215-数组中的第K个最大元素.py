@@ -5,11 +5,13 @@ class Solution(object):
         :type k: int
         :rtype: int
         """
-        nums1 = list(set(nums))
+        if len(nums)==1:
+            return nums[0]
         # 用sort实现list的降序排列
-        sorted(nums1,key=lambda x:x[1])
-        print(nums)
-        return nums[k+1]
+        nums1 = sorted(nums,reverse=True)
+        # print(nums) [3, 2, 1, 5, 6, 4]
+        # print(nums1) [6, 5, 4, 3, 2, 1]
+        return nums1[k-1]
 
 
 def main():
