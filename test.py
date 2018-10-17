@@ -10,7 +10,8 @@ print(nums1+nums2) # [1, 2, 3]
 for i in range(4):
     i = i + 3
     print(i)
-n=1
+
+n = 1
 
 print(n//3)
 nums = [10,3,8,9,4]
@@ -56,3 +57,8 @@ for file in dirs:
 # 卡纳赫拉.jpg
 # project
 # 人工智能前沿
+
+
+# 求均值
+L = [1,2,3,4,5]
+print(np.mean(L))
