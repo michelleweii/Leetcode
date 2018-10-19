@@ -62,3 +62,20 @@ for file in dirs:
 # 求均值
 L = [1,2,3,4,5]
 print(np.mean(L))
+
+# del[1:3]删除指定区间
+L2 = [1,2,3,4,5]
+del L2[1:3]
+print(L2) # [1, 4, 5]，删除1，2下标
+del L2[0]
+print(L2) # [4, 5],删除0下标
+# del L2
+# print(L2) # NameError: name 'L2' is not defined
+
+a = [0, 2, 2, 3]
+a.remove(2)
+print(a) # [0, 2, 3],删除指定元素
+
+b = [4, 3, 5]
+print(b.pop(1)) # 3
+print(b) # [4, 5]
