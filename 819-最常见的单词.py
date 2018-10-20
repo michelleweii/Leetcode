@@ -50,12 +50,13 @@ def main():
 if __name__ == '__main__':
     main()
 
-
-    def mostCommonWord(self, paragraph, banned):
-        ban = set(banned)
-        paragraph = [s.strip("!?',;.") for s in paragraph.lower().split(' ')]
-        p = [w for w in paragraph if w not in ban]
-        word_count = {w: 0 for w in p}
-        for w in p:
-            word_count[w] += 1
-        return max(word_count, key=lambda k: word_count[k])
+"""
+def mostCommonWord(self, paragraph, banned):
+    ban = set(banned)
+    paragraph = [s.strip("!?',;.") for s in paragraph.lower().split(' ')]
+    p = [w for w in paragraph if w not in ban]
+    word_count = {w: 0 for w in p}
+    for w in p:
+        word_count[w] += 1
+    return max(word_count, key=lambda k: word_count[k])
+"""
