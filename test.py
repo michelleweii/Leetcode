@@ -79,3 +79,6 @@ print(a) # [0, 2, 3],删除指定元素
 b = [4, 3, 5]
 print(b.pop(1)) # 3
 print(b) # [4, 5]
+
+s = "abcdefs"
+print(s[0:3])

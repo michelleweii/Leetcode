@@ -27,14 +27,14 @@ class Solution(object):
 # @ 1
 # class Solution:
 #     def plusOne(self, digits):
-#         car = 1
+#         last = 1
 #         res = []
 #         for i in range(len(digits)):
-#             tmp = digits.pop() + car
-#             car = int(tmp/10)
+#             tmp = digits.pop() + last
+#             last = int(tmp/10)
 #             res.insert(0, tmp%10)
-#         if car != 0:
-#             res.insert(0, car)
+#         if last != 0:
+#             res.insert(0, last)
 #         return res
 
 # @ 2
