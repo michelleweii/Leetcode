@@ -82,3 +82,6 @@ print(b) # [4, 5]
 
 s = "abcdefs"
 print(s[0:3])
+
+c = "acbed"
+print(sorted(c))
