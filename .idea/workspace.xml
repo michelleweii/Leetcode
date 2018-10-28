@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="698d30e3-58b9-4d4e-92a0-1b119132d59e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/172-阶乘后的零.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/242-有效的字母异位词.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/567-字符串的排列.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,27 +31,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="91" />
+          <entry key="py" value="93" />
           <entry key="pyi" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="91" />
+          <entry key="Python" value="93" />
           <entry key="PythonStub" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="14" />
-          <entry key="py" value="16801" />
+          <entry key="py" value="17267" />
           <entry key="pyi" value="431" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="14" />
-          <entry key="Python" value="16801" />
+          <entry key="Python" value="17267" />
           <entry key="PythonStub" value="431" />
         </counts>
       </usages-collector>
@@ -63,10 +64,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/172-阶乘后的零.py">
+        <entry file="file://$PROJECT_DIR$/567-字符串的排列.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="262">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="450">
+              <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -87,8 +88,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/9-回文数.py" />
-        <option value="$PROJECT_DIR$/496-下一个更大元素I.py" />
         <option value="$PROJECT_DIR$/541-反转字符串II.py" />
         <option value="$PROJECT_DIR$/520-检测大写字母.py" />
         <option value="$PROJECT_DIR$/349-两个数组的交集.py" />
@@ -138,6 +137,8 @@
         <option value="$PROJECT_DIR$/594-最长和谐子序列.py" />
         <option value="$PROJECT_DIR$/125-验证回文串.py" />
         <option value="$PROJECT_DIR$/172-阶乘后的零.py" />
+        <option value="$PROJECT_DIR$/242-有效的字母异位词.py" />
+        <option value="$PROJECT_DIR$/567-字符串的排列.py" />
       </list>
     </option>
   </component>
@@ -211,7 +212,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.172-阶乘后的零">
+  <component name="RunManager" selected="Python.567-字符串的排列">
     <configuration name="125-验证回文串" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -254,6 +255,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="242-有效的字母异位词" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="leetcode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/242-有效的字母异位词.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="438-找到字符串中所有字母异位词" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -275,7 +297,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="66-加一" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="567-字符串的排列" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -287,28 +309,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/66-加一.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="test" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="leetcode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/567-字符串的排列.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -318,19 +319,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.test" />
-      <item itemvalue="Python.66-加一" />
       <item itemvalue="Python.438-找到字符串中所有字母异位词" />
       <item itemvalue="Python.125-验证回文串" />
       <item itemvalue="Python.172-阶乘后的零" />
+      <item itemvalue="Python.242-有效的字母异位词" />
+      <item itemvalue="Python.567-字符串的排列" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.567-字符串的排列" />
+        <item itemvalue="Python.242-有效的字母异位词" />
         <item itemvalue="Python.172-阶乘后的零" />
         <item itemvalue="Python.125-验证回文串" />
         <item itemvalue="Python.438-找到字符串中所有字母异位词" />
-        <item itemvalue="Python.test" />
-        <item itemvalue="Python.66-加一" />
       </list>
     </recent_temporary>
   </component>
@@ -370,15 +371,15 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.68560886" visible="true" weight="0.20509554" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4900369" weight="0.39745224" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.68487084" visible="true" weight="0.32738853" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48929888" weight="0.39745224" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Python Console" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.31439114" side_tool="true" visible="true" weight="0.20509554" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.31512916" side_tool="true" visible="true" weight="0.32738853" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -425,16 +426,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/476-数字的补数.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="34" selection-start-line="34" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/541-反转字符串II.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/496-下一个更大元素I.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -777,10 +768,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/242-有效的字母异位词.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="246">
+          <caret line="26" selection-start-line="26" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/172-阶乘后的零.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="262">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="361">
+          <caret line="30" selection-start-line="30" selection-end-line="36" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/567-字符串的排列.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
         </state>
       </provider>
     </entry>
