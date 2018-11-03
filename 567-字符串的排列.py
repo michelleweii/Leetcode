@@ -6,9 +6,6 @@ class Solution(object):
         :type s2: str
         :rtype: bool
         """
-        
-
-
 
     # def checkInclusion(self, s1, s2):
     #     """
@@ -27,10 +24,6 @@ class Solution(object):
     #             # 用字典统计
     #                 return True
     #     return False
-
-
-
-
 
 
 def main():
