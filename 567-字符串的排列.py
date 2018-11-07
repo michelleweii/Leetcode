@@ -24,36 +24,55 @@
 #         #     if sum(s1_num) == sum(s2_num[i:i+lens1]):
 #         #         return True
 #         # return False
-class Solution(object):
+# class Solution(object):
+    # def checkInclusion(self, s1, s2):
+    #     A = [ord(x) - ord('a') for x in s1]
+    #     print(A) # [0, 1, 3]
+    #     B = [ord(x) - ord('a') for x in s2]
+    #     print(B) # [2, 2, 2, 2, 1, 1, 1, 1, 0, 0, 0, 0]
+    #
+    #     target = [0] * 26
+    #     for x in A:
+    #         target[x] += 1
+    #     print(target)
+    #     # abd [1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    #
+    #     window = [0] * 26
+    #     for i, x in enumerate(B):
+    #         window[x] += 1
+    #         if i >= len(A):
+    #             window[B[i - len(A)]] -= 1
+    #             print("start")
+    #             print(window)
+    #         if window == target:
+    #             return True
+    #     # print(window)
+    #     return False
+
+from collections import Counter
+class Solution:
     def checkInclusion(self, s1, s2):
-        A = [ord(x) - ord('a') for x in s1]
-        print(A) # [0, 1, 3]
-        B = [ord(x) - ord('a') for x in s2]
-        print(B) # [2, 2, 2, 2, 1, 1, 1, 1, 0, 0, 0, 0]
-
-        target = [0] * 26
-        for x in A:
-            target[x] += 1
-        print(target)
-        # abd [1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-
-        window = [0] * 26
-        for i, x in enumerate(B):
-            window[x] += 1
-            if i >= len(A):
-                window[B[i - len(A)]] -= 1
-            if window == target:
-                return True
-        print(window)
-        return False
-
-        
+        """
+        :type s1: str
+        :type s2: str
+        :rtype: bool
+        """
+        d1, d2 = Counter(s1), Counter(s2[:len(s1)])
+        for start in range(len(s1), len(s2)):
+            if d1 == d2: return True
+            d2[s2[start]] += 1
+            d2[s2[start - len(s1)]] -= 1
+            print(d2)
+            if d2[s2[start - len(s1)]] == 0:
+                # print(start) # 2 3 4
+                del d2[s2[start - len(s1)]]
+        return d1 == d2
 
 
 
 def main():
-    s1 = "abd"
-    s2 = "ccccbbbbaaaa"
+    s1 = "ab"
+    s2 = "eidbaooo"
     myResult = Solution()
     # 第一个字符串的排列之一是第二个字符串的子串
     print(myResult.checkInclusion(s1, s2))
