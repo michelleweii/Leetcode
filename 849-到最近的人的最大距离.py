@@ -1,3 +1,6 @@
+# print ("math.ceil(math.pi) : ", math.ceil(math.pi)) # output:4
+# 返回一个大于等于的值
+
 class Solution(object):
     def maxDistToClosest(self, seats):
         """
