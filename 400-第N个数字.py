@@ -11,11 +11,34 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
+        length = 1
+        base = 1
+        while(n>9*length*base):
+            n -= 9*length*base
+            length+=1
+            base*=10
+        # print(n) # 2
+        # e.g. 二位数的第一个数字，是10
+        curNum = (n-1)//length+base # 将数字还原，11(th)指向的是10,还原10；
+        # print(curNum) # 10
+        # 判断是11(th)指向的是数10的第几位，即指向的是0还是1；
+        # 如果指向的是第0位，则是1；指向第1位，则是0；
+        point = (n-1)%length # 指向第0位，还是第1位
+        # print(point)
+        digit = 0
+        while (point<length):
+            # print(i) # 0,1 (如果是2位数)
+            digit =  curNum%10 # 个位数
+            curNum //= 10 # 十位数
+            point += 1
+            # print(digit)
+            # print(curNum)
+        return digit
 
 
 
 def main():
-    n = 11
+    n = 22
     myResult = Solution()
     print(myResult.findNthDigit(n))
 
