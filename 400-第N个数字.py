@@ -34,11 +34,28 @@ class Solution(object):
             # print(digit)
             # print(curNum)
         return digit
-
+"""
+n = int(input("Please input a number "))
+#  li=[]
+# for i in range(1,2**31):
+#     str_i=str(i)
+#     for j in range(len(str_i)):
+#         li.append(str_i[j])
+# print("The n-th digit is ", li(n-1))
+for i in range(1, 10):
+    if n - 9 * 10 ** (i - 1) * i <= 0:
+        k = i
+        break
+    else:
+        n -= 9 * 10 ** (i - 1) * i
+base = 10 ** (k - 1)
+str_n = str(base + (n - 1) // k)
+print("The n-th digit is ", str_n[(n-1) % k])
+"""
 
 
 def main():
-    n = 22
+    n = 35867
     myResult = Solution()
     print(myResult.findNthDigit(n))
 
