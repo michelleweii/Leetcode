@@ -85,3 +85,6 @@ print(s[0:3])
 
 c = "acbed"
 print(sorted(c))
+
+seats = [0,1,1,0,0,0]
+print(seats.index(1))
