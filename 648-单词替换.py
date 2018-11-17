@@ -9,30 +9,33 @@ class Solution(object):
         :type sentence: str
         :rtype: str
         """
-        myDict = {}
-        res = ""
-        for word in dict:
-            if word in myDict:
-                myDict[word]+=1
-            else:
-                myDict[word]=1
-        # print(myDict)
+        # root_dict = set(dict)
+        # raws = sentence.split()
+        # res = []
+        # for raw in raws:
+        #     flag = False
+        #     for i in range(0, len(raw)):
+        #         prefix = raw[0:i + 1]
+        #         if prefix in root_dict:
+        #             res.append(prefix)
+        #             flag = True
+        #             break
+        #     if flag == False:
+        #         res.append(raw)
+        # return ' '.join(res)
 
+        myDict = set(dict)
+        res = []  # res由字符串变为列表就不内存溢出了
         for word in sentence.split(): # 字符串按空格划分
             cur_word = ""
             for i,ch in enumerate(word):
                 cur_word += ch
                 if cur_word in myDict:
-                    if res == "":
-                        res += cur_word
-                    else:res += ' '+cur_word
+                    res.append(cur_word)
                     break
                 if i==len(word)-1:
-                    if res == "":
-                        res+=word
-                    else:
-                        res += ' '+word
-        return res
+                    res.append(word)
+        return " ".join(res)
 
 
 
