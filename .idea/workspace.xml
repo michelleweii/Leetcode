@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="698d30e3-58b9-4d4e-92a0-1b119132d59e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/75-颜色分类.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/409-最长回文串.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/648-单词替换.py" beforeDir="false" afterPath="$PROJECT_DIR$/648-单词替换.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/680-验证回文字符串 Ⅱ.py" beforeDir="false" afterPath="$PROJECT_DIR$/680-验证回文字符串 Ⅱ.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,27 +34,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="116" />
+          <entry key="py" value="120" />
           <entry key="pyi" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="116" />
+          <entry key="Python" value="120" />
           <entry key="PythonStub" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="14" />
-          <entry key="py" value="23081" />
+          <entry key="py" value="23526" />
           <entry key="pyi" value="431" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="14" />
-          <entry key="Python" value="23081" />
+          <entry key="Python" value="23526" />
           <entry key="PythonStub" value="431" />
         </counts>
       </usages-collector>
@@ -66,20 +66,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/648-单词替换.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="297">
-              <caret line="42" selection-start-line="42" selection-end-line="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/75-颜色分类.py">
+        <entry file="file://$PROJECT_DIR$/409-最长回文串.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="10" selection-end-column="57" />
+            <state relative-caret-position="324">
+              <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -100,7 +91,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/27-移除元素.py" />
         <option value="$PROJECT_DIR$/26-删除排序数组中的重复项.py" />
         <option value="$PROJECT_DIR$/283-移动零.py" />
         <option value="$PROJECT_DIR$/167-两数之和.py" />
@@ -120,7 +110,6 @@
         <option value="$PROJECT_DIR$/414-第三大的数.py" />
         <option value="$PROJECT_DIR$/720-词典中最长的单词.pyi" />
         <option value="$PROJECT_DIR$/647-回文子串.py" />
-        <option value="$PROJECT_DIR$/680-验证回文字符串 Ⅱ.py" />
         <option value="$PROJECT_DIR$/215-数组中的第K个最大元素.py" />
         <option value="$PROJECT_DIR$/260-只出现一次的数字 III.py" />
         <option value="$PROJECT_DIR$/53-最大子序和.py" />
@@ -151,6 +140,8 @@
         <option value="$PROJECT_DIR$/849-到最近的人的最大距离.py" />
         <option value="$PROJECT_DIR$/648-单词替换.py" />
         <option value="$PROJECT_DIR$/75-颜色分类.py" />
+        <option value="$PROJECT_DIR$/680-验证回文字符串 Ⅱ.py" />
+        <option value="$PROJECT_DIR$/409-最长回文串.py" />
       </list>
     </option>
   </component>
@@ -161,8 +152,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="150" />
-    <option name="y" value="34" />
+    <option name="x" value="144" />
+    <option name="y" value="23" />
     <option name="width" value="1376" />
     <option name="height" value="877" />
   </component>
@@ -224,7 +215,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.75-颜色分类">
+  <component name="RunManager" selected="Python.409-最长回文串">
+    <configuration name="409-最长回文串" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="leetcode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/409-最长回文串.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="567-字符串的排列" type="PythonConfigurationType" factoryName="Python">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -259,27 +271,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/648-单词替换.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="665-非递减数列" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="leetcode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/665-非递减数列.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -354,18 +345,18 @@
     <list>
       <item itemvalue="Python.567-字符串的排列" />
       <item itemvalue="Python.849-到最近的人的最大距离" />
-      <item itemvalue="Python.665-非递减数列" />
       <item itemvalue="Python.test" />
       <item itemvalue="Python.648-单词替换" />
       <item itemvalue="Python.75-颜色分类" />
+      <item itemvalue="Python.409-最长回文串" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.409-最长回文串" />
         <item itemvalue="Python.75-颜色分类" />
         <item itemvalue="Python.648-单词替换" />
         <item itemvalue="Python.849-到最近的人的最大距离" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.665-非递减数列" />
       </list>
     </recent_temporary>
   </component>
@@ -397,23 +388,23 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="415" y="23" width="1376" height="877" extended-state="0" />
+    <frame x="144" y="23" width="1376" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27380073" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27380073" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.67453873" visible="true" weight="0.2178344" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48560885" weight="0.39745224" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6723247" visible="true" weight="0.2178344" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48413286" weight="0.39745224" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Python Console" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.32546127" side_tool="true" visible="true" weight="0.2178344" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.32767528" side_tool="true" visible="true" weight="0.2178344" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -460,13 +451,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/506-相对名次.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="27" column="22" lean-forward="true" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/434-字符串中的单词数.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -712,20 +696,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/647-回文子串.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/680-验证回文字符串 Ⅱ.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/917-反转字母.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="154">
@@ -768,9 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/26-删除排序数组中的重复项.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/665-非递减数列.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="702">
@@ -799,6 +766,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/75-颜色分类.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/647-回文子串.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/648-单词替换.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="297">
@@ -806,10 +787,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/75-颜色分类.py">
+    <entry file="file://$PROJECT_DIR$/680-验证回文字符串 Ⅱ.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="10" selection-end-column="57" />
+        <state relative-caret-position="319">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/26-删除排序数组中的重复项.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-688" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/409-最长回文串.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="18" column="22" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
         </state>
       </provider>
     </entry>

@@ -7,27 +7,19 @@ class Solution(object):
         :rtype: bool
         """
 
-        # flag = 0
-        # lists = list(s)
-        # reverse_s = lists[::-1]
-        # # print(reverse_s)
-        # for i,val_i in enumerate(lists):
-        #     if len(lists)==1:
-        #         return True
-        #     else:
-        #         if i<len(s)/2: # 1
-        #             if val_i != reverse_s[i]:
-        #                 # return False
-        #                 if not flag:
-        #                     del lists[i]
-        #                     del reverse_s[i]
-        #                     flag=1
-        #                 else:
-        #                     return False
-        #                 # print(lists)
-        #                 # print(reverse_s)
-        #         else:
-        #             return True
+        def myValidPalindrome(s, left, right):
+            while left < right:
+                if s[left] != s[right]:
+                    return False
+                left, right = left + 1, right - 1
+            return True
+
+        left, right = 0, len(s) - 1
+        while left < right:
+            if s[left] != s[right]:
+                return myValidPalindrome(s, left, right - 1) or myValidPalindrome(s, left + 1, right)
+            left, right = left + 1, right - 1
+        return True
 
 
 def main():
