@@ -1,3 +1,6 @@
+# 最长的回文数，只要字母是偶数个时，全都可以拿来用；
+# 如果字母个数是奇数时，大于1的时候，可以舍掉一个字母，只用里面的偶数个构成字符串；
+# 单个字母最多可以用一个，放在字母的最中间。
 import collections
 class Solution(object):
     def longestPalindrome(self, s):
@@ -18,8 +21,6 @@ class Solution(object):
                 max_length += myDict[i]-1
                 odd = 1
         return (max_length+odd)
-
-
 
 
 if __name__ == '__main__':
