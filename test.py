@@ -88,3 +88,11 @@ print(sorted(c))
 
 seats = [0,1,1,0,0,0]
 print(seats.index(1))
+
+
+alist = [1,2,3,4]
+print(alist[0:3:2]) # [1, 3]
+print(alist[1:]) # [2, 3, 4]
+print(alist[2:]) # [2, 3, 4]
+print(alist[3:]) # [4]
+print(alist[4:]) # []
