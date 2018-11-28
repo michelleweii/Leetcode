@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="698d30e3-58b9-4d4e-92a0-1b119132d59e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/237-删除链表中的节点.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/563-二叉树的坡度.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/83-删除排序链表中的重复元素.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/203-移除链表元素.py" beforeDir="false" afterPath="$PROJECT_DIR$/203-移除链表元素.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/257-二叉树的所有路径.py" beforeDir="false" afterPath="$PROJECT_DIR$/257-二叉树的所有路径.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/237-删除链表中的节点.py" beforeDir="false" afterPath="$PROJECT_DIR$/237-删除链表中的节点.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/563-二叉树的坡度.py" beforeDir="false" afterPath="$PROJECT_DIR$/563-二叉树的坡度.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,27 +36,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="139" />
+          <entry key="py" value="143" />
           <entry key="pyi" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="139" />
+          <entry key="Python" value="143" />
           <entry key="PythonStub" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="14" />
-          <entry key="py" value="27501" />
+          <entry key="py" value="28164" />
           <entry key="pyi" value="431" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="14" />
-          <entry key="Python" value="27501" />
+          <entry key="Python" value="28164" />
           <entry key="PythonStub" value="431" />
         </counts>
       </usages-collector>
@@ -69,23 +68,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/203-移除链表元素.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="20" lean-forward="true" selection-start-column="20" selection-end-column="20" />
+            <state relative-caret-position="-592">
+              <caret column="19" selection-start-column="19" selection-end-column="19" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/237-删除链表中的节点.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/563-二叉树的坡度.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="236">
-              <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-              <folding>
-                <marker date="1543306781125" expanded="true" signature="702:812" ph="..." />
-              </folding>
+            <state relative-caret-position="378">
+              <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/83-删除排序链表中的重复元素.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -106,7 +111,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/137-只出现一次的数字 II.py" />
         <option value="$PROJECT_DIR$/58-最后一个单词的长度.py" />
         <option value="$PROJECT_DIR$/686-重复叠加字符串匹配.py" />
         <option value="$PROJECT_DIR$/859-亲密字符串.py" />
@@ -153,10 +157,11 @@
         <option value="$PROJECT_DIR$/263-丑数.py" />
         <option value="$PROJECT_DIR$/264-丑数 II.py" />
         <option value="$PROJECT_DIR$/313-超级丑数.py" />
-        <option value="$PROJECT_DIR$/563-二叉树的坡度.py" />
         <option value="$PROJECT_DIR$/257-二叉树的所有路径.py" />
         <option value="$PROJECT_DIR$/203-移除链表元素.py" />
         <option value="$PROJECT_DIR$/237-删除链表中的节点.py" />
+        <option value="$PROJECT_DIR$/563-二叉树的坡度.py" />
+        <option value="$PROJECT_DIR$/83-删除排序链表中的重复元素.py" />
       </list>
     </option>
   </component>
@@ -167,8 +172,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="153" />
-    <option name="y" value="45" />
+    <option name="x" value="441" />
+    <option name="y" value="85" />
     <option name="width" value="1397" />
     <option name="height" value="877" />
   </component>
@@ -234,7 +239,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.237-删除链表中的节点">
+  <component name="RunManager" selected="Python.563-二叉树的坡度">
     <configuration name="203-移除链表元素" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -248,27 +253,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/203-移除链表元素.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="204-计数质数" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="leetcode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/204-计数质数.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -298,7 +282,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="264-丑数 II" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="257-二叉树的所有路径" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -310,7 +294,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/264-丑数 II.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/257-二叉树的所有路径.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -332,6 +316,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/313-超级丑数.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="563-二叉树的坡度" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="leetcode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/563-二叉树的坡度.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -363,19 +368,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.567-字符串的排列" />
-      <item itemvalue="Python.204-计数质数" />
-      <item itemvalue="Python.264-丑数 II" />
       <item itemvalue="Python.313-超级丑数" />
       <item itemvalue="Python.203-移除链表元素" />
       <item itemvalue="Python.237-删除链表中的节点" />
+      <item itemvalue="Python.563-二叉树的坡度" />
+      <item itemvalue="Python.257-二叉树的所有路径" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.237-删除链表中的节点" />
+        <item itemvalue="Python.563-二叉树的坡度" />
+        <item itemvalue="Python.257-二叉树的所有路径" />
         <item itemvalue="Python.203-移除链表元素" />
+        <item itemvalue="Python.237-删除链表中的节点" />
         <item itemvalue="Python.313-超级丑数" />
-        <item itemvalue="Python.264-丑数 II" />
-        <item itemvalue="Python.204-计数质数" />
       </list>
     </recent_temporary>
   </component>
@@ -407,15 +412,15 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="153" y="45" width="1397" height="877" extended-state="0" />
+    <frame x="441" y="85" width="1397" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23764534" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23764534" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6693727" visible="true" weight="0.2700637" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6693727" visible="true" weight="0.34267515" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48339483" weight="0.3963068" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -431,20 +436,20 @@
       <window_info anchor="right" id="Database" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2624269" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23764534" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.084076434" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3987261" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6693727" visible="true" weight="0.10191083" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48339483" weight="0.3963068" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Python Console" order="9" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.3306273" side_tool="true" weight="0.26751593" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -470,13 +475,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/215-数组中的第K个最大元素.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="29" lean-forward="true" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/9-回文数.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -801,14 +799,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/237-删除链表中的节点.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-16">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <marker date="1543308832392" expanded="true" signature="1277:1387" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/257-二叉树的所有路径.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
+        <state relative-caret-position="361">
           <caret line="23" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/563-二叉树的坡度.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="37" lean-forward="true" selection-start-line="21" selection-start-column="37" selection-end-line="21" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/83-删除排序链表中的重复元素.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
@@ -817,18 +832,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/203-移除链表元素.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" lean-forward="true" selection-start-column="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/237-删除链表中的节点.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
-          <folding>
-            <marker date="1543306781125" expanded="true" signature="702:812" ph="..." />
-          </folding>
+        <state relative-caret-position="-592">
+          <caret column="19" selection-start-column="19" selection-end-column="19" />
         </state>
       </provider>
     </entry>

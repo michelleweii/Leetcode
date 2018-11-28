@@ -5,6 +5,7 @@ class ListNode(object):
         self.next = None
 
 class Solution(object):
+
     def deleteNode(self, node):
         # 只有对要删除节点node的访问权限
         """
@@ -16,7 +17,24 @@ class Solution(object):
         node.val = node.next.val
         node.next = node.next.next
 
+    def myDelete(self,ptr,node):
+        if ptr:
+            while ptr.val == node:
+                ptr = ptr.next
+                if ptr is None:
+                    return ptr
+            # ptr指向头结点，cur位于ptr的下面一个节点
+            cur = ptr.next
+            pre = ptr
+            while cur != None:
+                if cur.val == node:
+                    pre.next = cur.next
+                else:
+                    pre = pre.next
+                cur = cur.next
+        travel(ptr)
 
+# class SingleList(object):
 def strToListNode(input):
     """将list转为链表"""
     numbers = input
@@ -37,9 +55,9 @@ def travel(input):
     print("")
 
 if __name__ == '__main__':
-    head = [4,5,1,9]
+    head = [4,5,1,9,5]
     node = 5
     ptr = strToListNode(head)
     travel(ptr)
     ans = Solution()
-    ans.deleteNode(node, ptr)
+    ans.myDelete(ptr,node)
