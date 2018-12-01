@@ -96,3 +96,6 @@ print(alist[1:]) # [2, 3, 4]
 print(alist[2:]) # [2, 3, 4]
 print(alist[3:]) # [4]
 print(alist[4:]) # []
+
+ii = 5
+print(ii//2+1)
