@@ -99,3 +99,6 @@ print(alist[4:]) # []
 
 ii = 5
 print(ii//2+1)
+
+listNode = [1,2,3]
+print(listNode[::-1])
