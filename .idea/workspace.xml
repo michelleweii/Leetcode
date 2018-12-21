@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="698d30e3-58b9-4d4e-92a0-1b119132d59e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/160-相交链表.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/563-二叉树的坡度.py" beforeDir="false" afterPath="$PROJECT_DIR$/563-二叉树的坡度.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/893-特殊等价字符串组.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -35,13 +33,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="147" />
+          <entry key="py" value="148" />
           <entry key="pyi" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="147" />
+          <entry key="Python" value="148" />
           <entry key="PythonStub" value="1" />
         </counts>
       </usages-collector>
@@ -103,6 +101,11 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/893-特殊等价字符串组.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test.py">
           <provider selected="true" editor-type-id="text-editor">
@@ -112,11 +115,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/563-二叉树的坡度.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+            <state relative-caret-position="162">
+              <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
             </state>
           </provider>
         </entry>
@@ -146,7 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/788-旋转数字.py" />
         <option value="$PROJECT_DIR$/414-第三大的数.py" />
         <option value="$PROJECT_DIR$/720-词典中最长的单词.pyi" />
         <option value="$PROJECT_DIR$/647-回文子串.py" />
@@ -197,6 +199,7 @@
         <option value="$PROJECT_DIR$/234-回文链表.py" />
         <option value="$PROJECT_DIR$/160-相交链表.py" />
         <option value="$PROJECT_DIR$/563-二叉树的坡度.py" />
+        <option value="$PROJECT_DIR$/893-特殊等价字符串组.py" />
       </list>
     </option>
   </component>
@@ -207,8 +210,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="128" />
-    <option name="y" value="54" />
+    <option name="x" value="73" />
+    <option name="y" value="283" />
     <option name="width" value="1394" />
     <option name="height" value="877" />
   </component>
@@ -447,7 +450,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="128" y="54" width="1394" height="877" extended-state="0" />
+    <frame x="479" y="270" width="1394" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23743626" />
@@ -510,13 +513,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/53-最大子序和.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/326-3的幂.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="241">
@@ -858,6 +854,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/563-二叉树的坡度.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="22" lean-forward="true" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/160-相交链表.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -865,12 +868,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/563-二叉树的坡度.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/893-特殊等价字符串组.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
