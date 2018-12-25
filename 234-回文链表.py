@@ -15,19 +15,19 @@ class Solution(object):
         while cur:
             listNode.append(cur.val)
             cur = cur.next
-        if len(listNode)==0:
+        if len(listNode) == 0:
             return True
         curList = listNode[::-1]
-        dummyRoot = ListNode(0)
-        ptr = dummyRoot
-        for i in curList:
-            ptr.next = ListNode(i)
-            ptr = ptr.next
-        ptr = dummyRoot.next
-        return ptr==head
+        return curList==listNode
 
-
-
+    
+#        dummyRoot = ListNode(0)
+#        ptr = dummyRoot
+#        for i in curList:
+#            ptr.next = ListNode(i)
+#            ptr = ptr.next
+#        ptr = dummyRoot.next
+#        return ptr == head
 
 
 if __name__ == '__main__':
