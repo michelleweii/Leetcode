@@ -18,9 +18,9 @@ class Solution(object):
         if len(listNode) == 0:
             return True
         curList = listNode[::-1]
-        return curList==listNode
+        return curList == listNode
 
-    
+
 #        dummyRoot = ListNode(0)
 #        ptr = dummyRoot
 #        for i in curList:

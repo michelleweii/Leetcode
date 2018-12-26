@@ -48,7 +48,7 @@ class Solution(object):
             return sum_left+sum_right+root.val,abs(sum_left-sum_right)+left_tilt+right_tilt
 
         sum_tree,tilt_tree = sum_and_tilt(root)
-        return  tilt_tree
+        return tilt_tree
 
 
 if __name__ == '__main__':
