@@ -12,7 +12,7 @@ class Solution(object):
         :type n: int
         :rtype: ListNode
         """
-        if head == None:
+        if head is None:
             return head
         pre = None
         cur = head
@@ -45,4 +45,3 @@ class Solution(object):
         return head
 
 if __name__ == '__main__':
-    
