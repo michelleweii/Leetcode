@@ -102,3 +102,16 @@ print(ii//2+1)
 
 listNode = [1,2,3]
 print(listNode[::-1])
+
+for i in range(4):
+    print(i) # 0,1,2,3
+
+
+A = [1,2,3]
+print("origin A:{}".format(A))
+A[0] = A[2]
+print("changed A:{}".format(A))
+
+colors = ['b','a','c','d']
+for i in range(0,len(colors)):
+    print(i,colors[i])
