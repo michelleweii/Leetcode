@@ -1,3 +1,10 @@
+# Definition for a binary tree node.
+class TreeNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
+
 class Solution(object):
     def binaryTreePaths(self, root):
         """
@@ -21,3 +28,13 @@ class Solution(object):
         return res
 
 if __name__ == '__main__':
+    a = TreeNode(1)
+    b = TreeNode(2)
+    c = TreeNode(3)
+    a.left = b
+    a.right = c
+    d = TreeNode(1)
+    d.left = b
+    d.right = c
+    print(Solution().binaryTreePaths(a))
+    # ['1->2', '1->3']

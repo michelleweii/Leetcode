@@ -52,11 +52,21 @@ class Solution(object):
 
 
 if __name__ == '__main__':
-    tree = Tree()
-    tree.add(1)
-    tree.add(2)
-    tree.add(3)
-    tree.add(4)
-    tree.add(5)
+    # tree = Tree()
+    # tree.add(1)
+    # tree.add(2)
+    # tree.add(3)
+    # tree.add(4)
+    # tree.add(5)
+    a = TreeNode(1)
+    b = TreeNode(2)
+    c = TreeNode(3)
+    d = TreeNode(4)
+    e = TreeNode(5)
+    a.left = b
+    a.right = c
+    c.right = d
+    d.right = e
     ans = Solution()
-    print(ans.findTilt(tree))
+    print(ans.findTilt(a))
+    # 5+9+10 = 24

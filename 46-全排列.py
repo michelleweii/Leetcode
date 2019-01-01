@@ -20,9 +20,6 @@ class Solution(object):
             nums[p], nums[i] = nums[i], nums[p]
 
 
-
-
-
 if __name__ == '__main__':
     nums = [1,2,3]
     myResult = Solution()
