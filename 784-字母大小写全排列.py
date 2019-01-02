@@ -5,8 +5,22 @@ class Solution(object):
         :rtype: List[str]
         """
 
-
-
+    def letterCasePermutation1(self, S):
+        """
+        :type S: str
+        :rtype: List[str]
+        """
+        res = [""]
+        for s in S:
+            if not s.isalpha():
+                for i in range(len(res)):
+                    res[i] += s
+            else:
+                for i in range(len(res)):
+                    tmp = res[i]
+                    res[i] += s.lower()
+                    res.append(tmp + s.upper())
+        return res
 
 
 def main():

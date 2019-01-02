@@ -115,3 +115,9 @@ print("changed A:{}".format(A))
 colors = ['b','a','c','d']
 for i in range(0,len(colors)):
     print(i,colors[i])
+
+a = [0 for _ in range(3)]
+# b = [a for _ in range(3)]
+# print(b) # [[0, 0, 0], [0, 0, 0], [0, 0, 0]]
+b = [list(a) for _ in range(3)]
+print(b) # [[0, 0, 0], [0, 0, 0], [0, 0, 0]]

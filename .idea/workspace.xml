@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="698d30e3-58b9-4d4e-92a0-1b119132d59e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/70-爬楼梯.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/198-打家劫舍.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/485-最大连续1的个数.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/160-相交链表.py" beforeDir="false" afterPath="$PROJECT_DIR$/160-相交链表.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/257-二叉树的所有路径.py" beforeDir="false" afterPath="$PROJECT_DIR$/257-二叉树的所有路径.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/46-全排列.py" beforeDir="false" afterPath="$PROJECT_DIR$/46-全排列.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/563-二叉树的坡度.py" beforeDir="false" afterPath="$PROJECT_DIR$/563-二叉树的坡度.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/70-爬楼梯.py" beforeDir="false" afterPath="$PROJECT_DIR$/70-爬楼梯.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/784-字母大小写全排列.py" beforeDir="false" afterPath="$PROJECT_DIR$/784-字母大小写全排列.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/896-单调数列.py" beforeDir="false" afterPath="$PROJECT_DIR$/896-单调数列.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,27 +40,27 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="165" />
+          <entry key="py" value="170" />
           <entry key="pyi" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="165" />
+          <entry key="Python" value="170" />
           <entry key="PythonStub" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="14" />
-          <entry key="py" value="31151" />
+          <entry key="py" value="32701" />
           <entry key="pyi" value="431" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="14" />
-          <entry key="Python" value="31151" />
+          <entry key="Python" value="32701" />
           <entry key="PythonStub" value="431" />
         </counts>
       </usages-collector>
@@ -71,15 +73,6 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/234-回文链表.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/19-删除链表的倒数第N个节点.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="234">
@@ -91,8 +84,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/160-相交链表.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+            <state relative-caret-position="510">
+              <caret line="31" column="14" lean-forward="true" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
               <folding>
                 <marker date="1546230013589" expanded="true" signature="189:297" ph="..." />
               </folding>
@@ -100,20 +93,41 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/70-爬楼梯.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" selection-start-line="14" selection-end-line="25" selection-end-column="22" />
+            <state relative-caret-position="576">
+              <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/49-字母异位词分组.py">
+        <entry file="file://$PROJECT_DIR$/46-全排列.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+            <state relative-caret-position="432">
+              <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/198-打家劫舍.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+              <folding>
+                <marker date="1546346041795" expanded="true" signature="433:671" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/485-最大连续1的个数.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -121,8 +135,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/784-字母大小写全排列.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+            <state relative-caret-position="198">
+              <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -130,7 +144,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/313-超级丑数.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="69">
+            <state relative-caret-position="72">
               <caret line="4" column="44" lean-forward="true" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
             </state>
           </provider>
@@ -141,15 +155,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret selection-end-line="5" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-15">
-              <caret line="68" column="29" lean-forward="true" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -170,9 +175,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/38-报数.py" />
-        <option value="$PROJECT_DIR$/443-压缩字符串.py" />
-        <option value="$PROJECT_DIR$/819-最常见的单词.py" />
         <option value="$PROJECT_DIR$/724-寻找数组的中心索引.py" />
         <option value="$PROJECT_DIR$/917-反转字母.py" />
         <option value="$PROJECT_DIR$/66-加一.py" />
@@ -183,7 +185,6 @@
         <option value="$PROJECT_DIR$/242-有效的字母异位词.py" />
         <option value="$PROJECT_DIR$/594-最长和谐子序列.py" />
         <option value="$PROJECT_DIR$/521-最长特殊序列 Ⅰ.py" />
-        <option value="$PROJECT_DIR$/784-字母大小写全排列.py" />
         <option value="$PROJECT_DIR$/567-字符串的排列.py" />
         <option value="$PROJECT_DIR$/49-字母异位词分组.py" />
         <option value="$PROJECT_DIR$/482-密钥格式化.py" />
@@ -215,12 +216,16 @@
         <option value="$PROJECT_DIR$/893-特殊等价字符串组.py" />
         <option value="$PROJECT_DIR$/19-删除链表的倒数第N个节点.py" />
         <option value="$PROJECT_DIR$/92-反转链表.py" />
-        <option value="$PROJECT_DIR$/test.py" />
-        <option value="$PROJECT_DIR$/46-全排列.py" />
         <option value="$PROJECT_DIR$/257-二叉树的所有路径.py" />
         <option value="$PROJECT_DIR$/563-二叉树的坡度.py" />
         <option value="$PROJECT_DIR$/160-相交链表.py" />
+        <option value="$PROJECT_DIR$/46-全排列.py" />
+        <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/70-爬楼梯.py" />
+        <option value="$PROJECT_DIR$/198-打家劫舍.py" />
+        <option value="$PROJECT_DIR$/896-单调数列.py" />
+        <option value="$PROJECT_DIR$/784-字母大小写全排列.py" />
+        <option value="$PROJECT_DIR$/485-最大连续1的个数.py" />
       </list>
     </option>
   </component>
@@ -231,7 +236,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="160" />
+    <option name="x" value="28" />
     <option name="y" value="23" />
     <option name="width" value="1396" />
     <option name="height" value="877" />
@@ -298,7 +303,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.70-爬楼梯">
+  <component name="RunManager" selected="Python.784-字母大小写全排列">
     <configuration name="160-相交链表" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -320,7 +325,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="257-二叉树的所有路径" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="198-打家劫舍" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -332,7 +337,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/257-二叉树的所有路径.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/198-打家劫舍.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -341,7 +346,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="46-全排列" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="485-最大连续1的个数" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -353,28 +358,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/46-全排列.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="563-二叉树的坡度" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="leetcode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/563-二叉树的坡度.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/485-最大连续1的个数.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -404,7 +388,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="70-爬楼梯" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="784-字母大小写全排列" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -416,7 +400,28 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/70-爬楼梯.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/784-字母大小写全排列.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="896-单调数列" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="leetcode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/896-单调数列.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -427,19 +432,19 @@
     </configuration>
     <list>
       <item itemvalue="Python.567-字符串的排列" />
-      <item itemvalue="Python.563-二叉树的坡度" />
-      <item itemvalue="Python.257-二叉树的所有路径" />
-      <item itemvalue="Python.46-全排列" />
       <item itemvalue="Python.160-相交链表" />
-      <item itemvalue="Python.70-爬楼梯" />
+      <item itemvalue="Python.198-打家劫舍" />
+      <item itemvalue="Python.485-最大连续1的个数" />
+      <item itemvalue="Python.896-单调数列" />
+      <item itemvalue="Python.784-字母大小写全排列" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.70-爬楼梯" />
+        <item itemvalue="Python.784-字母大小写全排列" />
+        <item itemvalue="Python.896-单调数列" />
+        <item itemvalue="Python.485-最大连续1的个数" />
+        <item itemvalue="Python.198-打家劫舍" />
         <item itemvalue="Python.160-相交链表" />
-        <item itemvalue="Python.563-二叉树的坡度" />
-        <item itemvalue="Python.257-二叉树的所有路径" />
-        <item itemvalue="Python.46-全排列" />
       </list>
     </recent_temporary>
   </component>
@@ -471,15 +476,15 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="160" y="23" width="1396" height="877" extended-state="0" />
+    <frame x="28" y="23" width="1396" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2029091" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16872728" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6693727" visible="true" weight="0.23949045" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6693727" visible="true" weight="0.22165605" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48339483" weight="0.39617833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -534,27 +539,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/167-两数之和.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="46" selection-start-line="46" selection-end-line="53" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/242-有效的字母异位词.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="26" selection-start-line="26" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/172-阶乘后的零.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="30" selection-start-line="30" selection-end-line="36" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/594-最长和谐子序列.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="414">
@@ -725,6 +709,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="27" selection-start-line="27" selection-end-line="28" selection-end-column="26" />
+          <folding>
+            <marker date="1542979298731" expanded="true" signature="36:41" ph="..." />
+            <marker date="1542979298731" expanded="true" signature="109:114" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -739,6 +727,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-16">
           <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+          <folding>
+            <marker date="1543308832392" expanded="true" signature="1277:1387" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -801,13 +792,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/46-全排列.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/49-字母异位词分组.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
@@ -815,31 +799,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/19-删除链表的倒数第N个节点.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/234-回文链表.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
           <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-15">
-          <caret line="68" column="29" lean-forward="true" selection-start-line="68" selection-start-column="29" selection-end-line="68" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/100-相同的树.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="5" selection-end-column="25" />
         </state>
       </provider>
     </entry>
@@ -857,34 +820,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/784-字母大小写全排列.py">
+    <entry file="file://$PROJECT_DIR$/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="18" column="10" lean-forward="true" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
+        <state relative-caret-position="360">
+          <caret line="112" column="23" lean-forward="true" selection-start-line="112" selection-start-column="23" selection-end-line="112" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/100-相同的树.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="5" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/313-超级丑数.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
+        <state relative-caret-position="72">
           <caret line="4" column="44" lean-forward="true" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/19-删除链表的倒数第N个节点.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/896-单调数列.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="35" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/46-全排列.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="24" column="12" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/70-爬楼梯.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="32" column="30" lean-forward="true" selection-start-line="32" selection-start-column="30" selection-end-line="32" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/198-打家劫舍.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding>
+            <marker date="1546346041795" expanded="true" signature="433:671" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/160-相交链表.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
+        <state relative-caret-position="510">
+          <caret line="31" column="14" lean-forward="true" selection-start-line="31" selection-start-column="14" selection-end-line="31" selection-end-column="14" />
           <folding>
             <marker date="1546230013589" expanded="true" signature="189:297" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/70-爬楼梯.py">
+    <entry file="file://$PROJECT_DIR$/784-字母大小写全排列.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" selection-start-line="14" selection-end-line="25" selection-end-column="22" />
+        <state relative-caret-position="198">
+          <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/485-最大连续1的个数.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
         </state>
       </provider>
     </entry>

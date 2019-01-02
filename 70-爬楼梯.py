@@ -4,7 +4,7 @@ class Solution(object):
         :type n: int
         :rtype: int
         """
-
+        # 递归求解，但超出时间限制
         # if n == 1:
         #     return 1
         # elif n == 2:
@@ -12,6 +12,8 @@ class Solution(object):
         # else:
         #     return (self.climbStairs(n-1)+self.climbStairs(n-2))
 
+        # 动态规划求解，两个if判断是我之前没想到的，
+        # 当n==1的时候，我dp[1]=2就是越界，之前没考虑到。
         if n==0:
             return 0
         if n==1:
