@@ -1,12 +1,12 @@
 class Solution(object):
-    def findMaxConsecutiveOnes(self, nums):
+    def findMaxConsecutiveOnes1(self, nums):
         """
         :type nums: List[int]
         :rtype: int
         """
         ls1 = [str(i) for i in nums]
         str_nums = "".join(ls1) # 原来nums里是数字不是str，所以这一个步骤没效果
-        print(str_nums) # 110111
+        # print(str_nums) # 110111
 
 
         count = 1
@@ -43,6 +43,17 @@ class Solution(object):
                 count = 0
         ans.append(count)
         return max(ans)
+
+
+    def findMaxConsecutiveOnes(self, nums):
+        str_nums = ''.join(map(str,nums))
+        print(str_nums)
+        n = str_nums.split('0')
+        print(n) # ['1', '11', '1']
+        # return len(max(n))
+        return max(map(len,n))
+
+
 
 if __name__ == '__main__':
     nums = [1, 0, 1, 1, 0, 1]
