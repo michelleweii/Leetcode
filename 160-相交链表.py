@@ -12,31 +12,19 @@ class Solution(object):
             head = head.next
         print()
 
-    def creatSinglink(self,nums):
-        head = ListNode(0)
-        cur = head
-        for num in nums:
-            node = ListNode(num)
-            cur.next = node
-            cur = node
-        head = head.next
-        self.printList(head)
 
-    def getIntersectionNode(self, ListA, ListB):
+    def getIntersectionNode(self, headA, headB):
         """
         :type head1, head1: ListNode
         :rtype: ListNode
         """
         # 思路一：使用A建立一个set，遍历B，如果有元素相等，那么第一次出现的那个元素就是交点；
         # 思路二：用B的长度减去A的长度，B指针向前移动差值个元素，然后再一起遍历（这时候起点相同），遇到相同元素时，就是交点；
-        headA = self.creatSinglink(ListA)
-        headB = self.creatSinglink(ListB)
-        # self.printList(headA)
-        # self.printList(headB)
+        self.printList(headA)
+        self.printList(headB)
         skipA = self.length(headA)
         skipB = self.length(headB)
-        print(skipA)
-        print(skipB)
+
 
         changed = skipA-skipB
         if changed<0:
@@ -52,7 +40,7 @@ class Solution(object):
 
         while headA and headB:
             if headA.val == headB.val:
-                return headA.val
+                return headA
             else:
                 headA = headA.next
                 headB = headB.next
@@ -71,19 +59,55 @@ class Solution(object):
         return cnt
 
 
+    def getIntersectionNode2(self, headA, headB):
+        # 为什么这个不报错？
+        """
+        :type head1, head1: ListNode
+        :rtype: ListNode
+        """
+        lenA, lenB = 0, 0
+        pA = headA
+        pB = headB
+        while pA:
+            pA = pA.next
+            lenA += 1
+        while pB:
+            pB = pB.next
+            lenB += 1
+        pA = headA
+        pB = headB
+        if lenA > lenB:
+            for i in range(lenA - lenB):
+                pA = pA.next
+        else:
+            for i in range(lenB - lenA):
+                pB = pB.next
+        while pA != pB:
+            pA = pA.next
+            pB = pB.next
+        return pA
+    # 原文：https: // blog.csdn.net / qq_34364995 / article / details / 80518198
 
 if __name__ == '__main__':
-    # a = ListNode(1)
-    # b = ListNode(2)
-    # c = ListNode(3)
-    # a.next = b
-    # b.next = c
-    # d = ListNode(4)
-    # e = ListNode(5)
-    # f = ListNode(6)
-    # d.next = e
-    # e.next = f
-    # f.next = b
-    ListA = [4,1,8,4,5]
-    ListB = [5,0,1,8,4,5]
-    print(Solution().getIntersectionNode(ListA,ListB))
+    a = ListNode(1)
+    b = ListNode(2)
+    c = ListNode(3)
+    a.next = b
+    b.next = c
+    d = ListNode(4)
+    e = ListNode(5)
+    f = ListNode(6)
+    d.next = e
+    e.next = f
+    f.next = b
+    print(Solution().getIntersectionNode(a,d))
+
+
+# 8
+# [4,1,8,4,5]
+# [5,0,1,8,4,5]
+# 2
+# 3
+
+# Intersected at '1'（false）
+# Intersected at '8'（true）
