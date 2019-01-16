@@ -6,8 +6,10 @@
 #         self.right = None
 
 class Solution(object):
-    def rightSideView(self, root):
+    def lowestCommonAncestor(self, root, p, q):
         """
         :type root: TreeNode
-        :rtype: List[int]
+        :type p: TreeNode
+        :type q: TreeNode
+        :rtype: TreeNode
         """
