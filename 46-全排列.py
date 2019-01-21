@@ -13,6 +13,7 @@ class Solution(object):
         if p == q:
             print(nums)
             rs.append(nums[:])
+            # 切片返回新数组，不改变原数组
         for i in range(p, q):
             # for i in range(p, q+1): 这里一直报错
             # 遍历一个数组就是range(0, len(arr))

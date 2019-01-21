@@ -41,7 +41,8 @@ class Solution(object):
         # 此时访问node为中序遍历
         if node.right is None and node.left is None and path_value == sum:
             # print(path)
-            rs.append(path.copy())
+            # rs.append(path.copy())  # path.copy()leetcode ide无法通过
+            rs.append(path[:])
             # print(rs)
 
         self.preorder(node.left, sum, path, path_value, rs)
@@ -54,8 +55,6 @@ class Solution(object):
         # 以它为根节点的所有可能性都尝试了，然后就换一个结点为根节点呀
         del path[-1]
         path_value -= node.val
-
-
 
 if __name__ == '__main__':
     a = TreeNode(5)

@@ -27,11 +27,14 @@ class Solution(object):
 
 
         changed = skipA-skipB
+        print(changed)
         if changed<0:
             offset = 0
             while headB and abs(changed) != offset:
+                print(abs(changed))
                 headB = headB.next
                 offset += 1
+            # print(headB.val)
         else:
             offset = 0
             while headA and abs(changed) != offset:
@@ -39,7 +42,8 @@ class Solution(object):
                 offset += 1
 
         while headA and headB:
-            if headA.val == headB.val:
+            if headA == headB:
+            # if headA.val == headB.val:  # 这句报错是因为没有val
                 return headA
             else:
                 headA = headA.next
@@ -101,6 +105,8 @@ if __name__ == '__main__':
     e.next = f
     f.next = b
     print(Solution().getIntersectionNode(a,d))
+
+
 
 
 # 8
