@@ -16,22 +16,22 @@ class Solution(object):
         if root is None:
             return flag
         cur_val = 0
-        self.preorder(root,sum,flag,cur_val)
+        flag = self.preorder(root,sum,flag,cur_val)
+        print(flag)
         return flag
 
     def preorder(self,node,sum,flag,cur_val):
         if node:
-            # 如果节点不空
-            cur_val+=node.val
-            if cur_val == sum and not node.left and not node.right:
+            cur_val += node.val
+            # print(cur_val)
+            if cur_val == sum and node.left is None and node.right is None:
                 flag = True
+                # print("flag:{}".format(flag))
                 return flag
 
-        self.preorder(node.left,sum,flag,cur_val)
-        self.preorder(node.right,sum,flag,cur_val)
-
-
-
+            self.preorder(node.left,sum,flag,cur_val)
+            self.preorder(node.right,sum,flag,cur_val)
+            cur_val -= node.val
 
 
 if __name__ == '__main__':
