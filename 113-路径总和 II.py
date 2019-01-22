@@ -25,8 +25,6 @@ class Solution(object):
         # 因为Python是引用传值，所以这个时候执行完preorder函数，rs已经改变了
         return rs
 
-
-
     def preorder(self,node,sum,path,path_value,rs):
         # 深度遍历——前序遍历
         if node is None:
@@ -38,13 +36,13 @@ class Solution(object):
         path_value += node.val
         # print(path)
 
-        # 此时访问node为中序遍历
         if node.right is None and node.left is None and path_value == sum:
             # print(path)
-            # rs.append(path.copy())  # path.copy()leetcode ide无法通过
+            # rs.append(path.copy())  # path.copy() —— leetcode ide无法通过
             rs.append(path[:])
             # print(rs)
 
+        # 此时访问node为中序遍历
         self.preorder(node.left, sum, path, path_value, rs)
         self.preorder(node.right, sum, path, path_value, rs)
         # 此时访问node为后序遍历
@@ -55,6 +53,58 @@ class Solution(object):
         # 以它为根节点的所有可能性都尝试了，然后就换一个结点为根节点呀
         del path[-1]
         path_value -= node.val
+
+
+    #-----------------------------------------------------------------
+    def pathSum222(self, root, sum):
+        """
+        :type root: TreeNode
+        :type sum: int
+        :rtype: List[List[int]]
+        """
+        self.res = []
+        self.total = sum
+
+        def caculate(root, sum, templist):
+            if not root:
+                return
+            if not root.left and not root.right:
+                if root.val + sum == self.total:
+                    self.res.append(templist + [root.val])
+            if root.left:
+                caculate(root.left, sum + root.val, templist + [root.val])
+            if root.right:
+                caculate(root.right, sum + root.val, templist + [root.val])
+
+        caculate(root, 0, [])
+        return self.res
+
+
+    #-----------------------------------------------------------------
+    def pathSum333(self, root, sum):
+        """
+        :type root: TreeNode
+        :type sum: int
+        :rtype: List[List[int]]
+        """
+        result = list()
+        if not root:
+            return result
+
+        self._pathSum(result, list(), root, sum)
+        return result
+
+    def _pathSum(self, result, path, node, num):
+        if node:
+            path.append(node.val)
+
+            if not node.left and not node.right and num == node.val:
+                result.append(path.copy())
+
+            self._pathSum(result, path, node.left, num - node.val)
+            self._pathSum(result, path, node.right, num - node.val)
+            path.pop()
+
 
 if __name__ == '__main__':
     a = TreeNode(5)
@@ -79,4 +129,6 @@ if __name__ == '__main__':
     sum = 22
     # Solution().pathSum(a, sum)
     print(Solution().pathSum(a,sum))
+
+
 
