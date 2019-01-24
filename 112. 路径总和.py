@@ -16,18 +16,15 @@ class Solution(object):
         if root is None:
             return flag
         cur_val = 0
-        flag = self.preorder(root,sum,flag,cur_val)
-        print(flag)
-        return flag
+        self.preorder(root,sum,flag,cur_val)
+
 
     def preorder(self,node,sum,flag,cur_val):
         if node:
             cur_val += node.val
             # print(cur_val)
-            if cur_val == sum and node.left is None and node.right is None:
-                flag = True
-                # print("flag:{}".format(flag))
-                return flag
+            if node.left is None and node.right is None:
+                return cur_val == sum
 
             self.preorder(node.left,sum,flag,cur_val)
             self.preorder(node.right,sum,flag,cur_val)
