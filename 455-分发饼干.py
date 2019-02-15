@@ -1,3 +1,4 @@
+# 贪心算法
 class Solution(object):
     def findContentChildren(self, g, s):
         """
@@ -5,6 +6,8 @@ class Solution(object):
         :type s: List[int]
         :rtype: int
         """
+
+
 
 
 if __name__ == '__main__':
