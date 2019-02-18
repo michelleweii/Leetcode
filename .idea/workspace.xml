@@ -53,8 +53,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/455-分发饼干.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+            <state relative-caret-position="18">
+              <caret line="1" selection-start-line="1" selection-end-line="11" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/53-最大子序和.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="30" lean-forward="true" selection-start-column="30" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -168,8 +177,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="191" />
-    <option name="y" value="23" />
+    <option name="x" value="585" />
+    <option name="y" value="29" />
     <option name="width" value="1095" />
     <option name="height" value="877" />
   </component>
@@ -235,7 +244,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.112. 路径总和">
+  <component name="RunManager" selected="Python.455-分发饼干">
     <configuration name="112. 路径总和" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -299,6 +308,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="455-分发饼干" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="leetcode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/455-分发饼干.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="567-字符串的排列" type="PythonConfigurationType" factoryName="Python">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -312,27 +342,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/567-字符串的排列.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="extra" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="leetcode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/extra.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -386,19 +395,19 @@
     <list>
       <item itemvalue="Python.113-路径总和 II" />
       <item itemvalue="Python.567-字符串的排列" />
-      <item itemvalue="Python.extra" />
       <item itemvalue="Python.test" />
       <item itemvalue="Python.160-相交链表" />
       <item itemvalue="Python.try" />
       <item itemvalue="Python.112. 路径总和" />
+      <item itemvalue="Python.455-分发饼干" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.455-分发饼干" />
         <item itemvalue="Python.112. 路径总和" />
         <item itemvalue="Python.try" />
         <item itemvalue="Python.160-相交链表" />
         <item itemvalue="Python.test" />
-        <item itemvalue="Python.extra" />
       </list>
     </recent_temporary>
   </component>
@@ -430,15 +439,15 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="191" y="23" width="1095" height="877" extended-state="0" />
+    <frame x="585" y="29" width="1095" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24767226" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24767226" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6693727" weight="0.29681528" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6693727" visible="true" weight="0.2955414" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48339483" weight="0.39617833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -490,13 +499,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/648-单词替换.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="297">
-          <caret line="42" selection-start-line="42" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/680-验证回文字符串 Ⅱ.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
@@ -851,10 +853,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/53-最大子序和.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="30" lean-forward="true" selection-start-column="30" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/455-分发饼干.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="18">
+          <caret line="1" selection-start-line="1" selection-end-line="11" selection-end-column="20" />
         </state>
       </provider>
     </entry>
