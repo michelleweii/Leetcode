@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="698d30e3-58b9-4d4e-92a0-1b119132d59e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/455-分发饼干.py" beforeDir="false" afterPath="$PROJECT_DIR$/455-分发饼干.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/376-摆动序列.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -50,11 +51,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/455-分发饼干.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="18">
-              <caret line="1" selection-start-line="1" selection-end-line="11" selection-end-column="20" />
+            <state relative-caret-position="324">
+              <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/376-摆动序列.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -116,7 +126,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/279-完全平方数.py" />
         <option value="$PROJECT_DIR$/190-颠倒二进制位.py" />
         <option value="$PROJECT_DIR$/400-第N个数字.py" />
         <option value="$PROJECT_DIR$/665-非递减数列.py" />
@@ -167,6 +176,7 @@
         <option value="$PROJECT_DIR$/236-二叉树的最近公共祖先.py" />
         <option value="$PROJECT_DIR$/112. 路径总和.py" />
         <option value="$PROJECT_DIR$/455-分发饼干.py" />
+        <option value="$PROJECT_DIR$/376-摆动序列.py" />
       </list>
     </option>
   </component>
@@ -177,8 +187,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="585" />
-    <option name="y" value="29" />
+    <option name="x" value="287" />
+    <option name="y" value="35" />
     <option name="width" value="1095" />
     <option name="height" value="877" />
   </component>
@@ -439,10 +449,10 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="585" y="29" width="1095" height="877" extended-state="0" />
+    <frame x="287" y="35" width="1095" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24767226" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2700186" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -499,13 +509,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/680-验证回文字符串 Ⅱ.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/26-删除排序数组中的重复项.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-688" />
@@ -862,8 +865,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/455-分发饼干.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="1" selection-start-line="1" selection-end-line="11" selection-end-column="20" />
+        <state relative-caret-position="324">
+          <caret line="18" column="14" lean-forward="true" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/376-摆动序列.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
         </state>
       </provider>
     </entry>
