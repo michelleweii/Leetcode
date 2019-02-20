@@ -32,3 +32,11 @@ print(new_rs) # [3, 4]
 print(id(new_rs)) # 4356797640, 这里和上面的string就不同了，这里地址就变化了
 rs.append([5,6])
 print(new_rs) # [3, 4]
+
+
+
+y_train = [1,2,3,4,5,2,3]
+y = y_train[1:4]
+y = 1
+print(y)
+print(y_train)
