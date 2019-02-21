@@ -1,4 +1,4 @@
-# 快排
+# 快排排序
 def QuickSort(nums,l,r):
     i = l
     j = r
@@ -20,6 +20,7 @@ def QuickSort(nums,l,r):
         QuickSort(nums,i+1,r)
     return nums
 
+# 冒泡排序
 def BubbleSort(nums):
     n = len(nums)-1
     for i in range(n,-1,-1): # 控制未排序的长短，已经冒上来的（位于最后）不再做处理
@@ -32,9 +33,11 @@ def BubbleSort(nums):
         if(flag==0): # 没有数据进行交换
             return nums
 
+# 简单选择排序
+def
 
 
 if __name__ == '__main__':
     nums = [49,38,65,97,76,13,27,49,100]
-    # print(QuickSort(nums,0,len(nums)-1))
+    print(QuickSort(nums,0,len(nums)-1))
     print(BubbleSort(nums))

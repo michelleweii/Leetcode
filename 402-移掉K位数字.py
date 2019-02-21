@@ -1,3 +1,4 @@
+# 贪心
 class Solution(object):
     def removeKdigits(self, num, k):
         """
