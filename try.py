@@ -40,3 +40,7 @@ y = y_train[1:4]
 y = 1
 print(y)
 print(y_train)
+
+
+aaa = "1234"
+print(aaa[:-1])
