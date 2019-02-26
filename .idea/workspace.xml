@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="698d30e3-58b9-4d4e-92a0-1b119132d59e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/55-跳跃游戏.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/402-移掉K位数字.py" beforeDir="false" afterPath="$PROJECT_DIR$/402-移掉K位数字.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/try.py" beforeDir="false" afterPath="$PROJECT_DIR$/try.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,7 +21,17 @@
     <fileColor scope="All" color="Blue" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/55-跳跃游戏.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -37,7 +47,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/665-非递减数列.py" />
         <option value="$PROJECT_DIR$/849-到最近的人的最大距离.py" />
         <option value="$PROJECT_DIR$/648-单词替换.py" />
         <option value="$PROJECT_DIR$/75-颜色分类.py" />
@@ -86,8 +95,9 @@
         <option value="$PROJECT_DIR$/455-分发饼干.py" />
         <option value="$PROJECT_DIR$/排序.py" />
         <option value="$PROJECT_DIR$/376-摆动序列.py" />
-        <option value="$PROJECT_DIR$/try.py" />
         <option value="$PROJECT_DIR$/402-移掉K位数字.py" />
+        <option value="$PROJECT_DIR$/55-跳跃游戏.py" />
+        <option value="$PROJECT_DIR$/try.py" />
       </list>
     </option>
   </component>
@@ -97,7 +107,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="133" />
     <option name="y" value="51" />
     <option name="width" value="1231" />
@@ -165,7 +175,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.402-移掉K位数字">
+  <component name="RunManager" selected="Python.try">
     <configuration name="排序" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -324,8 +334,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.402-移掉K位数字" />
         <item itemvalue="Python.try" />
+        <item itemvalue="Python.402-移掉K位数字" />
         <item itemvalue="Python.376-摆动序列" />
         <item itemvalue="Python.排序" />
         <item itemvalue="Python.455-分发饼干" />
@@ -363,14 +373,15 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="133" y="51" width="1231" height="877" extended-state="1" />
+    <frame x="133" y="51" width="1231" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23966943" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23966943" />
       <window_info id="Structure" order="1" weight="0.24958678" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6693727" visible="true" weight="0.23057325" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6693727" visible="true" weight="0.20254777" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48339483" weight="0.39617833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -422,13 +433,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/665-非递减数列.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/131-分割回文串.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="139">
@@ -787,8 +791,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/try.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="521">
-          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+        <state relative-caret-position="143">
+          <caret line="28" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/55-跳跃游戏.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
         </state>
       </provider>
     </entry>

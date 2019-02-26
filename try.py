@@ -44,3 +44,7 @@ print(y_train)
 
 aaa = "1234"
 print(aaa[:-1])
+
+import math
+num11=20.5
+print(math.ceil(num11))
