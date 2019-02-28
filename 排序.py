@@ -34,7 +34,11 @@ def BubbleSort(nums):
             return nums
 
 # 简单选择排序
-def
+def SelectSort(nums):
+    n = len(nums)-1
+
+
+
 
 
 if __name__ == '__main__':
