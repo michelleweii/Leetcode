@@ -6,6 +6,26 @@ class Solution(object):
         :type x: int
         :rtype: int
         """
+        str1 = str(x).split('-')
+        # print(str1)
+        if len(str1)>1:
+            temp = '-'+str1[1][::-1]
+            if int(temp)>-2**31 and int(temp)<2**31-1:
+                return int(temp)
+            return 0
+        else:
+            if int(str1[0][::-1])>-2**31 and int(str1[0][::-1])<2**31-1:
+                return int(str1[0][::-1])
+            return 0
+
+
+
+
+    def reverse1(self, x):
+        """
+        :type x: int
+        :rtype: int
+        """
 
         rs = []
         pos = 0
@@ -38,7 +58,7 @@ class Solution(object):
 
 
 def main():
-    x = -123
+    x = 1534236469
     myResult = Solution()
     print(myResult.reverse(x))
 
