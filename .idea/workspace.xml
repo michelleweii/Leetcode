@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="698d30e3-58b9-4d4e-92a0-1b119132d59e" name="Default" comment="" />
+    <list default="true" id="698d30e3-58b9-4d4e-92a0-1b119132d59e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/B1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/239-滑动窗口最大值.py" beforeDir="false" afterPath="$PROJECT_DIR$/239-滑动窗口最大值.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/华为上机题目1.py" beforeDir="false" afterPath="$PROJECT_DIR$/HW1.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,11 +41,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/5-最长回文子串.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
               <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/239-滑动窗口最大值.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="739">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+              <folding>
+                <element signature="e#311#324#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/B1.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -93,8 +119,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/633-平方数之和.py" />
-        <option value="$PROJECT_DIR$/204-计数质数.py" />
         <option value="$PROJECT_DIR$/263-丑数.py" />
         <option value="$PROJECT_DIR$/264-丑数 II.py" />
         <option value="$PROJECT_DIR$/313-超级丑数.py" />
@@ -144,6 +168,8 @@
         <option value="$PROJECT_DIR$/try2.py" />
         <option value="$PROJECT_DIR$/7-反转整数.py" />
         <option value="$PROJECT_DIR$/3-无重复字符的最长子串.py" />
+        <option value="$PROJECT_DIR$/239-滑动窗口最大值.py" />
+        <option value="$PROJECT_DIR$/B1.py" />
       </list>
     </option>
   </component>
@@ -153,8 +179,8 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="83" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="88" />
     <option name="y" value="23" />
     <option name="width" value="1231" />
     <option name="height" value="877" />
@@ -221,7 +247,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.7-反转整数">
+  <component name="RunManager" selected="Python.B1">
     <configuration name="113-路径总和 II" type="PythonConfigurationType" factoryName="Python">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -327,7 +353,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="78-子集" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="B1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -339,7 +365,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/78-子集.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/B1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -372,19 +398,19 @@
     <list>
       <item itemvalue="Python.113-路径总和 II" />
       <item itemvalue="Python.567-字符串的排列" />
-      <item itemvalue="Python.78-子集" />
       <item itemvalue="Python.try2" />
       <item itemvalue="Python.排序" />
       <item itemvalue="Python.3-无重复字符的最长子串" />
       <item itemvalue="Python.7-反转整数" />
+      <item itemvalue="Python.B1" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.B1" />
         <item itemvalue="Python.7-反转整数" />
         <item itemvalue="Python.try2" />
         <item itemvalue="Python.3-无重复字符的最长子串" />
         <item itemvalue="Python.排序" />
-        <item itemvalue="Python.78-子集" />
       </list>
     </recent_temporary>
   </component>
@@ -419,15 +445,15 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="83" y="23" width="1231" height="877" extended-state="0" />
+    <frame x="88" y="23" width="1231" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23966943" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23223141" />
       <window_info id="Structure" order="1" weight="0.24958678" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6693727" visible="true" weight="0.29936305" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6693727" visible="true" weight="0.39617833" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48339483" weight="0.39617833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -479,16 +505,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/541-反转字符串II.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/557-反转字符串中的单词III.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/66-加一.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="254">
@@ -573,18 +589,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="13" column="27" lean-forward="true" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/华为上机题目1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-          <folding>
-            <marker date="1546851859619" expanded="true" signature="231:609" ph="..." />
-            <marker date="1546851859619" expanded="true" signature="631:632" ph="..." />
-            <marker date="1546851859619" expanded="true" signature="631:1351" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -831,6 +835,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HW1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/239-滑动窗口最大值.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="739">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="e#311#324#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/B1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
         </state>
       </provider>
     </entry>
