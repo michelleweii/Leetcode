@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="698d30e3-58b9-4d4e-92a0-1b119132d59e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/239-滑动窗口最大值.py" beforeDir="false" afterPath="$PROJECT_DIR$/239-滑动窗口最大值.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/剑指offer/面试题3-数字中重复的数字.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,11 +39,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/239-滑动窗口最大值.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
               <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/剑指offer/面试题3-数字中重复的数字.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -93,11 +103,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/75-颜色分类.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/70-爬楼梯.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="396">
@@ -122,7 +127,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/264-丑数 II.py" />
         <option value="$PROJECT_DIR$/313-超级丑数.py" />
         <option value="$PROJECT_DIR$/203-移除链表元素.py" />
         <option value="$PROJECT_DIR$/237-删除链表中的节点.py" />
@@ -173,6 +177,7 @@
         <option value="$PROJECT_DIR$/try2.py" />
         <option value="$PROJECT_DIR$/1-两数之和.py" />
         <option value="$PROJECT_DIR$/239-滑动窗口最大值.py" />
+        <option value="$PROJECT_DIR$/剑指offer/面试题3-数字中重复的数字.py" />
       </list>
     </option>
   </component>
@@ -183,8 +188,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="132" />
-    <option name="y" value="54" />
+    <option name="x" value="96" />
+    <option name="y" value="23" />
     <option name="width" value="1231" />
     <option name="height" value="877" />
   </component>
@@ -250,7 +255,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.try2">
+  <component name="RunManager" selected="Python.面试题3-数字中重复的数字">
     <configuration name="113-路径总和 II" type="PythonConfigurationType" factoryName="Python">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -272,27 +277,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="排序" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="leetcode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/排序.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="3-无重复字符的最长子串" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -306,6 +290,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/3-无重复字符的最长子串.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="面试题3-数字中重复的数字" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="leetcode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/剑指offer" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/剑指offer/面试题3-数字中重复的数字.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -402,18 +407,18 @@
       <item itemvalue="Python.113-路径总和 II" />
       <item itemvalue="Python.567-字符串的排列" />
       <item itemvalue="Python.try2" />
-      <item itemvalue="Python.排序" />
       <item itemvalue="Python.3-无重复字符的最长子串" />
       <item itemvalue="Python.7-反转整数" />
       <item itemvalue="Python.B1" />
+      <item itemvalue="Python.面试题3-数字中重复的数字" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.面试题3-数字中重复的数字" />
         <item itemvalue="Python.try2" />
         <item itemvalue="Python.B1" />
         <item itemvalue="Python.7-反转整数" />
         <item itemvalue="Python.3-无重复字符的最长子串" />
-        <item itemvalue="Python.排序" />
       </list>
     </recent_temporary>
   </component>
@@ -448,15 +453,14 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="132" y="54" width="1231" height="877" extended-state="0" />
-    <editor active="true" />
+    <frame x="96" y="23" width="1231" height="877" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23223141" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23223141" />
       <window_info id="Structure" order="1" weight="0.24958678" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6693727" visible="true" weight="0.20509554" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6693727" visible="true" weight="0.41528663" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48339483" weight="0.39617833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -508,13 +512,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/893-特殊等价字符串组.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="684">
-          <caret line="38" column="3" lean-forward="true" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/206-反转链表.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="303">
@@ -859,6 +856,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/剑指offer/面试题3-数字中重复的数字.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
         </state>
       </provider>
     </entry>
