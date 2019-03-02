@@ -9,7 +9,8 @@
 
 # 有问题，如果改成3，则就越过7了。
 
-def findT(nums,t,n):
+def findT(nums,t):
+    n = len(nums)
     next_index = abs(t-nums[0])
     while next_index<n:
         if nums[next_index]==t:
@@ -17,8 +18,28 @@ def findT(nums,t,n):
         next_index += abs(t-nums[next_index])
     return -1
 
+
+def find(array, target):
+    # write code here
+    length = len(array)
+    abs_length = abs(target - array[0])
+    if length == 0 or abs_length >= length:
+        return None
+
+    i = 0
+    while i < length:
+        if array[i] == target:
+            return i
+        else:
+            res = abs(target - array[i])
+            i += res
+            continue
+    return None
+
+
+
 if __name__ == '__main__':
     nums = [4,5,6,3,6,7,8,9,10,9]
     t = 7
     n = len(nums)
-    print(findT(nums,t,n))
+    print(find(nums,t))
