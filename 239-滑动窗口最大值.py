@@ -7,6 +7,21 @@ class Solution(object):
         """
 
 
+    # 暴力求解
+    def maxSlidingWindow1(self, nums, k):
+        """
+        :type nums: List[int]
+        :type k: int
+        :rtype: List[int]
+        """
+        if len(nums)==0:
+            return [0]
+        rs = []
+        for i in range(len(nums)-k+1):
+            tmp = max(nums[i:i+k])
+            rs.append(tmp)
+        return rs
+
 
 
 
