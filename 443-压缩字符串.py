@@ -1,32 +1,33 @@
 # del[1:3]删除指定区间
 class Solution(object):
     def compress(self, chars):
+        # 双指针
+        
+
+    def compress1(self, chars):
         """
         :type chars: List[str]
         :rtype: int
         """
-        ans = ''
-        length = len(chars)
-        i = 0
-        while i<length:
-            count = 1
-            while i<(length-1) and chars[i+1]==chars[i]:
-                count+=1
-                i+=1
-            print(count) #2 2 3
-            ans += chars[i]
-            print(ans)
-            if count>1:
-                ans += str(count)
-            i+=1
+        char_map = {}
+        for index,val in enumerate(chars):
+            if val not in char_map:
+                char_map[val] = 1
+            else:
+                cnt = char_map[val]
+                cnt += 1
+                char_map[val] = cnt
+        rs = []
+        for key in char_map:
+            rs.append(key)
+            if char_map[key] == 1:
+                continue
+            else:
+                rs.append(str(char_map[key]))
+        print(rs)
+        length = "".join(rs)
+        return len(length)
 
-        # print(ans)
-        ans = list(ans)
-        print(chars)
-        for j in range(len(ans)):
-            chars[j] = ans[j]
-        print(chars)
-        return len(ans)
 
 def main():
     chars = ["a","a","b","b","c","c","c"]
