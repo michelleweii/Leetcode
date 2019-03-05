@@ -82,14 +82,13 @@ def heapSort(nums):
         Sift(nums,0,i-1)
     return nums
 
-
-def MergeSort():
+def MergeSort(nums):
     pass
 
 if __name__ == '__main__':
-    nums = [49,38,65,200,97,76,13,27,49,100]
-    print(QuickSort(nums,0,len(nums)-1))
-    print(BubbleSort(nums))
-    print(heapSort(nums))
-    print(SelectSort(nums))
-    print(MergeSort(nums))
+    nums = [49,38,65,200,97,76,13,27,49,100,-1]
+    print("快排：",QuickSort(nums,0,len(nums)-1))
+    print("冒泡：",BubbleSort(nums))
+    print("堆排序：",heapSort(nums))
+    print("简单选择：",SelectSort(nums))
+    print("归并：",MergeSort(nums))

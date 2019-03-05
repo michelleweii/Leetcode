@@ -2,7 +2,7 @@
 class Solution(object):
     def compress(self, chars):
         # 双指针
-        
+
 
     def compress1(self, chars):
         """
