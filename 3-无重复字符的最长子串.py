@@ -14,8 +14,6 @@ class Solution(object):
         print(hash_map)
         return res
 
-
-
     def lengthOfLongestSubstringPiggy(self, s):
         """
         :type s: str
