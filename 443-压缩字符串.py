@@ -1,10 +1,24 @@
 # del[1:3]删除指定区间
 class Solution(object):
-    def compress(self, chars):
+    def compress22(self, chars):
         # 双指针
 
+    def compress(self, chars):
+        left = i = 0
+        while i < len(chars):
+            char, length = chars[i], 1
+            while (i + 1) < len(chars) and char == chars[i + 1]:
+                length, i = length + 1, i + 1
+            chars[left] = char
+            if length > 1:
+                len_str = str(length)
+                chars[left + 1:left + 1 + len(len_str)] = len_str
+                left += len(len_str)
+            left, i = left + 1, i + 1
+        return left
 
-    def compress1(self, chars):
+
+    def compress_no_in_place(self, chars):
         """
         :type chars: List[str]
         :rtype: int
