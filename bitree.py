@@ -30,8 +30,6 @@ class Solution(object):
         return res
 
 
-
-
 def main():
     tree2 = TreeNode(2)
     tree3 = TreeNode(3)

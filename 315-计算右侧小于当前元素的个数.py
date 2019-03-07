@@ -1,5 +1,5 @@
-# 思路是归并排序
-
+# 思路是归并排序——思路忘记了
+# 用二叉搜索树完成
 class Solution(object):
     def countSmaller(self, nums):
         """
