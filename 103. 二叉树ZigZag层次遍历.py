@@ -15,28 +15,19 @@ class Solution(object):
         res = []
         if root:
             queue.append(root)
+            flag = 1
             while queue:
-                cur_level,cnt_level,size = [],1,len(queue)
+                cur_level, size = [], len(queue)
                 for i in range(size):
-                    if cnt_level % 2 != 0:
-                        cur = queue.pop()
-                        cur_level.append(cur.val)
-                        if cur.left:
-                            queue.append(cur.left)
-                        if cur.right:
-                            queue.append(cur.right)
-                    else:
-                        cur = queue.pop(0)
-                        cur_level.append(cur.val)
-                        if cur.right:
-                            queue.append(cur.right)
-                        if cur.left:
-                            queue.append(cur.left)
-
-            
-
-                print(cur_level)
-                cnt_level+=1
+                    cur = queue.pop(0)
+                    cur_level.append(cur.val)
+                    if cur.left:
+                        queue.append(cur.left)
+                    if cur.right:
+                        queue.append(cur.right)
+                res.append(cur_level[::flag])
+                flag*=-1
+        return res
 
 if __name__ == '__main__':
     a = TreeNode(3)
