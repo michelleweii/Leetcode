@@ -2,6 +2,7 @@
 class Solution(object):
     def compress22(self, chars):
         # 双指针
+        pass
 
     def compress(self, chars):
         left = i = 0
