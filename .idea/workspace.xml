@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="698d30e3-58b9-4d4e-92a0-1b119132d59e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/98-验证二叉搜索树.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/226-翻转二叉树.py" beforeDir="false" afterPath="$PROJECT_DIR$/226-翻转二叉树.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,20 +38,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/226-翻转二叉树.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/98-验证二叉搜索树.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36">
-              <caret line="2" selection-start-line="2" selection-end-line="24" selection-end-column="19" />
+            <state relative-caret-position="289">
+              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
             </state>
           </provider>
         </entry>
@@ -157,8 +148,8 @@
         <option value="$PROJECT_DIR$/103. 二叉树ZigZag层次遍历.py" />
         <option value="$PROJECT_DIR$/104-二叉树的最大深度.py" />
         <option value="$PROJECT_DIR$/103-二叉树ZigZag层次遍历.py" />
-        <option value="$PROJECT_DIR$/226-翻转二叉树.py" />
         <option value="$PROJECT_DIR$/98-验证二叉搜索树.py" />
+        <option value="$PROJECT_DIR$/226-翻转二叉树.py" />
       </list>
     </option>
   </component>
@@ -169,8 +160,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="262" />
-    <option name="y" value="115" />
+    <option name="x" value="153" />
+    <option name="y" value="23" />
     <option name="width" value="1231" />
     <option name="height" value="877" />
   </component>
@@ -242,7 +233,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.98-验证二叉搜索树">
+  <component name="RunManager" selected="Python.226-翻转二叉树">
     <configuration name="103. 二叉树ZigZag层次遍历" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -306,6 +297,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="226-翻转二叉树" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="leetcode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/226-翻转二叉树.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="412-Fizz Buzz" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -348,27 +360,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="94-二叉树的中序遍历" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="leetcode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/94-二叉树的中序遍历.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="98-验证二叉搜索树" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -393,19 +384,19 @@
     <list>
       <item itemvalue="Python.113-路径总和 II" />
       <item itemvalue="Python.567-字符串的排列" />
-      <item itemvalue="Python.94-二叉树的中序遍历" />
       <item itemvalue="Python.412-Fizz Buzz" />
       <item itemvalue="Python.103. 二叉树ZigZag层次遍历" />
       <item itemvalue="Python.104-二叉树的最大深度" />
       <item itemvalue="Python.98-验证二叉搜索树" />
+      <item itemvalue="Python.226-翻转二叉树" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.226-翻转二叉树" />
         <item itemvalue="Python.98-验证二叉搜索树" />
         <item itemvalue="Python.104-二叉树的最大深度" />
         <item itemvalue="Python.103. 二叉树ZigZag层次遍历" />
         <item itemvalue="Python.412-Fizz Buzz" />
-        <item itemvalue="Python.94-二叉树的中序遍历" />
       </list>
     </recent_temporary>
   </component>
@@ -440,15 +431,15 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="262" y="115" width="1231" height="877" extended-state="0" />
+    <frame x="153" y="23" width="1231" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2446281" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2446281" />
       <window_info id="Structure" order="1" weight="0.24958678" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6693727" visible="true" weight="0.43312103" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6693727" visible="true" weight="0.3477707" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48339483" weight="0.39617833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -816,10 +807,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/104-二叉树的最大深度.py">
+    <entry file="file://$PROJECT_DIR$/103-二叉树ZigZag层次遍历.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="738">
-          <caret line="41" column="4" selection-start-line="41" selection-start-column="4" selection-end-line="41" selection-end-column="4" />
+        <state relative-caret-position="241">
+          <caret line="34" selection-start-line="34" selection-end-line="43" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/98-验证二叉搜索树.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -830,24 +828,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/104-二叉树的最大深度.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="41" lean-forward="true" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/226-翻转二叉树.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/103-二叉树ZigZag层次遍历.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="241">
-          <caret line="34" selection-start-line="34" selection-end-line="43" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/98-验证二叉搜索树.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" selection-start-line="2" selection-end-line="24" selection-end-column="19" />
+        <state relative-caret-position="289">
+          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
         </state>
       </provider>
     </entry>

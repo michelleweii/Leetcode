@@ -14,7 +14,15 @@ class Solution(object):
         :type root: TreeNode
         :rtype: TreeNode
         """
-        pass
+        # 如果是叶子节点，则递归结束
+        if root is None:
+            return
+        # if root.left and root.right:
+        root.left,root.right = root.right,root.left
+        self.invertTree(root.left)
+        self.invertTree(root.right)
+        return root
+
 
 if __name__ == '__main__':
     a = TreeNode(3)
