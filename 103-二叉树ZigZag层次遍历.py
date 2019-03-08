@@ -1,3 +1,5 @@
+# 小结：
+# 层次遍历是广度优先遍历
 # Definition for a binary tree node.
 class TreeNode(object):
     def __init__(self, x):

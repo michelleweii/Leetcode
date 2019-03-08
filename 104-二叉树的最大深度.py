@@ -1,3 +1,4 @@
+import collections
 # Definition for a binary tree node.
 class TreeNode(object):
     def __init__(self, x):
@@ -6,6 +7,7 @@ class TreeNode(object):
         self.right = None
 
 class Solution(object):
+    # recursion
     def maxDepth(self, root):
         """
         :type root: TreeNode
@@ -20,6 +22,23 @@ class Solution(object):
             RD = self.maxDepth(root.right)
             return max(RD,LD)+1
 
+    # queue for level order
+    def maxDepth2(self, root):
+        if not root:
+            return 0
+        tqueue, h = collections.deque(), 0
+        tqueue.append(root)
+        while tqueue:
+            nextlevel = collections.deque()
+            while tqueue:
+                front = tqueue.popleft()
+                if front.left:
+                    nextlevel.append(front.left)
+                if front.right:
+                    nextlevel.append(front.right)
+            tqueue = nextlevel
+            h += 1
+        return h
 
 if __name__ == '__main__':
     a = TreeNode(3)
