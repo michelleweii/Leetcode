@@ -16,7 +16,7 @@ class Solution(object):
             return []
         res = []
         def tree_path(root,path,res):
-            if root.left==None and root.right==None:
+            if (root.left == None) and (root.right == None):
                 res.append(path+str(root.val))
                 return res
             if root.left:
