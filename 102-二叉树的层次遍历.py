@@ -27,6 +27,22 @@ class Solution(object):
                 rs.append(cur_level[:])
         return rs
 
+    # 深度优先遍历
+    def dfs(self,root):
+        stack = []
+        rs = []
+        if root:
+            stack.append(root)
+            while stack:
+                cur = stack.pop()
+                # print(cur.val)
+                rs.append(cur.val)
+                if cur.right:
+                    stack.append(cur.right)
+                if cur.left:
+                    stack.append(cur.left)
+        print(rs)
+
 
 if __name__ == '__main__':
     a = TreeNode(3)
@@ -39,4 +55,5 @@ if __name__ == '__main__':
     c.right = e
     c.left = d
     print(Solution().levelOrder(a))
+    print(Solution().dfs(a))
 

@@ -11,6 +11,10 @@ print(collections.Counter(n1)==collections.Counter(n2))
 str1 = "w20930"
 print(str1.split('0'))
 
+
+alist = [1,2,3,4,5]
+for _ in range(len(alist)):
+    print(alist.pop())
 """
 二分查找
 def BiSearch(nums,k):
