@@ -15,6 +15,17 @@ print(str1.split('0'))
 alist = [1,2,3,4,5]
 for _ in range(len(alist)):
     print(alist.pop())
+
+n = "banana"
+res = []
+for i in range(len(n)):
+    if n[i] not in res:
+        res.append(n[i])
+        print(res)
+    else:
+        continue
+print("".join(res))
+
 """
 二分查找
 def BiSearch(nums,k):
