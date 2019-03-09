@@ -43,8 +43,6 @@ class Solution(object):
 
 
 
-
-
 if __name__ == '__main__':
     a = TreeNode(1)
     b = TreeNode(2)

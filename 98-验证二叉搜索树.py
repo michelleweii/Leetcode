@@ -1,13 +1,14 @@
 # Definition for a binary tree node.
-# 方法一：中序遍历二叉树，结果是否是递增的，递增代表是二叉搜索树。
+
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
 
+# # 方法一：中序遍历二叉树，结果是否是递增的，递增代表是二叉搜索树。
 class Solution(object):
-    def isValidBST(self, root):
+    def isValidBST1(self, root):
         res = []
         self.helper(root,res)
         # print(res)
@@ -24,18 +25,20 @@ class Solution(object):
             self.helper(root.right,res)
         return None
 
+# 方法二，递归版本，每个结点都满足左小于它，右大于它的性质
+    def isValidBST(self, root):
+        return self.check_bst(root, float("-inf"), float("inf"))
 
-    # def isValidBST1(self, root):
-    #     """
-    #     :type root: TreeNode
-    #     :rtype: bool
-    #     """
-    #     if root is None:
-    #         return False
-    #     if root.left.val <= root.val:
-    #         return self.isValidBST(root.left)
-    #     else:
-    #         return self.isValidBST(root.right)
+    def check_bst(self, node, left, right):
+        if not node:
+            return True
+
+        if not left < node.val < right:
+            return False
+
+        return (self.check_bst(node.left, left, node.val)
+                and self.check_bst(node.right, node.val, right))
+
 
 
 
