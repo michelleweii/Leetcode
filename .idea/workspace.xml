@@ -2,42 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="698d30e3-58b9-4d4e-92a0-1b119132d59e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/动态规划/120-三角形最小路径和.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/动态规划/322-零钱兑换.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/动态规划/64-最小路径和.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/动态规划/673-最长递增子序列的个数.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/100-相同的树.py" beforeDir="false" afterPath="$PROJECT_DIR$/树与二叉树/100-相同的树.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/102-二叉树的层次遍历.py" beforeDir="false" afterPath="$PROJECT_DIR$/树与二叉树/102-二叉树的层次遍历.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/103-二叉树ZigZag层次遍历.py" beforeDir="false" afterPath="$PROJECT_DIR$/树与二叉树/103-二叉树ZigZag层次遍历.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/104-二叉树的最大深度.py" beforeDir="false" afterPath="$PROJECT_DIR$/树与二叉树/104-二叉树的最大深度.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/110-平衡二叉树.py" beforeDir="false" afterPath="$PROJECT_DIR$/树与二叉树/110-平衡二叉树.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/112-路径总和.py" beforeDir="false" afterPath="$PROJECT_DIR$/树与二叉树/112-路径总和.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/113-路径总和 II.py" beforeDir="false" afterPath="$PROJECT_DIR$/树与二叉树/113-路径总和 II.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/114-二叉树展开为链表.py" beforeDir="false" afterPath="$PROJECT_DIR$/树与二叉树/114-二叉树展开为链表.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/138-复制带随机指针的链表.py" beforeDir="false" afterPath="$PROJECT_DIR$/链表/138-复制带随机指针的链表.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/141-环形链表.py" beforeDir="false" afterPath="$PROJECT_DIR$/链表/141-环形链表.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/142-环形链表 II.py" beforeDir="false" afterPath="$PROJECT_DIR$/链表/142-环形链表 II.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/160-相交链表.py" beforeDir="false" afterPath="$PROJECT_DIR$/链表/160-相交链表.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/19-删除链表的倒数第N个节点.py" beforeDir="false" afterPath="$PROJECT_DIR$/链表/19-删除链表的倒数第N个节点.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/198-打家劫舍.py" beforeDir="false" afterPath="$PROJECT_DIR$/动态规划/198-打家劫舍.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/199-二叉树的右视图.py" beforeDir="false" afterPath="$PROJECT_DIR$/树与二叉树/199-二叉树的右视图.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/203-移除链表元素.py" beforeDir="false" afterPath="$PROJECT_DIR$/链表/203-移除链表元素.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/206-反转链表.py" beforeDir="false" afterPath="$PROJECT_DIR$/链表/206-反转链表.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/21-合并两个有序链表.py" beforeDir="false" afterPath="$PROJECT_DIR$/链表/21-合并两个有序链表.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/226-翻转二叉树.py" beforeDir="false" afterPath="$PROJECT_DIR$/树与二叉树/226-翻转二叉树.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/23-合并K个排序链表.py" beforeDir="false" afterPath="$PROJECT_DIR$/链表/23-合并K个排序链表.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/234-回文链表.py" beforeDir="false" afterPath="$PROJECT_DIR$/链表/234-回文链表.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/236-二叉树的最近公共祖先.py" beforeDir="false" afterPath="$PROJECT_DIR$/树与二叉树/236-二叉树的最近公共祖先.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/237-删除链表中的节点.py" beforeDir="false" afterPath="$PROJECT_DIR$/链表/237-删除链表中的节点.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/257-二叉树的所有路径.py" beforeDir="false" afterPath="$PROJECT_DIR$/树与二叉树/257-二叉树的所有路径.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/300-最长上升子序列.py" beforeDir="false" afterPath="$PROJECT_DIR$/动态规划/300-最长上升子序列.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/452. 引爆气球.py" beforeDir="false" afterPath="$PROJECT_DIR$/452-引爆气球.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/509-斐波那契数.py" beforeDir="false" afterPath="$PROJECT_DIR$/动态规划/509-斐波那契数.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/53-最大子序和.py" beforeDir="false" afterPath="$PROJECT_DIR$/动态规划/53-最大子序和.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/563-二叉树的坡度.py" beforeDir="false" afterPath="$PROJECT_DIR$/树与二叉树/563-二叉树的坡度.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/70-爬楼梯.py" beforeDir="false" afterPath="$PROJECT_DIR$/动态规划/70-爬楼梯.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/83-删除排序链表中的重复元素.py" beforeDir="false" afterPath="$PROJECT_DIR$/链表/83-删除排序链表中的重复元素.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/876-链表的中间结点.py" beforeDir="false" afterPath="$PROJECT_DIR$/链表/876-链表的中间结点.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/92-反转链表.py" beforeDir="false" afterPath="$PROJECT_DIR$/链表/92-反转链表.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/94-二叉树的中序遍历.py" beforeDir="false" afterPath="$PROJECT_DIR$/树与二叉树/94-二叉树的中序遍历.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/98-验证二叉搜索树.py" beforeDir="false" afterPath="$PROJECT_DIR$/树与二叉树/98-验证二叉搜索树.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -54,7 +23,44 @@
     <fileColor scope="All" color="Blue" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/动态规划/673-最长递增子序列的个数.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/动态规划/322-零钱兑换.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/动态规划/120-三角形最小路径和.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/动态规划/64-最小路径和.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="126">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -70,11 +76,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/142-环形链表 II.py" />
-        <option value="$PROJECT_DIR$/509-斐波那契数.py" />
-        <option value="$PROJECT_DIR$/extra.py" />
-        <option value="$PROJECT_DIR$/21-合并两个有序链表.py" />
-        <option value="$PROJECT_DIR$/138-复制带随机指针的链表.py" />
         <option value="$PROJECT_DIR$/114-二叉树展开为链表.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/46-全排列.py" />
@@ -121,6 +122,11 @@
         <option value="$PROJECT_DIR$/try2.py" />
         <option value="$PROJECT_DIR$/300-最长上升子序列.py" />
         <option value="$PROJECT_DIR$/树与二叉树.py" />
+        <option value="$PROJECT_DIR$/动态规划/673-最长递增子序列的个数.py" />
+        <option value="$PROJECT_DIR$/动态规划/120-三角形最小路径和.py" />
+        <option value="$PROJECT_DIR$/动态规划/64.py" />
+        <option value="$PROJECT_DIR$/动态规划/64-最小路径和.py" />
+        <option value="$PROJECT_DIR$/动态规划/322-零钱兑换.py" />
       </list>
     </option>
   </component>
@@ -131,8 +137,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="88" />
-    <option name="y" value="23" />
+    <option name="x" value="62" />
+    <option name="y" value="87" />
     <option name="width" value="1231" />
     <option name="height" value="877" />
   </component>
@@ -167,6 +173,11 @@
             <path>
               <item name="Leetcode" type="b2602c69:ProjectViewProjectNode" />
               <item name="Leetcode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Leetcode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Leetcode" type="462c0819:PsiDirectoryNode" />
+              <item name="动态规划" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Leetcode" type="b2602c69:ProjectViewProjectNode" />
@@ -207,28 +218,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.300-最长上升子序列">
-    <configuration name="102-二叉树的层次遍历" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="leetcode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/树与二叉树/102-二叉树的层次遍历.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.322-零钱兑换">
     <configuration name="110-平衡二叉树" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -313,6 +303,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="322-零钱兑换" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="leetcode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/动态规划" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/动态规划/322-零钱兑换.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="567-字符串的排列" type="PythonConfigurationType" factoryName="Python">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -359,18 +370,18 @@
       <item itemvalue="Python.113-路径总和 II" />
       <item itemvalue="Python.567-字符串的排列" />
       <item itemvalue="Python.236-二叉树的最近公共祖先" />
-      <item itemvalue="Python.102-二叉树的层次遍历" />
       <item itemvalue="Python.try2" />
       <item itemvalue="Python.110-平衡二叉树" />
       <item itemvalue="Python.300-最长上升子序列" />
+      <item itemvalue="Python.322-零钱兑换" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.322-零钱兑换" />
         <item itemvalue="Python.300-最长上升子序列" />
         <item itemvalue="Python.try2" />
         <item itemvalue="Python.110-平衡二叉树" />
         <item itemvalue="Python.236-二叉树的最近公共祖先" />
-        <item itemvalue="Python.102-二叉树的层次遍历" />
       </list>
     </recent_temporary>
   </component>
@@ -405,14 +416,15 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="88" y="23" width="1231" height="877" extended-state="0" />
+    <frame x="62" y="87" width="1231" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25454545" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25454545" />
       <window_info id="Structure" order="1" weight="0.24958678" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6693727" visible="true" weight="0.086624205" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6693727" visible="true" weight="0.41273886" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48339483" weight="0.39617833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -464,42 +476,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/204-计数质数.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-9" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/75-颜色分类.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/7-反转整数.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/真题/HW1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/剑指offer/面试题5-替换空格.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="30" lean-forward="true" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/链表/92-反转链表.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="3" column="22" lean-forward="true" selection-start-line="3" selection-start-column="22" selection-end-line="3" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/真题/B1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -625,9 +601,6 @@
           <caret line="44" selection-start-line="44" selection-end-line="44" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/788-旋转数字.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/树与二叉树/98-验证二叉搜索树.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -783,6 +756,43 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/788-旋转数字.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/55-跳跃游戏.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/75-颜色分类.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/动态规划/673-最长递增子序列的个数.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="8" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/动态规划/120-三角形最小路径和.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/动态规划/64-最小路径和.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/动态规划/322-零钱兑换.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="38" column="14" selection-start-line="38" selection-start-column="14" selection-end-line="38" selection-end-column="14" />
         </state>
       </provider>
     </entry>
