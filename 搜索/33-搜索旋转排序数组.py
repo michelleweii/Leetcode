@@ -5,7 +5,14 @@ class Solution(object):
         :type target: int
         :rtype: int
         """
-        
+        # 需找到自增区间、旋转区间
+        low = 0
+        high = len(nums)-1
+        while low <= high:
+            mid = (mid+high)//2
+            if nums[mid]==target:
+                return mid
+
 
 
 if __name__ == '__main__':

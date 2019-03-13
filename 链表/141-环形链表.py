@@ -16,6 +16,7 @@ class Solution(object):
         # while p1 and p2:
         while p2 and p2.next:
             # 为什么这样判断可以？？
+            # p2.next只是为了p2.next.next不报错
             p1 = p1.next
             p2 = p2.next.next
             # 如何判断遇见两次了呢？已解
