@@ -5,7 +5,7 @@ class Solution(object):
         :type target: int
         :rtype: int
         """
-
+        
 
 
 if __name__ == '__main__':
