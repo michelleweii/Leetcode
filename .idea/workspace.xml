@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="698d30e3-58b9-4d4e-92a0-1b119132d59e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/真题/阿里-给定精度求根号n.py" beforeDir="false" afterPath="$PROJECT_DIR$/真题/阿里-给定精度求根号n.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/33-搜索旋转排序数组.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/搜索/35-搜索插入位置.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,11 +49,29 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/真题/阿里-给定精度求根号n.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="144">
               <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/33-搜索旋转排序数组.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/搜索/35-搜索插入位置.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -99,8 +119,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/112. 路径总和.py" />
-        <option value="$PROJECT_DIR$/455-分发饼干.py" />
         <option value="$PROJECT_DIR$/376-摆动序列.py" />
         <option value="$PROJECT_DIR$/402-移掉K位数字.py" />
         <option value="$PROJECT_DIR$/try.py" />
@@ -150,6 +168,8 @@
         <option value="$PROJECT_DIR$/动态规划/53-最大子序和.py" />
         <option value="$PROJECT_DIR$/真题/百度-1.py" />
         <option value="$PROJECT_DIR$/真题/阿里-给定精度求根号n.py" />
+        <option value="$PROJECT_DIR$/33-搜索旋转排序数组.py" />
+        <option value="$PROJECT_DIR$/搜索/35-搜索插入位置.py" />
       </list>
     </option>
   </component>
@@ -160,8 +180,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="68" />
-    <option name="y" value="23" />
+    <option name="x" value="138" />
+    <option name="y" value="88" />
     <option name="width" value="1231" />
     <option name="height" value="877" />
   </component>
@@ -195,11 +215,6 @@
             <path>
               <item name="Leetcode" type="b2602c69:ProjectViewProjectNode" />
               <item name="Leetcode" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Leetcode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Leetcode" type="462c0819:PsiDirectoryNode" />
-              <item name="真题" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Leetcode" type="b2602c69:ProjectViewProjectNode" />
@@ -241,28 +256,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.120-三角形最小路径和">
-    <configuration name="110-平衡二叉树" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="leetcode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/树与二叉树/110-平衡二叉树.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.35-搜索插入位置">
     <configuration name="113-路径总和 II" type="PythonConfigurationType" factoryName="Python">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -347,6 +341,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="35-搜索插入位置" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="leetcode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/搜索" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/搜索/35-搜索插入位置.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="567-字符串的排列" type="PythonConfigurationType" factoryName="Python">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -393,18 +408,18 @@
       <item itemvalue="Python.113-路径总和 II" />
       <item itemvalue="Python.567-字符串的排列" />
       <item itemvalue="Python.try2" />
-      <item itemvalue="Python.110-平衡二叉树" />
       <item itemvalue="Python.300-最长上升子序列" />
       <item itemvalue="Python.322-零钱兑换" />
       <item itemvalue="Python.120-三角形最小路径和" />
+      <item itemvalue="Python.35-搜索插入位置" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.35-搜索插入位置" />
         <item itemvalue="Python.120-三角形最小路径和" />
         <item itemvalue="Python.322-零钱兑换" />
         <item itemvalue="Python.300-最长上升子序列" />
         <item itemvalue="Python.try2" />
-        <item itemvalue="Python.110-平衡二叉树" />
       </list>
     </recent_temporary>
   </component>
@@ -439,7 +454,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="68" y="23" width="1231" height="877" extended-state="0" />
+    <frame x="319" y="362" width="1231" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25454545" />
@@ -499,20 +514,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/5-最长回文子串.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="824">
-          <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/3-无重复字符的最长子串.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="23" lean-forward="true" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/真题/15-三数之和.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -814,6 +815,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/33-搜索旋转排序数组.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/搜索/35-搜索插入位置.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
         </state>
       </provider>
     </entry>
