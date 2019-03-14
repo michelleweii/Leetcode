@@ -14,6 +14,7 @@ class Solution(object):
                     if dp[i] < dp[j]+1:
                         dp[i] = dp[j]+1
             # print(dp[i])
+        # print(dp)
         return max(dp)
 
 
