@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="698d30e3-58b9-4d4e-92a0-1b119132d59e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/1-两数之和.py" beforeDir="false" afterPath="$PROJECT_DIR$/1-两数之和.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/动态规划/300-最长上升子序列.py" beforeDir="false" afterPath="$PROJECT_DIR$/动态规划/300-最长上升子序列.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/动态规划/673-最长递增子序列的个数.py" beforeDir="false" afterPath="$PROJECT_DIR$/动态规划/673-最长递增子序列的个数.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/动态规划/64-最小路径和.py" beforeDir="false" afterPath="$PROJECT_DIR$/动态规划/64-最小路径和.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -23,55 +21,28 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/真题/腾讯-1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="6" selection-start-column="6" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/真题/腾讯-2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/链表/23-合并K个排序链表.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="180">
+              <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/动态规划/673-最长递增子序列的个数.py">
+        <entry file="file://$PROJECT_DIR$/动态规划/64-最小路径和.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="463">
+              <caret line="35" column="31" lean-forward="true" selection-start-line="3" selection-end-line="35" selection-end-column="31" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/动态规划/322-零钱兑换.py">
+        <entry file="file://$PROJECT_DIR$/动态规划/120-三角形最小路径和.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/动态规划/300-最长上升子序列.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="23" lean-forward="true" selection-start-column="23" selection-end-column="23" />
+            <state relative-caret-position="90">
+              <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -122,7 +93,6 @@
         <option value="$PROJECT_DIR$/300-最长上升子序列.py" />
         <option value="$PROJECT_DIR$/树与二叉树.py" />
         <option value="$PROJECT_DIR$/动态规划/64.py" />
-        <option value="$PROJECT_DIR$/动态规划/64-最小路径和.py" />
         <option value="$PROJECT_DIR$/动态规划/322-零钱兑换.py" />
         <option value="$PROJECT_DIR$/动态规划/120-三角形最小路径和.py" />
         <option value="$PROJECT_DIR$/图/207-课程表.py" />
@@ -143,6 +113,7 @@
         <option value="$PROJECT_DIR$/1-两数之和.py" />
         <option value="$PROJECT_DIR$/动态规划/300-最长上升子序列.py" />
         <option value="$PROJECT_DIR$/动态规划/673-最长递增子序列的个数.py" />
+        <option value="$PROJECT_DIR$/动态规划/64-最小路径和.py" />
       </list>
     </option>
   </component>
@@ -153,9 +124,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="480" />
+    <option name="x" value="165" />
     <option name="y" value="23" />
-    <option name="width" value="924" />
+    <option name="width" value="1239" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -185,15 +156,6 @@
       <pane id="ProjectPane">
         <subPane>
           <expand>
-            <path>
-              <item name="Leetcode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Leetcode" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Leetcode" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Leetcode" type="462c0819:PsiDirectoryNode" />
-              <item name="动态规划" type="462c0819:PsiDirectoryNode" />
-            </path>
             <path>
               <item name="Leetcode" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
@@ -234,7 +196,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.673-最长递增子序列的个数">
+  <component name="RunManager" selected="Python.64-最小路径和">
     <configuration name="阿里-给定精度求根号n" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -319,27 +281,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="34-在排序数组中查找元素的第一个和最后一个位置" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="leetcode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/搜索" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/搜索/34-在排序数组中查找元素的第一个和最后一个位置.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="567-字符串的排列" type="PythonConfigurationType" factoryName="Python">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -353,6 +294,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/567-字符串的排列.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="64-最小路径和" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="leetcode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/动态规划" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/动态规划/64-最小路径和.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -385,19 +347,19 @@
     <list>
       <item itemvalue="Python.113-路径总和 II" />
       <item itemvalue="Python.567-字符串的排列" />
-      <item itemvalue="Python.34-在排序数组中查找元素的第一个和最后一个位置" />
       <item itemvalue="Python.33-搜索旋转排序数组" />
       <item itemvalue="Python.阿里-给定精度求根号n" />
       <item itemvalue="Python.673-最长递增子序列的个数" />
       <item itemvalue="Python.300-最长上升子序列" />
+      <item itemvalue="Python.64-最小路径和" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.64-最小路径和" />
         <item itemvalue="Python.673-最长递增子序列的个数" />
         <item itemvalue="Python.300-最长上升子序列" />
         <item itemvalue="Python.阿里-给定精度求根号n" />
         <item itemvalue="Python.33-搜索旋转排序数组" />
-        <item itemvalue="Python.34-在排序数组中查找元素的第一个和最后一个位置" />
       </list>
     </recent_temporary>
   </component>
@@ -432,15 +394,15 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="480" y="23" width="924" height="877" extended-state="0" />
+    <frame x="165" y="23" width="1239" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.03322259" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23316912" />
       <window_info id="Structure" order="1" weight="0.24958678" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6693727" visible="true" weight="0.2700637" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6693727" visible="true" weight="0.21528663" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48339483" weight="0.39617833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -663,13 +625,6 @@
     <entry file="file://$PROJECT_DIR$/75-颜色分类.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/动态规划/64-最小路径和.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/动态规划/198-打家劫舍.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -681,13 +636,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/动态规划/120-三角形最小路径和.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="504">
-          <caret line="28" selection-start-line="28" selection-end-line="33" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -778,17 +726,10 @@
     <entry file="file://$PROJECT_DIR$/3-无重复字符的最长子串.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/链表/23-合并K个排序链表.py">
+    <entry file="file://$PROJECT_DIR$/动态规划/673-最长递增子序列的个数.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/动态规划/322-零钱兑换.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        <state relative-caret-position="144">
+          <caret line="8" column="35" lean-forward="true" selection-start-line="8" selection-start-column="35" selection-end-line="8" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -799,10 +740,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/动态规划/673-最长递增子序列的个数.py">
+    <entry file="file://$PROJECT_DIR$/动态规划/322-零钱兑换.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="18">
+          <caret line="9" column="6" lean-forward="true" selection-start-line="9" selection-start-column="6" selection-end-line="9" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/链表/23-合并K个排序链表.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="11" lean-forward="true" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/动态规划/120-三角形最小路径和.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="11" lean-forward="true" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/动态规划/64-最小路径和.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="463">
+          <caret line="35" column="31" lean-forward="true" selection-start-line="3" selection-end-line="35" selection-end-column="31" />
         </state>
       </provider>
     </entry>
