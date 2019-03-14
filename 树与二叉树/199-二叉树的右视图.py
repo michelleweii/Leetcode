@@ -11,6 +11,22 @@ class Solution(object):
         :type root: TreeNode
         :rtype: List[int]
         """
+        res=[]
+        queue = []
+        if root:
+            queue.append(root)
+            while queue:
+                cur_level,size = [],len(queue)
+                for _ in range(size):
+                    tmp = queue.pop(0)
+                    cur_level.append(tmp.val)
+                    if tmp.left:
+                        queue.append(tmp.left)
+                    if tmp.right:
+                        queue.append(tmp.right)
+                res.append(cur_level[-1])
+        return res
+
 
 
 if __name__ == '__main__':

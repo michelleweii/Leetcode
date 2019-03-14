@@ -11,7 +11,6 @@ class Solution(object):
         :type root: TreeNode
         :rtype: List[str]
         """
-        res = []
         if not root:  # 如果是叶子节点
             return []
         res = []
