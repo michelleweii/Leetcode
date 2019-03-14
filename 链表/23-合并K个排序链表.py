@@ -1,4 +1,6 @@
 # Definition for singly-linked list.
+# 思路：
+# 先把整个链表拉成一个链表，把这个链表的值全部存储在列表中，再将列表排序，新建一个链表重新一个一个指向列表的每一项
 class ListNode(object):
     def __init__(self, x):
         self.val = x
@@ -10,8 +12,6 @@ class Solution(object):
         :type lists: List[ListNode]
         :rtype: ListNode
         """
-
-
 
 if __name__ == "__main__":
     a = ListNode(1)
