@@ -12,16 +12,42 @@ class Solution(object):
         :type q: TreeNode
         :rtype: bool
         """
+        res1,res2 = [],[]
+        if self.preorder(p,res1)==self.preorder(q,res2):
+            return True
+        return False
+
+    def preorder(self,root,res):
+        if root:
+            res.append(root.val)
+            if root.left:
+                self.preorder(root.left,res)
+            else:
+                res.append('null')
+            if root.right:
+                self.preorder(root.right,res)
+            else:
+                res.append('null')
+        return res
+    #
+    # def postorder(self,root,res):
+    #     if root:
+    #         if root.left:
+    #             self.preorder(root.left,res)
+    #         if root.right:
+    #             self.preorder(root.right,res)
+    #         res.append(root.val)
+    #     return res
 
 
 
 if __name__ == '__main__':
     a = TreeNode(1)
     b = TreeNode(2)
-    c = TreeNode(3)
+
+    c = TreeNode(1)
+    d = TreeNode(2)
+
     a.left = b
-    a.right = c
-    d = TreeNode(1)
-    d.left = b
-    d.right = c
-    Solution.isSameTree(a, d)
+    c.right = d
+    print(Solution().isSameTree(a,c))
