@@ -15,11 +15,14 @@ class Solution(object):
             return []
         res = []
         def tree_path(root,path,res):
+            # 说明是到了根节点，可以输出
             if (root.left == None) and (root.right == None):
                 res.append(path+str(root.val))
                 return res
+            # 遍历左孩子
             if root.left:
                 tree_path(root.left,path+str(root.val)+'->',res)
+            # 遍历右孩子
             if root.right:
                 tree_path(root.right,path+str(root.val)+'->',res)
             return res
