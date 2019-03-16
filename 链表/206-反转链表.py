@@ -7,13 +7,8 @@ class ListNode(object):
 class Solution(object):
     def reverseList(self, head):
         # 第二次做,还是不会做
-        dummy = ListNode(0)
-        p = head.next
-        dummy.next = head
-        while p:
-            head.next = None
-            head = p
-            p = p.next
+        # 迭代
+
 
     def recursive(self,head):
         if (head==None or head.next==None):
