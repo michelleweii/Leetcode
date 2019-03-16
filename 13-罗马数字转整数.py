@@ -13,6 +13,8 @@ class Solution(object):
         hash_map['C'] = 100
         hash_map['D'] = 500
         hash_map['M'] = 1000
+        # 如果前比后大，则为一般的罗马数字，直接相加即可
+        # 如果前比后小，则为4，9这种IV型，需要有后值-前值
         for i in range(len(s)-1):
             if (hash_map[s[i]]<hash_map[s[i+1]]):
                 res -= hash_map[s[i]]
