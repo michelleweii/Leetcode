@@ -16,6 +16,9 @@ alist = [1,2,3,4,5]
 for _ in range(len(alist)):
     print(alist.pop())
 
+inds = [1,2,3,4]
+alist = alist[inds+1]
+print(alist)
 
 
 """
