@@ -6,6 +6,25 @@ class ListNode(object):
 
 class Solution(object):
     def reverseList(self, head):
+        # 第二次做,还是不会做
+        dummy = ListNode(0)
+        p = head.next
+        dummy.next = head
+        while p:
+            head.next = None
+            head = p
+            p = p.next
+
+    def recursive(self,head):
+        if (head==None or head.next==None):
+            return head
+        new_head = self.recursive(head.next)
+        head.next.next = head
+        head.next = None
+        return new_head
+
+
+    def reverseList1(self, head):
         """
         :type head: ListNode
         :rtype: ListNode
@@ -24,7 +43,6 @@ class Solution(object):
                 cur = rear
             return pre
 
-
 def main():
     a = ListNode(1)
     b = ListNode(2)
@@ -37,6 +55,7 @@ def main():
     d.next = e
     myresult = Solution()
     print(myresult.reverseList(a))
+    print(myresult.recursive(a))
 
 if __name__ == "__main__":
     main()

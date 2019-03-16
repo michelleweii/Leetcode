@@ -9,14 +9,12 @@ class Solution(object):
     def addTwoNumbers(self, l1, l2):
         sum = self.convertNum(l1)+self.convertNum(l2)
         sum = list(map(int,str(sum)))[::-1] # 807->[8, 0, 7]
-        # print(sum)
         p = ListNode(0)
         head = p
         for i in sum:
             node = ListNode(i)
             p.next = node
             p = p.next
-
         return head.next
 
     def convertNum(self,node):
