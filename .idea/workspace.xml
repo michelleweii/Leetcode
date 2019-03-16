@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="698d30e3-58b9-4d4e-92a0-1b119132d59e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/13-罗马数字转整数.py" beforeDir="false" afterPath="$PROJECT_DIR$/13-罗马数字转整数.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2-两数相加.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -20,20 +21,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/4-寻找两个有序数组的中位数.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/13-罗马数字转整数.py">
+        <entry file="file://$PROJECT_DIR$/2-两数相加.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+            <state relative-caret-position="324">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -54,7 +46,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bitree.py" />
         <option value="$PROJECT_DIR$/443-压缩字符串.py" />
         <option value="$PROJECT_DIR$/412-Fizz Buzz.py" />
         <option value="$PROJECT_DIR$/315-计算右侧小于当前元素的个数.py" />
@@ -105,6 +96,7 @@
         <option value="$PROJECT_DIR$/try2.py" />
         <option value="$PROJECT_DIR$/4-寻找两个有序数组的中位数.py" />
         <option value="$PROJECT_DIR$/13-罗马数字转整数.py" />
+        <option value="$PROJECT_DIR$/2-两数相加.py" />
       </list>
     </option>
   </component>
@@ -115,8 +107,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="669" />
-    <option name="y" value="23" />
+    <option name="x" value="662" />
+    <option name="y" value="184" />
     <option name="width" value="1379" />
     <option name="height" value="877" />
   </component>
@@ -191,7 +183,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.13-罗马数字转整数">
+  <component name="RunManager" selected="Python.2-两数相加">
     <configuration name="100-相同的树" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -255,7 +247,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="22-括号生成" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="2-两数相加" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -263,11 +255,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/递归回溯" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/递归回溯/22-括号生成.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2-两数相加.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -342,19 +334,19 @@
     <list>
       <item itemvalue="Python.113-路径总和 II" />
       <item itemvalue="Python.567-字符串的排列" />
-      <item itemvalue="Python.22-括号生成" />
       <item itemvalue="Python.100-相同的树" />
       <item itemvalue="Python.try2" />
       <item itemvalue="Python.4-寻找两个有序数组的中位数" />
       <item itemvalue="Python.13-罗马数字转整数" />
+      <item itemvalue="Python.2-两数相加" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.2-两数相加" />
         <item itemvalue="Python.13-罗马数字转整数" />
         <item itemvalue="Python.4-寻找两个有序数组的中位数" />
         <item itemvalue="Python.try2" />
         <item itemvalue="Python.100-相同的树" />
-        <item itemvalue="Python.22-括号生成" />
       </list>
     </recent_temporary>
   </component>
@@ -389,7 +381,7 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="669" y="23" width="1379" height="877" extended-state="0" />
+    <frame x="662" y="184" width="1379" height="877" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.02209131" />
@@ -397,7 +389,7 @@
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6693727" visible="true" weight="0.2700637" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6693727" visible="true" weight="0.41528663" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48339483" weight="0.39617833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -449,13 +441,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/树与二叉树/236-二叉树的最近公共祖先.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="23" lean-forward="true" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/树与二叉树/114-二叉树展开为链表.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="216">
@@ -753,6 +738,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/13-罗马数字转整数.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="18" column="49" lean-forward="true" selection-start-line="18" selection-start-column="49" selection-end-line="18" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/4-寻找两个有序数组的中位数.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="365">
@@ -760,10 +752,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/13-罗马数字转整数.py">
+    <entry file="file://$PROJECT_DIR$/2-两数相加.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="27" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
+        <state relative-caret-position="324">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
