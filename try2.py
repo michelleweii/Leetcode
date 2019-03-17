@@ -16,9 +16,6 @@ alist = [1,2,3,4,5]
 for _ in range(len(alist)):
     print(alist.pop())
 
-inds = [1,2,3,4]
-alist = alist[inds+1]
-print(alist)
 
 
 """
@@ -42,3 +39,23 @@ if __name__ == '__main__':
     k = 9
     print(BiSearch(nums, k))
 """
+
+# 浅拷贝
+list1 = [[]]*3
+print(list1) # [[], [], []]
+list1[0].append(3) # [[3], [3], [3]]
+# 是一个含有一个空列表元素的列表,所以[[]]*3表示3个指向这个空列表元素的引用,修改任何
+# 一个元素都会改变整个列表
+print(list1)
+
+# 深拷贝
+lists = [[] for i in range(3)]
+lists[0].append(3)
+lists[0].append(4)
+lists[0].append(5)
+print(lists) # [[3, 4, 5], [], []]
+
+# 构建3行4列二维数组
+myList = [([0] * 3) for i in range(4)]
+print(myList) # [[0, 0, 0], [0, 0, 0], [0, 0, 0], [0, 0, 0]]
+

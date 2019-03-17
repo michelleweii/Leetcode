@@ -29,7 +29,7 @@ class Solution(object):
         else:
             pre = head
             cur = head.next
-            pre.next = None  # 断开一条连接线
+            pre.next = None   #最开始的头节点要变成尾节点，即在后面补null使链表终结
 
             while cur != None:
                 rear = cur.next

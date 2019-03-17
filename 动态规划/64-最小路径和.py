@@ -15,7 +15,7 @@ class Solution(object):
         # row = [0]*len(grid)
         # print(row)
         # dp2 = [row]*len(grid)
-        # print(dp2) # 同样可以到达列表生成式的效果
+        # print(dp2) # 同样可以到达列表生成式的效果，但是这种会改变！
         # 对第一行进行初始化
         dp[0][0] = grid[0][0]
         for j in range(1,len(grid[0])):
