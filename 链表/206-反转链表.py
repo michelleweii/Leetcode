@@ -8,6 +8,19 @@ class Solution(object):
     def reverseList(self, head):
         # 第二次做,还是不会做
         # 迭代
+        if (head is None) or (head.next is None):
+            return head
+        p1 = head
+        p2 = p1.next
+        p3 = p2.next
+        while p2:
+            p3 = p2.next
+            p2.next = p1
+            p1 = p2
+            p2 = p3
+        head.next = None
+        head = p1
+        return head
 
 
     def recursive(self,head):
@@ -30,7 +43,6 @@ class Solution(object):
             pre = head
             cur = head.next
             pre.next = None   #最开始的头节点要变成尾节点，即在后面补null使链表终结
-
             while cur != None:
                 rear = cur.next
                 cur.next = pre
