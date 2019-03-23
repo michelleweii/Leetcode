@@ -16,11 +16,12 @@ class Solution(object):
         for i in digits:
             inputstr.append(hash_map[int(i)])
         # print(inputstr) # ['abc', 'def']
+        # 闭包
         def dfs(cur_str,i,res):
             if len(cur_str)==len(inputstr): # abc def ghi
                 res.append(cur_str)
                 return
-            for count in range(len(inputstr[i])): #abc
+            for count in range(len(inputstr[i])): # abc
                 dfs(cur_str+inputstr[i][count],i+1,res)
 
         dfs("",0,res)
