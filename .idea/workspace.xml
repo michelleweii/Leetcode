@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="698d30e3-58b9-4d4e-92a0-1b119132d59e" name="Default" comment="" />
+    <list default="true" id="698d30e3-58b9-4d4e-92a0-1b119132d59e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/29-两数相除.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,9 +21,22 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/递归回溯/22-括号生成.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="414">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/动态规划/121-买卖股票的最佳时机.py">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/29-两数相除.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="64">
+              <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -39,7 +55,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/199-二叉树的右视图.py" />
         <option value="$PROJECT_DIR$/300-最长上升子序列.py" />
         <option value="$PROJECT_DIR$/树与二叉树.py" />
         <option value="$PROJECT_DIR$/动态规划/64.py" />
@@ -90,6 +105,7 @@
         <option value="$PROJECT_DIR$/递归回溯/90-子集 II.py" />
         <option value="$PROJECT_DIR$/18-四数之和.py" />
         <option value="$PROJECT_DIR$/动态规划/121-买卖股票的最佳时机.py" />
+        <option value="$PROJECT_DIR$/29-两数相除.py" />
       </list>
     </option>
   </component>
@@ -99,9 +115,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="73" />
-    <option name="y" value="35" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="244" />
+    <option name="y" value="23" />
     <option name="width" value="1628" />
     <option name="height" value="877" />
   </component>
@@ -136,6 +152,16 @@
             <path>
               <item name="Leetcode" type="b2602c69:ProjectViewProjectNode" />
               <item name="Leetcode" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Leetcode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Leetcode" type="462c0819:PsiDirectoryNode" />
+              <item name="动态规划" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Leetcode" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Leetcode" type="462c0819:PsiDirectoryNode" />
+              <item name="递归回溯" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Leetcode" type="b2602c69:ProjectViewProjectNode" />
@@ -176,28 +202,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.90-子集 II">
-    <configuration name="10-正则表达式匹配" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="leetcode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/10-正则表达式匹配.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.29-两数相除">
     <configuration name="113-路径总和 II" type="PythonConfigurationType" factoryName="Python">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -253,6 +258,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/18-四数之和.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="29-两数相除" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="leetcode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/29-两数相除.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -327,19 +353,19 @@
     <list>
       <item itemvalue="Python.113-路径总和 II" />
       <item itemvalue="Python.567-字符串的排列" />
-      <item itemvalue="Python.10-正则表达式匹配" />
       <item itemvalue="Python.17-电话号码的字母组合" />
       <item itemvalue="Python.90-子集 II" />
       <item itemvalue="Python.18-四数之和" />
       <item itemvalue="Python.78-子集" />
+      <item itemvalue="Python.29-两数相除" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.29-两数相除" />
         <item itemvalue="Python.90-子集 II" />
         <item itemvalue="Python.78-子集" />
         <item itemvalue="Python.18-四数之和" />
         <item itemvalue="Python.17-电话号码的字母组合" />
-        <item itemvalue="Python.10-正则表达式匹配" />
       </list>
     </recent_temporary>
   </component>
@@ -383,14 +409,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="74" y="36" width="1628" height="877" extended-state="0" />
+    <frame x="244" y="23" width="1628" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16241443" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23148724" />
       <window_info id="Structure" order="1" weight="0.24958678" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.6693727" visible="true" weight="0.30191082" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.6693727" visible="true" weight="0.21273886" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48339483" weight="0.39617833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -442,13 +469,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/真题/百度-1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="7" selection-start-column="7" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/搜索/35-搜索插入位置.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
@@ -582,13 +602,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-82">
           <caret line="5" column="7" lean-forward="true" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/递归回溯/22-括号生成.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>
@@ -773,7 +786,25 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/动态规划/121-买卖股票的最佳时机.py">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/递归回溯/22-括号生成.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="414">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/29-两数相除.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="64">
+          <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
