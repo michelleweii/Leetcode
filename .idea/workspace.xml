@@ -105,10 +105,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="89" />
-    <option name="y" value="109" />
-    <option name="width" value="1628" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="114" />
+    <option name="y" value="136" />
+    <option name="width" value="1393" />
     <option name="height" value="877" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
