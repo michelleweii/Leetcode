@@ -1,19 +1,12 @@
 class Solution:
     def maxProfit(self, prices):
-        # dp[i]表示以第i天为止，所获得的最大收益
-        if len(prices)<2:
-            return 0
-        dp = [0 for _ in range(len(prices))]
-        dp[0] = 0
+        # 贪心算法，今天比明天赚就买入
         profit = 0
-        minval = prices[0]
-        for idx,val in enumerate(prices):
-            minval = min(minval,val)
-            profit = max(profit,val-minval)
-            if profit>dp[idx]:
-                dp[idx]=profit
+        for i in range(len(prices)-1):
+            if prices[i]<prices[i+1]:
+                profit += prices[i+1]-prices[i]
+        print(profit)
 
-        print(dp)
 
 
 

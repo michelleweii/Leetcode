@@ -1,12 +1,9 @@
 class Solution(object):
     def maxProfit(self, prices):
-        """
-        :type prices: List[int]
-        :rtype: int
-        """
+
+        # 在价格最低的时候买入，差价最大的时候卖出
         if len(prices) < 2:
             return 0
-        # 在价格最低的时候买入，差价最大的时候卖出
         minval = prices[0]
         profit = 0
         for val in prices:
