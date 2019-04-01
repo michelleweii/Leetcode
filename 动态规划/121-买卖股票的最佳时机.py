@@ -4,7 +4,19 @@ class Solution(object):
         :type prices: List[int]
         :rtype: int
         """
+        if len(prices) < 2:
+            return 0
+        # 在价格最低的时候买入，差价最大的时候卖出
+        minval = prices[0]
+        profit = 0
+        for val in prices:
+            minval = min(minval,val)
+            # print(minval)
+            profit = max(profit,val-minval)
+            # print(profit)
+        return profit
+
 
 if __name__ == '__main__':
-    prices = [7,1,5,3,6,4]
+    prices = [7,6,4,3,1]
     print(Solution().maxProfit(prices))
