@@ -2,8 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="698d30e3-58b9-4d4e-92a0-1b119132d59e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/31-下一个排列.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/动态规划/122-买卖股票的最佳时机 II.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/动态规划/121-买卖股票的最佳时机.py" beforeDir="false" afterPath="$PROJECT_DIR$/动态规划/121-买卖股票的最佳时机.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/36-有效的数独.py" beforeDir="false" afterPath="$PROJECT_DIR$/36-有效的数独.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,10 +33,28 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/31-下一个排列.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/动态规划/121-买卖股票的最佳时机.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="126">
               <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/动态规划/122-买卖股票的最佳时机 II.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -55,8 +75,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/动态规划/120-三角形最小路径和.py" />
-        <option value="$PROJECT_DIR$/图/207-课程表.py" />
         <option value="$PROJECT_DIR$/动态规划/198-打家劫舍.py" />
         <option value="$PROJECT_DIR$/动态规划/53-最大子序和.py" />
         <option value="$PROJECT_DIR$/真题/百度-1.py" />
@@ -103,9 +121,11 @@
         <option value="$PROJECT_DIR$/48-旋转图像.py" />
         <option value="$PROJECT_DIR$/搜索/34-在排序数组中查找元素的第一个和最后一个位置.py" />
         <option value="$PROJECT_DIR$/递归.py" />
-        <option value="$PROJECT_DIR$/36-有效的数独.py" />
         <option value="$PROJECT_DIR$/39-组合总和.py" />
         <option value="$PROJECT_DIR$/动态规划/121-买卖股票的最佳时机.py" />
+        <option value="$PROJECT_DIR$/动态规划/122-买卖股票的最佳时机 II.py" />
+        <option value="$PROJECT_DIR$/36-有效的数独.py" />
+        <option value="$PROJECT_DIR$/31-下一个排列.py" />
       </list>
     </option>
   </component>
@@ -116,8 +136,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="446" />
-    <option name="y" value="134" />
+    <option name="x" value="238" />
+    <option name="y" value="58" />
     <option name="width" value="1184" />
     <option name="height" value="778" />
   </component>
@@ -207,7 +227,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.121-买卖股票的最佳时机">
+  <component name="RunManager" selected="Python.36-有效的数独">
     <configuration name="113-路径总和 II" type="PythonConfigurationType" factoryName="Python">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -250,6 +270,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="122-买卖股票的最佳时机 II" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="leetcode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/动态规划" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/动态规划/122-买卖股票的最佳时机 II.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="29-两数相除" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="leetcode" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -263,6 +304,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/29-两数相除.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="36-有效的数独" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="leetcode" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/36-有效的数独.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -313,64 +375,22 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="78-子集" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="leetcode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/递归回溯" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/递归回溯/78-子集.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="90-子集 II" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="leetcode" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/递归回溯" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/递归回溯/90-子集 II.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Python.113-路径总和 II" />
       <item itemvalue="Python.567-字符串的排列" />
-      <item itemvalue="Python.90-子集 II" />
-      <item itemvalue="Python.78-子集" />
       <item itemvalue="Python.29-两数相除" />
       <item itemvalue="Python.48-旋转图像" />
       <item itemvalue="Python.121-买卖股票的最佳时机" />
+      <item itemvalue="Python.122-买卖股票的最佳时机 II" />
+      <item itemvalue="Python.36-有效的数独" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.36-有效的数独" />
+        <item itemvalue="Python.122-买卖股票的最佳时机 II" />
         <item itemvalue="Python.121-买卖股票的最佳时机" />
         <item itemvalue="Python.48-旋转图像" />
         <item itemvalue="Python.29-两数相除" />
-        <item itemvalue="Python.90-子集 II" />
-        <item itemvalue="Python.78-子集" />
       </list>
     </recent_temporary>
   </component>
@@ -414,7 +434,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="446" y="134" width="1184" height="778" extended-state="0" />
+    <frame x="241" y="122" width="1184" height="778" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18314703" />
@@ -474,20 +494,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/真题/阿里-给定精度求根号n.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="17" column="5" lean-forward="true" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1-两数之和.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="47" selection-start-line="13" selection-start-column="47" selection-end-line="13" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/3-无重复字符的最长子串.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -786,17 +792,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/36-有效的数独.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="54" lean-forward="true" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/27-移除元素.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/动态规划/121-买卖股票的最佳时机.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/36-有效的数独.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/动态规划/122-买卖股票的最佳时机 II.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="26" selection-start-line="8" selection-start-column="26" selection-end-line="8" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -807,10 +827,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/动态规划/121-买卖股票的最佳时机.py">
+    <entry file="file://$PROJECT_DIR$/31-下一个排列.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="20" selection-start-line="7" selection-start-column="20" selection-end-line="7" selection-end-column="20" />
+        <state relative-caret-position="108">
+          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
         </state>
       </provider>
     </entry>
