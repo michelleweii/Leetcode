@@ -27,6 +27,7 @@ class Solution:
 
 
 
+# https://blog.csdn.net/qq_17550379/article/details/82856452
 if __name__ == '__main__':
     prices = [1,2,3,0,2]
     # 对应的交易状态为: [买入, 卖出, 冷冻期, 买入, 卖出]

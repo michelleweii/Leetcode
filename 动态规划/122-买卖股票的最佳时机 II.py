@@ -7,6 +7,8 @@ class Solution:
                 profit += prices[i+1]-prices[i]
         print(profit)
 
+    # 还可以用dp做
+
 if __name__ == '__main__':
     prices = [7,1,5,3,6,4]
     print(Solution().maxProfit(prices))

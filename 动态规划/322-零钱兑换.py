@@ -1,14 +1,10 @@
+# 给定不同面额的硬币 coins 和一个总金额 amount。编写一个函数来计算可以凑成总金额所需的
+# 最少的硬币个数。如果没有任何一种硬币组合能组成总金额，返回 -1。
 class Solution(object):
     def coinChange1(self, coins, amount):
-        """
-        :type coins: List[int]
-        :type amount: int
-        :rtype: int
-        """
         # 设dp[i]为构成金额i的最优解,即凑成总金额所需的最少的硬币个数
         # 那么dp[1]=1,dp[2]=1,dp[5]=1,因为coins中有此金额，直接拿来用即可
         # dp[i]=min(dp[i-1],dp[i-2],dp[i-5])+1
-
         if amount<=0: return 0
         # 初始化（这种方式初始化就不会dp越界）
         max_int = 2<<31
