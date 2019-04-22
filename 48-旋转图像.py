@@ -3,18 +3,17 @@ class Solution:
         """
         Do not return anything, modify matrix in-place instead.
         """
-        row = len(matrix)
-        # print(row)
-        column = len(matrix[0])
-        # print(column)
-        B = [[0 for _ in range(row)] for _ in range(column)]
-        # print(B)
-        for i in range(row):
-            for j in range(column - 1, -1, -1):
-                # print(j)
-                B[i][j] = matrix[j][row - 1 - i]
+        n = len(matrix)
+        for i in range(n):
+            for j in range(i+1,n):
+                matrix[i][j],matrix[j][i]=matrix[j][i],matrix[i][j]
+        # print(matrix) # 沿着轴翻转
 
-        return B
+        for i in range(n):
+            for j in range(n//2):
+                matrix[i][j],matrix[i][n-j-1]=matrix[i][n-j-1],matrix[i][j]
+        print(matrix) # 沿着中轴，镜像翻转
+
 
 
 
@@ -25,5 +24,3 @@ if __name__ == '__main__':
         [7, 8, 9]
     ]
     print(Solution().rotate(matrix))
-
-    
