@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="698d30e3-58b9-4d4e-92a0-1b119132d59e" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/45-跳跃游戏 ||.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/55-跳跃游戏.py" beforeDir="false" afterPath="$PROJECT_DIR$/贪心/55-跳跃游戏.py" afterDir="false" />
     </list>
@@ -22,10 +23,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/贪心/55-跳跃游戏.py">
+        <entry file="file://$PROJECT_DIR$/45-跳跃游戏 ||.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="24" column="18" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="18" />
+            <state relative-caret-position="486">
+              <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -46,8 +47,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/4-寻找两个有序数组的中位数.py" />
-        <option value="$PROJECT_DIR$/13-罗马数字转整数.py" />
         <option value="$PROJECT_DIR$/2-两数相加.py" />
         <option value="$PROJECT_DIR$/链表/21-合并两个有序链表.py" />
         <option value="$PROJECT_DIR$/try2.py" />
@@ -97,6 +96,8 @@
         <option value="$PROJECT_DIR$/动态规划/64-最小路径和.py" />
         <option value="$PROJECT_DIR$/71-简化路径.py" />
         <option value="$PROJECT_DIR$/43-字符串相乘.py" />
+        <option value="$PROJECT_DIR$/贪心/55-跳跃游戏.py" />
+        <option value="$PROJECT_DIR$/45-跳跃游戏 ||.py" />
       </list>
     </option>
   </component>
@@ -405,7 +406,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="100" y="23" width="1340" height="877" extended-state="1" />
+    <frame x="218" y="46" width="1340" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24791509" />
       <window_info id="Structure" order="1" weight="0.24958678" />
@@ -464,11 +466,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/784-字母大小写全排列.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-20" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/递归回溯/46-全排列.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -783,8 +780,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/贪心/55-跳跃游戏.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="18" selection-start-line="24" selection-start-column="16" selection-end-line="24" selection-end-column="18" />
+        <state relative-caret-position="486">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/45-跳跃游戏 ||.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
         </state>
       </provider>
     </entry>
