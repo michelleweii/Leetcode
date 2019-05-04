@@ -5,13 +5,13 @@ class RandomListNode(object):
         self.next = None
         self.random = None
 
+
 class Solution(object):
     def copyRandomList(self, head):
         """
         :type head: RandomListNode
         :rtype: RandomListNode
         """
-
 
 
 if __name__ == '__main__':
