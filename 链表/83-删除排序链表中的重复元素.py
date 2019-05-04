@@ -20,6 +20,7 @@ class Solution(object):
             else:
                 pre = cur
                 cur = pre.next
+        return head
 
 
 if __name__ == '__main__':
