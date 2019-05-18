@@ -71,13 +71,6 @@ class Solution(object):
                     path.append(node.left)
         return result
 
-
-
-
-
-
-
-
 if __name__ == '__main__':
     a = TreeNode(3)
     b = TreeNode(5)

@@ -2,7 +2,11 @@
 # 假设每一种面额的硬币有无限个。
 class Solution:
     def change(self, amount, coins):
-        pass
+        # dp[i]是构成金额i的硬币数目
+        dp = [0 for _ in range(amount)]
+        for i in range(amount):
+            for j in range(len(coins)):
+                dp[i] = dp[i - coins[j]] + 1
 
 if __name__ == '__main__':
     amount = 5
