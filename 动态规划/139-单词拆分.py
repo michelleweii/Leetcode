@@ -1,7 +1,7 @@
 class Solution:
     def wordBreak(self, s, wordDict):
         if s == '':
-                return True
+            return True
         if len(wordDict) == 1:
             if s == wordDict[0]:
                 return True
@@ -20,7 +20,6 @@ class Solution:
                 #     print(j,temp)
                 # print(i,j)
         return dp[len(s)] == 1
-
 
 
 if __name__ == '__main__':
