@@ -20,6 +20,7 @@ class Solution:
                     if self.find(list(matrix),rows,cols,path[1:],i,j):
                         return True
         return False
+        
     def find(self,matrix,rows,cols,path,i,j):
         if not path:
             return True
@@ -39,5 +40,5 @@ if __name__ == '__main__':
     martix = [["a","b","t","g"],["c","f","c","s"],["j","d","e","h"]] 
     rows = len(martix)
     cols = len(martix[0])
-    path = []
+    path = [] # 就是str,
     print(Solution().hasPath(martix,rows,cols,path))
