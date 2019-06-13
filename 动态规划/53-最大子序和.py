@@ -5,14 +5,19 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        length = len(nums)
-        for i in range(1,length):
-            num = max(nums[i]+nums[i-1],nums[i])
-            nums[i] = num
-            # print(num)
-        # print(nums)     # [-2, 1, -2, 4, 3, 5, 6, 1, 5]
-        return max(nums)
-
+        # length = len(nums)
+        # for i in range(1,length):
+        #     num = max(nums[i]+nums[i-1],nums[i])
+        #     nums[i] = num
+        #     # print(num)
+        # # print(nums)     # [-2, 1, -2, 4, 3, 5, 6, 1, 5]
+        # return max(nums)
+        n = len(nums)
+        dp = [0]*n
+        dp[0] = nums[0]
+        for i in range(1, n):
+            dp[i] = max(nums[i], dp[i-1]+nums[i])
+        return max(dp)
 
 
 def main():
@@ -20,7 +25,6 @@ def main():
     myResult = Solution()
     print(myResult.maxSubArray(nums))
 
+
 if __name__ == '__main__':
     main()
-
-
