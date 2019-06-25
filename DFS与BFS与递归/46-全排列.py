@@ -1,9 +1,8 @@
 class Solution(object):
     def permute(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: List[List[int]]
-        """
+    """
+    非递归
+    def permute(self, nums):
         n = len(nums)
         rs = []
         self.perm(nums,0,n,rs)
@@ -22,8 +21,10 @@ class Solution(object):
             # nums[p]=nums[i]
             self.perm(nums, p+1, q, rs)
             nums[p], nums[i] = nums[i], nums[p]
+    """
+
 
 if __name__ == '__main__':
-    nums = [1,2,3]
+    nums = [1, 2, 3]
     myResult = Solution()
-    myResult.permute([1,2,3])
+    myResult.permute([1, 2, 3])
