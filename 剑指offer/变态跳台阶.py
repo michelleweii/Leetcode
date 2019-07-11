@@ -27,7 +27,3 @@ class Solution:
     def jumpFloorII(self, number):
         # write code here
         return pow(2, number-1)
-
-
-if __name__ == '__main__':
-    main()
