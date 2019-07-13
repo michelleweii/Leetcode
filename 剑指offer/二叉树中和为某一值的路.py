@@ -1,11 +1,11 @@
-# Definition for a binary tree node.
-class TreeNode(object):
+# -*- coding:utf-8 -*-
+class TreeNode:
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
-
-class Solution(object):
+class Solution:
+    # 返回二维列表，内部每个列表表示找到的路径
     def FindPath(self, root, expectNumber):
         res = []
         path = []
@@ -28,8 +28,6 @@ class Solution(object):
             self.dfs(root.right,sum,path,res)
         path.pop()
 
-
-
 if __name__ == '__main__':
     a = TreeNode(5)
     b = TreeNode(4)
@@ -51,9 +49,4 @@ if __name__ == '__main__':
     f.right = j
     f.left = i
     sum = 22
-    # Solution().pathSum(a, sum)
-    print(Solution().hasPathSum(a,sum))
-
-
-
-
+    print(Solution().FindPath(a,sum))
