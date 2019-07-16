@@ -28,7 +28,7 @@ class Solution(object):
                     if cur.right:
                         queue.append(cur.right)
                 res.append(cur_level[::flag])
-                flag*=-1
+                flag *= -1
         return res
 
 if __name__ == '__main__':
