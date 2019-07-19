@@ -29,27 +29,30 @@ class Solution:
         return temp
 
 
-    def merge_sort(self,alist):
-        # 归并排序
-        n = len(alist)
-        if n<=1:return alist
-        mid = n//2
-        left_li = self.merge(alist[:mid])
-        right_li = self.merge(alist[mid:])
-        left_pointer,right_pointer=0,0
-        res = []
-        while left_pointer<len(left_li) and right_pointer<len(right_li):
-            if left_li[left_pointer]<=right_li[right_pointer]:
-                res.append(left_li[left_pointer])
-                left_pointer+=1
-            else:
-                res.append(right_li[right_pointer])
-                right_pointer+=1
-        res += left_li[left_pointer:]
-        res += right_li[right_pointer:]
-        return res
-
-
 if __name__ == '__main__':
     data = [1,2,3,4,5,6,7,0]
     print(Solution().InversePairs(data))
+
+
+    """
+    归并排序
+    def merge_sort(self,alist):
+    # 归并排序
+    n = len(alist)
+    if n<=1:return alist
+    mid = n//2
+    left_li = self.merge(alist[:mid])
+    right_li = self.merge(alist[mid:])
+    left_pointer,right_pointer=0,0
+    res = []
+    while left_pointer<len(left_li) and right_pointer<len(right_li):
+        if left_li[left_pointer]<=right_li[right_pointer]:
+            res.append(left_li[left_pointer])
+            left_pointer+=1
+        else:
+            res.append(right_li[right_pointer])
+            right_pointer+=1
+    res += left_li[left_pointer:]
+    res += right_li[right_pointer:]
+    return res
+    """

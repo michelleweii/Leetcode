@@ -6,6 +6,31 @@ class TreeNode:
         self.right = None
 class Solution:
     def Print(self, pRoot):
+        rs = []
+        flag = 1
+        if not pRoot: return rs
+        queue = []
+        queue.append(pRoot)
+        while queue:
+            cur_level,size = [],len(queue)
+            for i in range(size):
+                tmp = queue.pop(0)
+                cur_level.append(tmp.val)
+                if tmp.left:
+                    queue.append(tmp.left)
+                if tmp.right:
+                    queue.append(tmp.right)
+            rs.append(cur_level[::flag])
+            flag*=-1
+
+        return rs
+
+
+
+
+
+
+
 
 
 if __name__ == '__main__':
