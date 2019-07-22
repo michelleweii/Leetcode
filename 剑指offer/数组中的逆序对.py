@@ -33,7 +33,6 @@ if __name__ == '__main__':
     data = [1,2,3,4,5,6,7,0]
     print(Solution().InversePairs(data))
 
-
     """
     归并排序
     def merge_sort(self,alist):

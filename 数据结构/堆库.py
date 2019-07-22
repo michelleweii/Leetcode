@@ -5,6 +5,8 @@ heapq.heappush(q,1)
 heapq.heappush(q,100)
 heapq.heappush(q,66)
 heapq.heappush(q,12)
+print(q[0])
+print(len(q)) # 4
 print(q) # [1, 100, 66],说明此时没有排序
 print(heapq.heapify(q)) # None
 # 从堆中删除元素，返回值是最小的
