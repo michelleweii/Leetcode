@@ -1,5 +1,6 @@
 # -*- coding:utf-8 -*-
 # 双指针
+
 class Solution:
     def FindContinuousSequence(self, tsum):
         s,j = 1,1

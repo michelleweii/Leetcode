@@ -44,9 +44,6 @@ class Solution:
         return root
 
 
-
-
-
 if __name__ == '__main__':
     a = TreeNode(3)
     b = TreeNode(9)

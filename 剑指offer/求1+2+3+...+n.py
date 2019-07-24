@@ -9,7 +9,6 @@ class Solution:
         return self.res
 
 
-
 if __name__ == '__main__':
     n = 2
     print(Solution().Sum_Solution(n))

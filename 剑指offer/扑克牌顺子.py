@@ -11,6 +11,7 @@ class Solution:
                 return False
         return numbers[-1]-numbers[k]<=4
 
+
 if __name__ == '__main__':
     n = [0,2,3,4,5]
     print(Solution().IsContinuous(n))

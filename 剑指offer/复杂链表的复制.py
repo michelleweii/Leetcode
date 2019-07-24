@@ -31,7 +31,6 @@ class Solution:
             cloNode = node
         return pHead
 
-        
 
 if __name__ == '__main__':
     a = RandomListNode(1)

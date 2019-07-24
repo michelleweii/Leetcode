@@ -25,6 +25,7 @@ class Solution:
             sum =~(num1^0xffffffff)
         return sum
 
+
 if __name__ == '__main__':
     a = 1
     b = 2
