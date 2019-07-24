@@ -25,8 +25,6 @@ class Solution:
             mid = (self.min_heap.pop()-self.max_heap.pop())/2.0
         return mid
 
-
-
 if __name__ == '__main__':
     s = [1,2,3,4,5]
     for x in s:

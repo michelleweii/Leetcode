@@ -10,7 +10,6 @@ class Solution:
         for i in range(len(array)):
             # 在hashmap中
             if array[i] in hashmap:
-                # print("1")
                 if array[hashmap[array[i]]]*array[i]<minval:
                     minval = array[hashmap[array[i]]]*array[i]
                     rs.append([array[hashmap[array[i]]],array[i]])
