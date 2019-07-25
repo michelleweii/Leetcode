@@ -13,3 +13,14 @@ class Solution:
         self.Mirror(root.right)
         root.left,root.right = root.right,root.left
 
+if __name__ == '__main__':
+    a = TreeNode(3)
+    b = TreeNode(9)
+    c = TreeNode(20)
+    d = TreeNode(15)
+    e = TreeNode(7)
+    a.right = c
+    a.left = b
+    c.right = e
+    c.left = d
+    print(Solution().Mirror(a))
