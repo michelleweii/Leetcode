@@ -23,27 +23,23 @@ class Solution:
         # 因为list是可变的，所以每次会改变都是null
         # 要用str不可变，深拷贝的方法待完成
         """
+    # 返回对应char
     def __init__(self):
-        self.Q = ""
-        self.hashmap = {}
-
+        self.s=''
+        self.dict1={}
     def FirstAppearingOnce(self):
-        if self.Q:
-            return self.Q[0]
-        else: return "#"
-
+        # write code here
+        for i in self.s:
+            if self.dict1[i]==1:
+                return i
+        return '#'
     def Insert(self, char):
-
-        if char in self.hashmap:
-            self.hashmap[char] += 1
-            while len(self.Q)>0 and self.hashmap[self.Q[0]]>1:
-                self.Q = self.Q[:-1]
+        # write code here
+        self.s=self.s+char
+        if char in self.dict1:
+            self.dict1[char]=self.dict1[char]+1
         else:
-            self.hashmap[char] = 1
-            self.Q = self.Q+char
-        print(self.Q)
-
-
+            self.dict1[char]=1
 
 
 if __name__ == '__main__':
