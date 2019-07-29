@@ -8,6 +8,7 @@ class Solution:
         else:
             return (self.LastRemaining_Solution(n - 1, m) + m) % n
 
+
 """
         if not m or not n:
             return -1

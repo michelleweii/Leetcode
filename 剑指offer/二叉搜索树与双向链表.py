@@ -4,6 +4,7 @@ class TreeNode:
         self.val = x
         self.left = None
         self.right = None
+
 class Solution:
     def Convert(self, pRootOfTree):
         # write code here
