@@ -1,4 +1,4 @@
-# -*- coding:utf-8 -*-
+ # -*- coding:utf-8 -*-
 class Solution:
     def minNumberInRotateArray(self, rotateArray):
         if not rotateArray:return 0
