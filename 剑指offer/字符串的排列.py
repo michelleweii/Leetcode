@@ -19,7 +19,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-
     ss = 'abc'
     ans = Solution()
     print(ans.Permutation(ss))

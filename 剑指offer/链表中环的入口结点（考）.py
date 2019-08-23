@@ -28,10 +28,6 @@ class Solution:
             start = start.next
         return None
 
-
-
-
-
 if __name__ == '__main__':
     a = ListNode(3)
     b = ListNode(2)

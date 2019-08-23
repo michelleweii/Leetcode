@@ -7,14 +7,16 @@ class Solution:
         self.max_heap = []
     def Insert(self, num):
         # 初始，一直向大顶堆中添加元素
+        # 由于只能建立小根堆，所以大根堆采用添加负数的方法
         heappush(self.max_heap,-num)
         if (self.min_heap and (-self.max_heap[0]>self.min_heap[0])):
             maxv = -self.max_heap[0]
             minv = self.min_heap[0]
-            heappop(self.max_heap,-maxv),heappop(self.min_heap,minv)
+            heappop(self.max_heap[0]),heappop(self.min_heap[0])
             heappush(self.max_heap,-minv),heappush(self.min_heap,maxv)
         if len(self.max_heap)>(len(self.min_heap)+1):
-            heappush(self.min_heap,-heappop(self.max_heap))
+            heappush(self.min_heap,-self.max_heap[0])
+            heappop(-self.max_heap[0])
         print(self.min_heap)
         print(self.max_heap)
 
@@ -29,6 +31,6 @@ if __name__ == '__main__':
     s = [1,2,3,4,5]
     for x in s:
         print(Solution().Insert(x))
-    # print(Solution().GetMedian())
+    print(Solution().GetMedian())
 
 

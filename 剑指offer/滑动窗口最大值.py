@@ -24,7 +24,6 @@ class Solution:
                 res.append(num[q[0]])
         return res
 
-
 if __name__ == '__main__':
     num = 2,3,4,2,6,2,5,1
     size = 3

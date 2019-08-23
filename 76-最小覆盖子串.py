@@ -1,4 +1,5 @@
 # 滑动窗口
+from collections import Counter
 class Solution:
     def minWindow(self, s, t):
         ls = len(s)
@@ -31,8 +32,19 @@ class Solution:
             r += 1
         return '' if min_size > ls else s[start:end+1]
 
+    def _minWindow(self, sW, tW):
+        sW_count, tW_count = Counter(sW), Counter(tW)
+        print(sW_count, tW_count)
+        for i, val in tW_count.items():
+            print(i,val)
+            if i in sW_count and val <= sW_count[i]:
+                continue
+            return False
+        return True
+
 
 if __name__ == '__main__':
     S = "ADOBECODEBANC"
     T = "ABC"
     print(Solution().minWindow(S, T))
+    print(Solution()._minWindow(S, T))

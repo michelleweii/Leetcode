@@ -23,9 +23,6 @@ class Solution:
             rs.append(cur_level[:])
         return rs
 
-
-
-
 if __name__ == '__main__':
     a = TreeNode(3)
     b = TreeNode(9)

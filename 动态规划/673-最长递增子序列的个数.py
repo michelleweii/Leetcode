@@ -1,7 +1,7 @@
 
 # lc300是求最长上升子序列的长度是是多少，是求len
 # 这道题是求最长上升子序列那个最长的那个一共有多少个，多少组，有多少个可能性构成
-
+from collections import Counter
 class Solution:
     def findNumberOfLIS(self, nums):
         res = 0
@@ -18,15 +18,15 @@ class Solution:
                 elif nums[i]>nums[j] and dp[i] == dp[j]+1:
                     cnt[i] += cnt[j]
             max_len = max(max_len,dp[i])
-        # print(dp)
-        # print(cnt)
+        print(dp)
+        print(cnt)
         for k in range(len(nums)):
             if dp[k] == max_len:
                 res += cnt[k]
         return res
 
-
 if __name__ == '__main__':
     nums = [2,2,2,2,2]
+    nums = [1,3,5,4,7]
     print(Solution().findNumberOfLIS(nums))
-
+    # print(Solution().fn(nums))
