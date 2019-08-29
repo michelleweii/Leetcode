@@ -14,8 +14,6 @@ class Solution:
         print(numbers)
         return "".join(numbers)
 
-
-
 if __name__ == '__main__':
     n = [32,3,321]
     print(Solution().PrintMinNumber(n))

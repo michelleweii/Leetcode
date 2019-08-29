@@ -1,6 +1,4 @@
-
 # 要求时间复杂度O(N)
-
 # Python solution using hash
 class Solution(object):
     def twoSum(self, nums, target):
