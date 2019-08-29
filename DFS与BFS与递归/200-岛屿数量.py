@@ -40,7 +40,7 @@ class Solution:
     #                 # 【位置 1】
     #     return count
 
-    
+
     def numIslands(self, grid):
         if not grid or not grid[0]:
             return 0
