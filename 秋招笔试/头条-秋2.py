@@ -4,7 +4,6 @@ import math
 # 自己建图，再广搜
 def Solution(N):
     nums = [int(x) for x in input().split()]
-    # M = [[0,4,0], [4,0,0],[0,0,0]]
     M = []
     for i in range(N):
         tmp = [0] * N

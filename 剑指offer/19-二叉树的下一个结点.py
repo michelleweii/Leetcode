@@ -7,6 +7,8 @@ class TreeLinkNode:
         self.left = None
         self.right = None
         self.next = None
+
+
 class Solution:
     def GetNext(self, pNode):
         if not pNode: return None

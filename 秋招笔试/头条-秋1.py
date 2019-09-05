@@ -1,10 +1,10 @@
 def Solution(N):
 # 油豆瓶
-    M = []
-    for i in range(N):
-        input_x = [int(x) for x in input().split()]
-        M.append(input_x)
-    # M = [[0,4,0], [4,0,0], [0,0,0]]
+#     M = []
+#     for i in range(N):
+#         input_x = [int(x) for x in input().split()]
+#         M.append(input_x)
+    M = [[0,4,0], [4,0,0], [0,0,0]]
     flag = [False] * N
     q = []
     res = 0
@@ -14,6 +14,7 @@ def Solution(N):
             q.append(start)
             while q:
                 now = q.pop(0)
+                print("now",now)
                 flag[now] = True
                 for i in range(N):
                     if M[now][i] >= 3 and not flag[i]:
@@ -23,7 +24,8 @@ def Solution(N):
     return res
 
 # tmp = input()
-N = int(input())
+# N = int(input())
+N = 3
 res = Solution(N)
 print(res)
 # def fn1(n,array):
