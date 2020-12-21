@@ -1,4 +1,4 @@
-# 动态规划
+# 7_dynamic_programming
 class Solution(object):
     def countSubstrings(self, s):
         """

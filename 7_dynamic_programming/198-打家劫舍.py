@@ -11,7 +11,7 @@ class Solution(object):
         elif len(nums)==2:
             return max(nums[0],nums[1])
         else:
-            return self.dp_opt(nums) # 动态规划
+            return self.dp_opt(nums) # 7_dynamic_programming
         # return self.rec_opt(len(nums)-1,nums) # 递归
 
     def rec_opt(self,n,nums):
