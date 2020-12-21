@@ -33,3 +33,22 @@ print(new_rs) # [3, 4]
 print(id(new_rs)) # 4356797640, 这里和上面的string就不同了，这里地址就变化了
 rs.append([5,6])
 print(new_rs) # [3, 4]
+
+
+print("test")
+inner = [2]
+outer = []
+outer.append(inner)
+print(id(outer), outer) # 2159387576520 [[2]]
+print(id(outer[0]), outer[0]) # 2159368651080 [2], outer[0]就是inner
+print(id(inner), inner) # 2159368651080 [2]
+
+outer.append(3)
+print(id(outer), outer) # 2159387576520 [[2], 3]
+
+print(id(inner), inner[0]) # 2159368651080 2
+
+outer = [5]
+print(id(inner), inner[0]) # 2159368651080 2
+print(id(outer), outer)  # 2159370831112 [5]
+

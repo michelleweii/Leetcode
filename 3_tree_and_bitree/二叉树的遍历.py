@@ -1,4 +1,4 @@
-# 迭代
+# 非递归中序遍历
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
@@ -6,9 +6,10 @@ class TreeNode(object):
         self.right = None
 
 def inorderTraversal(root):
-    stack,res = [],[]
+    stack, res = [], []
     cur = root
-    while stack or cur:# 根节点的右子树还未遍历完，此时cur非空
+    # 根节点的右子树还未遍历完，此时cur非空
+    while stack or cur:
         while cur:
         # travel to each node's left child, till reach the left leaf
             stack.append(cur)
@@ -18,9 +19,9 @@ def inorderTraversal(root):
             cur = stack.pop()
             # so let's append the node value
             res.append(cur.val)
-            print(cur.val)
+            # print(cur.val)
             cur = cur.right
-            print(cur)
+            # print(cur)
     return res
 
 if __name__ == '__main__':
