@@ -1,3 +1,4 @@
+from collections import deque
 # 小结：
 # 层次遍历是广度优先遍历
 # Definition for a binary tree node.
@@ -8,11 +9,30 @@ class TreeNode(object):
         self.right = None
 
 class Solution(object):
+    # 2020/02/23
     def zigzagLevelOrder(self, root):
         """
         :type root: TreeNode
         :rtype: List[List[int]]
         """
+        if root is None: return []
+        queue = deque([root])
+        path = []
+        flag = 1
+        while queue:
+            cur_level, size = [], len(queue)
+            for i in range(size):
+                node = queue.popleft()
+                if node.left:
+                    queue.append(node.left)
+                if node.right:
+                    queue.append(node.right)
+                cur_level.append(node.val)
+            path.append(cur_level[::flag])
+            flag *= -1
+        return path
+
+    def zigzagLevelOrder2(self, root):
         queue = []
         res = []
         if root:

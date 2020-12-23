@@ -1,7 +1,7 @@
-
+from collections import deque
 # Definition for a Node.
 class Node:
-    def __init__(self, val, left, right, next):
+    def __init__(self, val: int = 0, left: 'Node' = None, right: 'Node' = None, next: 'Node' = None):
         self.val = val
         self.left = left
         self.right = right
@@ -10,17 +10,22 @@ class Node:
 
 class Solution:
     def connect(self, root):
-        if root:
+        if root is None: return root
+        first = root
+        while first: # 如果树不为null
+            head = tail = Node(0)
+            cur = first
+            while cur:  # 遍历当前层
+                if cur.left:
+                    tail.next = cur.left
+                    tail = tail.next
+                if cur.right:
+                    tail.next = cur.right
+                    tail = tail.next
+                cur = cur.next
+            first = head.next
+        return root
 
-        if root.left
-            # 如果左节点不空
+if __name__ == '__main__':
+    a = Node(1)
 
-        else:
-
-        if root.right:
-            # 如果右节点不空
-        else:
-
-        self.connect(root.left)
-        self.connect(root.right)
-    return root
