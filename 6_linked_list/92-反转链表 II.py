@@ -5,13 +5,8 @@ class ListNode(object):
         self.next = None
 
 class Solution(object):
-    def reverseBetween(self, head, m, n):
-        """
-        :type head: ListNode
-        :type m: int
-        :type n: int
-        :rtype: ListNode
-        """
+    # 2020/12/25
+    def reverseBetween(self, head: ListNode, m: int, n: int):# -> ListNode:
         if head is None:
             return head
         pre = None
@@ -24,7 +19,6 @@ class Solution(object):
             # cur指向的是m所在的节点
             i += 1
 
-        change_len = n - m + 1
         # 要记录开始反转的节点的前一个，因为要连接变换后的节点
         t1 = pre
         # 要记录开始反转的节点，因为要连接剩余的节点
@@ -37,8 +31,8 @@ class Solution(object):
             i += 1
 
         if m == 1:
-            t2.next = cur
-            return pre
+            t2.next = cur # 此时cur为none，原头结点指向node
+            return pre # pre目前在原链表的末尾
 
         t2.next = cur
         t1.next = pre

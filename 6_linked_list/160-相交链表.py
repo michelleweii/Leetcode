@@ -4,71 +4,9 @@ class ListNode(object):
         self.val = x
         self.next = None
 
-
 class Solution(object):
-    def printList(self,head):
-        while head:
-            print(head.val,end='->')
-            head = head.next
-        print()
-
-
+    # 2020/12/25
     def getIntersectionNode(self, headA, headB):
-        """
-        :type head1, head1: ListNode
-        :rtype: ListNode
-        """
-        # 思路一：使用A建立一个set，遍历B，如果有元素相等，那么第一次出现的那个元素就是交点；
-        # 思路二：用B的长度减去A的长度，B指针向前移动差值个元素，然后再一起遍历（这时候起点相同），遇到相同元素时，就是交点；
-        self.printList(headA)
-        self.printList(headB)
-        skipA = self.length(headA)
-        skipB = self.length(headB)
-
-
-        changed = skipA-skipB
-        print(changed)
-        if changed<0:
-            offset = 0
-            while headB and abs(changed) != offset:
-                print(abs(changed))
-                headB = headB.next
-                offset += 1
-            # print(headB.val)
-        else:
-            offset = 0
-            while headA and abs(changed) != offset:
-                headA = headA.next
-                offset += 1
-
-        while headA and headB:
-            if headA == headB:
-            # if headA.val == headB.val:  # 这句报错是因为没有val
-                return headA
-            else:
-                headA = headA.next
-                headB = headB.next
-
-        return None
-
-
-    def length(self,head):
-        if head is None:
-            return 0
-        cnt = 0
-        cur = head
-        while cur:
-            cur = cur.next
-            cnt+=1
-        return cnt
-
-
-    def getIntersectionNode2(self, headA, headB):
-        # 为什么这个不报错？
-        """
-        :type head1, head1: ListNode
-        :rtype: ListNode
-        """
         lenA, lenB = 0, 0
         pA = headA
         pB = headB
@@ -90,7 +28,25 @@ class Solution(object):
             pA = pA.next
             pB = pB.next
         return pA
-    # 原文：https: // blog.csdn.net / qq_34364995 / article / details / 80518198
+
+    # 双指针解法 2020/12/25
+    def double_pointer(self, headA, headB):
+        if (not headA or not headB):
+            return None
+        # 定义两个指针, 第一轮让两个到达末尾的节点指向另一个链表的头部, 最后如果相遇则为交点(在第一轮移动中恰好抹除了长度差)
+        # 两个指针等于移动了相同的距离, 有交点就返回, 无交点就是各走了两条指针的长度
+        pA = headA
+        pB = headB
+
+        # 在这里第一轮体现在pA和pB第一次到达尾部会移向另一链表的表头, 而第二轮体现在如果pA或pB相交就返回交点, 不相交最后就是null == null
+        while pA != pB:
+            pA = pA.next if pA else headB
+            pB = pB.next if pB else headA
+
+        return pA
+
+
+
 
 if __name__ == '__main__':
     a = ListNode(1)

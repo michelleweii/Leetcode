@@ -5,6 +5,23 @@ class ListNode(object):
         self.next = None
 
 class Solution(object):
+    #
+    # 双指针 2020/12/25
+    def removeNthFromEnd(self, head, n):
+        if not head:return head
+        dummy = ListNode(0)
+        dummy.next = head
+        p1 = p2 = dummy
+        for i in range(n):
+            p2 = p2.next
+        while p2.next:
+            p1 = p1.next
+            p2 = p2.next
+        p1.next = p1.next.next
+        return dummy.next
+
+
+
     def removeNthFromEnd1(self, head, n):
         """
         :type head: ListNode
@@ -22,7 +39,7 @@ class Solution(object):
         p2.next = p2.next.next
         return dummy.next
 
-    def removeNthFromEnd(self, head, n):
+    def removeNthFromEnd2(self, head, n):
         """
         :type head: ListNode
         :type n: int

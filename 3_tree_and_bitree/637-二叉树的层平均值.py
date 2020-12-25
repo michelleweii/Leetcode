@@ -5,8 +5,9 @@ class TreeNode:
         self.right = None
 
 class Solution:
-    # 2020/02/23
+    # 2020/02/25
     def averageOfLevels(self, root: TreeNode):# -> List[float]:
+
 
 
 if __name__ == '__main__':
