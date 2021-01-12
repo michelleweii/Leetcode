@@ -1,4 +1,4 @@
-class Solution:
+class solution(object):
     def search(self, nums, target) -> bool:
         if not nums:
             return False
@@ -25,4 +25,4 @@ class Solution:
 if __name__ == '__main__':
     nums = [2, 5, 6, 0, 0, 1, 2]
     target = 0
-    print(Solution().search(nums, target))
+    print(solution().search(nums, target))

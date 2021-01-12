@@ -1,5 +1,6 @@
 class Solution:
     """
+    2021/01/12
     注意这里声明时，数组的行数没有-1
     [mid//m][mid%m] 求当前一维数组中元素mid的index,对应在二维数组中的index
     """
