@@ -11,8 +11,9 @@ class Solution(object):
         for i in range(1,len(nums)):
             for j in range(i):
                 if nums[i] > nums[j]: # 当前元素要比之前的元素大，才可以跟在后面，构成上升
-                    if dp[i] < dp[j]+1:
-                        dp[i] = dp[j]+1
+                    # if dp[i] < dp[j]+1:
+                    #     dp[i] = dp[j]+1
+                    dp[i] = max(dp[i], dp[j] + 1)
             # print(dp[i])
         # print(dp)
         return max(dp)
