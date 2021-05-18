@@ -6,19 +6,20 @@ class MinStack:
         """
         initialize your data structure here.
         """
-
+        pass
 
     def push(self, x):
-
+        pass
 
     def pop(self):
+        pass
 
 
     def top(self):
-
+        pass
 
     def getMin(self):
-
+        pass
 
 if __name__ == '__main__':
     # Your MinStack object will be instantiated and called as such:
