@@ -1,4 +1,5 @@
 # 要求时间复杂度O(N)
+# https://www.bilibili.com/video/BV1Lb411w74Y
 # Python solution using hash
 class Solution(object):
     def twoSum(self, nums, target):
