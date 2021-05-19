@@ -19,30 +19,18 @@ def bsearch_2(l, r):
         else: r = mid-1
     return l
 
+# 如果元素不存在呢？
+def bisec(nums,k):
+    l,r = 0,len(nums)-1
+    while(l<r):
+        mid = (l+r)//2
+        if nums[mid]>=k: r=mid
+        else: l=mid+1
+    print(l) # 1 # 停在里>=k值最近的那个index=1处
 
 if __name__ == '__main__':
     sum = (4+2)>>1
     print(sum) # 3
-
-
-"""
-二分查找
-def BiSearch(nums,k):
-    nums = sorted(nums)
-    print(nums)
-    low = 0
-    high = len(nums)-1
-    while low<=high:
-        mid = (low+high)//2
-        if nums[mid]==k:
-            return True
-        if nums[mid]<k:
-            low = mid+1
-        else:
-            high = mid-1
-    return -1
-if __name__ == '__main__':
-    nums = [3,5,74,2,75,8,2,9]
-    k = 9
-    print(BiSearch(nums, k))
-"""
+    nums = [1,5,6,7,9]
+    k = 3
+    bisec(nums,k)
