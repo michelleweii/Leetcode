@@ -14,6 +14,7 @@ class Solution:
         for i in range(len(nums)):
             s = s+nums[i] if nums[i]==1 else -1
             if not hash_map:
+
             else:
                 res = max(res, i-hash_map[s])
 
