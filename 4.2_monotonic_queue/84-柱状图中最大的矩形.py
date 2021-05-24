@@ -34,8 +34,6 @@ class Solution:
         return res
 
 
-
-
 if __name__ == '__main__':
     heights = [2,4]#[2,1,5,6,2,3]
     myresult = Solution()

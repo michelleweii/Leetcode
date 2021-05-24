@@ -32,7 +32,3 @@ if __name__ == '__main__':
     height = [4,2,0,3,2,5]
     myresult = Solution()
     print(myresult.trap(height))
-
-
-
-
