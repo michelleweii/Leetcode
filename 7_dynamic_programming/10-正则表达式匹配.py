@@ -1,34 +1,29 @@
-class Solution:
+"""
+hard
+dp
+"""
+class Solution(object):
     def isMatch(self, s, p):
-        if not s or not p:
+        import re
+        # re.match(pattern, string, flags=0)
+        # pattern	匹配的正则表达式
+        # string	要匹配的字符串（长的）
+        # re.I不区分大小写
+        match = re.match(p, s, re.I)
+        # 匹配成功re.match方法返回一个匹配的对象，否则返回None。
+        #
+        # 我们可以使用group(num) 或 groups() 匹配对象函数来获取匹配表达式。
+        print(match) # <_sre.SRE_Match object; span=(0, 1), match='a'>
+        print(match.group())  # a
+        if match is not None:
+            return match.group() == s
+        elif match is None:
+            return s == None
+        else:
             return False
-        s_len = len(s)
-        p_len = len(p)
-        dp = [[False] * (p_len + 1) for _ in range(s_len + 1)]
-        #print(dp)
-        # 初始化
-        dp[0][0] = True
-        for i in range(p_len):
-            if p[i] == "*" and dp[0][i - 1]:
-                dp[0][i + 1] = True
-        print(dp)
 
-        # 状态转移
-        for i in range(s_len):
-            for j in range(p_len):
-                if p[j] == s[i] or p[j] == ".":
-                    dp[i + 1][j + 1] = dp[i][j]
-                elif p[j] == "*":
-                    if p[j - 1] != s[i]:
-                        dp[i + 1][j + 1] = dp[i + 1][j - 1]
-                    if p[j-1] == s[i] or p[j-1] == ".":
-                        dp[i+1][j+1] = (dp[i][j+1]\
-                                        or dp[i+1][j] \
-                                        or dp[i+1][j-1])
-        #print(dp)
-        return dp[-1][-1]
 
 if __name__ == '__main__':
-    s = "aab"
-    p = "c*a*b"
+    s = "aabd"
+    p = "a"
     print(Solution().isMatch(s,p))

@@ -1,3 +1,6 @@
+"""
+middle
+"""
 class Solution:
     def insert(self, intervals, newInterval):
         intervals.append(newInterval)

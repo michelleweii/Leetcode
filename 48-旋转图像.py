@@ -1,3 +1,6 @@
+"""
+middle
+"""
 class Solution:
     def rotate(self, matrix):
         """
@@ -13,9 +16,6 @@ class Solution:
             for j in range(n//2):
                 matrix[i][j],matrix[i][n-j-1]=matrix[i][n-j-1],matrix[i][j]
         print(matrix) # 沿着中轴，镜像翻转
-
-
-
 
 if __name__ == '__main__':
     matrix = [

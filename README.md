@@ -29,3 +29,23 @@
 
 滑动窗口算法一定是双指针算法；
 双指针算法不一定是滑动窗口算法；
+
+
+字符串相关
+49 hash表 value是list[]
+
+151 error
+
+
+需要重做
+easy 7
+
+middle 686 kmp
+
+middle 260 hash
+
+middle 29 位运算
+
+middle 43 没做
+
+middle 71 堆栈
