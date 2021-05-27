@@ -1,16 +1,50 @@
-# 马拉车算法——Manacher 算法 
-#
-# 现将字符串通过添加特定字符'#'，变成奇数个数。对新字符串使用中心扩展发即可，中心扩展法得到的半径就是子串的长度。
-#
-# 先转化字符串'35534321'  ---->  '#3#5#5#3#4#3#2#1#'，然后求出以每个元素为中心的最长回文子串的长度。
+"""
+middle
+马拉车算法——Manacher 算法
+思路：现将字符串通过添加特定字符'#'，变成奇数个数。
+对新字符串使用中心扩展发即可，中心扩展法得到的半径就是子串的长度。
+
+举例：
+先转化字符串'35534321'---->'#3#5#5#3#4#3#2#1#'，
+然后求出以每个元素为中心的最长回文子串的长度。
+-------------------------
+简单思路：
+首先枚举中心点，向两边枚举，看能枚举多长（两头对应字符串不同）。
+分串是奇数or偶数
+"""
+
 
 class Solution(object):
-    def longestPalindrome(self, s):
-        """
-        :type s: str
-        :rtype: str
-        """
-        # manacher 算法
+    # 直观做法
+    # 分奇数or偶数开始校验回文串
+    def longestPalindrome(self,s):
+        lens = 0
+        res = ""
+        for k in range(len(s)):
+            # 奇数
+            i = k
+            j = k+1
+            while(i>=0 and j<len(s) and s[i]==s[j]):
+                i-=1
+                j+=1
+            if (j-i-1) > lens:
+                lens = j-i-1
+                print(i,j)
+                res = s[i+1:j]
+
+            # 偶数
+            i = k-1
+            j = k+1
+            while(i>=0 and j<len(s) and s[i]==s[j]):
+                i-=1
+                j+=1
+            if (j-i-1) > lens:
+                lens = j-i-1
+                res = s[i+1:j]
+        return res
+
+    # 马拉车算法
+    def longestPalindrome_plus(self, s):
         s = '#' + '#'.join('{}'.format(s)) + '#'
         lens=len(s)
         max_str = ""
@@ -33,21 +67,6 @@ class Solution(object):
             else:
                 break
         return length,string
-
-        """
-         # 枚举实现——超时
-        max_length=0
-        max_string=""
-        for i in range(len(s)):
-            tmp = ""
-            for letter in s[i:len(s)]:
-                tmp+=letter
-                if tmp==tmp[::-1]:
-                    if len(tmp)>max_length:
-                        max_length=len(tmp)
-                        max_string=tmp
-        return max_string
-        """
 
 
 

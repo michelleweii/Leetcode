@@ -2,10 +2,10 @@ class Solution(object):
     def maxSlidingWindow(self, nums, k):
         res = []
         if not nums or not k:return res
-        q = []
+        q = [] # 存的是下标
         for i in range(len(nums)):
-
             # 维护递增队列，比队尾大的才插入
+            # 把比当前插入元素小的都干掉
             while q and nums[i]>nums[q[-1]]:
                 q.pop()
 
@@ -20,6 +20,7 @@ class Solution(object):
 
 if __name__ == '__main__':
     nums = [1, 3, -1, -3, 5, 3, 6, 7]
+    print(nums.pop()) # 7
     k = 3
     # [3,3,5,5,6,7]
     res = Solution()

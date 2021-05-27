@@ -1,10 +1,5 @@
 class Solution(object):
     def maxSlidingWindow(self, nums, k):
-        """
-        :type nums: List[int]
-        :type k: int
-        :rtype: List[int]
-        """
         # 单调队列
         res = []
         queue = []
@@ -21,14 +16,8 @@ class Solution(object):
                 res.append(queue[0])
         return res
 
-
     # 暴力求解
     def maxSlidingWindow1(self, nums, k):
-        """
-        :type nums: List[int]
-        :type k: int
-        :rtype: List[int]
-        """
         if len(nums)==0:
             return [0]
         rs = []
