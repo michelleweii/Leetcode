@@ -1,3 +1,6 @@
+"""
+hard 有考过
+"""
 class Solution(object):
     def findMedianSortedArrays(self, A, B):
         m, n = len(A), len(B)

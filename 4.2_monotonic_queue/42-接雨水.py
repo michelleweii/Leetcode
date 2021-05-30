@@ -1,3 +1,7 @@
+"""
+hard 有考过
+单调栈
+"""
 class Solution:
     def trap(self, height):
         if len(height) <= 1:
