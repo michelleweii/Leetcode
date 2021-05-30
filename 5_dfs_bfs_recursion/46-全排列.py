@@ -1,3 +1,7 @@
+"""
+middle
+dfs
+"""
 class Solution(object):
     def permute(self, nums):
     """

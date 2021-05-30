@@ -1,3 +1,7 @@
+"""
+hard
+单调队列
+"""
 class Solution(object):
     def maxSlidingWindow(self, nums, k):
         res = []
