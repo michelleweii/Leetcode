@@ -36,9 +36,6 @@ class Solution(object):
         # print(hash_map) # {'a': 3, 'b': 4, 'c': 5}
         return res
 
-
-
-
 if __name__ == '__main__':
     s = "abcabc"
     print(Solution().lengthOfLongestSubstring(s))
