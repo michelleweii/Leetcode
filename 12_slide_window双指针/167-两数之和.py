@@ -40,11 +40,8 @@ class Solution(object):
                 r-=1
 
 
-def main():
+if __name__ == '__main__':
     numbers = [2, 7, 11, 15]
     target = 9
     myResult = Solution()
     print(myResult.twoSum(numbers, target))
-
-if __name__ == '__main__':
-    main()

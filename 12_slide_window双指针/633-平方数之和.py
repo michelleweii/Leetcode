@@ -1,4 +1,7 @@
-# 双指针
+"""
+middle
+双指针
+"""
 class Solution:
     def judgeSquareSum(self, c):
         d = {}
