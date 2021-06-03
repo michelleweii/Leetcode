@@ -40,13 +40,18 @@
 # 4、双指针
 **4.1、单向**
 
--
+[https://www.bilibili.com/video/BV1P7411L7eV?from=search&seid=16847300039480678482](同向双指针（一）)
+[https://www.bilibili.com/video/BV1P7411L7NK](同向双指针（二）)
+[https://www.bilibili.com/video/BV1M741147Ta](双指针基础（一）)
+[https://www.bilibili.com/video/BV1A7411L7EQ?from=search&seid=16847300039480678482](双指针基础（二）)
 
 **4.2、双向**
 
+- 75 荷兰国旗问题
+
 - 
 
-**未做：11、283、1047**
+**未做：11、16、48、76、88、167、283、1047、**
 
 ### 需要重做
 - easy 7
