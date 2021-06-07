@@ -67,8 +67,10 @@
 
 - 
 
+特别地
+float("inf") #Python中可以用如下方式表示正负无穷：float("inf"), float("-inf")
 
-
+lc31 对sort切片有了新的理解
 
 dp
 https://www.bilibili.com/video/BV1hf4y197w3
