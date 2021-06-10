@@ -12,24 +12,21 @@ class Solution(object):
         # all in [left, cur) = 1
         # all in [right, len - 1] = 2
 
-        left, right = 0, len(nums)-1
-        # cur是当前遍历的元素
+        # https://leetcode-cn.com/problems/sort-colors/solution/kuai-su-pai-xu-partition-guo-cheng-she-ji-xun-huan/
+        left = 0
+        right = len(nums)
         cur = 0
-        while cur<=right:
-            if nums[cur]==0:
-                # left向右移动
-                nums[cur], nums[left] = nums[left], nums[cur]
-                cur += 1
+        # 只移动0,2。 1自然会处于该处于的位置
+        while cur < right:
+            if nums[cur] == 0:
+                nums[left], nums[cur] = nums[cur], nums[left]
                 left += 1
-
-            elif nums[cur] == 1:
                 cur += 1
-
-            # 与当前元素交换，b线向左移，elif nums[cur]==2:
+            elif nums[cur] == 2:
+                right -= 1 # 这里先right--需要注意
+                nums[right], nums[cur] = nums[cur], nums[right]
             else:
-                nums[cur], nums[right] = nums[right], nums[cur]
-                right -= 1
-
+                cur += 1
         return nums
 
 
