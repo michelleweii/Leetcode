@@ -8,7 +8,6 @@ https://leetcode-cn.com/problems/remove-duplicates-from-sorted-array-ii/solution
 - 由于是保留 k 个相同数字，对于前 k 个数字，我们可以直接保留
 - 对于后面的任意数字，能够保留的前提是：与当前写入的位置前面的第 k 个元素进行比较，不相同则保留
 
-
 解法二：快慢指针
 """
 class Solution:

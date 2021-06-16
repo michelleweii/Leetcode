@@ -11,7 +11,6 @@ class Solution(object):
         # all in [0, left) = 0
         # all in [left, cur) = 1
         # all in [right, len - 1] = 2
-
         # https://leetcode-cn.com/problems/sort-colors/solution/kuai-su-pai-xu-partition-guo-cheng-she-ji-xun-huan/
         left = 0
         right = len(nums)
