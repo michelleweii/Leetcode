@@ -1,6 +1,7 @@
 """
 hard
 哈希表+双指针
+https://leetcode-cn.com/problems/substring-with-concatenation-of-all-words/solution/python-zi-dian-hua-dong-chuang-kou-by-li-bmut/
 o(n*mw)
 枚举所有子串的开头，从这个单词开始，查看所有的[i,i+w,i+2w,...,i+(m-1)w)，
 判断单词是否已经用过了，这个单词是否和hashmap中的一致
