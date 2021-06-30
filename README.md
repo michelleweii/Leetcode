@@ -68,6 +68,13 @@ https://leetcode-cn.com/problems/sort-colors/solution/kuai-su-pai-xu-partition-g
 
 # 5、dp
 
+416. 分割等和子集——动态规划之01背包问题
+494. 目标和——动态规划之01背包问题
+322. 零钱兑换——动态规划之完全背包问题
+518. 零钱兑换 II——动态规划之完全背包的组合问题
+377. 组合总和 Ⅳ——动态规划之完全背包考虑顺序的组合问题
+
+
 https://www.bilibili.com/video/BV1hf4y197w3
 https://www.bilibili.com/video/BV1CD4y127CZ
 https://www.bilibili.com/video/BV1sk4y1y7Dv

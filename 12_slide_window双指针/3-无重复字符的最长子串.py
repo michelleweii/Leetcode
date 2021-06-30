@@ -19,7 +19,7 @@ class Solution(object):
             hash_map[s[j]] = hash_map.get(s[j],0)+1
             while hash_map[s[j]]>1:
                 hash_map[s[i]] = hash_map[s[i]]-1
-                i += 1
+                i += 1 # i是最右的有边界
             res = max(res,j-i+1)
         return res
 
