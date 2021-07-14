@@ -1,9 +1,11 @@
 剑指offer二刷笔记
 
-# week1
-(看笔记之后做题，仍有问题) 3 10 11 
+# week1 
+【2021-07-13】(看笔记之后做题，仍有问题) 3 10 11 
 
 - 剑指 Offer 03 [数组中重复的数字](https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof)
+
+关于数值交换，踩坑 [交换列表中的两个值遇到的坑](https://blog.csdn.net/weixin_39544046/article/details/105972357)
 - 剑指 Offer 11 [旋转数组的最小数字](https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/)
 - 剑指 Offer 10- II [青蛙跳台阶问题](https://leetcode-cn.com/problems/qing-wa-tiao-tai-jie-wen-ti-lcof/)
 
@@ -11,6 +13,16 @@
 
 # week2
 
+【2021-07-14 ~ 2021-0-15】
+- 剑指 Offer 16 [数值的整数次方](https://leetcode-cn.com/problems/shu-zhi-de-zheng-shu-ci-fang-lcof/solution/mian-shi-ti-16-shu-zhi-de-zheng-shu-ci-fang-kuai-s/)
+
+考察快速幂的概念
+
+
+[位运算相关题目](https://leetcode-cn.com/problems/er-jin-zhi-zhong-1de-ge-shu-lcof/solution/gong-shui-san-xie-yi-ti-si-jie-wei-shu-j-g9w6/)
+
+
+位运算15、快速幂16
 
 # week3
 

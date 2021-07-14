@@ -5,14 +5,22 @@ https://leetcode-cn.com/problems/shu-zu-zhong-zhong-fu-de-shu-zi-lcof/solution/y
 """
 class Solution:
     def findRepeatNumber(self, nums):
+        """
         n = len(nums)
         for i in range(n):
             while nums[i]!=i and nums[nums[i]]!=nums[i]:
-                print(i, nums[i], nums[nums[i]])
+                # print(i, nums[i], nums[nums[i]])
                 nums[nums[i]], nums[i] = nums[i], nums[nums[i]]
-                print(i, nums) # python nums出了while循环就恢复原样了！
-            if nums[i] != nums[nums[i]] and nums[nums[i]]==nums[i]:
-                return nums[i]
+                # print(i, nums) # python nums出了while循环就恢复原样了！
+                if nums[i] != nums[nums[i]] and nums[nums[i]]==nums[i]:
+                    return nums[i]
+        return -1
+        """
+        n = len(nums)
+        for i in range(n):
+            while nums[i] != i:
+                if nums[nums[i]] == nums[i]: return nums[i]
+                nums[nums[i]], nums[i] = nums[i], nums[nums[i]]
         return -1
 
 
