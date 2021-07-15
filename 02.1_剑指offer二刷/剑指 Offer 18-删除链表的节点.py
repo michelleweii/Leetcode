@@ -15,3 +15,4 @@ if __name__ == '__main__':
     head = [4,5,1,9]
     val = 1
     print(Solution().deleteNode(head, val))
+    # [4,5,9]
