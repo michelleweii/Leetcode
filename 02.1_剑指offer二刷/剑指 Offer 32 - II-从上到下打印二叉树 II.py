@@ -15,7 +15,7 @@ class Solution(object):
     #   [15,7]
     # ]
     def levelOrder(self, root):
-        if not root:return None
+        if not root:return []
         queue = []
         res = []
         queue.append(root)

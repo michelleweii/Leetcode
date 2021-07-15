@@ -1,6 +1,7 @@
 """
 middle 二叉树
 2021-07-15
+32题 i ii iii如下：
 """
 class TreeNode(object):
     def __init__(self, x):
@@ -45,7 +46,7 @@ class Solution(object):
     # 之字形遍历
     # [[3], [20,9], [15,7]]
     def levelOrder3(self, root):
-        if not root:return None
+        if not root:return []
         queue = []
         res = []
         queue.append(root)

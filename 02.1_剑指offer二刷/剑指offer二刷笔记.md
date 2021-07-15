@@ -16,6 +16,8 @@
 【2021-07-14 ~ 2021-0-15】
 - 剑指 Offer 16 [数值的整数次方](https://leetcode-cn.com/problems/shu-zhi-de-zheng-shu-ci-fang-lcof/solution/mian-shi-ti-16-shu-zhi-de-zheng-shu-ci-fang-kuai-s/)
 
+- 13 bfs 所有可行解
+
 考察快速幂的概念
 
 
@@ -31,6 +33,37 @@
 
 [二叉树对称性递归题目汇总](https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof/solution/yi-pian-wen-zhang-dai-ni-chi-tou-dui-che-uhgs/)
 
+
+13、16、18、29、31
+
+> 14-20没做, 18想7月16日早上自己做一下
+
+
+
 # week4
 
 # week5
+
+
+55 二叉树的深度 once ok
+
+
+58 once okk
+
+
+
+
+---
+python 用法
+```python
+s = "a good   example"
+res = s.split()
+print(res) # ['a', 'good', 'example']
+res = s.split(' ')
+print(res) # ['a', 'good', '', '', 'example']
+```
+
+
+
+
+
