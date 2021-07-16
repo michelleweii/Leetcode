@@ -1,4 +1,7 @@
-
+"""
+easy
+https://leetcode-cn.com/problems/da-yin-cong-1dao-zui-da-de-nwei-shu-lcof/solution/mian-shi-ti-17-da-yin-cong-1-dao-zui-da-de-n-wei-2/
+"""
 def myPow(x, n: int):
     res = 1
     for i in range(1, abs(n)+1):
