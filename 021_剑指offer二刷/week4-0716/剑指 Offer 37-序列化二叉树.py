@@ -1,5 +1,5 @@
 """
-hard
+hard 二叉树
 """
 class TreeNode(object):
     def __init__(self, x):
