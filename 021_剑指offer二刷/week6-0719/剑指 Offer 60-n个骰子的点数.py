@@ -16,6 +16,7 @@ middle 一维dp
 """
 class Solution:
     def dicesProbability(self, n):
+        pass
 
 if __name__ == '__main__':
     n = 1

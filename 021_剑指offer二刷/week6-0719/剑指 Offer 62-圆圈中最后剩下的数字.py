@@ -8,7 +8,6 @@ class Solution:
         if not n:return n
 
 
-
 if __name__ == '__main__':
     n = 5
     m = 3

@@ -17,8 +17,8 @@ class Solution:
             while stk and i-k>=stk[0]:
                 stk.pop(0)
 
-            # stk.append(i)
-            print(i, stk)
+            stk.append(i)
+            # print(i, stk)
             if i+1>=k:
                 res.append(nums[stk[0]])
         return res
