@@ -1,6 +1,7 @@
 """
 easy bst
-
+2021-07-20
+https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/solution/mian-shi-ti-68-i-er-cha-sou-suo-shu-de-zui-jin-g-7/
 """
 
 class TreeNode:
@@ -11,9 +12,14 @@ class TreeNode:
 
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
+        # if not root:return root
+        if root.val < p.val and root.val < q.val:
+            return self.lowestCommonAncestor(root.right, p, q)
+        if root.val > p.val and root.val > q.val:
+            return self.lowestCommonAncestor(root.left, p, q)
+        else:
+            return root
 
 if __name__ == '__main__':
-    root = [6, 2, 8, 0, 4, 7, 9, null, null, 3, 5]
-    p = TreeNode(2)
-    q = TreeNode(8)
-    print(Solution().lowestCommonAncestor(root, p, q))
+
+    print(Solution().lowestCommonAncestor(a, p, q))
