@@ -3,6 +3,7 @@ middle dfs
 需要重做 2021-07-16
 """
 class Solution:
+    # ['acb', 'bca', 'cba', 'abc', 'bac', 'cab']
     def permutation(self, s: str):
         res = []
         if not s: return res

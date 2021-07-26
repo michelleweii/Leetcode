@@ -28,7 +28,6 @@ class Solution:
                 b = tmp[1]+dy[i]
                 if a>=0 and a<m and b>=0 and b<n and not visited[a][b]:
                     queue.append((a,b))
-
         return res
 
 if __name__ == '__main__':

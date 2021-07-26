@@ -20,7 +20,6 @@ class Solution:
         p = head
         for i in range(1, n):
             p = p.next
-
         return p
 
 if __name__ == '__main__':
