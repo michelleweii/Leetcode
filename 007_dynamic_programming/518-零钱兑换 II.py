@@ -1,5 +1,10 @@
-# 给定不同面额的硬币和一个总金额。写出函数来计算可以凑成总金额的硬币组合数。
-# 假设每一种面额的硬币有无限个。
+"""
+middle
+动态规划
+是否可以用 coins 中的数组合和成 amount，完全背包问题，并且为“不考虑排列顺序的完全背包问题”，外层循环为选择池 coins，内层循环为 amount。
+dp[i] 表示和为 i 的 coin 组合有 dp[i] 种。
+"""
+# link:https://leetcode-cn.com/problems/coin-change/solution/yi-tao-kuang-jia-jie-jue-bei-bao-wen-ti-h0y40/
 class Solution:
     def change(self, amount, coins):
         # dp[i]是构成金额i的硬币数目

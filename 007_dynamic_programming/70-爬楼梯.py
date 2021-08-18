@@ -1,9 +1,10 @@
+"""
+easy
+完全背包
+https://mp.weixin.qq.com/s/e_wacnELo-2PG76EjrUakA
+"""
 class Solution(object):
     def climbStairs(self, n):
-        """
-        :type n: int
-        :rtype: int
-        """
         # 递归求解，但超出时间限制
         # if n == 1:
         #     return 1

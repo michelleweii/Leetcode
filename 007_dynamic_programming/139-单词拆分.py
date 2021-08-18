@@ -1,30 +1,24 @@
+"""
+middle
+是否可以用 wordDict 中的词组合成 s，完全背包问题，并且为“考虑排列顺序的完全背包问题”，外层循环为 target ，内层循环为选择池 wordDict。
+dp[i] 表示以 i 结尾的字符串是否可以被 wordDict 中组合而成。
+考虑顺序，外层target，内层arrs。内循环正序。
+"""
+# https://leetcode-cn.com/problems/coin-change/solution/yi-tao-kuang-jia-jie-jue-bei-bao-wen-ti-h0y40/
 class Solution:
     def wordBreak(self, s, wordDict):
-        if s == '':
-            return True
-        if len(wordDict) == 1:
-            if s == wordDict[0]:
-                return True
-            else:
-                return False
-
-        dp = [0 for _ in range(len(s)+1)]
-        dp[0] = 1
-        for i in range(len(s)):
-            temp = s[:i+1]
-            for j in range(i+1):
-                if temp in wordDict and dp[j]:
-                    dp[i+1] = 1
-                temp = temp[1:]
-                # if i==7:
-                #     print(j,temp)
-                # print(i,j)
-        return dp[len(s)] == 1
+        dp = [False]*(len(s)+1) # 以i结尾的单词能不能由word所构成
+        dp[0] = True # 空串
+        for i in range(len(s)+1):
+            for word in wordDict:
+                sz = len(word)
+                if i>=sz and word==s[i-sz:i]:
+                    dp[i] = dp[i] or dp[i-sz]
+        # print(dp)
+        return dp[-1]
 
 
 if __name__ == '__main__':
     s = "leetcode"
-    # print(s[:4])
-    # print(len(s))
     wordDict = ["leet", "code"]
     print(Solution().wordBreak(s, wordDict))
