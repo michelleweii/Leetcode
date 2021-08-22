@@ -1,6 +1,6 @@
 """
 middle
-dfs
+dfs-队列
 """
 # 给定一个整数 n, 返回从 1 到 n 的字典顺序。
 # 例如，
@@ -33,10 +33,6 @@ class Solution:
         return ans
 
     def lexicalOrderDFS(self, n):
-        """
-        :type n: int
-        :rtype: List[int]
-        """
         res = []
         for i in range(1, 10):
             self.getNum(i, n, res)

@@ -2,10 +2,6 @@
 # 使用栈
 class Solution(object):
     def longestValidParentheses(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
         res = 0
         stack = [(-1,'(')]
         for i, val in enumerate(s):

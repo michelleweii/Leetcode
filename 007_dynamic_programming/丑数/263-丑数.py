@@ -4,10 +4,6 @@ class Solution(object):
     # 每一个丑数必然是之前丑数与2，3或5的乘积得到的，这样下一个丑数就是用之前的丑数分别乘以2，3，5
 
     def isUgly(self, num):
-        """
-        :type num: int
-        :rtype: bool
-        """
         # 暴力
         while num>1:
             if num%2==0:

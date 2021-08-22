@@ -3,11 +3,6 @@
 
 class Solution:
     def nthSuperUglyNumber(self, n, primes):
-        """
-        :type n: int
-        :type primes: List[int]
-        :rtype: int
-        """
         dp = [1] # res=[]
 
         lenPrimes = len(primes)

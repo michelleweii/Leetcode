@@ -33,10 +33,10 @@ if __name__ == '__main__':
         path = []
         result = []
         nums.sort()
-        self.dfs(nums,0,path,result)
+        self.dfs-队列(nums,0,path,result)
         return result
 
-    def dfs(self,nums,start,path,result):
+    def dfs-队列(self,nums,start,path,result):
         if path not in result:
             result.append(path[:])
         # 需要一个出口
@@ -44,7 +44,7 @@ if __name__ == '__main__':
             return
         for i in range(start,len(nums)):
             path.append(nums[i])
-            self.dfs(nums,i+1,path,result)
+            self.dfs-队列(nums,i+1,path,result)
             path.pop()
 
     """

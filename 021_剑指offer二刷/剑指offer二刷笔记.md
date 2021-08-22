@@ -696,7 +696,7 @@ class Solution:
             res.append(path[:])
         self.dfs(res, path, root.left, target)
         self.dfs(res, path, root.right, target)
-        # 回溯
+        # 回溯算法
         path.pop()
 ```
 

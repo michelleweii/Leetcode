@@ -3,10 +3,6 @@
 
 class Solution(object):
     def minPathSum(self, grid):
-        """
-        :type grid: List[List[int]]
-        :rtype: int
-        """
         # 设dp[i][j]为到达位置（i，j）时的最优解
         dp = [[0 for col in range(len(row))] for row in grid]
         row = len(grid)

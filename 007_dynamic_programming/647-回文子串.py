@@ -1,10 +1,6 @@
 # 7_dynamic_programming
 class Solution(object):
     def countSubstrings(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
         new_word = []
         for i in range(len(s)):
             for k in range(1,len(s)):
@@ -39,12 +35,7 @@ class Solution(object):
         print(count)
 
 
-
-
-def main():
+if __name__ == '__main__':
     s = "abc"
     myResult = Solution()
     print(myResult.countSubstrings(s))
-
-if __name__ == '__main__':
-    main()

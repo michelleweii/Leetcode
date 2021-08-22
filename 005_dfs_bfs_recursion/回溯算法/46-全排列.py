@@ -1,6 +1,6 @@
 """
 middle
-dfs 回溯法
+dfs-队列 回溯法
 """
 class Solution(object):
     def __init__(self):
@@ -19,7 +19,7 @@ class Solution(object):
                 continue
             self.path.append(nums[i])
             self.dfs(nums)  # 递归
-            self.path.pop()  # 回溯
+            self.path.pop()  # 回溯算法
 
 if __name__ == '__main__':
     nums = [1, 2, 3]

@@ -1,6 +1,6 @@
 """
 middle
-字符串处理+dfs
+字符串处理+dfs-队列
 
 # 对于”aab”作为输入，可以这么寻找回文：
 # “a”+”ab”构成的回文串
@@ -32,7 +32,7 @@ class Solution(object):
             if self.check(now):
                 self.path.append(now)
                 self.res.append(self.path[:]) # 注意这里python的深拷贝
-                self.path.pop() # 回溯
+                self.path.pop() # 回溯算法
             return self.res
 
         # 字符串 s 还没遍历完
@@ -58,16 +58,16 @@ class Solution(object):
     """
     def partition(self, s):
         res = []
-        self.dfs(s, [], res)
+        self.dfs-队列(s, [], res)
         return res
 
-    def dfs(self, s, path, res):
+    def dfs-队列(self, s, path, res):
         if not s:
             res.append(path)
             return
         for i in range(1, len(s) + 1):
             if self.isPal(s[:i]):
-                self.dfs(s[i:], path + [s[:i]], res)
+                self.dfs-队列(s[i:], path + [s[:i]], res)
 
     def isPal(self, s):
         return s == s[::-1]
