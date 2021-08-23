@@ -27,6 +27,6 @@ class Solution:
 
 if __name__ == '__main__':
     nums = [2,2,2,2,2]
-    nums = [1,3,5,4,7]
+    # nums = [1,3,5,4,7]
     print(Solution().findNumberOfLIS(nums))
     # print(Solution().fn(nums))

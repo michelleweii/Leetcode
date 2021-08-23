@@ -1,4 +1,4 @@
-# Definition for a Node.
+
 class Node:
     def __init__(self, val, neighbors):
         self.val = val

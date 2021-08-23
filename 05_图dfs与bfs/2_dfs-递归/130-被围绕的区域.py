@@ -14,13 +14,12 @@ class Solution:
                 elif (board[i][j] == 'M'):
                     board[i][j] = 'O'
 
-    def dfs(board, i, j, m, n):
+    def dfs(self, board, i, j, m, n):
         if i < 0 or j < 0 or i > m-1 or j > n-1：
             return
         if(board[i][j] != 'O') return
         board[i][j] = 'M'
         dfs(board, i+1, j, m, n)
-
         dfs(board, i, j+1, m, n)
         dfs(board, i-1, j, m, n)
         dfs(board, i, j-1, m, n)

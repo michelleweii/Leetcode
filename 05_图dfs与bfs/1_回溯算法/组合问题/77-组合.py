@@ -1,5 +1,6 @@
 """
 回溯法——组合问题（middle）
+# 给定两个整数 n 和 k，返回范围 [1, n] 中所有可能的 k 个数的组合。
 # 没有剪枝
 """
 class Solution:
@@ -19,6 +20,8 @@ class Solution:
             # return # return加不加都不影响结果，所以作用是什么？
         # 横向遍历
         for i in range(start_index, n+1):
+            # 剪枝
+
             self.path.append(i)
             self.dfs(n,k,i+1) # 深度遍历
             self.path.pop() # 回溯，上一级

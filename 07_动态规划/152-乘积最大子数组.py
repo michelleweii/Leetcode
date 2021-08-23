@@ -1,5 +1,5 @@
 """
-middle
+middle 超级常考
 !!!要求连续
 """
 # 给定一个整数数组nums，找出一个序列中乘积最大的连续子序列（该序列至少包含一个数）。
@@ -11,7 +11,6 @@ class Solution:
         for i in range(1,len(nums)):
             dp[i] = max(dp[i-1],nums[i]*dp[i-1])
             print(dp[i])
-
         return max(dp)
 
 

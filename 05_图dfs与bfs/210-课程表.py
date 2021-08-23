@@ -1,6 +1,6 @@
+# 拓扑排序
 class Solution:
     def findOrder(self, numCourses, prerequisites):
-        # 拓扑排序
         if numCourses < 2:
             return [0]
         rd = [0]*numCourses

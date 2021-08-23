@@ -14,9 +14,6 @@ class Solution(object):
         return dp[0][0]
 
 
-
-
-
 if __name__ == '__main__':
     # triangle = [[-10]]
     triangle = [[2],[3,4],[6,5,7],[4,1,8,3]]

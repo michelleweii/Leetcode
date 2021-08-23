@@ -1,6 +1,6 @@
 """
 middle
-dfs
+2_dfs-递归
 """
 # 给定一个整数 n, 返回从 1 到 n 的字典顺序。
 # 例如，
@@ -38,10 +38,9 @@ class Solution:
             self.getNum(i, n, res)
         return res
 
+
+    # 递归, i为以i开头, n为不大于n, res为保存结果的数组
     def getNum(self, i, n, res):
-        """
-        递归, i为以i开头, n为不大于n, res为保存结果的数组
-        """
         if i <= n:
             res.append(i)
             cur = i * 10

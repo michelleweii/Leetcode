@@ -1,5 +1,5 @@
 """
-middle bfs-队列
+middle 3_bfs-队列
 所有可行解
 """
 class Solution:

@@ -32,7 +32,7 @@ class Solution:
             sums+=candidates[i]
             self.path.append(candidates[i])
             # i+1表明一个数字只能使用一次，这样下次递归的循环就从i+1开始了
-            self.dfs(candidates,target,sums,i+1)
+            self.dfs(candidates,target,sums,i+1) # 再向下一层
             sums-=candidates[i]
             self.path.pop()
 
