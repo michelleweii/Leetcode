@@ -1,6 +1,6 @@
 """
 middle
-dfs-队列 回溯法
+dfs 回溯法
 """
 class Solution(object):
     def __init__(self):
