@@ -9,7 +9,7 @@ class Solution(object):
         visited[n] = True
         print(q)
 
-        while any(q): # 如果队列不为空的话，执行循环
+        while q: # 如果队列不为空的话，执行循环
             num, step = q.pop(0)  # 队列先进先出
             i = 1
             tNum = num-i**2
@@ -25,10 +25,6 @@ class Solution(object):
                 i+=1
                 tNum = num-i**2
 
-def main():
-    n = 12
-    myResult = Solution()
-    print(myResult.numSquares(n))
-
 if __name__ == '__main__':
-    main()
+    n = 12
+    print(Solution().numSquares(n))

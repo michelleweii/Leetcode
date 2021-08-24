@@ -1,53 +1,53 @@
-# 给定一个可能包含重复元素的整数数组 nums，
-# 返回该数组所有可能的子集（幂集）。
-
-# 说明：解集不能包含重复的子集。
+"""
+middle-回溯法-子集问题（有重复元素）
+子集问题，树枝上的所有节点都要
+"""
 class Solution(object):
+    def __init__(self):
+        self.res = []
+        self.path = []
+
     def subsetsWithDup(self, nums):
-        res = [[]]
-        nums.sort() # 这句话好神奇，加了就对了 （说明：解集不能包含重复的子集。）
-        self.dfs(0, [], nums, res)
-        return res
+        if not nums:return self.res
+        nums.sort()
+        # 方法一：
+        # self.dfs(nums,0)
+        # 方法二：使用used标记访问
+        used = [0]*len(nums)
+        self.dfs_used(nums,0,used)
+        return self.res
 
-    def dfs(self, i, item, nums, res):
-        if i >= len(nums):
+    def dfs_used(self,nums,start_index,used):
+        self.res.append(self.path[:])
+        # 定义出口
+        if start_index>=len(nums):
             return
-        item.append(nums[i]) # 每个阶段的元素
-        res.append(item[:])
-        self.dfs(i+1,item,nums,res)
-        item.pop()
-        self.dfs(i+1,item,nums,res)
+        # for循环控制树层
+        for i in range(start_index, len(nums)):
+            if i>0 and nums[i]==nums[i-1] and used[i-1]==0:
+                continue
+            self.path.append(nums[i])
+            used[i] = 1
+            self.dfs_used(nums,i+1,used) # start_index下一位开始
+            self.path.pop()
+            used[i] = 0
 
+    # 方法一
+    def dfs(self,nums,start_index):
+        self.res.append(self.path[:])
+        # 定义出口
+        if start_index>=len(nums):
+            return
+
+        for i in range(start_index, len(nums)):
+            # i是控制树层，取过的元素不再重复取
+            if i>start_index and nums[i]==nums[i-1]:
+                continue
+            self.path.append(nums[i])
+            self.dfs(nums,i+1)
+            self.path.pop()
 
 if __name__ == '__main__':
     nums = [1,2,2]
+    # nums = [0]
     print(Solution().subsetsWithDup(nums))
-
-    """
-    class Solution(object):
-    def subsetsWithDup(self, nums):
-        path = []
-        result = []
-        nums.sort()
-        self.2_dfs-递归(nums,0,path,result)
-        return result
-
-    def 2_dfs-递归(self,nums,start,path,result):
-        if path not in result:
-            result.append(path[:])
-        # 需要一个出口
-        if start == len(nums): # 之前报错，改了这里
-            return
-        for i in range(start,len(nums)):
-            path.append(nums[i])
-            self.2_dfs-递归(nums,i+1,path,result)
-            path.pop()
-
-    """
-
-# 输入：
-# [4,4,4,1,4]
-# 输出：
-# [[],[4],[4,4],[4,4,4],[4,4,4,1],[4,4,4,1,4],[4,4,4,4],[4,4,1],[4,4,1,4],[4,1],[4,1,4],[1],[1,4]]
-# 预期：
-# [[],[1],[1,4],[1,4,4],[1,4,4,4],[1,4,4,4,4],[4],[4,4],[4,4,4],[4,4,4,4]]

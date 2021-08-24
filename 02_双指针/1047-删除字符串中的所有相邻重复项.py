@@ -19,7 +19,6 @@ class Solution:
                 left -= 1
         return "".join(s[:left+1])
 
-
     """ 栈
     stk = []
     n = len(s)
@@ -33,8 +32,6 @@ class Solution:
             stk.append(cur)
     return "".join(stk)
     """
-
-
 
 if __name__ == '__main__':
     s = "abbaca"

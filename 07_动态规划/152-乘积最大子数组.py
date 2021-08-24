@@ -10,9 +10,8 @@ class Solution:
         dp[0] = nums[0]
         for i in range(1,len(nums)):
             dp[i] = max(dp[i-1],nums[i]*dp[i-1])
-            print(dp[i])
+            # print(dp[i])
         return max(dp)
-
 
 if __name__ == '__main__':
     nums = [2,3,-2,4]

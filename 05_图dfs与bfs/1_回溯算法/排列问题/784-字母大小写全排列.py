@@ -2,10 +2,6 @@ from string import ascii_lowercase
 
 class Solution(object):
     def letterCasePermutation(self, S):
-        """
-        :type S: str
-        :rtype: List[str]
-        """
         rs = [S]
         def flip(ch):
             if ch in ascii_lowercase:
@@ -30,38 +26,7 @@ class Solution(object):
                 # ['1ab2', '1Ab2', '1aB2', '1AB2']
         return rs
 
-
-
-    def letterCasePermutation1(self, S):
-        """
-        :type S: str
-        :rtype: List[str]
-        """
-        res = [""]
-        print(len(res)) # 1
-        for s in S:
-            # print(s)
-            if not s.isalpha():
-                for i in range(len(res)):
-                    # print(i) # 0 1 0 1 2 3
-                    res[i] += s
-
-            else:
-                for i in range(len(res)):
-                    # print(i) # 0 0 1
-                    tmp = res[i]
-                    res[i] += s.lower()
-                    # print(i, res)
-                    res.append(tmp + s.upper())
-                    print(i, res)
-        return res
-
-
-def main():
-    S = "1ab2"
-    myResult = Solution()
-    # 第一个字符串的排列之一是第二个字符串的子串
-    print(myResult.letterCasePermutation(S))
-
 if __name__ == '__main__':
-    main()
+    S = "1ab2"
+    # 第一个字符串的排列之一是第二个字符串的子串
+    print(Solution().letterCasePermutation(S))

@@ -1,3 +1,6 @@
+"""
+hard
+"""
 class Solution:
     def totalNQueens(self, n):
         self.res = 0
