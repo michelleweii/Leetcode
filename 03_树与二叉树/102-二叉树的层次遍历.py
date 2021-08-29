@@ -1,5 +1,5 @@
 from collections import deque
-# Definition for a binary tree node.
+
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
@@ -24,10 +24,6 @@ class Solution(object):
         return path
 
     def levelOrder2(self, root):
-        """
-        :type root: TreeNode
-        :rtype: List[List[int]]
-        """
         queue = []
         rs = []
         if root:

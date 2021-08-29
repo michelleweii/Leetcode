@@ -1,7 +1,9 @@
+"""
+middle 哈希表
+"""
 class Solution(object):
     def threeSum(self, nums):
         rs = []
-
         for i in range(len(nums)):
             temp = 0-nums[i]
             hash_map = {}

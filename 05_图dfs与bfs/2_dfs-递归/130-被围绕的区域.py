@@ -1,38 +1,50 @@
+"""
+middle dfs
+20210825
+思路：
+从四周的O开始扩散，将O能扩到的所有O转为Y； （# 任何不在边界上，或不与边界上的'O'相连的'O'最终都会被填充为'X'。）
+再次遍历board，将所有的Y转为O，其余所有转为X
+"""
+
+# 被围绕的区间不会存在于边界上，换句话说，任何边界上的'O'都不会被填充为'X'。
+# 任何不在边界上，或不与边界上的'O'相连的'O'最终都会被填充为'X'。
+# 如果两个元素在水平或垂直方向相邻，则称它们是“相连”的。
 class Solution:
-    def solve(self, board):
-        if not board or not board[0]:
-            return
-        m, n = len(board), len(board[0])  # m行，n列
-        for i in range(m):
-            for j in range(n):
-                if (i == 0) or (j == 0) or (i=m-1) or (j=n-1):
-                    self.dfs(board, i, j, m, n)
-        for i in range(m):
-            for j in range(n):
-                if (board[i][j] == 'O'):
-                    board[i][j] = 'X'
-                elif (board[i][j] == 'M'):
-                    board[i][j] = 'O'
+    def solve(self, board) -> None:
+        if not board or not board[0]:return board
+        n, m = len(board), len(board[0])  # n行，m列
+        # 从四周向内扩散
+        # 左右（这块搞死了）
+        for i in range(n):
+            if board[i][0] == 'O':self.dfs(board, i, 0, n, m)
+            if board[i][m-1] == 'O': self.dfs(board, i, m-1, n, m)
+        # 上下（这块搞死了）
+        for j in range(m):
+            if board[0][j] == 'O': self.dfs(board, 0, j, n, m)
+            if board[n-1][j] == 'O': self.dfs(board, n-1, j, n, m)
 
-        def dfs(self, board, i, j, m, n):
-            if i < 0 or j < 0 or i > m-1 or j > n-1：
-                return
-            if(board[i][j] != 'O'): return
-            board[i][j] = 'M'
-            dfs(board, i+1, j, m, n)
-            dfs(board, i, j+1, m, n)
-            dfs(board, i-1, j, m, n)
-            dfs(board, i, j-1, m, n)
+        print("扩散结果：", board)
+        # 再次遍历board，将所有的Y转为O，其余所有转为X
+        for i in range(n):
+            for j in range(m):
+                if board[i][j] == 'Y':board[i][j] = 'O'
+                else: board[i][j] = 'X'
+        print("最终结果：", board)
 
-        # print(board[0]) # ['X', 'X', 'X', 'X']
-        # print('XO'[0])  # X , it is amazing!!!
-        """
-        board[:] = [['XO'[c == 'S'] for c in row] for row in board]
-        等于, 一个二维数组
-        for row in board:
-            for i, c in enumerate(row):
-                row[i] = 'XO'[c == 'S']
-        """
+    def dfs(self,board,x,y,n,m):
+        # 定义出口 ???
+
+        dx = [-1,0,1,0]
+        dy = [0,1,0,-1]
+
+        board[x][y] = 'Y'
+
+        # 从当前位置(x,y)的4个方向开始遍历
+        for i in range(4):
+            a = x+dx[i]
+            b = y+dy[i]
+            if a>=0 and a<n and b>=0 and b<m and board[a][b]=='O':
+                self.dfs(board,a,b,n,m)
 
 
 if __name__ == '__main__':
@@ -41,3 +53,9 @@ if __name__ == '__main__':
              ['X', 'X', 'O', 'X'],
              ['X', 'O', 'X', 'X']]
     print(Solution().solve(board))
+"""
+[["X","X","X","X"],
+["X","X","X","X"],
+["X","X","X","X"],
+["X","O","X","X"]]
+"""

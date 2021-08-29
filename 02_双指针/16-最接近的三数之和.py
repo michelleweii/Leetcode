@@ -1,6 +1,5 @@
 """
-middle
-双指针反向 o(n^2)
+middle 双指针反向 o(n^2)
 重点理解i,left,right的位置
 1、在数组 nums 中，进行遍历，每遍历一个值利用其下标i，形成一个固定值 nums[i], 枚举剩余部分left&right。
 2、根据 sum = nums[i] + nums[start] + nums[end] 的结果，判断 sum 与目标 target 的距离，如果更近则更新结果 ans

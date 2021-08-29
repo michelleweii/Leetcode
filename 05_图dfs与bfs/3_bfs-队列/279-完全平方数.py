@@ -7,8 +7,7 @@ class Solution(object):
         q.append((n,0))
         visited = [False for _ in range(n+1)]
         visited[n] = True
-        print(q)
-
+        # print(q)
         while q: # 如果队列不为空的话，执行循环
             num, step = q.pop(0)  # 队列先进先出
             i = 1

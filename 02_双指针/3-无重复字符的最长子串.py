@@ -1,6 +1,5 @@
 """
-middle
-双指针扫描
+middle 同向双指针扫描
 思路：
 定义两个指针i,j。表示当前扫描到的子串是[i,j]，
 扫描过程中维护一个哈希表，表示[i,j]中每个字符出现的次数。
@@ -23,6 +22,7 @@ class Solution(object):
             res = max(res,j-i+1)
         return res
 
+    # 2020
     def lengthOfLongestSubstring(self, s):
         hash_map = {}
         left,res = 0,0
