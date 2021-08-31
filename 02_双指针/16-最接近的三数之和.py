@@ -14,7 +14,7 @@ class Solution:
         # 有3个变量
         res = nums[0]+nums[1]+nums[2]
         for i in range(len(nums)):
-            # 剪枝
+            # 剪枝, 重复的数字不需要再计算
             if i > 0 and nums[i] == nums[i - 1]:
                 continue
 
