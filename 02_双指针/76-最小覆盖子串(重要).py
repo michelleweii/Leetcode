@@ -1,7 +1,7 @@
 """
-hard
+hard 2021-06-10
 双指针同向
-子串是连续的；T可能包含重复字符
+子串是连续的；T可能包含重复字符（下面连接的图例有助于理解）
 https://leetcode-cn.com/problems/minimum-window-substring/solution/tong-su-qie-xiang-xi-de-miao-shu-hua-dong-chuang-k/
 如何判断S的子串包含了T中的所有字符？
 - 分别统计s的子串和T中每个字符出现的次数，逐个对比（哈希表）。
@@ -20,7 +20,8 @@ https://leetcode-cn.com/problems/minimum-window-substring/solution/tong-su-qie-x
 #
 from collections import Counter
 # sW_count, tW_count = Counter(sW), Counter(tW) # 统计字符串里每个字符的个数
-
+# need[] == 0，说明这个字符正好
+# need[] <0,说明这个字符多余了
 class Solution:
     def minWindow(self, s, t):
         ls = len(s)
@@ -36,7 +37,7 @@ class Solution:
         # for c in t:
         #     need[c] = need.get(c, 0)+1
         need = Counter(t) # 当前滑动窗口中需要的各元素的数量
-        need_cnt = len(t) # 所需元素的总数量,=3则为还差3个元素
+        need_cnt = len(t) # 所需元素的总数量,=3则为还差3个元素(还需要几个元素可以成为t)
         start = 0 # start是最小覆盖串开始的index
 
         # [left, right) # 一开始l,r都是0，带入[)中，[0,0)这个区间是空的
@@ -48,7 +49,7 @@ class Solution:
             need[s[right]] -= 1 # 把右边的字符加入窗口
 
             if need_cnt == 0: # 步骤一：滑动窗口包含了所有T元素
-                while (left<right and need[s[left]]<0):  # 步骤二：增加left，排除多余元素
+                while (left<right and need[s[left]]<0):  # 步骤二：增加left，排除多余元素，<0说明是多余元素
                     need[s[left]] += 1
                     left += 1 # 指针右移
                 # 出while循环的时候，left位于不能再右移的位置
@@ -58,6 +59,7 @@ class Solution:
                     start = left # 再从这个位置开始向右扩展
 
                 # left向右移动后窗口肯定不能满足了,重新开始循环
+                # left是要前进一位的，开始寻找下一个满足条件的滑动窗口
                 need[s[left]] += 1 # 该元素移出了，则还需要该元素
                 left += 1
                 need_cnt += 1
