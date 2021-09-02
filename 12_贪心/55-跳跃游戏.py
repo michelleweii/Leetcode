@@ -1,9 +1,5 @@
 class Solution(object):
     def canJump(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: bool
-        """
         # 最远可达到的位置（index），不是落脚点，落脚点是这段中最远的位置
         far = [] # 最远可以跳至的位置
         for i, val in enumerate(nums):

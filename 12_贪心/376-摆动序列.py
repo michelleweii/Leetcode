@@ -1,9 +1,5 @@
 class Solution(object):
     def wiggleMaxLength(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
         # 在连续递增，递减时，只保留首尾元素
         def wigglelength(type,nums):
             if (len(nums)==0): return 0

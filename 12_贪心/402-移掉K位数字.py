@@ -24,11 +24,6 @@ class Solution(object):
         return "".join(stack).lstrip('0') or "0"
 
 
-
-
-
-
-
 if __name__ == '__main__':
     num = "10"
     k = 1

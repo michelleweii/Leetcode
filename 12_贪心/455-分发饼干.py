@@ -14,11 +14,6 @@ class Solution(object):
 
     # 超出时间限制，自己写的
     def findContentChildren1(self, g, s):
-        """
-        :type g: List[int]
-        :type s: List[int]
-        :rtype: int
-        """
         g = sorted(g) # 需求
         s = sorted(s)  # 糖果
         cnt = 0

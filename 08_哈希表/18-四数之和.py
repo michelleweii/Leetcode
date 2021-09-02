@@ -1,11 +1,10 @@
+"""
+middle 2021-09-02 能不能用双指针呢？
+"""
 # 字典，元组，set的使用
+
 class Solution(object):
     def fourSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[List[int]]
-        """
         lens = len(nums)
         nums.sort() # 说明：解集不能包含重复的子集
         res = set()
