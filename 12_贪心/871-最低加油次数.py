@@ -10,7 +10,9 @@ class Solution:
 
 
 if __name__ == '__main__':
-    target = 100, startFuel = 10, stations = [[10, 60], [20, 30], [30, 30], [60, 40]]
+    target = 100
+    startFuel = 10
+    stations = [[10, 60], [20, 30], [30, 30], [60, 40]]
     print(Solution().minRefuelStops(target,startFuel,stations))
 # 我们出发时有 10 升燃料。
 # 我们开车来到距起点 10 英里处的加油站，消耗 10 升燃料。将汽油从 0 升加到 60 升。
