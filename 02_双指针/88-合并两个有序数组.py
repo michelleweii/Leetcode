@@ -1,5 +1,5 @@
 """
-easy
+easy 2021-09-07review
 双指针双向
 # https://leetcode-cn.com/problems/merge-sorted-array/solution/hua-jie-suan-fa-88-he-bing-liang-ge-you-xu-shu-zu-/
 难死了 easy个锤子
@@ -11,7 +11,6 @@ easy
 - 时间复杂度：O(m+n)
 """
 class Solution:
-    # Do not return anything, modify nums1 in-place instead.
     def merge(self, nums1, m, nums2, n):
         p, q = m-1, n-1
         last = m+n-1
