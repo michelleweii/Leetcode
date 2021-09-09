@@ -1,6 +1,6 @@
 """
-easy
-双指针双向
+easy 2021-09-08 无问题
+双指针反向
 """
 class Solution(object):
     def twoSum(self, numbers, target):
