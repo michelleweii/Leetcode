@@ -17,7 +17,6 @@ class Solution:
             # 剪枝, 重复的数字不需要再计算
             if i > 0 and nums[i] == nums[i - 1]:
                 continue
-
             # 每次固定一个数nums[i]
             left = i+1
             right = len(nums)-1

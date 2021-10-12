@@ -16,6 +16,7 @@ class Solution(object):
         # 对nums升序 nlogn
         nums.sort()
         for i in range(n):
+            # 遍历每个元素，以每个元素为原点开始向右区间计算
             if nums[i]>0:return res # 因为升序，所以后面不可能有三个数加和等于 00，直接返回结果。
             # 剪枝，当前元素已经遍历过
             if i>0 and nums[i]==nums[i-1]:continue

@@ -1,7 +1,7 @@
 """
 middle 双指针反向 O(N)
 我的思考：
-使用双指针的原因是根据这个问题的特点，存水的高度取决于两边较短的那个内壁的高度。
+使用双指针的原因是根据这个问题的特点，【存水的高度取决于两边较短的那个内壁的高度】。
 为什么这道题不用单调栈？
 题解：https://leetcode-cn.com/problems/container-with-most-water/solution/container-with-most-water-shuang-zhi-zhen-fa-yi-do/
 """
