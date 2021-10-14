@@ -1,7 +1,6 @@
 """
 hard 2021-10-13 考察频次蛮高
 https://leetcode-cn.com/problems/reverse-nodes-in-k-group/solution/tu-jie-kge-yi-zu-fan-zhuan-lian-biao-by-user7208t/
-
 1、链表分区为已翻转部分+待翻转部分+未翻转部分
 2、每次翻转前，要确定翻转链表的范围，这个必须通过 k 此循环来确定
 3、【需记录翻转链表前驱和后继，方便翻转完成后把已翻转部分和未翻转部分连接起来】
@@ -11,8 +10,13 @@ https://leetcode-cn.com/problems/reverse-nodes-in-k-group/solution/tu-jie-kge-yi
 7、特殊情况，当翻转部分长度不足 k 时，在定位 end 完成后，end==null，已经到达末尾，说明题目已完成，直接返回即可
 8、时间复杂度为 O(n*K)最好的情况为O(n) 最差的情况未 O(n^2)
 9、空间复杂度为 O(1)除了几个必须的节点指针外，我们并没有占用其他空间
-
 """
+##
+# 需要4个指针，pre->start->end->post；
+# pre：待翻转区前一个；指向已翻转最后一个；
+# start：待翻转区开始；
+# end：待翻转区结束；
+# post：待翻转区后一个；指向未翻转第一个；
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -20,9 +24,48 @@ class ListNode:
 
 class Solution:
     def reverseKGroup(self, head: ListNode, k: int) -> ListNode:
+        if not head:return head
+        dummy = ListNode(-1)
+        dummy.next = head
+        pre = dummy  # 待翻转区前一个；指向已翻转最后一个；
+        start = head # 待翻转区开始；
+        end = head # 待翻转区结束；
+        post = head # 待翻转区后一个；指向未翻转第一个；
+        while post: # post代表有下一个新的开始
+            # 据k找到end 注意链表是否结束
+            for i in range(1, k): # 注意要从1开始
+                if end:end = end.next
+            # 如果链表的尾部没有被k整除, 跳出while循环
+            if end is None: break
+            # 对翻转区进行翻转
+            post = end.next
+            end.next = None # 断开与原链表的连接
+            end = start # 这里第一次不明白，注意!
+            start = self.reverse(start) # 这里，end-start的关系注意！
 
+            end.next = post
+            pre.next = start
 
+            # 重新指定pre，start，end
+            pre = end
+            start = post
+            end = start # 从开始位置继续找k个
+        return dummy.next
 
+    def reverse(self, head):
+        """
+        翻转整个以head为头的链表
+        翻转链表需要3个指针
+        """
+        pre = None
+        cur = head
+        while cur:
+            post = cur.next
+            cur.next = pre
+            pre = cur
+            cur = post
+        # 返回新的链表头部
+        return pre
 
 if __name__ == '__main__':
     n1 = ListNode(1)

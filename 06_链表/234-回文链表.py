@@ -6,10 +6,6 @@ class ListNode(object):
 
 class Solution(object):
     def isPalindrome(self, head):
-        """
-        :type head: ListNode
-        :rtype: bool
-        """
         listNode = []
         cur = head
         while cur:
@@ -19,15 +15,6 @@ class Solution(object):
             return True
         curList = listNode[::-1]
         return curList == listNode
-
-
-#        dummyRoot = ListNode(0)
-#        ptr = dummyRoot
-#        for i in curList:
-#            ptr.next = ListNode(i)
-#            ptr = ptr.next
-#        ptr = dummyRoot.next
-#        return ptr == head
 
 
 if __name__ == '__main__':

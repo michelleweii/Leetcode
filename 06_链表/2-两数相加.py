@@ -1,4 +1,6 @@
-# Definition for singly-linked list.
+"""
+middle 2021-10-15
+"""
 from functools import reduce
 class ListNode(object):
     def __init__(self, x):
