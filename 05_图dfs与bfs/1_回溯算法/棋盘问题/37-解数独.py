@@ -1,5 +1,5 @@
 """
-hard 2021-10-17【回溯法】
+hard 2021-10-18【回溯法】
 1、排除已有元素
 2、回溯所有可能
 方块索引 = （行/3）*3 +列/3
@@ -12,6 +12,24 @@ y总模板：https://www.acwing.com/solution/content/43802/
 """
 
 class Solution:
+    """
+    bool backtracking(vector<vector<char>>& board) {
+        for (int i = 0; i < board.size(); i++) {        // 遍历行
+            for (int j = 0; j < board[0].size(); j++) { // 遍历列
+                if (board[i][j] != '.') continue;
+                for (char k = '1'; k <= '9'; k++) {     // (i, j) 这个位置放k是否合适
+                    if (isValid(i, j, k, board)) {
+                        board[i][j] = k;                // 放置k
+                        if (backtracking(board)) return true; // 如果找到合适一组立刻返回
+                        board[i][j] = '.';              // 回溯，撤销k
+                    }
+                }
+                return false;                           // 9个数都试完了，都不行，那么就返回false
+            }
+        }
+        return true; // 遍历完没有返回false，说明找到了合适棋盘位置了
+    }
+    """
     def __init__(self):
         self.sloved = 0
     def solveSudoku(self, board):
@@ -21,6 +39,7 @@ class Solution:
         self.row = [[0 for _ in range(9)] for _ in range(len(board))]
         self.col = [[0 for _ in range(9)] for _ in range(len(board[0]))]
         self.block = [[0 for _ in range(9)] for _ in range(9)]
+        # 初始化
         for i in range(len(board[0])):
             for j in range(len(board)):
                 # 数独部分空格内已填入了数字，空白格用 '.' 表示。
