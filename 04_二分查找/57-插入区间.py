@@ -1,5 +1,10 @@
 """
 middle
+intervals = [[1,3],[6,9]], newInterval = [2,5]
+[[1,5],[6,9]]
+二分插入之后再套用56代码
+https://leetcode-cn.com/problems/insert-interval/solution/python3er-fen-fa-by-simpleson/
+https://mp.weixin.qq.com/s/ioUlNa4ZToCrun3qb4y4Ow
 """
 class Solution:
     def insert(self, intervals, newInterval):
