@@ -1,7 +1,12 @@
 """
-hard 有考过
-单调栈
-stk存储的是index
+hard 有考过2021-10-26日回顾
+【单调递减栈】：stk存储的是index
+思路：注意题目的性质，【当后面的柱子高度比前面的低时，是无法接雨水的】
+所以维护单调递减栈，当新入元素比栈顶元素大时，就开始计算面积，栈顶元素出栈；
+当新入元素比栈顶元素小时，该元素入栈；(更低的柱子以为这后面如果能找到高柱子，这里就能接到雨水，所以入栈把它保存起来)
+- 计算面积要注意：
+1、雨水区域的右边 r 指的自然是当前索引 i; 左边 l 就是新的栈顶 st.top()
+2、水坑的高度就是左右两边更低的一边减去底部，宽度是在左右中间
 """
 class Solution:
     def trap(self, height):
@@ -10,7 +15,8 @@ class Solution:
         res = 0
         stk = []
         for i in range(len(height)):
-            # 当当前元素比栈顶元素大时(维护非严格单调减)
+            # 当 当前元素比栈顶元素大时(维护非严格单调减)
+            # 当找到一根比前面高的柱子，就可以计算接到的雨水
             while stk and height[i]>height[stk[-1]]:
                 cur = stk[-1]
                 stk.pop() # 删掉栈顶元素index
@@ -23,22 +29,6 @@ class Solution:
                 res += h*w
             stk.append(i)
         return res
-
-        #
-        #
-        # """
-        # 方法2
-        # for i in range(len(height)):
-        #     while stk and height[stk[-1]]<=height[i]:
-        #         j = stk[-1]
-        #         stk.pop()
-        #         if stk:
-        #             h = min(height[i],height[stk[-1]])
-        #             res += (h-height[j])* (i-stk[-1]-1)
-        #     stk.append(i)
-        # return res
-        # """
-        #
         # """
         # 维护单调递增栈
         # for i in range(len(height)):
@@ -52,7 +42,7 @@ class Solution:
         #     stk.append(i)
         # return res
         # """
-
+# https://leetcode-cn.com/problems/trapping-rain-water/solution/trapping-rain-water-by-ikaruga/
 if __name__ == '__main__':
     height = [4,2,0,3,2,5]
     myresult = Solution()
