@@ -1,6 +1,6 @@
 """
 hard 2021-10-27回顾
-单调队列
+【单调递减栈】
 """
 class Solution(object):
     def maxSlidingWindow(self, nums, k):

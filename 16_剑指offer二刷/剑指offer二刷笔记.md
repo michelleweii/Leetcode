@@ -95,7 +95,7 @@ def exchange(self, nums):
     return nums
 ```
 
-#### **48 *最长不含重复字符的子字符串（同向双指针）**middle
+#### **48 *最长不含重复字符的子字符串（同向双指针）**middle lc3
 
 ```python
 def lengthOfLongestSubstring(self, s):
@@ -1063,7 +1063,7 @@ class Solution:
         return not stk
 ```
 
-#### **59 *滑动窗口最大值（单调栈）**
+#### **59 *滑动窗口最大值（单调递减栈）** lc239
 
 ```python
 class Solution:
