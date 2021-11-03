@@ -154,8 +154,8 @@ def quick_sort(nums, left, right):
     # 循环结束，i与j相等
     nums[i] = pivot # 待比较数据放入最终位置
     # return i # 回待比较数据最终位置
-    quick_sort(nums, left, i-1)
-    quick_sort(nums, i+1, right)
+    quick_sort(nums, left, i-1) # 每次递归结束，右边都比pivot小
+    quick_sort(nums, i+1, right) # 左边都比pivot大
     # print(nums)
 ```
 

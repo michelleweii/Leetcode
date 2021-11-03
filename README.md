@@ -82,7 +82,33 @@ https://www.bilibili.com/video/BV12k4y127nP
 https://www.bilibili.com/video/BV14z4y1f7hH
 
 
+# 6、链表
 
+148. 排序链表【如何寻找一个链表的中间点】
+
+快慢指针找到中点的时候，快指针最开始一定要设置为head.next，设置成head就会栈溢出.
+
+使用 fast,slow 快慢双指针法，奇数个节点找到中点，偶数个节点找到中心左边的节点。中点 slow。
+```
+如果slow = fast = head,那么在链表只剩两个节点的时候有以下执行顺序：(首节点->尾节点->null)
+0. 执行查找中点的while循环
+1. 得出：slow = 尾节点，fast = null
+2. mid = slow.next;
+   slow.next = null; 
+   //第2步为断链,需要注意的是,slow的next原本就是null(由第1步得出)
+   //也就是说,断链操作根本没有生效,链表结构依然是:首节点->尾节点->null
+3. 进入递归,由于链表结构没变,所以会继续进行查找中点、断链操作,重复以上步骤,导致栈溢出
+-----------------------------------------------------------
+如果slow = head,fast = head.next,那么在链表只剩两个节点的时候有以下执行顺序：(首节点->尾节点->null)
+0. 执行查找中点的while循环
+1. 得出：slow = 首节点，fast = 尾节点
+2. mid = slow.next;
+   slow.next = null; 
+   //这里的断链操作生效了,此时链表结构为：首节点->null,尾节点->null
+3. 进入递归,重复以上步骤,此时的链表已经分解成两个节点,所以不会查找中点及断链,而是直接return。
+```
+
+优雅求一个链表的长度`while h: h, length = h.next, length + 1`
 
 
 # 重要算法
