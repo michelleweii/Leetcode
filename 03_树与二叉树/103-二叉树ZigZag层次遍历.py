@@ -11,10 +11,6 @@ class TreeNode(object):
 class Solution(object):
     # 2020/02/23
     def zigzagLevelOrder(self, root):
-        """
-        :type root: TreeNode
-        :rtype: List[List[int]]
-        """
         if root is None: return []
         queue = deque([root])
         path = []

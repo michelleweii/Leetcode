@@ -18,7 +18,7 @@ class Solution:
     def sortList_rec(self, head): # 归并递归（从上到下）空间复杂度O(n)
         if not head or not head.next:return head # 递归出口
         # 和归并list排序不一样的地方
-        # 找到中间点，并将链表分成两端，注意这里[链表寻找中间点]的方法。
+        # 找到中间点，并将链表分成两端，注意这里[链表寻找中间点]的方法。相关lc876
         slow, fast = head, head.next
         # 为什么fast=head.next 而不能是fast=head?
         # 因为这样长度为2的那一支链表会一直递归下去，直到栈溢出。
