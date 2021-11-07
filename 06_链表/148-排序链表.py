@@ -25,7 +25,7 @@ class Solution:
         while fast and fast.next:
             fast = fast.next.next
             slow = slow.next # 中点 slow
-        mid = slow.next
+        mid = slow.next # 也可以mid=show, pre.next=None, 和109一样，标记pre
         slow.next = None
         # 归并递归，以下都可以理解
         left, right = self.sortList(head), self.sortList(mid)
@@ -33,7 +33,7 @@ class Solution:
         # 辅助ListNode h 作为头部
         h = res = ListNode(0)
         while left and right:
-            if left.val<right.val:h.next,left =left,left.next
+            if left.val<right.val:h.next,left = left,left.next
             else: h.next, right = right,right.next
             h = h.next
 

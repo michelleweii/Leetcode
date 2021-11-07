@@ -10,10 +10,6 @@ class TreeNode(object):
 
 class Solution(object):
     def invertTree(self, root):
-        """
-        :type root: TreeNode
-        :rtype: TreeNode
-        """
         # 如果是叶子节点，则递归结束
         if root is None:
             return

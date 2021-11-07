@@ -27,7 +27,7 @@ class Solution:
     def sortedArrayToBST(self, nums):
         if not nums:return nums
         # 找到中点，左边升序作为右子树，右边升序作为左子树
-        return self.dfs(nums,0,len(nums)-1)
+        return self.dfs(nums, 0, len(nums)-1)
 
     def dfs(self, nums, start, end):
         if start>end:return
@@ -35,7 +35,7 @@ class Solution:
         mid = start + (end - start) // 2 # 等价于 int mid = (start + end) / 2
         root = TreeNode(nums[mid])
         root.left = self.dfs(nums, start, mid-1)
-        root.right = self.dfs(nums,mid+1,end)
+        root.right = self.dfs(nums, mid+1, end)
         return root
 
 if __name__ == '__main__':
