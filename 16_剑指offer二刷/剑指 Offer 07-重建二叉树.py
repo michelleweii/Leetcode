@@ -1,5 +1,5 @@
 """
-bi-tree+2_dfs-递归 middle
+middle bi-tree+2_dfs-递归
 2021-07-13
 """
 """
@@ -32,6 +32,7 @@ class Solution:
             self.hash_map[val] = i
         return self.dfs(0, len(preorder)-1, 0, len(inorder)-1)
 
+    # 去2个序列中分别找左子树node，右子树node
     def dfs(self, pl, pr, il, ir):
         if pl>pr:return None # dfs一定要有循环的出口
         root = TreeNode(self.preorder[pl])
@@ -39,7 +40,7 @@ class Solution:
         # 去前序遍历中找左子树，去中序遍历中找左子树
         root.left = self.dfs(pl+1, pl+k-il, il, k-1)
         # 去前序遍历中找右子树，去中序遍历中找右子树
-        root.right = self.dfs(pl+k-il+1, pr,k+1, ir)
+        root.right = self.dfs(pl+k-il+1, pr, k+1, ir)
         return root
 
 if __name__ == '__main__':
