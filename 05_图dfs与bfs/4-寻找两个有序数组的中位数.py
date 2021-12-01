@@ -1,6 +1,6 @@
 """
 hard 2021-10-27回顾 美团有考过(这里考虑递归)
-https://www.acwing.com/solution/content/50/ 题解1 easy
+https://www.acwing.com/solution/content/50/ 题解1 hard
 https://www.bilibili.com/video/BV1nC4y1a7vT 视频题解0:50
 
 两个有序数组，从小到大排，第k个数是多少；如果k=(n+m)/2则是中位数；

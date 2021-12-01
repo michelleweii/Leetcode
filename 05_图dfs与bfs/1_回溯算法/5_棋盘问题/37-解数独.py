@@ -8,7 +8,7 @@ row[1][2] = 1，表示第1行中2已经被使用
 https://leetcode-cn.com/problems/sudoku-solver/solution/37-jie-shu-du-hui-su-sou-suo-suan-fa-xiang-jie-by-/
 https://www.bilibili.com/video/BV1a4411k72j?spm_id_from=333.999.0.0
 https://blog.csdn.net/qq_28410301/article/details/100560593
-y总模板：https://www.acwing.com/solution/content/43802/
+y总模板(详细)：https://www.acwing.com/solution/content/43802/
 """
 
 class Solution:

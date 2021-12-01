@@ -1,7 +1,7 @@
 """
 middle 2021-11-07
 将一棵树恢复成bst
-https://leetcode-cn.com/problems/recover-binary-search-tree/solution/tu-jie-hui-fu-yi-ge-er-cha-sou-suo-shu-by-hyj8/
+(好)https://leetcode-cn.com/problems/recover-binary-search-tree/solution/tu-jie-hui-fu-yi-ge-er-cha-sou-suo-shu-by-hyj8/
 https://leetcode-cn.com/problems/recover-binary-search-tree/solution/zhong-xu-bian-li-by-powcai/
 错误1：出现了两对不满足前小后大，需要交换第一对的第一个元素与第二对的第二个元素。
 错误2：只出现一对不满足前小后大，交换这一对元素即可。
