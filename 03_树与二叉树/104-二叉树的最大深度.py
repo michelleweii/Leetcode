@@ -1,5 +1,9 @@
+"""
+easy 2021-12-02
+
+"""
 import collections
-# Definition for a binary tree node.
+
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
@@ -7,25 +11,17 @@ class TreeNode(object):
         self.right = None
 
 class Solution(object):
-    # recursion
     def maxDepth(self, root):
-        """
-        :type root: TreeNode
-        :rtype: int
-        """
-        if root is None:
-            return 0
-        else:
-            # 左子树高度
-            LD = self.maxDepth(root.left)
-            # 右子树高度
-            RD = self.maxDepth(root.right)
-            return max(RD,LD)+1
+        if root is None: return 0
+        # 左子树高度
+        LD = self.maxDepth(root.left)
+        # 右子树高度
+        RD = self.maxDepth(root.right)
+        return max(RD,LD)+1
 
-    # queue for level order
+    # 定义queue，层次队列
     def maxDepth2(self, root):
-        if not root:
-            return 0
+        if not root:return 0
         tqueue, h = collections.deque(), 0
         tqueue.append(root)
         while tqueue:
