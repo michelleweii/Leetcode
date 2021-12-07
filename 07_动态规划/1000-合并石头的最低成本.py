@@ -1,7 +1,6 @@
 """
 middle 区间dp
 2021-07-12
-
 i-j前缀的和为 nums[i...j]=sum[j]-sum[i-1]
 """
 # f[i][j]=所有将[i,j]合并为一堆的方案。
@@ -21,10 +20,6 @@ class Solution:
 
             for k in range(i, j):
                 dp[i][j]=min(dp[i][j], dp[i][k]+dp[k+1][j]+sums[j]-sums[i-1])
-
-
-
-
 
 if __name__ == '__main__':
     stones = [3,5,1,2,6]

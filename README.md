@@ -146,6 +146,7 @@ https://www.bilibili.com/video/BV14z4y1f7hH
 > 283、1047关于原地覆盖的问题，需要多次回顾。
 
 
+134 for循环适合模拟从头到尾的遍历，而while循环适合模拟环形遍历，要善于使用while！
 
 
 
@@ -156,7 +157,41 @@ https://www.bilibili.com/video/BV14z4y1f7hH
 - [ ] 30 双指针 hard
 
 
+定义一个最大数 `dp=[sys.maxsize]*len(s)`
 
 2021年10月12日回归呜呜
 
 一个无向图，需要用标记位，标记着节点是否走过，否则就会死循环！
+
+
+
+
+
+# 10、top200未做题目
+
+- [ ] 152 middle
+- [ ] 154 hard 二分
+- [ ] 155 easy 单调栈
+- [ ] 164 hard 基数排序
+- [ ] 166 middle 竖式除法
+- [ ] 173 middle
+- [ ] 174 hard ()
+- [ ] 179 middle
+- [ ] 189 middle
+
+【sql】
+
+- [ ] 176 middle
+
+- [ ] 177 middle
+
+- [ ] 178 middle
+
+- [ ] 180 middle
+- [ ] 184 middle
+- [ ] 185 hard
+
+【bash】
+
+- [ ] ß192 middle
+- [ ] 194 middle

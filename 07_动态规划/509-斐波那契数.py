@@ -1,5 +1,5 @@
 """
-easy
+easy 一维dp入门题目
 """
 class Solution(object):
     def fib(self, n):

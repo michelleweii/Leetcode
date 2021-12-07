@@ -21,8 +21,6 @@ class Solution:
 
         return dp[n][m]
 
-
-
 if __name__ == '__main__':
     text1 = "abc"
     text2 = "ab"

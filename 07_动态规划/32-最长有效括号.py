@@ -19,7 +19,6 @@ class Solution(object):
     def dpSolution(self,s):
         n = len(s)
         if n<2: return 0
-
         # dp[i]表示第i个位置的最长有效长度
         dp = [0]*n
         res = 0
@@ -35,8 +34,6 @@ class Solution(object):
                         dp[i] = dp[i-1]+dp[i-dp[i-1]-2]+2
         # print(dp)
         return max(dp)
-
-
 
 
 if __name__ == '__main__':

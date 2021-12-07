@@ -1,9 +1,9 @@
+"""
+middle 2021-12-07 一维dp
+核心思想：选与不选
+"""
 class Solution(object):
     def rob(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
         if len(nums) == 0:
             return 0
         elif len(nums)==1:
