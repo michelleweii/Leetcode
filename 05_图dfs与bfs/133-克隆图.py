@@ -1,4 +1,7 @@
+"""
+middle 2021-12-09
 
+"""
 class Node:
     def __init__(self, val, neighbors):
         self.val = val
@@ -21,4 +24,5 @@ class Solution:
         return search(node)
 
 if __name__ == '__main__':
-    pass
+    # adjList = [[2,4],[1,3],[2,4],[1,3]]
+    # print(Solution().cloneGraph(adjList))

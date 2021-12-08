@@ -37,10 +37,6 @@ lc113: 找到所有路径，所以递归函数不要返回值！
 外面for循环，里面while循环。
 **单调栈84 (双端添加哨兵)**、739、496、42
 
-> **滑动窗口算法一定是双指针算法；**
->
-> **双指针算法不一定是滑动窗口算法；**
-
 # 3、字符串相关
 - 686 KMP算法-middle
 
@@ -57,12 +53,36 @@ lc113: 找到所有路径，所以递归函数不要返回值！
     > - **子数组（子数组最少包含一个元素）**
 
 # 4、双指针
-## **4.1、单向**
+**滑动窗口算法一定是双指针算法；双指针算法不一定是滑动窗口算法；**
+
+## **4.1、单向（滑动窗口）**
 
 [https://www.bilibili.com/video/BV1P7411L7eV?from=search&seid=16847300039480678482](同向双指针（一）)
 [https://www.bilibili.com/video/BV1P7411L7NK](同向双指针（二）)
 [https://www.bilibili.com/video/BV1M741147Ta](双指针基础（一）)
 [https://www.bilibili.com/video/BV1A7411L7EQ?from=search&seid=16847300039480678482](双指针基础（二）)
+
+76：cnt元素维度，初始化是目标，每当window中包含一个，cnt--；
+
+438：window中字符个数与目标保持一致，字符维度，flag++；
+
+s长串、t短串，**两个while循环解决**。
+
+```python
+# 一般框架
+"""
+遍历s，求最小问题
+    1、移动right，寻找可行解，满足t_tmp
+        2、移动left，寻找最优解
+"""
+while right<len(s):
+    # 当满足条件了，一般是hash表字符个数满足了
+    while(根据题意，不用寻找最优解，就不用第二个while了)：
+        left++
+    right++
+```
+
+
 
 ## **4.2、双向**
 
@@ -103,7 +123,7 @@ https://www.bilibili.com/video/BV14z4y1f7hH
 快慢指针找到中点的时候，快指针最开始一定要设置为head.next，设置成head就会栈溢出.
 
 使用 fast,slow 快慢双指针法，奇数个节点找到中点，偶数个节点找到中心左边的节点。中点 slow。
-```
+```python
 如果slow = fast = head,那么在链表只剩两个节点的时候有以下执行顺序：(首节点->尾节点->null)
 0. 执行查找中点的while循环
 1. 得出：slow = 尾节点，fast = null
@@ -169,15 +189,14 @@ https://www.bilibili.com/video/BV14z4y1f7hH
 
 # 10、top200未做题目
 
-- [ ] 152 middle
-- [ ] 154 hard 二分
+- [x] 152 middle
+- [x] 154 hard 二分
 - [ ] 155 easy 单调栈
 - [ ] 164 hard 基数排序
 - [ ] 166 middle 竖式除法
-- [ ] 173 middle
-- [ ] 174 hard ()
-- [ ] 179 middle
-- [ ] 189 middle
+- [ ] 173 middle BST
+- [x] 174 hard 二维dp
+- [ ] 179 middle 同剑指offer
 
 【sql】
 
@@ -193,5 +212,5 @@ https://www.bilibili.com/video/BV14z4y1f7hH
 
 【bash】
 
-- [ ] ß192 middle
+- [ ] 192 middle
 - [ ] 194 middle
