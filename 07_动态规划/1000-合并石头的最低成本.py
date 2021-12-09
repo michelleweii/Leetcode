@@ -1,9 +1,19 @@
 """
-middle 区间dp
-2021-07-12
-i-j前缀的和为 nums[i...j]=sum[j]-sum[i-1]
+hard 2021-12-....
+区间dp（三维dp）
+https://leetcode-cn.com/problems/minimum-cost-to-merge-stones/solution/yi-dong-you-yi-dao-nan-yi-bu-bu-shuo-ming-si-lu-he/
+-
+- i-j前缀的和为 nums[i...j]=sum[j]-sum[i-1]
+
 """
-# f[i][j]=所有将[i,j]合并为一堆的方案。
+# dp[i,j]=所有将[i,j]合并为一堆的方案。
+# 定义状态转移方程：最常见的写法为：
+# dp[i,j] = max/min{dp[i,j], dp[i, k] + dp[k+1, j] + cost}。 ## 分界点k到底划还是不划
+# 选取[i, j]之间的一个分界点k，分别计算[i, k]和[k+1, j]的最优解，从而组合出[i, j]的最优解。
+
+# 枚举i为子区间左边界，枚举j为子区间有边界，枚举k为分界点。
+# 要注意由于要求的是dp[1,n]，所以i必须从大往小遍历，j必须从小往大遍历。这样在状态转移方程中利用的就是已求解的dp状态。
+
 class Solution:
     def mergeStones(self, stones, k):
         # 计算前缀和
