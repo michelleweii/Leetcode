@@ -13,7 +13,6 @@ https://leetcode-cn.com/problems/minimum-cost-to-merge-stones/solution/yi-dong-y
 
 # 枚举i为子区间左边界，枚举j为子区间有边界，枚举k为分界点。
 # 要注意由于要求的是dp[1,n]，所以i必须从大往小遍历，j必须从小往大遍历。这样在状态转移方程中利用的就是已求解的dp状态。
-
 class Solution:
     def mergeStones(self, stones, k):
         # 计算前缀和
