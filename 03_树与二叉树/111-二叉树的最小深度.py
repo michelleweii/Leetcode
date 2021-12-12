@@ -7,7 +7,6 @@ easy 2021-11-11
 - 当 root 节点左右孩子都不为空时，返回左右孩子较小深度的节点值
 https://leetcode-cn.com/problems/minimum-depth-of-binary-tree/solution/li-jie-zhe-dao-ti-de-jie-shu-tiao-jian-by-user7208/
 """
-
 class TreeNode:
     def __init__(self, x):
         self.val = x

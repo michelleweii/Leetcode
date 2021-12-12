@@ -1020,9 +1020,10 @@ class CQueue:
         return self.stk2.pop()
 ```
 
-#### 30 包含min函数的栈
+#### 30 包含min函数的栈(单调栈)
 
 ```python
+# 单调递减栈
 class MinStack:
     def __init__(self):
         self.stk, self.min_stk = [], []

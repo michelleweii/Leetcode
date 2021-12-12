@@ -1,0 +1,42 @@
+"""
+easy 2021-12-12
+ 最大直径是左子树和右子树的最大深度之和，但是万一最大直径没有经过根节点呢？
+ 所以说对于树中的每一个结点，都要把它视为根节点，然后比较所有结点的左子树和右子树的最大深度之和，
+ 取其中的最大值。
+https://leetcode-cn.com/problems/diameter-of-binary-tree/solution/hot-100-9er-cha-shu-de-zhi-jing-python3-di-gui-ye-/
+相关题lc104
+"""
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+class Solution:
+    def __init__(self):
+        self.res = 0
+
+    def diameterOfBinaryTree(self, root: TreeNode) -> int:
+        if not root:return 0
+        self.depth(root)
+        return self.res
+
+    def depth(self, root):
+        if not root:return 0
+        left_depth = self.depth(root.left)
+        right_depth = self.depth(root.right)
+        self.res = max(self.res, left_depth+right_depth)
+        return max(left_depth, right_depth)+1
+
+
+if __name__ == '__main__':
+    a = TreeNode(1)
+    b = TreeNode(2)
+    c = TreeNode(3)
+    d = TreeNode(4)
+    e = TreeNode(5)
+    a.right = c
+    a.left = b
+    b.right = e
+    b.left = d
+    print(Solution().diameterOfBinaryTree(a))
