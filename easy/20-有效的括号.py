@@ -30,12 +30,6 @@ class Solution(object):
                     return False
         return stack==[]
 
-
-
-
-
-
-
 if __name__ == '__main__':
     s = "()[]{]"
     print(Solution().isValid(s))
