@@ -1,6 +1,8 @@
+"""
+middle 2018-11-25 dp
 # 和264的区别在于，264是给定primes的个数，求第n个丑数
 # 本题事先不知道primes的个数，所以t1,t2,...tn无法确定。
-
+"""
 class Solution:
     def nthSuperUglyNumber(self, n, primes):
         dp = [1] # res=[]

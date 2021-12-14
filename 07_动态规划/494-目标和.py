@@ -1,5 +1,5 @@
 """
-middle 0-1背包
+middle 2021-08-19 dp 01背包
 感觉求所有方案数基本都是dp[i] = dp[i]+dp[i-num]
 求torf，dp[i] = dp[i] OR dp[i-num]
 """

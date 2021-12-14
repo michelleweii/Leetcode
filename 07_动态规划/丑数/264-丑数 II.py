@@ -1,6 +1,5 @@
 """
-middle
-dp
+middle 2018-11-24 dp
 """
 class Solution:
     def nthUglyNumber(self, n):

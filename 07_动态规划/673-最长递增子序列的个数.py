@@ -1,7 +1,10 @@
-
+"""
+middle 2019-03-14 dp
+https://leetcode-cn.com/problems/number-of-longest-increasing-subsequence/solution/dai-ma-sui-xiang-lu-dai-ni-xue-tou-dp673-9txt/
 # lc300是求最长上升子序列的长度是是多少，是求len
 # 这道题是求最长上升子序列那个最长的那个一共有多少个，多少组，有多少个可能性构成
-# from collections import Counter
+
+"""
 class Solution:
     def findNumberOfLIS(self, nums):
         res = 0

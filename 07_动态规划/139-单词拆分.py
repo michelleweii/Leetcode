@@ -1,5 +1,5 @@
 """
-middle 2021-11-01
+middle 2021-11-01 dp完全背包
 [完全背包+考虑排列顺序]，外层循环为 target ，内层循环为选择池 wordDict。
 dp[i] 表示以 i 结尾的字符串(包括i)是否可以被 wordDict 中组合而成。
 target = s

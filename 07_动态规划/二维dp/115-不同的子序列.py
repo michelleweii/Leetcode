@@ -5,7 +5,6 @@ https://leetcode-cn.com/problems/distinct-subsequences/solution/shou-hua-tu-jie-
 # 2021/12/06 还是有点不明白
 # 尾部字符成功匹配上了，dp[i][j] = dp[i-1][j-1] + dp[i-1][j] # 为什么还要加没有配上的case呢？
 
-
 # 题目：求 s 的子序列中 t 出现的个数，blabla...
 # 翻译：在 s 串身上 “挑选” 字符，去匹配 t 串的字符，求挑选的方式数
 # 抓住 “选”，s 要照着 t 来挑选(用s去匹配t)，逐字符考察选或不选，分别来到什么状态？
@@ -16,7 +15,6 @@ https://leetcode-cn.com/problems/distinct-subsequences/solution/shou-hua-tu-jie-
 # dp出口
 # 1) 小到 t 变成空串，此时 s 为了匹配它，方式只有1种：什么字符也不用挑（或 s 也是空串，什么都不做就匹配了，方式数也是1）
 # 2) 小到 s 变成空串，但 t 不是，s 怎么也匹配不了 t，方式数为 0
-
 class Solution:
     def numDistinct(self, s: str, t: str):
         s_len = len(s)

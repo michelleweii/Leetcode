@@ -1,6 +1,5 @@
 """
-middle 二维dp
-2021-07-12
+middle 2021-07-12 二维dp
 https://leetcode-cn.com/problems/longest-common-subsequence/solution/fu-xue-ming-zhu-er-wei-dong-tai-gui-hua-r5ez6/
 """
 class Solution:

@@ -1,7 +1,6 @@
 """
-middle
-动态规划
-完全背包问题，并且为“考虑排列顺序的完全背包问题”，外层循环为 target ，内层循环为选择池 nums。
+middle 2021-08-18 dp完全背包
+“考虑排列顺序的完全背包问题”，外层循环为 target ，内层循环为选择池 nums。
 dp[i] 表示和为 i 的 num 组合有 dp[i] 种。
 """
 # link:https://leetcode-cn.com/problems/coin-change/solution/yi-tao-kuang-jia-jie-jue-bei-bao-wen-ti-h0y40/
