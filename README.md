@@ -11,12 +11,12 @@
 
 【】前缀和~=hashmap
 
-# 1、二叉树
+# 1. 二叉树
 
 bitree题目集合
 https://leetcode-cn.com/problems/convert-bst-to-greater-tree/solution/yi-tao-quan-fa-shua-diao-nge-bian-li-shu-de-wen-5/
 
-## 1.1、层次遍历
+## 1.1. 层次遍历
 - 102.二叉树的层序遍历（已完成）
 - 103.[二叉树的锯齿形层序遍历](https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal)  （已完成）
 - 二叉树的右视图
@@ -36,24 +36,14 @@ lc113: 找到所有路径，所以递归函数不要返回值！
 > 若其左子树存在，则其左子树中每个节点的值都不大于该节点值；
 > 若其右子树存在，则其右子树中每个节点的值都不小于该节点值。
 >
-> BST的中序遍历是升序的。
+> 性质：BST的中序遍历是升序的。
 >
-> 
 
-# 2、二分和单调队列
-## 2.1、二分
+# 2. 二分法
 - 153.旋转数组最小值0513
 - 162.寻找峰值0513
 
-## 2.2、单调队列
-- 496 下一个更大元素 I (模板题)
-- 42 接雨水（单调栈，还是不会）
-- 84 柱状图中最大的矩形（单调栈）失败ing
-单调栈模板
-外面for循环，里面while循环。
-**单调栈84 (双端添加哨兵)**、739、496、42
-
-# 3、字符串相关
+# 3. 字符串相关
 - 686 KMP算法-middle
 
 - 49 hash表 value是list[]
@@ -68,10 +58,10 @@ lc113: 找到所有路径，所以递归函数不要返回值！
     > - **子序列不一定是连续的一段，但是下标要求是递增的；**
     > - **子数组（子数组最少包含一个元素）**
 
-# 4、双指针
+# 4. 双指针
 **滑动窗口算法一定是双指针算法；双指针算法不一定是滑动窗口算法；**
 
-## **4.1、单向（滑动窗口）**
+## **4.1. 单向（滑动窗口）**
 
 [https://www.bilibili.com/video/BV1P7411L7eV?from=search&seid=16847300039480678482](同向双指针（一）)
 [https://www.bilibili.com/video/BV1P7411L7NK](同向双指针（二）)
@@ -100,7 +90,7 @@ while right<len(s):
 
 
 
-## **4.2、双向**
+## **4.2. 双向**
 
 - 75 荷兰国旗问题
 https://leetcode-cn.com/problems/sort-colors/solution/kuai-su-pai-xu-partition-guo-cheng-she-ji-xun-huan/
@@ -116,7 +106,7 @@ https://leetcode-cn.com/problems/sort-colors/solution/kuai-su-pai-xu-partition-g
 - middle 71 堆栈
 - hard 30 0530没做
 
-# 5、dp
+# 5. dp
 
 416. 分割等和子集——动态规划之01背包问题
 494. 目标和——动态规划之01背包问题
@@ -132,7 +122,7 @@ https://www.bilibili.com/video/BV12k4y127nP
 https://www.bilibili.com/video/BV14z4y1f7hH
 
 
-# 6、链表
+# 6. 链表
 
 148. 排序链表【如何寻找一个链表的中间点】与876的差别在哪？
 
@@ -161,21 +151,99 @@ https://www.bilibili.com/video/BV14z4y1f7hH
 优雅求一个链表的长度`while h: h, length = h.next, length + 1`
 
 
+
+# 7. 单调栈
+
+https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray/solution/dan-diao-zhan-jie-fa-by-lilin-k-7096/
+
+单调递减栈：从栈底到栈顶数据是从大到小；
+单调递增栈：从栈底到栈顶数据是从小到大；
+
+单调递减栈操作：如果栈为空或入栈元素值小于栈顶元素值，则入栈；否则，如果入栈则会破坏栈的单调性，则需要把比入栈元素小的元素全部出栈。
+
+- 应用场景：
+
+> 1.需要找到两边（一边）比cur大（小）的值时可以用，遇到时退栈并计算（更新），栈中一般存储下标（下标和值的pair，或值另外存在vector）
+>
+> 2.需要在无序数列中保证有序数列时，如去掉k位数使得数最小，此时栈中一般保存数而不是下标。
+
+```c++
+# 单调递增
+for(int i = 0; i < nums.size(); i++){
+    while(!st.empty() && nums[i] < st.top()){
+      # 一些操作
+}
+     st.push(nums[i]);
+}
+```
+
+
+
+- 496 下一个更大元素 I (模板题)
+- 42 接雨水（单调栈，还是不会）
+- 84 柱状图中最大的矩形（单调栈）失败ing
+  单调栈模板
+  外面for循环，里面while循环。
+  **单调栈84 (双端添加哨兵)**、739、496、42
+
+# 8. 图
+
+一个无向图，需要用标记位，标记着节点是否走过，否则就会死循环！
+
+## 8.1. dfs
+
+
+
+## 8.2. bfs
+
+
+
+## 8.3. 并查集
+
+作用：检查图中是否存在环，主要实现两个方法：
+
+1. def find_root(x) # 找到x节点的根；
+2. def union(x,y) # 将x，y节点进行合并（将x，y结点连起来）；
+
+在并查集里，每个节点会记录它的父节点。
+
+> 详解：https://leetcode-cn.com/problems/number-of-provinces/solution/python-duo-tu-xiang-jie-bing-cha-ji-by-m-vjdr/
+
+- 带权并查集
+
+> https://leetcode-cn.com/problems/evaluate-division/solution/pythonbing-cha-ji-fu-mo-ban-by-milomusia-kfsu/
+>
+> 普通并查集只能判断两个元素是否在一个集合中，带权并查集可以维护集合元素之间的关系，这个关系由每个元素的权值维护。
+
+四边形法则：https://www.cnblogs.com/enmac/p/13962764.html
+
+四边形法则更新根节点的权重：`self.value[x_father] = self.value[y] * val / self.value[x]`
+
+
+
 # 重要算法
 
-- 214 最短回文数（KMP算法）
+- 214 最短回文数（KMP算法,hard）
 - 208 （字典树/前缀树）
-- 
+- 214 kmp 
 
 
 
 
 
-特别地
+# pytrick
 
-- float("inf") #Python中可以用如下方式表示正负无穷：float("inf"), float("-inf")
+- float("inf") # Python中可以用如下方式表示正负无穷：float("inf"), float("-inf")。
 
-- lc31 对sort切片有了新的理解
+- lc31 对sort切片有了新的理解。
+
+- 定义一个最大数 `dp=[sys.maxsize]*len(s)`。
+
+
+
+- **子串一定的是连续的；**
+- **子序列不一定是连续的一段，但是下标要求是递增的；**
+- **子数组（子数组最少包含一个元素），要求下标是连续的；**
 
 
 
@@ -185,18 +253,12 @@ https://www.bilibili.com/video/BV14z4y1f7hH
 
 
 
-待做
-
-- [ ] 214 kmp hard
-
-- [ ] 30 双指针 hard
 
 
-定义一个最大数 `dp=[sys.maxsize]*len(s)`
 
-2021年10月12日回归呜呜
 
-一个无向图，需要用标记位，标记着节点是否走过，否则就会死循环！
+
+
 
 
 
@@ -206,12 +268,12 @@ https://www.bilibili.com/video/BV14z4y1f7hH
 
 - [x] 152 middle
 - [x] 154 hard 二分
-- [ ] 155 easy 单调栈
+- [x] 155 easy 单调栈
 - [ ] 164 hard 基数排序
 - [ ] 166 middle 竖式除法
-- [ ] 173 middle BST
+- [x] 173 middle BST
 - [x] 174 hard 二维dp
-- [ ] 179 middle 同剑指offer
+- [x] 179 middle 同剑指offer
 
 【sql】
 
@@ -229,3 +291,13 @@ https://www.bilibili.com/video/BV14z4y1f7hH
 
 - [ ] 192 middle
 - [ ] 194 middle
+
+
+
+
+
+刷题时光轴
+
+2021/10/12回归呜呜
+
+2021/12/06

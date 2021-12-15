@@ -1,6 +1,6 @@
 """
-hard 有考过2021-10-26日回顾
-【单调递减栈】：stk存储的是index
+hard 2021-06-02 【单调递减栈】：stk存储的是index
+# https://leetcode-cn.com/problems/trapping-rain-water/solution/trapping-rain-water-by-ikaruga/
 思路：注意题目的性质，【当后面的柱子高度比前面的低时，是无法接雨水的】
 所以维护单调递减栈，当新入元素比栈顶元素大时，就开始计算面积，栈顶元素出栈；
 当新入元素比栈顶元素小时，该元素入栈；(更低的柱子以为这后面如果能找到高柱子，这里就能接到雨水，所以入栈把它保存起来)
@@ -10,10 +10,8 @@ hard 有考过2021-10-26日回顾
 """
 class Solution:
     def trap(self, height):
-        if len(height) <= 1:
-            return 0
-        res = 0
-        stk = []
+        if len(height) <= 1: return 0
+        res, stk = 0, []
         for i in range(len(height)):
             # 当 当前元素比栈顶元素大时(维护非严格单调减)
             # 当找到一根比前面高的柱子，就可以计算接到的雨水
@@ -42,7 +40,9 @@ class Solution:
         #     stk.append(i)
         # return res
         # """
-# https://leetcode-cn.com/problems/trapping-rain-water/solution/trapping-rain-water-by-ikaruga/
+
+# 2021-10-26
+# 2021-12-16
 if __name__ == '__main__':
     height = [4,2,0,3,2,5]
     myresult = Solution()
