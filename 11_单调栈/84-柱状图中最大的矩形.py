@@ -18,9 +18,13 @@ class Solution:
             while stk and heights[i]<heights[stk[-1]]: # <才是求比栈顶元素右边小的right
                 h = heights[stk[-1]]
                 stk.pop()
-                res = max(res, (i-stk[-1]-1)*h)
+                res = max(res, (i-stk[-1]-1)*h) # 为什么求宽度-1？题目要求是柱子
             stk.append(i)
         return res
+    # 以1，5 6 2 为例
+    # 此时i在2，栈顶为6，出栈后的新栈顶为5
+    # 遍历到2的时候，可以求出以6为矮柱的面积， （2index-5index-1）*6
+    # 2<5, 继续求5为挨柱的面积，(2index-1index-1)*5
 
 if __name__ == '__main__':
     heights = [2,1,5,6,2,3]

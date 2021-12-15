@@ -18,12 +18,13 @@ class Solution:
             while stk and height[i]>height[stk[-1]]:
                 cur = stk[-1]
                 stk.pop() # 删掉栈顶元素index
-                if 0 == len(stk): # 必须左边还有，才能计算红色部分的体积
-                    break
+                # 可以加哨兵解决该问题
+                if not stk: break # 必须左边还有，才能计算红色部分的体积
+
                 # left和i取min
                 left = stk[-1]
                 h = min(height[i],height[left])-height[cur]
-                w = i-left-1
+                w = i-left-1 # 为什么求宽度-1？题目要求是柱子
                 res += h*w
             stk.append(i)
         return res
