@@ -1,4 +1,6 @@
-# Definition for singly-linked list.
+
+
+
 class ListNode(object):
     def __init__(self, x):
         self.val = x
@@ -6,11 +8,6 @@ class ListNode(object):
 
 class Solution(object):
     def hasCycle(self, head):
-        """
-        :type head: ListNode
-        :rtype: bool
-        """
-
         p1 = head # 慢指针
         p2 = head # 快指针
         # while p1 and p2:

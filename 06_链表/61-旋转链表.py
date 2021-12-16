@@ -1,6 +1,5 @@
 """
-middle 2021-11-08
-链表（快满指针）
+middle 2021-11-08 链表（快慢指针）
 要求：将链表每个节点向右移动 k 个位置
 https://leetcode-cn.com/problems/rotate-list/solution/java-shuang-zhi-zhen-100-by-programmery-31h5/
 """

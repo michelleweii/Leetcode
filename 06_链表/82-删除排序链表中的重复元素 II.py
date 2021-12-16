@@ -4,7 +4,6 @@ class ListNode:
         self.val = x
         self.next = None
 
-
 class Solution:
     def deleteDuplicates(self, head):
         dummy = ListNode(0)
