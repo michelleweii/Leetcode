@@ -1,6 +1,6 @@
 """
-hard 2021-11-14
-贪心 https://leetcode-cn.com/problems/candy/solution/candy-cong-zuo-zhi-you-cong-you-zhi-zuo-qu-zui-da-/
+hard 2021-11-14 贪心
+https://leetcode-cn.com/problems/candy/solution/candy-cong-zuo-zhi-you-cong-you-zhi-zuo-qu-zui-da-/
 要求：1、每个孩子至少分配到 1 个糖果；2、评分更高的孩子必须比他两侧的邻位孩子获得更多的糖果。
 如果孩子围成一个环
 """
