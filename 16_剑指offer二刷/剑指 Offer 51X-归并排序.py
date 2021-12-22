@@ -4,6 +4,7 @@ def merge_sort1():
     pass
 
 # 归并排序模板
+# # [l, mid] + [mid+1, r]
 def merge_sort2(nums, l, r):
     if l>=r: return
     mid = (l+r)//2
@@ -21,6 +22,7 @@ def merge_sort2(nums, l, r):
     res += nums[left_p:mid+1]
     res += nums[right_p:r+1]
     # 把临时数组里的元素再放回去
+    print("[l:r]", l, r)
     for k in range(r-l+1):
         nums[l+k] = res[k]
     print("nums", nums)

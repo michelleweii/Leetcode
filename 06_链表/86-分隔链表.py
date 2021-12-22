@@ -1,11 +1,12 @@
 """
-middle 2021-11-09
-借助虚拟头结点。small 链表按顺序存储所有小于 x 的节点,large 链表按顺序存储所有大于等于 x 的节点;
+middle 2021-11-09 链表
+借助虚拟头结点。small链表按顺序存储所有小于 x 的节点, large链表按顺序存储所有大于等于 x 的节点;
 遍历完原链表后，将 small 链表尾节点指向 large 链表的头节点即能完成对链表的分隔。
 时间复杂度: O(n)，其中n是原链表的长度。我们对该链表进行了一次遍历。
 空间复杂度: O(1)
 https://leetcode-cn.com/problems/partition-list/solution/leetcode86-fen-ge-lian-biao-by-ying-185-1y02/
 """
+# 2021-12-21 类似lc328
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val

@@ -1,6 +1,5 @@
 """
-easy 链表
-2021-07-15
+easy 2021-07-15 链表
 """
 class ListNode(object):
     def __init__(self, x):

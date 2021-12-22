@@ -1,50 +1,33 @@
-# Definition for singly-linked list.
+"""
+middle 2020/12/25 链表（快慢指针）
+一次遍历解决问题：两个指针间距n，当后一个指针移动到末尾node(while p2.next)，前一个指针就落在要删除的前一个节点了
+https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/solution/dong-hua-tu-jie-leetcode-di-19-hao-wen-ti-shan-chu/
+"""
+# 2021-12-21
 class ListNode(object):
     def __init__(self, x):
         self.val = x
         self.next = None
 
 class Solution(object):
-    #
-    # 双指针 2020/12/25
+    # 双指针(快慢指针) 2020/12/25
+    # 一次遍历解决问题
     def removeNthFromEnd(self, head, n):
         if not head:return head
         dummy = ListNode(0)
         dummy.next = head
         p1 = p2 = dummy
         for i in range(n):
-            p2 = p2.next
-        while p2.next:
-            p1 = p1.next
+            p2 = p2.next # 后一个指针
+            # print(i, p2.val) # 1 2
+        while p2.next: # 停在最后一个节点
+            p1 = p1.next # 前一个指针
             p2 = p2.next
         p1.next = p1.next.next
         return dummy.next
 
-
-
-    def removeNthFromEnd1(self, head, n):
-        """
-        :type head: ListNode
-        :type n: int
-        :rtype: ListNode
-        """
-        dummy = ListNode(0)
-        dummy.next = head
-        p1 = p2 = dummy
-        for i in range(n):
-            p1 = p1.next
-        while p1.next:
-            p1 = p1.next
-            p2 = p2.next
-        p2.next = p2.next.next
-        return dummy.next
-
+    # 两次遍历，先求移动长度n-k，再遍历链表删除节点
     def removeNthFromEnd2(self, head, n):
-        """
-        :type head: ListNode
-        :type n: int
-        :rtype: ListNode
-        """
         lenLink = self.length(head)
         print(lenLink)
         changed = lenLink-n
@@ -65,14 +48,14 @@ class Solution(object):
             return head
             # self.printList(head)
 
-
+    # 打印链表
     def printList(self,head):
         while head:
             print(head.val,end='->')
             head = head.next
         print()
 
-
+    # 求链表长度
     def length(self,head):
         if head is None:
             return 0
@@ -82,10 +65,6 @@ class Solution(object):
             cur = cur.next
             cnt+=1
         return cnt
-
-
-
-
 
 if __name__ == '__main__':
     a = ListNode(1)
@@ -97,8 +76,5 @@ if __name__ == '__main__':
     b.next = c
     c.next = d
     d.next = e
-    n = 5
+    n = 2
     print(Solution().removeNthFromEnd(a,n))
-
-
-

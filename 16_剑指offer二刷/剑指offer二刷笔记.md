@@ -198,16 +198,17 @@ def merge(self, nums, l, r):
     return res
 ```
 
-#### 51-0 归并排序模板
+#### 51-0 归并排序模板（递归）
 
 ```python
+# [l, mid] + [mid+1, r]
 def merge_sort2(nums, l, r):
     if l>=r: return
     mid = (l+r)//2
     merge_sort2(nums, l, mid)
     merge_sort2(nums, mid+1, r)
     left_p, right_p = l, mid+1
-    res = []
+    res = [] # 临时数组，用于保存局部排序好的结果
     while left_p <= mid and right_p <= r:
         if nums[left_p]<nums[right_p]:
             res.append(nums[left_p])
@@ -217,7 +218,8 @@ def merge_sort2(nums, l, r):
             right_p += 1
     res += nums[left_p:mid+1]
     res += nums[right_p:r+1]
-    # 把临时数组里的元素再放回去
+    
+    # 把临时数组里的元素再放回去，当前归并的区间
     for k in range(r-l+1):
         nums[l+k] = res[k]
     # print("nums", nums)
@@ -1327,12 +1329,6 @@ def singleNumbers(self, nums):
 
 66 构建乘积数组（模拟题）
 
-
-
-
-
-
-
 # 2. 记录
 
 【2021-07-13】(看笔记之后做题，仍有问题) 3 10 11 
@@ -1409,8 +1405,10 @@ def singleNumbers(self, nums):
 
 ---
 
-
-
 辣鸡题目
 
 20. 表示数值的字符串
+
+
+
+​																																																				**于2021年7月**

@@ -39,7 +39,8 @@ lc113: 找到所有路径，所以递归函数不要返回值！
 > 若其右子树存在，则其右子树中每个节点的值都不小于该节点值。
 >
 > 性质：BST的中序遍历是升序的。
->
+
+在二叉树中如何从低向上推导呢？使用后序遍历也就是左右中的顺序，这样就可以在回溯的过程中从下到上进行推导了。
 
 # 2. 二分法
 - 153.旋转数组最小值0513
@@ -125,6 +126,7 @@ https://www.bilibili.com/video/BV14z4y1f7hH
 
 
 # 6. 链表
+https://leetcode-cn.com/tag/linked-list/problemset/
 
 148. 排序链表【如何寻找一个链表的中间点】与876的差别在哪？
 
@@ -149,6 +151,16 @@ https://www.bilibili.com/video/BV14z4y1f7hH
    //这里的断链操作生效了,此时链表结构为：首节点->null,尾节点->null
 3. 进入递归,重复以上步骤,此时的链表已经分解成两个节点,所以不会查找中点及断链,而是直接return。
 ```
+
+```python
+# 利用快慢指针找到链表中点
+slow, fast = head, head
+while fast and fast.next:
+  slow, fast = slow.next, fast.next.next
+  mid = slow
+```
+
+找链表中点：109、
 
 优雅求一个链表的长度`while h: h, length = h.next, length + 1`
 
@@ -266,8 +278,26 @@ for(int i = 0; i < nums.size(); i++){ //for循环
 
 # python语法
 
+for循环适合模拟从头到尾的遍历，而while循环适合模拟环形遍历，要善于使用while。
+
 - 179 自定义比较函数
   sorted默认升序；修改reverse=True参数，改为降序；
+
+`nums = sorted(nums, key=abs, reverse=True) # 将nums按绝对值从大到小排列`
+
+```python
+# people[i] = [hi, ki]
+# 按照第一个元素降序排，按照第二个元素升序排；
+# lambda返回的是一个元组：当-x[0](维度h）相同时，再根据x[1]（维度k）从小到大排序
+people.sort(key=lambda x: (-x[0], x[1]))
+```
+
+```python
+# points = [[10,16],[2,8],[1,6],[7,12]]
+points.sort(key=lambda x: x[0]) # 按照第一个元素升序 # [[1, 6], [2, 8], [7, 12], [10, 16]]
+```
+
+`list(str(n)) # 332->['3','3','2']`
 
 - 切片
 
@@ -277,6 +307,10 @@ print(nums[:1]) # [1]
 print(nums[:0]) # []
 所以，nums[0:0] return 0
 ```
+
+
+
+将数字807转为[8, 0, 7]，`sums_list = list(map(int, str(sums)))`。
 
 
 

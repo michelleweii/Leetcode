@@ -36,13 +36,14 @@ class Solution:
             for i in range(1, k): # 注意要从1开始
                 if end:end = end.next
             # 如果链表的尾部没有被k整除, 跳出while循环
+            # 不满足k个一组的翻转条件，剩余节点保持原有顺序
             if end is None: break
             # 对翻转区进行翻转
             post = end.next
             end.next = None # 断开与原链表的连接
             end = start # 这里第一次不明白，注意!
             start = self.reverse(start) # 这里，end-start的关系注意！
-
+            # 与原链表接上
             end.next = post
             pre.next = start
 
@@ -54,7 +55,7 @@ class Solution:
 
     def reverse(self, head):
         """
-        翻转整个以head为头的链表
+        lc206.反转链表，翻转整个以head为头的链表
         翻转链表需要3个指针
         """
         pre = None

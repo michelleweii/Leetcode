@@ -1,7 +1,6 @@
 """
-medium 2021-10-14
-反转链表
-这里翻转用了3个指针，pre、cur、post
+medium 2021-10-14 反转链表
+这里翻转用了3个指针，pre、cur、tail
 同样反转链表有92、206【反转链表必考！】
 https://leetcode-cn.com/problems/swap-nodes-in-pairs/solution/dai-ma-sui-xiang-lu-dai-ni-xue-tou-lian-r063e/
 """
@@ -19,15 +18,15 @@ class Solution:
         pre = dummy
         # 循环，必须要有pre.next和pre.next.next，否则交换结束
         while pre.next and pre.next.next:
-            cur = pre.next
-            post = pre.next.next
+            cur = pre.next # 标记好位置
+            tail = pre.next.next # 标记好位置
+            # pre，cur，tail对应最左，中间的，最右边的节点
+            # 开始交换节点
+            cur.next = tail.next # 前连
+            tail.next = cur # 后连
+            pre.next = tail # 第一个节点后连
 
-            # pre，cur，post对应最左，中间的，最右边的节点
-            cur.next = post.next
-            post.next = cur
-            pre.next = post
-
-            pre = pre.next.next
+            pre = pre.next.next # 下一次迭代
         return dummy.next
 
 if __name__ == '__main__':
@@ -35,9 +34,7 @@ if __name__ == '__main__':
     n2 = ListNode(2)
     n3 = ListNode(3)
     n4 = ListNode(4)
-
     n1.next = n2
     n2.next = n3
     n3.next = n4
-
     print(Solution().swapPairs(n1))

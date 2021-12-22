@@ -1,4 +1,8 @@
-# Definition for singly-linked list.
+"""
+middle 2021-12-22 【经典面试题】
+有重复元素则全部all都删除
+https://leetcode-cn.com/problems/remove-duplicates-from-sorted-list-ii/solution/fu-xue-ming-zhu-di-gui-die-dai-yi-pian-t-wy0h/
+"""
 class ListNode:
     def __init__(self, x):
         self.val = x

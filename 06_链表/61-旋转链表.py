@@ -17,7 +17,7 @@ class Solution:
         while h: h, length = h.next, length + 1
         if k%length==0:return head
 
-        slow,fast = head,head
+        slow, fast = head, head
 
         # 快指针先走k步，注意这里是求余，因为k可能会比length大好几倍
         while k%length>0:
@@ -27,7 +27,7 @@ class Solution:
         # 注意这里fast指向链表最后一个节点，所以要fast.next=None
         # 否则就是fast = None
         while fast.next:
-            slow,fast=slow.next,fast.next
+            slow, fast = slow.next, fast.next
 
         # 快指针走到链表尾部时，慢指针刚好走到结果链表的尾部。
         res = slow.next
