@@ -123,7 +123,7 @@ class Solution:
         return self.partition(arr, 0, len(arr)-1, k)
 
     def partition(self, arr, left, right, k):
-        if left>=right:return
+        if left>=right:return # 如果原地更改的话，就return即可；如果有新的变量接收，就要return一个具体的值
         pivot = arr[left]
         l,r = left,right
         while l<r:
@@ -158,6 +158,13 @@ def quick_sort(nums, left, right):
     quick_sort(nums, i+1, right) # 左边都比pivot大
     # print(nums)
 ```
+
+#### 40-1 堆排序模板
+
+```python
+```
+
+
 
 #### **51 数组中的逆序对（归并排序）**
 

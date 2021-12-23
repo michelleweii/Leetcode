@@ -1,5 +1,5 @@
 """
-middle 2020/12/25 链表（快慢指针）
+middle 2020/12/25 链表（双指针）
 一次遍历解决问题：两个指针间距n，当后一个指针移动到末尾node(while p2.next)，前一个指针就落在要删除的前一个节点了
 https://leetcode-cn.com/problems/remove-nth-node-from-end-of-list/solution/dong-hua-tu-jie-leetcode-di-19-hao-wen-ti-shan-chu/
 """
@@ -10,7 +10,7 @@ class ListNode(object):
         self.next = None
 
 class Solution(object):
-    # 双指针(快慢指针) 2020/12/25
+    # 双指针 2020/12/25
     # 一次遍历解决问题
     def removeNthFromEnd(self, head, n):
         if not head:return head

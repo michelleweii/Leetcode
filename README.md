@@ -3,6 +3,7 @@
 1. [企业题库](https://codetop.cc/home)
 2. [代码随想录](https://programmercarl.com/)
 2. [刷题模板](https://fuxuemingzhu.blog.csdn.net/article/details/101900729)
+2. [十大排序算法](https://leetcode-cn.com/problems/sort-an-array/solution/fu-xi-ji-chu-pai-xu-suan-fa-java-by-liweiwei1419/)
 
 题目关键字：
 
@@ -12,13 +13,19 @@
 
 【】前缀和~=hashmap
 
-# 1. 二叉树
+# 1. 排序算法
+
+归并排序：自下而上O(1)空间复杂度，应用题目LC.148。
+
+# 2. 二叉树
+
+[图解bitree的遍历过程，加深理解](https://leetcode-cn.com/problems/serialize-and-deserialize-binary-tree/solution/shou-hui-tu-jie-gei-chu-dfshe-bfsliang-chong-jie-f/)
 
 [bitree题目集合](https://leetcode-cn.com/problems/convert-bst-to-greater-tree/solution/yi-tao-quan-fa-shua-diao-nge-bian-li-shu-de-wen-5/)
 
 [树的遍历（递归+迭代）](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/solution/die-dai-fa-by-jason-2/)
 
-## 1.1. 层次遍历
+## 2.1. 层次遍历
 - 102.二叉树的层序遍历（已完成）
 - 103.[二叉树的锯齿形层序遍历](https://leetcode-cn.com/problems/binary-tree-zigzag-level-order-traversal)  （已完成）
 - 二叉树的右视图
@@ -42,11 +49,11 @@ lc113: 找到所有路径，所以递归函数不要返回值！
 
 在二叉树中如何从低向上推导呢？使用后序遍历也就是左右中的顺序，这样就可以在回溯的过程中从下到上进行推导了。
 
-# 2. 二分法
+# 3. 二分法
 - 153.旋转数组最小值0513
 - 162.寻找峰值0513
 
-# 3. 字符串相关
+# 4. 字符串相关
 - 686 KMP算法-middle
 
 - 49 hash表 value是list[]
@@ -61,10 +68,10 @@ lc113: 找到所有路径，所以递归函数不要返回值！
     > - **子序列不一定是连续的一段，但是下标要求是递增的；**
     > - **子数组（子数组最少包含一个元素）**
 
-# 4. 双指针
+# 5. 双指针
 **滑动窗口算法一定是双指针算法；双指针算法不一定是滑动窗口算法；**
 
-## **4.1. 单向（滑动窗口）**
+## **5.1. 单向（滑动窗口）**
 
 [https://www.bilibili.com/video/BV1P7411L7eV?from=search&seid=16847300039480678482](同向双指针（一）)
 [https://www.bilibili.com/video/BV1P7411L7NK](同向双指针（二）)
@@ -93,9 +100,9 @@ while right<len(s):
 
 
 
-## **4.2. 双向**
+## **5.2. 双向**
 
-- 75 荷兰国旗问题
+- 75 荷兰国旗问题 （快排扩展）
 https://leetcode-cn.com/problems/sort-colors/solution/kuai-su-pai-xu-partition-guo-cheng-she-ji-xun-huan/
 题解这里，关于窗口的开闭是很重要的。
 
@@ -109,7 +116,7 @@ https://leetcode-cn.com/problems/sort-colors/solution/kuai-su-pai-xu-partition-g
 - middle 71 堆栈
 - hard 30 0530没做
 
-# 5. dp
+# 6. dp
 
 416. 分割等和子集——动态规划之01背包问题
 494. 目标和——动态规划之01背包问题
@@ -125,7 +132,7 @@ https://www.bilibili.com/video/BV12k4y127nP
 https://www.bilibili.com/video/BV14z4y1f7hH
 
 
-# 6. 链表
+# 7. 链表
 https://leetcode-cn.com/tag/linked-list/problemset/
 
 148. 排序链表【如何寻找一个链表的中间点】与876的差别在哪？
@@ -142,14 +149,16 @@ https://leetcode-cn.com/tag/linked-list/problemset/
    //第2步为断链,需要注意的是,slow的next原本就是null(由第1步得出)
    //也就是说,断链操作根本没有生效,链表结构依然是:首节点->尾节点->null
 3. 进入递归,由于链表结构没变,所以会继续进行查找中点、断链操作,重复以上步骤,导致栈溢出
+4. mid中点是slow
 -----------------------------------------------------------
-如果slow = head,fast = head.next,那么在链表只剩两个节点的时候有以下执行顺序：(首节点->尾节点->null)
+如果slow = head, fast = head.next,那么在链表只剩两个节点的时候有以下执行顺序：(首节点->尾节点->null)
 0. 执行查找中点的while循环
 1. 得出：slow = 首节点，fast = 尾节点
 2. mid = slow.next;
    slow.next = null; 
    //这里的断链操作生效了,此时链表结构为：首节点->null,尾节点->null
 3. 进入递归,重复以上步骤,此时的链表已经分解成两个节点,所以不会查找中点及断链,而是直接return。
+4. mid中点是slow.next
 ```
 
 ```python
@@ -166,7 +175,7 @@ while fast and fast.next:
 
 
 
-# 7. 单调栈
+# 8. 单调栈
 
 https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray/solution/dan-diao-zhan-jie-fa-by-lilin-k-7096/
 
@@ -217,19 +226,39 @@ for(int i = 0; i < nums.size(); i++){ //for循环
 - 581.
 - 739.
 
-# 8. 图
+# 9. 图
 
 一个无向图，需要用标记位，标记着节点是否走过，否则就会死循环！
 
-## 8.1. dfs
+## 9.1.1 dfs
 
 
 
-## 8.2. bfs
+## 9.1.2 回溯
+
+回溯总结
+
+- 子集问题、分割问题都是组合问题。可以不适用used数组来去重，因为递归的时候下一个startIndex是i+1而不是0。
+
+- 如果要是全排列的话，每次要从0开始遍历，为了跳过已入栈的元素，需要使用used。
+
+排列问题与组合问题的不同
+
+- 每层都是从0开始搜索而不是startIndex
+- 需要used数组记录path里都放了哪些元素了（而组合问题的used是用来标记相同元素是在树层还是树枝上的，树枝上used=1可以用，树层上used=0不可以用）
+
+**组合问题和分割问题都是收集树的叶子节点，而子集问题是找树的所有节点！**
+
+组合是[1,2], [2,1] 都是同一个解集，但是排列问题中[1,2], [2,1] 是不同的解题。
+如果是一个集合来求组合的话，就需要startIndex。
+如果是多个集合取组合，各个集合之间相互不影响，那么就不用startIndex。（排列问题不需要index）。
+- 注意这里不要加return，因为要取树上的所有节点。（if出口的时候）
+
+## 9.2. bfs
 
 
 
-## 8.3. 并查集
+## 9.3. 并查集
 
 作用：检查图中是否存在环，主要实现两个方法：
 
@@ -249,6 +278,70 @@ for(int i = 0; i < nums.size(); i++){ //for循环
 四边形法则：https://www.cnblogs.com/enmac/p/13962764.html
 
 四边形法则更新根节点的权重：`self.value[x_father] = self.value[y] * val / self.value[x]`
+
+
+
+
+
+# 10. 堆/优先队列
+
+堆是一种相当有意思的数据结构，它在很多语言里也被命名为「优先队列」。它是建立在数组上的「树」结构，类似的数据结构还有「并查集」「线段树」等。
+
+python优先队列`from queue import PriorityQueue`
+
+> PriorityQueue没有pop()的方法，就是get()元素之后，该元素还是在queue里，转用heapq。
+
+优先队列不是O(logN)，因为remove()是个O(N)的操作，remove方法需要遍历所有元素。
+
+
+
+
+
+# 11. 二进制性质
+
+针对奇数有：二进制表示中，奇数一定比前面那个偶数多一个 1，因为多的就是最低位的 1。
+
+```
+# 举例：
+#          0 = 0       1 = 1
+#          2 = 10      3 = 11
+```
+
+针对偶数有：二进制表示中，偶数中 1 的个数一定和除以 2 之后的那个数一样多。因为最低位是 0，除以 2 就是右移一位，也就是把那个 0 抹掉而已，所以 1 的个数是不变的。
+
+```
+# 举例：
+#           2 = 10       4 = 100       8 = 1000
+#           3 = 11       6 = 110       12 = 1100
+```
+
+如果n是2的幂，则1）n 二进制最高位为 1，其余所有位为 0；2）n−1 二进制最高位为 0，其余所有位为 1；[refer](https://leetcode-cn.com/problems/power-of-two/solution/power-of-two-er-jin-zhi-ji-jian-by-jyd/)
+
+| 2^x  | n    | n - 1 | n & (n - 1)          |
+| ---- | ---- | ----- | -------------------- |
+| 2^0  | 0001 | 0000  | (0001) & (0000) == 0 |
+| 2^1  | 0010 | 0001  | (0010) & (0001) == 0 |
+| 2^2  | 0100 | 0011  | (0100) & (0011) == 0 |
+| 2^3  | 1000 | 0111  | (1000) & (0111) == 0 |
+
+> 因此，通过 `n > 0` 且 `n & (n - 1) == 0` 即可判定是否满足 n = 2^x。
+
+
+
+# 12. 时间复杂度
+
+判断字符是否在[栈]上存在需要 O(N) 的时间
+
+判断字符是否在[hashmap]上存在需要 O(1) 的时间
+
+查询给定字符是否在一个序列中存在的方法。根本上来说，有两种可能：
+- 有序序列：可以二分法，时间复杂度大致是 O(logN)。
+- 无序序列：可以使用遍历的方式，最坏的情况下时间复杂度为 O(N)。
+  我们也可以使用空间换时间的方式，使用 N 的空间 换取 O(1)的时间复杂度——hashmap。
+
+
+
+
 
 # pytrick
 
@@ -280,8 +373,11 @@ for(int i = 0; i < nums.size(); i++){ //for循环
 
 for循环适合模拟从头到尾的遍历，而while循环适合模拟环形遍历，要善于使用while。
 
-- 179 自定义比较函数
-  sorted默认升序；修改reverse=True参数，改为降序；
+179 自定义比较函数
+
+[关于 sorted 排序的多种情况](https://leetcode-cn.com/problems/top-k-frequent-words/solution/an-zhao-duo-ge-guan-jian-zi-pai-xu-by-ae-rd32/)
+
+sorted默认升序；修改reverse=True参数，改为降序；
 
 `nums = sorted(nums, key=abs, reverse=True) # 将nums按绝对值从大到小排列`
 
@@ -296,6 +392,25 @@ people.sort(key=lambda x: (-x[0], x[1]))
 # points = [[10,16],[2,8],[1,6],[7,12]]
 points.sort(key=lambda x: x[0]) # 按照第一个元素升序 # [[1, 6], [2, 8], [7, 12], [10, 16]]
 ```
+
+```python
+hash = collections.Counter(words)
+res = sorted(hash, key=lambda word:(-hash[word], word)) #词频 倒序排列, 若词频相同，按字母顺序排序 正序排列
+```
+
+词频正序， 字母正序
+`sorted(hash, key=lambda word:(hash[word], word))`
+
+词频倒序， 字母倒序 （reverse=True 即将sorted方法修改为倒序排列）
+`sorted(hash, key=lambda word:(hash[word], word), reverse=True)`
+
+词频倒序， 字母正序（本题要求）
+`sorted(hash, key=lambda word:(-hash[word], word))`
+
+词频正序， 字母倒序
+`sorted(hash, key=lambda word:(-hash[word], word), reverse=True)`
+
+
 
 `list(str(n)) # 332->['3','3','2']`
 
@@ -314,53 +429,8 @@ print(nums[:0]) # []
 
 
 
-# 10、二进制性质
 
-针对奇数有：二进制表示中，奇数一定比前面那个偶数多一个 1，因为多的就是最低位的 1。
-
-```
-# 举例：
-#          0 = 0       1 = 1
-#          2 = 10      3 = 11
-```
-
-针对偶数有：二进制表示中，偶数中 1 的个数一定和除以 2 之后的那个数一样多。因为最低位是 0，除以 2 就是右移一位，也就是把那个 0 抹掉而已，所以 1 的个数是不变的。
-
-```
-# 举例：
-#           2 = 10       4 = 100       8 = 1000
-#           3 = 11       6 = 110       12 = 1100
-```
-
-如果n是2的幂，则1）n 二进制最高位为 1，其余所有位为 0；2）n−1 二进制最高位为 0，其余所有位为 1；[refer](https://leetcode-cn.com/problems/power-of-two/solution/power-of-two-er-jin-zhi-ji-jian-by-jyd/)
-
-| 2^x  | n    | n - 1 | n & (n - 1)          |
-| ---- | ---- | ----- | -------------------- |
-| 2^0  | 0001 | 0000  | (0001) & (0000) == 0 |
-| 2^1  | 0010 | 0001  | (0010) & (0001) == 0 |
-| 2^2  | 0100 | 0011  | (0100) & (0011) == 0 |
-| 2^3  | 1000 | 0111  | (1000) & (0111) == 0 |
-
-> 因此，通过 `n > 0` 且 `n & (n - 1) == 0` 即可判定是否满足 n = 2^x。
-
-
-
-# 11、时间复杂度
-
-判断字符是否在[栈]上存在需要 O(N) 的时间
-
-判断字符是否在[hashmap]上存在需要 O(1) 的时间
-
-查询给定字符是否在一个序列中存在的方法。根本上来说，有两种可能：
-- 有序序列：可以二分法，时间复杂度大致是 O(logN)。
-
-- 无序序列：可以使用遍历的方式，最坏的情况下时间复杂度为 O(N)。
-  我们也可以使用空间换时间的方式，使用 N 的空间 换取 O(1)的时间复杂度——hashmap。
-
-  
-
-
-# 10、top200未做题目
+# top200未做题目
 
 - [ ] 164 hard 基数排序
 - [ ] 166 middle 竖式除法

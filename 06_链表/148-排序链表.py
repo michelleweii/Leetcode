@@ -12,9 +12,6 @@ class Solution:
     def sortList(self, head): # 归并递归（从下到上）空间复杂度O(1)
         pass
 
-
-
-
     def sortList_rec(self, head): # 归并递归（从上到下）空间复杂度O(n)
         if not head or not head.next:return head # 递归出口
         # 和归并list排序不一样的地方

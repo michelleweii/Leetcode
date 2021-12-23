@@ -1,6 +1,7 @@
-
-
-
+"""
+easy 2021-12-23 链表
+题目：判断是否有环——快慢指针
+"""
 class ListNode(object):
     def __init__(self, x):
         self.val = x
@@ -8,19 +9,18 @@ class ListNode(object):
 
 class Solution(object):
     def hasCycle(self, head):
-        p1 = head # 慢指针
-        p2 = head # 快指针
+        slow = head # 慢指针
+        fast = head # 快指针
         # while p1 and p2:
-        while p2 and p2.next:
+        while fast and fast.next:
             # 为什么这样判断可以？？
             # p2.next只是为了p2.next.next不报错
-            p1 = p1.next
-            p2 = p2.next.next
+            slow = slow.next
+            fast = fast.next.next
             # 如何判断遇见两次了呢？已解
-            if p1 == p2:
+            if slow == fast:
                 return True
         return False
-
 
 if __name__ == '__main__':
     a = ListNode(3)
