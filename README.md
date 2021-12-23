@@ -133,9 +133,11 @@ https://www.bilibili.com/video/BV14z4y1f7hH
 
 
 # 7. 链表
-https://leetcode-cn.com/tag/linked-list/problemset/
+1. [myself【leetcode总结】解析链表系列](https://blog.csdn.net/weixin_31866177/article/details/84554245?spm=1001.2014.3001.5506)
 
-148. 排序链表【如何寻找一个链表的中间点】与876的差别在哪？
+2. [LC链表专题](https://leetcode-cn.com/tag/linked-list/problemset/)
+
+LC148排序链表【如何寻找一个链表的中间点】与876的差别在哪？
 
 快慢指针找到中点的时候，快指针最开始一定要设置为head.next，设置成head就会栈溢出.
 
