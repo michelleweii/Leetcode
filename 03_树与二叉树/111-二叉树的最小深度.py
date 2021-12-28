@@ -20,7 +20,9 @@ class Solution:
         if root.left is None and root.right is None: return 1
         left = self.minDepth(root.left)
         right = self.minDepth(root.right)
-        # 2.如果左孩子和由孩子其中一个为空，那么需要返回比较大的那个孩子的深度
+        # 2.如果左孩子和右孩子其中一个为空，那么需要返回比较大的那个孩子的深度?
+        # 这里没有理解
+        # 题目要求是到叶子节点，所以返回比较的大那边，因为另一边不是叶子节点啊
         if root.left is None or root.right is None:return left+right+1
         # 3.最后一种情况，也就是左右孩子都不为空，返回最小深度+1即可
         return min(left,right)+1

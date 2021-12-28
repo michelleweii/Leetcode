@@ -4,6 +4,7 @@
 2. [代码随想录](https://programmercarl.com/)
 2. [刷题模板](https://fuxuemingzhu.blog.csdn.net/article/details/101900729)
 2. [十大排序算法](https://leetcode-cn.com/problems/sort-an-array/solution/fu-xi-ji-chu-pai-xu-suan-fa-java-by-liweiwei1419/)
+2. [必刷题](http://www.chengxuchu.com/#/%E7%AE%97%E6%B3%95%E5%9F%BA%E5%9C%B0/README?id=%e7%ae%97%e6%b3%95%e5%9f%ba%e5%9c%b0)
 
 题目关键字：
 
@@ -15,7 +16,11 @@
 
 # 1. 排序算法
 
-归并排序：自下而上O(1)空间复杂度，应用题目LC.148。
+- 归并排序：时间复杂度O(nlogn)，从上到下(我学习的那种)，空间复杂度O(n); 从下到上，空间复杂度O(1)，应用题目LC148。
+- 快排：从后面先开始找比pivot小的数，否则错误。
+- 桶排序：桶排序 每个桶内部无序，但是桶与桶之间是有序的。
+
+> 经典的找数组次大值的做法是使用两个变量 a 和 b 分别存储遍历过程中的最大值和次大值。
 
 # 2. 二叉树
 
@@ -93,9 +98,10 @@ s长串、t短串，**两个while循环解决**。
 """
 while right<len(s):
     # 当满足条件了，一般是hash表字符个数满足了
-    while(根据题意，不用寻找最优解，就不用第二个while了)：
-        left++
-    right++
+    if 满足条件:
+    	while(根据题意，不用寻找最优解，就不用第二个while了)：
+        left++ # 寻找最优解
+    right++ # 寻找可行解
 ```
 
 
@@ -193,9 +199,13 @@ https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray/solution/
 
 - 应用场景：
 
+> **对于找最近一个比当前值大/小的问题，都可以使用单调栈来解决**。
+>
 > 1.<u>需要找到两边（一边）比cur大（小）的值时可以用</u>，遇到时退栈并计算（更新），栈中一般存储下标（下标和值的pair，或值另外存在vector）
 >
 > 2.需要在无序数列中保证有序数列时，如去掉k位数使得数最小，此时栈中一般保存数而不是下标。
+>
+> 应用场景举例LC654. 在这个题中，我们要找到**元素右边第一个比它大的元素**作为**整个左侧区间的根结点**，因此我们可以维护一个【递减栈】，存放未找到右侧更大元素的元素。
 
 ```c++
 // 单调递增
@@ -301,6 +311,12 @@ python优先队列`from queue import PriorityQueue`
 
 # 11. 二进制性质
 
+位运算是2进制。
+
+> 左移：m<<n —> m*2^n；
+>
+> 右移：m>>n —> m*2^(-n)；
+
 针对奇数有：二进制表示中，奇数一定比前面那个偶数多一个 1，因为多的就是最低位的 1。
 
 ```
@@ -369,9 +385,16 @@ python优先队列`from queue import PriorityQueue`
 
 
 
+**递归函数的return：对递归函数什么时候要有返回值，什么时候不能有返回值很迷茫?**
+**如果需要遍历整颗树，递归函数就不能有返回值。如果需要遍历某一条固定路线，递归函数就一定要有返回值！**
+
 
 
 # python语法
+
+A&B：无论A真假，B都运算。
+
+A&&B：A真，B不运算。
 
 for循环适合模拟从头到尾的遍历，而while循环适合模拟环形遍历，要善于使用while。
 
@@ -429,7 +452,7 @@ print(nums[:0]) # []
 
 将数字807转为[8, 0, 7]，`sums_list = list(map(int, str(sums)))`。
 
-
+字典dict删除元素用pop()
 
 
 # top200未做题目

@@ -1,6 +1,7 @@
 """
 easy 2021-12-23 链表
 题目：判断是否有环——快慢指针
+https://leetcode-cn.com/problems/linked-list-cycle/solution/kuai-man-zhi-zhen-fa-dai-ma-zhong-zhu-sh-cdst/
 """
 class ListNode(object):
     def __init__(self, x):

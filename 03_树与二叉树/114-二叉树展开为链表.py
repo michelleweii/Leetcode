@@ -41,6 +41,7 @@ class Solution:
 """
 
 if __name__ == '__main__':
-    root = [1, 2, 5, 3, 4, None, 6]
-    print(Solution().flatten(root))
+    pass
+    # root = [1, 2, 5, 3, 4, None, 6]
+    # print(Solution().flatten(root))
 #     [1,null,2,null,3,null,4,null,5,null,6]

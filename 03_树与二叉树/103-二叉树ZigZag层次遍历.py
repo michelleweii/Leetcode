@@ -1,7 +1,7 @@
-from collections import deque
-# 小结：
-# 层次遍历是广度优先遍历
-# Definition for a binary tree node.
+"""
+middle 2021-12-25 层次遍历
+- 层次遍历是广度优先遍历
+"""
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
@@ -11,6 +11,7 @@ class TreeNode(object):
 class Solution(object):
     # 2020/02/23
     def zigzagLevelOrder(self, root):
+        from collections import deque
         if root is None: return []
         queue = deque([root])
         path = []

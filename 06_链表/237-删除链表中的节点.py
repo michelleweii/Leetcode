@@ -1,4 +1,8 @@
-# Definition for singly-linked list.
+"""
+easy 2021-12-24
+题目: 只能直接访问要被删除的node节点
+思路：用后续节点来覆盖要被删除的节点
+"""
 class ListNode(object):
     def __init__(self, x):
         self.val = x

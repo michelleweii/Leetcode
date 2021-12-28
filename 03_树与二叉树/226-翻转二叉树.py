@@ -1,7 +1,6 @@
-# 交换二叉树的左右子树
-# easy题目
-
-# Definition for a binary tree node.
+"""
+easy 2021-12-26 bitree前序遍历
+"""
 class TreeNode(object):
     def __init__(self, x):
         self.val = x

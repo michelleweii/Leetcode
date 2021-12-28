@@ -1,4 +1,7 @@
-# Definition for singly-linked list.
+"""
+easy 2021-12-24
+https://leetcode-cn.com/problems/remove-linked-list-elements/solution/203yi-chu-lian-biao-yuan-su-by-lewis-dxstabdzew/
+"""
 class ListNode:
     def __init__(self, x):
         self.val = x

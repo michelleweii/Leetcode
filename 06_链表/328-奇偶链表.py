@@ -1,5 +1,6 @@
 """
 middle 2021-12-21 链表
+题目：位置奇数节点+位置偶数节点
 https://leetcode-cn.com/problems/odd-even-linked-list/solution/shou-hua-tu-jie-328qi-ou-lian-biao-odd-even-linked/
 odd 指针扫描奇数结点，even 指针扫描偶数结点
 3个指针（扫描奇数结点、扫描偶数结点、保存偶链的头结点）

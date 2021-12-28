@@ -1,4 +1,6 @@
-# Definition for a binary tree node.
+"""
+middle 2021-12-29 递归遍历（必会）
+"""
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
@@ -21,37 +23,6 @@ class Solution(object):
         # # 若右子树是none,左子树不是，说明左子树找到了A或B
         if not right:return left
         # 如果左边，右边都没找到呢？
-
-
-    def lowestCommonAncestor_gg(self, root, p, q):
-        """
-        :type root: TreeNode
-        :type p: TreeNode
-        :type q: TreeNode
-        :rtype: TreeNode
-        """
-
-        p_path, p_result = [], []
-        self.dfs(root, p, p_path, p_result)
-        q_path, q_result = [], []
-        self.dfs(root, q, q_path, q_result)
-
-        # 求最短的那dfs个路径
-        # print("p:",p_result)
-        # print("q:",q_result)
-
-        if len(p_result)<len(q_result):
-            path_len = len(p_result)
-        else:
-            path_len = len(q_result)
-
-        result = TreeNode(0)
-        for i in range(path_len):
-            if p_result[i].val == q_result[i].val:
-                result = p_result[i]
-
-        return result
-
 
     def dfs(self,node,search,path,result):
         # 先序遍历（深度优先遍历）

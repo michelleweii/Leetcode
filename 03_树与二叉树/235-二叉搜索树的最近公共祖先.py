@@ -1,13 +1,14 @@
-# Definition for a binary tree node.
+"""
+easy 2021-12-29 bst
+"""
 class TreeNode:
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
+
 # 二叉搜索树，右边节点比他大，左边节点比他小
 # 递归寻找，若都小于跟结点，递归去左子树找，若都大于根节点，递归去右子树找，一大一小就是根节点
-
-
 class Solution:
     def lowestCommonAncestor(self, root, p, q):
         while root:

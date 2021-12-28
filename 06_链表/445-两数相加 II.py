@@ -2,6 +2,9 @@
 middle 2021-12-23 链表/栈
 对比lc2，本题要求不能反转链表
 https://leetcode-cn.com/problems/add-two-numbers-ii/solution/fu-xue-ming-zhu-xiang-jie-qiu-jia-fa-xue-ofb5/
+思路：
+1、两个链表节点入栈
+2、弹栈+计算+头插（此步骤需要引入新的节点）
 """
 class ListNode:
     def __init__(self, val=0, next=None):

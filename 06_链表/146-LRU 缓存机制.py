@@ -7,8 +7,10 @@ https://leetcode-cn.com/problems/lru-cache/solution/shu-ju-jie-gou-fen-xi-python
     2.2、去除最前端一项
     2.3、将队列中某一项移到末尾（只要操作数据，就需要将数据放在最后）
 """
-# 重点：双向链表删除某节点，只需要一个元素
-
+# 【重点】：双向链表删除某节点，只需要一个元素
+# 【回顾】：LRU (最近最少使用) 缓存机制，新元素添加到链表末尾，旧元素移到链表开始位置；
+# 更新/添加/访问->移到链表末尾；超过capacity则删除链表头部元素；
+# hashmap便于快速定位是否存在一个节点；
 # 定义双向链表
 class ListNode:
     def __init__(self, key=None, value=None):
@@ -19,7 +21,6 @@ class ListNode:
 
 # 定义LRU缓存
 class LRUCache:
-
     def __init__(self, capacity: int):
         self.capacity = capacity
         # 定义哈希表，为了O(1)时间复杂度get元素
@@ -51,9 +52,10 @@ class LRUCache:
         self.tail.prev.next = node
         self.tail.prev = node
 
+    # 访问这个元素，得到这个元素的值return，将该节点移到末尾
     def get(self, key: int) -> int:
         if key in self.hashmap:
-            # 如果已经在链表中了久把它移到末尾（变成最新访问的）
+            # 如果已经在链表中了，则把它移到末尾（变成最新访问的）
             self.move_node_to_tail(key)
         res = self.hashmap.get(key,-1) # value是一个node，双向链表中的node
         if res == -1:
@@ -61,7 +63,11 @@ class LRUCache:
         else:
             return res.value # 获取node中的值
 
-
+    # 添加元素
+    # case1: 已经在hashmap中，更新value值，移到末尾
+    # case2：不在hashmap中，
+    #   case2.1. 没有超过capacity, 创建node，添加到末尾；
+    #   case2.2. 超过capacity, 移除链表头部元素（hashmap+doublelinked），创建新node，添加到末尾；
     def put(self, key: int, value: int) -> None:
         if key in self.hashmap:
             # 如果key本身已经在哈希表中了就不需要在链表中加入新的节点
@@ -74,7 +80,7 @@ class LRUCache:
             # 删除完了，再添加新的元素。
             if len(self.hashmap) == self.capacity:
                 # 删除哈希表对应项【删除，更新哈希表】
-                self.hashmap.pop(self.head.next.key)
+                self.hashmap.pop(self.head.next.key) # 删除链表头部元素
                 # 删除最久没有被访问过的节点，即头节点之后的节点（更新双向链表）
                 self.head.next = self.head.next.next
                 self.head.next.prev = self.head

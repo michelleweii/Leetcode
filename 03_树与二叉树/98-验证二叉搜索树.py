@@ -1,5 +1,5 @@
 """
-middle 2021-11-06
+middle 2021-11-06 遍历
 已知：BST的中序遍历是升序的
 """
 class TreeNode(object):
@@ -30,10 +30,13 @@ class Solution(object):
 # 方法二，递归版本，每个结点都满足左小于它，右大于它的性质
     def isValidBST(self, root):
         return self.check_bst(root, float("-inf"), float("inf"))
+
     def check_bst(self, node, left, right):
         if not node: return True
         if not left < node.val < right:
             return False
+        # 左子树分别bst
+        # 右子树分别bst，后面两个参数不是很理解
         return (self.check_bst(node.left, left, node.val)
                 and self.check_bst(node.right, node.val, right))
 

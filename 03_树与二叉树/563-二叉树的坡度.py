@@ -1,63 +1,50 @@
-# https://blog.csdn.net/weixin_40449300/article/details/81051179
-class TreeNode(object):
-    def __init__(self, x):
-        self.val = x
-        self.left = None
-        self.right = None
-
-class Tree(object):
-    def __init__(self):
-        self.val = None
-        self.left = None
-        self.right = None
-
-    def add(self,item):
-        # 最后去添加，不考虑头插还是尾插
-        node = TreeNode(item)
-        if self.val is None:
-            self.val = node
-            return
-        queue = [self.val]
-        while queue:
-            cur_node = queue.pop(0)
-            if cur_node.left is None:
-                # 左节点为空，新加入的节点放到这个位置上
-                cur_node.left=node
-                return
-            else:
-                # 不是空的话，左节点入队
-                queue.append(cur_node.left)
-            if cur_node.right is None:
-                cur_node.right=node
-                return
-            else:
-                queue.append(cur_node.right)
+"""
+easy 2021-12-28 递归遍历（还没太理解）
+https://leetcode-cn.com/problems/binary-tree-tilt/solution/gong-shui-san-xie-jian-dan-er-cha-shu-di-ekz4/
+一个树的节点的坡度：该节点(左子树的结点之和)-(右子树结点之和)的绝对值。空结点的的坡度是0。
+整个树的坡度就是其所有节点的坡度之和。
+"""
+class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
 
 class Solution(object):
+    def __init__(self):
+        self.res = 0
+
+    def findTilt_on(self, root):
+        if not root: return 0
+        self.dfs(root)
+        return self.res
+
+    def dfs(self, root):
+        if not root:return 0
+        # 在计算子树权值和的时候将坡度进行累加
+        l = self.dfs(root.left) # 左子树权值和
+        r = self.dfs(root.right)
+        self.res += abs(l-r)
+        return l+r+root.val
+
+    # O(n^2)
     def findTilt(self, root):
-        """
-        :type root: TreeNode
-        :rtype: int
-        """
-        def sum_and_tilt(root):
-            if not root:        # 如果是一个叶子节点的左右孩子，则是空的，没有东西可以继续遍历了！
-                return 0,0  # 第一个值是该节点为根的时候，它的和；第二个值是该节点的
-                            # 总坡度（因为题目要求的是所有节点的坡度之和）
-            sum_left,left_tilt = sum_and_tilt(root.left)
-            sum_right,right_tilt = sum_and_tilt(root.right)
-            return sum_left+sum_right+root.val,abs(sum_left-sum_right)+left_tilt+right_tilt
-
-        sum_tree,tilt_tree = sum_and_tilt(root)
-        return tilt_tree
-
+        # 1、计算子树坡度
+        if not root:return 0
+        # 左子树坡度
+        left_tilt = self.findTilt(root.left)
+        # 右子树坡度
+        right_tilt = self.findTilt(root.right)
+        # 差值
+        diff = abs(self.get_sum(root.left)-self.get_sum(root.right))
+        return left_tilt+right_tilt+diff
+    # 2、计算子树权值和
+    # 求该节点+左右子树总和
+    def get_sum(self, root):
+        if not root:return 0
+        return self.get_sum(root.left)+self.get_sum(root.right)+root.val
 
 if __name__ == '__main__':
-    # tree = Tree()
-    # tree.add(1)
-    # tree.add(2)
-    # tree.add(3)
-    # tree.add(4)
-    # tree.add(5)
     a = TreeNode(1)
     b = TreeNode(2)
     c = TreeNode(3)

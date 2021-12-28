@@ -1,6 +1,5 @@
 """
-easy 2021-11-08
-基础必会题
+easy 2021-11-08 前序遍历
 https://leetcode-cn.com/problems/binary-tree-preorder-traversal/solution/tu-jie-er-cha-shu-de-si-chong-bian-li-by-z1m/
 """
 class TreeNode:
@@ -15,14 +14,28 @@ class Solution:
 
     def preorderTraversal(self, root: TreeNode):
         if not root:return []
-        self.pre_order(root)
+        self.helper(root)
         return self.res
 
-    def pre_order(self, root):
+    def helper(self, root):
         if not root: return
         self.res.append(root.val)
-        self.pre_order(root.left)
-        self.pre_order(root.right)
+        self.helper(root.left)
+        self.helper(root.right)
+
+    # 迭代
+    def preorder(self, root):
+        if not root:return []
+        stack, res = [root], []
+        while stack:
+            node = stack.pop()
+            if node:
+                res.append(node.val) # 根节点加入结果中
+                if node.right: # 右子树入栈
+                    stack.append(node.right)
+                if node.left: # 左子树入栈
+                    stack.append(node.left)
+        return res
 
 
 if __name__ == '__main__':

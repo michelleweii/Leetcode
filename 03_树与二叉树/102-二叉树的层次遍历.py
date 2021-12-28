@@ -1,11 +1,12 @@
-from collections import deque
-
+"""
+easy 2021-12-25 层次遍历基础基础！
+"""
 class TreeNode(object):
     def __init__(self, x):
         self.val = x
         self.left = None
         self.right = None
-
+from collections import deque
 class Solution(object):
     # 2020/12/23
     def levelOrder(self, root: TreeNode):# -> List[List[int]]:

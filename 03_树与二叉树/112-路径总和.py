@@ -1,10 +1,10 @@
 """
-easy 2021-11-11
+easy 2021-11-11 树回溯
 https://programmercarl.com/0112.%E8%B7%AF%E5%BE%84%E6%80%BB%E5%92%8C.html#%E9%80%92%E5%BD%92
 回溯:https://leetcode-cn.com/problems/path-sum/solution/lu-jing-zong-he-de-si-chong-jie-fa-dfs-hui-su-bfs-/
 """
 """
-if (traversal(cur->left, count - cur->left->val)) return true; // 注意这里有回溯的逻辑
+if(traversal(cur->left, count - cur->left->val)) return true; // 注意这里有回溯的逻辑
 为什么传参的时候直接相减是有回溯逻辑的呢?
 回溯隐藏在traversal(cur->left, count - cur->left->val)这里， 
 因为把count - cur->left->val 直接作为参数传进去，函数结束，count的数值没有改变。
