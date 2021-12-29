@@ -1,6 +1,7 @@
 """
 middle 2021-12-14 bst
 题目：返回bst第k小元素, ac myself
+空间复杂度：O(h)，h为二叉树高度。
 """
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):

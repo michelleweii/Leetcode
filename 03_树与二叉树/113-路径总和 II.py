@@ -18,7 +18,7 @@ class Solution(object):
         self.path.append(root.val)
         self.dfs(root, targetSum-root.val)
         return self.res
-    # 递归函数不需要返回值，因为我们要遍历整个树, 所以都是return，而不是return xxx
+    # 递归函数不需要返回值，因为我们要遍历整个树
     def dfs(self, root, target):
         # 遇到了叶子节点且找到了和为sum的路径
         if target==0 and not root.right and not root.left:

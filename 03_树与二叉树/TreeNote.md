@@ -6,6 +6,8 @@
 
 [关于二叉树的高度与深度图解](https://www.programmercarl.com/0110.%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91.html#%E9%80%92%E5%BD%92)
 
+路径：任意节点出发到任意节点结束所构成的~~（最大）~~路径。
+
 # 二叉树遍历
 
 - [二叉树的四种遍历](https://leetcode-cn.com/problems/binary-tree-preorder-traversal/solution/tu-jie-er-cha-shu-de-si-chong-bian-li-by-z1m/)
@@ -15,6 +17,13 @@
 > 1. 确定递归函数的参数和返回值
 > 2. 确定终止条件
 > 3. 确定单层递归的逻辑
+
+二叉树前中后 递归/迭代 遍历，空间复杂度 O(h)，h为二叉树高度。
+
+平均情况下，h=logn，即O(logn)；最坏情况下，h=n，即O(n)。
+
+- 时间：o(n)
+- 空间：o(n)，平均树的高度，最差是链状的树
 
 ## 前序遍历（递归）
 
@@ -170,7 +179,16 @@ def LevelOrder(root):
 
 ## morris遍历
 
-二叉树遍历算法的超强进阶算法，morris遍历可以将非递归遍历中的空间复杂度降为O(1)。
+二叉树遍历算法的超强进阶算法，morris遍历可以将非递归遍历中的 <u>**空间复杂度**</u> 降为O(1)。
+
+https://leetcode-cn.com/problems/binary-tree-preorder-traversal/solution/leetcodesuan-fa-xiu-lian-dong-hua-yan-shi-xbian-2/
+
+- 用时间换空间
+  - 高效使用大量指向None的指针
+  - 用两个指针来连接/切断叶子节点和父节点关系
+  - 完成左子树的最右节点和根节点的连接
+- 时间：o(n)
+- 空间：o(1)
 
 # 树回溯
 
@@ -222,11 +240,150 @@ class Solution:
             self.path.pop() # 回溯和递归是一一对应的，有一个递归，就要有一个回溯。
 ```
 
+LC112.路径总和
+
+```python
+"""
+if(traversal(cur->left, count - cur->left->val)) return true; // 注意这里有回溯的逻辑
+为什么传参的时候直接相减是有回溯逻辑的呢?
+回溯隐藏在traversal(cur->left, count - cur->left->val)这里， 
+因为把count - cur->left->val 直接作为参数传进去，函数结束，count的数值没有改变。
+"""
+# 是否有=target的路径
+# 根到叶子->前序遍历
+class TreeNode(object):
+    def __init__(self, x):
+        self.val = x
+        self.left = None
+        self.right = None
+
+class Solution(object):
+    def hasPathSum(self, root, targetSum):
+        if not root:return False
+        return self.dfs(root, targetSum-root.val)
+
+    def dfs(self, root, target):
+        # 遇到叶子节点，并且计数为0
+        if target == 0 and not root.right and not root.left:
+            return True
+        #  遇到叶子节点，计数不为0
+        if not root.right and not root.left:
+            return False
+
+        if root.left:
+            target -= root.left.val
+            if self.dfs(root.left, target):return True # # 递归，处理左节点
+            target += root.left.val  # 回溯
+
+        if root.right:
+            target -= root.right.val
+            if self.dfs(root.right, target):return True # # 递归，处理右节点
+            target += root.right.val  # 回溯
+
+        return False
+```
+
+LC113.路径总和2
+
+```python
+# 打印=target的所有路径
+class Solution(object):
+    def __init__(self):
+        self.path, self.res = [], []
+
+    def pathSum(self, root, targetSum):
+        if not root:return self.res
+        self.path.append(root.val)
+        self.dfs(root, targetSum-root.val)
+        return self.res
+    # 递归函数不需要返回值，因为我们要遍历整个树
+    def dfs(self, root, target):
+        # 遇到了叶子节点且找到了和为sum的路径
+        if target==0 and not root.right and not root.left:
+            self.res.append(self.path[:])
+            return
+        # 遇到叶子节点而没有找到合适的边，直接返回
+        if not root.right and not root.left:
+             return
+
+        if root.left:
+            target -= root.left.val
+            self.path.append(root.left.val)
+            self.dfs(root.left, target) # 递归
+            target += root.left.val # 回溯
+            self.path.pop() # 回溯
+
+        if root.right:
+            target -= root.right.val
+            self.path.append(root.right.val)
+            self.dfs(root.right, target) # 递归
+            target += root.right.val # 回溯
+            self.path.pop() # 回溯
+```
+
+LC437.路径总和3
+
+```python
+# 任意节点出发，结束，总和为target
+class Solution:
+    # 【朴素版】ac，时间复杂度：O(n^2)
+    def pathSum_native(self, root: TreeNode, targetSum): #int) -> int:
+        if not root: return 0
+        self.target = targetSum
+        self.count = 0
+        self.dfs1(root)
+        return self.count
+
+    def dfs1(self, root):
+        if not root:return
+        # 操作根节点
+        self.dfs2(root, root.val)
+        # 遍历左、右子树
+        self.dfs1(root.left)
+        self.dfs1(root.right)
+
+    def dfs2(self, root, val):# val当前和
+        # 出口
+        if val==self.target:
+            self.count += 1
+        if root.left:
+            self.dfs2(root.left, val+root.left.val)
+            # val+root.left.val 值传递，自带回溯效果
+        if root.right:
+            self.dfs2(root.right, val+root.right.val)
+
+    # ----------------------------------------------------------
+    def pathSum(self, root: TreeNode, targetSum):
+        if not root: return 0
+        self.count = 0
+        self.target = targetSum
+        self.hashmap = {}
+        self.hashmap[0] = 1 # # 前缀和为0的数量有1个。默认nums[-1]=0
+        self.dfs(root, root.val)
+        return self.count
+
+    # 具体操作细节退化到lc560
+    # key: 前缀和
+    # value: key 对应的前缀和的个数
+    def dfs(self, root, sums):
+        # 为啥子没有出口？
+        # if not root:return # 加不加都会过？为什么？前序遍历不加会报错
+        self.count += self.hashmap.get(sums-self.target, 0)
+        # 有多少节点 a 满足 sum[a...b] = targetSum，
+        # b 是当前的sums
+        self.hashmap[sums] = self.hashmap.get(sums, 0) + 1
+        # 开始回溯
+        if root.left:self.dfs(root.left, sums+root.left.val)
+        # sums+root.left.val 自带回溯效果
+        if root.right:self.dfs(root.right, sums+root.right.val)
+        self.hashmap[sums] = self.hashmap.get(sums,0)-1
+```
+
 
 
 > 相关题目
 >
-> LC112->LC113-> 
+> LC112->LC113-> LC129->LC437
 >
 > LC513
 
@@ -244,9 +401,11 @@ class Solution:
 >
 > BST的中序遍历是升序的。等同于根据中序遍历的序列恢复BST。
 
+基本操作：
 
-
-应用：
+1. 插入节点（[701. 二叉搜索树中的插入操作](https://leetcode-cn.com/problems/insert-into-a-binary-search-tree/)）
+2. 删除节点（[450. 删除二叉搜索树中的节点](https://leetcode-cn.com/problems/delete-node-in-a-bst/)）删除比插入难一点
+3. 搜索节点（[700. 二叉搜索树中的搜索](https://leetcode-cn.com/problems/search-in-a-binary-search-tree/)）
 
 
 
@@ -269,3 +428,30 @@ class Solution:
         return max(self.depth(root.left), self.depth(root.right)) + 1
 ```
 
+
+
+
+
+# 重要题目
+
+LC124.二叉树中的最大路径和
+
+LC236.二叉树的最近公共祖先
+
+```python
+class Solution:
+    def lowestCommonAncestor(self, root, p, q) -> 'TreeNode':
+        if not root:return root
+        if root==p or root==q:return root
+        left = self.lowestCommonAncestor(root.left, p, q)
+        right = self.lowestCommonAncestor(root.right, p, q)
+        # 当 left 和 right 同时不为空 ：说明 p, q分列在 root的 异侧 （分别在 左 / 右子树），
+        # 因此 root 为最近公共祖先，返回 root
+        if left and right:return root
+        if left:return left
+        return right
+```
+
+
+
+[二叉树总结篇](https://www.programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E6%80%BB%E7%BB%93%E7%AF%87.html#%E6%9C%80%E5%90%8E%E6%80%BB%E7%BB%93)

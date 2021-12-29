@@ -38,9 +38,10 @@ class Solution:
         for x in nums:
             sums += x
             # print(sums) # 1,2,3
-            # 问自己！当前前缀和（a）-k，之前出现过吗？如果出现过了记作b，那么a-b=k，count++
-            # (a,b)=presum[a]-presum[b]=k
-            # 求b出现过几次
+            # 问自己！当前前缀和（sums）-k，之前出现过吗？如果出现过了记作a，那么sums-a=k，count++
+            # (a,b)=presum[b]-presum[a]=k
+            # presum[b]=sums
+            # 求a出现过几次
             res += hash_map.get(sums-k, 0) # hash_map[sums-k] KeyError: -1
             # 维护hashmap的定义
             hash_map[sums] = hash_map.get(sums, 0) + 1 # 计算前缀和为sums的个数
@@ -59,7 +60,6 @@ class Solution:
     当前“前缀和”与历史前缀和，差分出一个子数组，该历史前缀和出现过 c 次，就表示当前项找到 c 个子数组求和等于 k。
     遍历过程中，c 不断加给 count，最后返回 count。
     """
-
 
 if __name__ == '__main__':
     nums = [1, 1, 1]

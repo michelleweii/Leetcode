@@ -18,8 +18,7 @@ class TreeNode:
 
 class Solution:
     def __init__(self):
-        self.first_node = None
-        self.second_node = None
+        self.first_node, self.second_node = None, None # 错误对
         self.pre_node = TreeNode(float("-inf"))
 
     def recoverTree(self, root):
@@ -30,14 +29,17 @@ class Solution:
     # 二叉树中序遍历（左根右）
     def in_order(self, root):
         if not root:return root # return 也可以
+        # 左
         self.in_order(root.left)
+        # 根（处理）
         # 只出现一对不满足前小后大，交换这一对元素即可。
         if self.first_node is None and self.pre_node.val >= root.val:
             self.first_node = self.pre_node
         # 出现了两对不满足前小后大，需要交换第一对的第一个元素与第二对的第二个元素。
         if self.first_node and self.pre_node.val >= root.val:
             self.second_node = root
-        self.pre_node = root
+        self.pre_node = root # 把当前结点设为中序前驱
+        # 右
         self.in_order(root.right)
 
 if __name__ == '__main__':

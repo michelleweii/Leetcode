@@ -1,6 +1,7 @@
 """
 easy 2021-12-02 二叉树属性
-计算每个子树的高度，再+1
+计算每个子树的高度，再+1。
+有关于二叉树深度与高度概念区别：https://programmercarl.com/0110.%E5%B9%B3%E8%A1%A1%E4%BA%8C%E5%8F%89%E6%A0%91.html#%E9%80%92%E5%BD%92
 """
 class TreeNode(object):
     def __init__(self, x):
@@ -32,6 +33,37 @@ class Solution(object):
             # 出当前层
             depth += 1
         return depth
+
+# 真正求取二叉树的最大深度，代码应该写成如下：（前序遍历）
+"""
+class Solution {
+public:
+    int result;
+    void getDepth(TreeNode* node, int depth) {
+        result = depth > result ? depth : result; // 中
+
+        if (node->left == NULL && node->right == NULL) return ;
+
+        if (node->left) { // 左
+            depth++;    // 深度+1
+            getDepth(node->left, depth);
+            depth--;    // 回溯，深度-1
+        }
+        if (node->right) { // 右
+            depth++;    // 深度+1
+            getDepth(node->right, depth);
+            depth--;    // 回溯，深度-1
+        }
+        return ;
+    }
+    int maxDepth(TreeNode* root) {
+        result = 0;
+        if (root == NULL) return result;
+        getDepth(root, 1);
+        return result;
+    }
+};
+"""
 
 if __name__ == '__main__':
     a = TreeNode(3)

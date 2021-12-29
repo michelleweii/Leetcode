@@ -1,5 +1,5 @@
 """
-middle 2021-12-14 bi-tree(dfs)+前缀和
+middle 2021-12-14 bi-tree(dfs)+前缀和（字节）
 区别：不用从root节点开始、也不用叶子节点结束的路径，任意的节点都可以当做路径的start; 输出有几条路径，不用打印明细；
 相关题：112、113
 https://leetcode-cn.com/problems/path-sum-iii/solution/gong-shui-san-xie-yi-ti-shuang-jie-dfs-q-usa7/
@@ -45,7 +45,7 @@ class Solution:
         self.dfs1(root.left)
         self.dfs1(root.right)
 
-    def dfs2(self, root, val):
+    def dfs2(self, root, val):# val当前和
         # 出口
         if val==self.target:
             self.count += 1
@@ -61,7 +61,7 @@ class Solution:
         self.count = 0
         self.target = targetSum
         self.hashmap = {}
-        self.hashmap[0] = 1
+        self.hashmap[0] = 1 # # 前缀和为0的数量有1个。默认nums[-1]=0
         self.dfs(root, root.val)
         return self.count
 
@@ -70,6 +70,7 @@ class Solution:
     # value: key 对应的前缀和的个数
     def dfs(self, root, sums):
         # 为啥子没有出口？
+        # if not root:return # 加不加都会过？为什么？前序遍历不加会报错
         self.count += self.hashmap.get(sums-self.target, 0)
         # 有多少节点 a 满足 sum[a...b] = targetSum，
         # b 是当前的sums

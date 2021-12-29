@@ -1,6 +1,6 @@
 """
-middle 2021-11-06
-返回所有由 n 个节点组成,从1-n的所有互斥bst
+middle 2021-11-06 bst构造
+返回所有由 n 个节点组成，从1-n的所有互斥bst
 https://leetcode-cn.com/problems/unique-binary-search-trees-ii/solution/cong-gou-jian-dan-ke-shu-dao-gou-jian-suo-you-shu-/
 https://leetcode-cn.com/problems/unique-binary-search-trees-ii/solution/di-gui-zhu-xing-jie-shi-python3-by-zhu_shi_fu/
 思路：
@@ -26,8 +26,10 @@ class Solution:
         # 如果子树不是空，递归所有可能的根节点
         for i in range(start, end + 1):
             # 对每个root，它所有的左子树构建bst
+            # 递归构建左子树，并拿到左子树所有可能的根结点列表 left_tree
             left_tree = self.build_tree(start, i - 1)  # x就是i
             # 对每个root，它所有的右子树构建bst
+            # 递归构建右子树，并拿到右子树所有可能的根结点列表 right_tree
             right_tree = self.build_tree(i + 1, end)
             # 把所有可能的左右子树与根节点进行拼接
             for left_node in left_tree:

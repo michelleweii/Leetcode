@@ -1,5 +1,6 @@
 """
 middle 2021-12-29 递归遍历（必会）
+https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/solution/236-er-cha-shu-de-zui-jin-gong-gong-zu-xian-hou-xu/
 """
 class TreeNode(object):
     def __init__(self, x):
@@ -22,25 +23,6 @@ class Solution(object):
         if not left: return right
         # # 若右子树是none,左子树不是，说明左子树找到了A或B
         if not right:return left
-        # 如果左边，右边都没找到呢？
-
-    def dfs(self,node,search,path,result):
-        # 先序遍历（深度优先遍历）
-        # node：正在遍历的结点；search：希望遍历到的结点
-        if node:
-            # 当node为空或已找到search结点，finish=1为找到
-            path.append(node)
-            while path:
-                node = path.pop()
-                result.append(node)
-                # print(result)
-                if node.val == search.val:
-                    return result
-                if node.right:
-                    path.append(node.right)
-                if node.left:
-                    path.append(node.left)
-        return result
 
 if __name__ == '__main__':
     a = TreeNode(3)

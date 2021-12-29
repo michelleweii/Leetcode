@@ -1,7 +1,8 @@
 """
 middle 2021-12-14 bst
-反中序遍历 相同题lc1038
+反中序遍历 相同题lc1038，题目：使每个节点 node 的新值等于原树中大于或等于 node.val 的值之和
 累加树：bst中序遍历之后，每个node的值更新为右侧all value+self（所有>=node的总和）
+https://leetcode-cn.com/problems/convert-bst-to-greater-tree/solution/shou-hua-tu-jie-zhong-xu-bian-li-fan-xiang-de-by-x/
 思路：先递归遍历右子树、后递归遍历左子树；维护一个外部累加变量sum，然后把sum赋值给 BST 中的每一个节点；
 """
 class TreeNode:
