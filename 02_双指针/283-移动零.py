@@ -1,20 +1,26 @@
 """
-easy 2021-09-09
-双指针同向
+easy 2021-09-09 同向双指针
 # 移动非零元素（操作次数就是非零元素的个数）
 # j 记录非零元素应该换到第几个位置，记录0的位置
 # i 遍历数组
 """
 class Solution:
     def moveZeroes(self, nums):
-        j = 0
-        for i in range(len(nums)):
-            if nums[i]!=0:
-                # print(i, j)
-                nums[i],nums[j] = nums[j],nums[i]
-                j+=1
-
+        slow, fast = 0, 0 # fast从1开始就是无序状态，0开始就是有序状态
+        while fast<len(nums):
+            if nums[fast]!=0:
+                nums[slow],nums[fast]=nums[fast],nums[slow]
+                slow += 1
+            fast+=1
         return nums
+        # j = 0
+        # for i in range(len(nums)):
+        #     if nums[i] !=0:
+        #         # print(i, j)
+        #         nums[i],nums[j] = nums[j],nums[i]
+        #         j+=1
+        #
+        # return nums
 
 
 if __name__ == '__main__':

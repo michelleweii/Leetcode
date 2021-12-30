@@ -1,6 +1,5 @@
 """
-hard 2021-06-10
-双指针同向
+hard 2021-06-10 同向双指针
 子串是连续的；T可能包含重复字符（下面连接的图例有助于理解）
 https://leetcode-cn.com/problems/minimum-window-substring/solution/tong-su-qie-xiang-xi-de-miao-shu-hua-dong-chuang-k/
 如何判断S的子串包含了T中的所有字符？

@@ -28,19 +28,23 @@ class Solution:
                 res += h*w
             stk.append(i)
         return res
-        # """
-        # 维护单调递增栈
-        # for i in range(len(height)):
-        #     level = 0
-        #     while stk and height[stk[-1]]<=height[i]:
-        #         res += (height[stk[-1]]-level)*(i-stk[-1]-1)
-        #         level = height[stk[-1]]
-        #         stk.pop()
-        #     if stk:
-        #         res+=(height[i]-level)*(i-stk[-1]-1) # 这一句还是不明白？
-        #     stk.append(i)
-        # return res
-        # """
+
+    # 类似LC11，双指针解法
+    # 接雨水最大容量，取决于短板
+    # https://leetcode-cn.com/problems/trapping-rain-water/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by-w-8/
+    # 太难了
+    # def two_pointers(self, height):
+    #     if len(height)<=1:return 0
+    #     i, j = 0, len(height)-1
+    #     res = 0
+    #     while i<j:
+    #         if height[i]<height[j]:# 移动短板height[i]
+    #             res = max(res, (j-i-1)*height[i]) # w*h
+    #             j-=1
+    #         else: # 移动短板height[j]
+    #             res = max(res, (j-i-1)*height[i]) # w*h
+    #             i+=1
+    #     return res
 
 # 2021-10-26
 # 2021-12-16
@@ -48,3 +52,4 @@ if __name__ == '__main__':
     height = [4,2,0,3,2,5]
     myresult = Solution()
     print(myresult.trap(height))
+    # print(myresult.two_pointers(height))

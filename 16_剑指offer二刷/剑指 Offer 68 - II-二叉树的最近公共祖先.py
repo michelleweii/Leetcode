@@ -1,6 +1,6 @@
 """
-easy 二叉树
-2021-07-20
+easy 2021-07-20 二叉树
+https://leetcode-cn.com/problems/lowest-common-ancestor-of-a-binary-tree/solution/236-er-cha-shu-de-zui-jin-gong-gong-zu-xian-hou-xu/
 """
 
 class TreeNode:
@@ -15,6 +15,8 @@ class Solution:
         if root==p or root==q:return root
         left = self.lowestCommonAncestor(root.left, p, q)
         right = self.lowestCommonAncestor(root.right, p, q)
+        # 当 left 和 right 同时不为空 ：说明 p, q分列在 root的 异侧 （分别在 左 / 右子树），
+        # 因此 root 为最近公共祖先，返回 root
         if left and right:return root
         if left:return left
         return right
