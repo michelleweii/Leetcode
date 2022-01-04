@@ -1,5 +1,6 @@
 """
 easy 2021-09-09 同向双指针
+https://leetcode-cn.com/problems/move-zeroes/solution/dong-hua-yan-shi-283yi-dong-ling-by-wang_ni_ma/
 # 移动非零元素（操作次数就是非零元素的个数）
 # j 记录非零元素应该换到第几个位置，记录0的位置
 # i 遍历数组
@@ -24,6 +25,6 @@ class Solution:
 
 
 if __name__ == '__main__':
-    nums = [1,1,0,3,12]
+    nums = [1,1,0,3,12] # [1, 1, 3, 12, 0]
     myResult = Solution()
     print(myResult.moveZeroes(nums))

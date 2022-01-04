@@ -1,26 +1,20 @@
-# 要求时间复杂度O(N)
-# https://www.bilibili.com/video/BV1Lb411w74Y
-# Python solution using hash
+"""
+easy 2022-01-04 哈希表
+https://www.bilibili.com/video/BV1Lb411w74Y
+要求时间复杂度O(N)
+"""
+# k: target-num
+# v: num index
 class Solution(object):
     def twoSum(self, nums, target):
         if len(nums) <= 1:
             return False
-        buff_dict = {}
+        hashmap = {}
         for i in range(len(nums)):
-            if nums[i] in buff_dict:
-                return [buff_dict[nums[i]], i]
+            if nums[i] in hashmap:
+                return [hashmap[nums[i]], i]
             else:
-                buff_dict[target - nums[i]] = i
-
-        # 2021-05
-        hash_map = {}
-        for idx, value in enumerate(nums):
-            diff = target-value
-            if diff in hash_map:
-                return [hash_map[diff], idx]
-            hash_map[value] = idx
-        return []
-
+                hashmap[target - nums[i]] = i
 
 if __name__ == '__main__':
     nums = [2, 7, 11, 15]

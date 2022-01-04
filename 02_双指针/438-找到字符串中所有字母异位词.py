@@ -1,58 +1,63 @@
 """
-middle
-滑动窗口+数组哈希表（与567，76相似）
+middle 2022-01-04 同向双指针|滑动窗口+数组哈希表（与567，76相似）
+https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/solution/438-zhao-dao-zi-fu-chuan-zhong-suo-you-z-nx6b/
 ---------------------------------
 解题思路
 （1）初始化 left = right = 0 把索引 <左闭右闭> 区间 [left, right] 当做一个 "窗口"。
-（2）不断增加 right 指针扩大窗口 [left, right]，直到窗口中的字符串符长度与字符串 tt 的长度相等。
+（2）不断增加 right 指针扩大窗口 [left, right]，直到窗口中的字符串符长度与字符串 t 的长度相等。
 （3）此时，停止增加 right，转而不断增加 left 指针缩小窗口 [left, right]，直到窗口中的字符串长度不再符合要求。
     同时，每增加一次 left，就要更新一轮结果。
 （4）重复第 2 和第 3 步，直到 right 到达字符串 s 的尽头。
 其中，第 2 步相当于在寻找一个 "可行解"，第 3 步相当于在判断这个可能的 "可行解"，最终找到 "最优解"。
-
-flag：记录窗口中满足条件的字符个数
-若一个字符进入窗口，应该增加 window 计数器；若一个字符将移出窗口，应该减少 window 计数器；当 flag 满足 pMap 时应收缩窗口；
-收缩窗口的时候应该更新最终结果。
-
-链接：https://leetcode-cn.com/problems/permutation-in-string/solution/zi-fu-chuan-de-pai-lie-hua-dong-chuang-k-sos8/
 """
-from collections import Counter
 class Solution(object):
+    # 套用模板解法
     def findAnagrams(self, s, p):
-        n = len(s)
+        from collections import Counter
         res = []
-        # window 记录窗口中的字符
-        window_map = {}
-        p_map = Counter(p)
+        n, m = len(s), len(p)
+        if n<m:return res
+
+        window_map = {} # window 记录窗口中的字符
+        p_map = Counter(p) # Counter({'a': 2})
         left, right = 0, 0
 
         while right < n: # 遍历长的字符串
             window_map[s[right]] = window_map.get(s[right], 0) + 1
-            while window_map.get(s[right], 0)>p_map.get(s[right], 0):
-                window_map[s[left]] = window_map.get(s[left], 0) - 1
+            # 通过窗口左边界的右移，把所有多余的字符移出去
+            while window_map.get(s[right], 0) > p_map.get(s[right], 0):
+                window_map[s[left]] = window_map.get(s[left], 0) - 1 # 类似LC3，重复的只可能是right新入的
                 left += 1
-            if right-left+1 == len(p):
+            if right-left+1 == m:
                 res.append(left)
-            right += 1
+            right += 1 # 扩充右边界
         return res
 
-        # flag = 0  # 记录窗口中满足条件的字符个数
-        #     if s[right] in p_map:
-        #         window_map[s[right]] = window_map.get(s[right],0) + 1
-        #         if window_map.get(s[right]) == p_map.get(s[right]): flag+=1 # 当flag==len(p) 说明完成匹配
-        #
-        #     while right-left+1 == len(p):
-        #         if flag==len(p_map): res.append(left)
-        #         # 开始找最优解
-        #         left += 1
-        #         if s[left] in p_map:
-        #             if window_map.get(s[left]) == p_map.get(s[left]): flag -= 1
-        #             window_map[s[left]] = window_map.get(s[left], 0) - 1
-        #     right += 1
-        # return res
+    def findAnagrams2(self, s: str, p: str):# -> List[int]:
+        n, m, res = len(s), len(p), []
+        if n < m: return res
+        p_cnt = [0] * 26
+        s_cnt = [0] * 26
+
+        for i in range(m):
+            p_cnt[ord(p[i]) - ord('a')] += 1
+        # print('p_cnt', p_cnt) # 字母a是两个
+        left = 0
+        for right in range(n):
+            cur_right = ord(s[right]) - ord('a')
+            s_cnt[cur_right] += 1
+            while s_cnt[cur_right] > p_cnt[cur_right]:
+                cur_left = ord(s[left]) - ord('a')
+                s_cnt[cur_left] -= 1
+                left += 1
+            if right - left + 1 == m:
+                res.append(left)
+        return res
+
 
 if __name__ == '__main__':
     s = "baa"
     p = "aa"
     myResult = Solution()
     print(myResult.findAnagrams(s, p))
+    print(myResult.findAnagrams2(s, p))

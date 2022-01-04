@@ -1,8 +1,6 @@
 双指针
 
-![img](/Users/michelle/Desktop/img.png)
-
-
+[为什么双指针不会错过正确答案？双指针的本质。！](https://leetcode-cn.com/problems/sum-of-square-numbers/solution/shuang-zhi-zhen-de-ben-zhi-er-wei-ju-zhe-ebn3/)
 
 双指针找最长子串，最短子串，最小覆盖，必然要搭配hashmap。其中，k为char字符，v为该字符出现几次。
 
@@ -33,9 +31,27 @@ def _lengthOfLongestSubstring(self, s):
     return res
 ```
 
+思路总结
+
+> [滑动窗口：当窗口大小与 t 长度相等时，可能得到一个可行解](https://leetcode-cn.com/problems/permutation-in-string/solution/zi-fu-chuan-de-pai-lie-hua-dong-chuang-k-sos8/)
+>
+> 基本都是[left, right]指针维护一个区间，第一个while right<len(nums)，right右区间一直++，
+>
+> 当不满足or满足题意是，第二个while进行left++，尝试缩小窗口，
+>
+> 在缩小窗口的同时，更新 res = max/min(res, right-left+1)，更新res的位置依据题意。（收缩窗口的时候更新结果）
+
 相关题目：
 
 LC3.无重复字符的最长子串
+
+LC209.长度最小的子数组
+
+LC76.最小覆盖子串
+
+LC438.找到字符串中所有字母的异位词
+
+LC567.字符串的排列
 
 
 
@@ -154,4 +170,10 @@ if __name__ == '__main__':
 
 LC26.删除有序数组中的重复项 & 80.删除有序数组中的重复项II
 
-LC27.移出元素 & 283.移动零
+LC27.移出元素 & 283.移动零 ：不等于0就交换，且slow++,fast++；等于0就fast++；
+
+
+
+
+
+https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/solution/gong-shui-san-xie-shuang-zhi-zhen-shi-xi-t5hc/

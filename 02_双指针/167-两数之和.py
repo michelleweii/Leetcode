@@ -1,7 +1,10 @@
 """
-easy 2021-09-08 无问题
-双指针反向
+easy 2021-09-08 反向双指针
+https://leetcode-cn.com/problems/two-sum-ii-input-array-is-sorted/solution/yi-zhang-tu-gao-su-ni-on-de-shuang-zhi-zhen-jie-fa/
+ac myself
 """
+# 与LC1.两数之和的区别？
+# 这不就是双指针解LC1吗？
 class Solution(object):
     def twoSum(self, numbers, target):
         # 有序数据，利用快排
@@ -18,6 +21,7 @@ class Solution(object):
                 l += 1
             else:
                 r -= 1
+        return [-1, -1]
 
 if __name__ == '__main__':
     numbers = [2, 7, 11, 15]

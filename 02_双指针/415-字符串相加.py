@@ -1,10 +1,11 @@
 """
-easy 2021-12-09
-反向双指针
+easy 2021-12-09 同向双指针
 # 进位如何考虑？初始化carry=0, 求进位 carry = tmp // 10
+# python可以左加
 # loop choose while or for? while
 https://leetcode-cn.com/problems/add-strings/solution/add-strings-shuang-zhi-zhen-fa-by-jyd/
 """
+# 2022-01-05 链表题LC445类似
 class Solution:
     def addStrings(self, num1: str, num2: str):# -> str:
         res = ""

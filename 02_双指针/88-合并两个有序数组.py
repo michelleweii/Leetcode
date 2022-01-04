@@ -1,7 +1,6 @@
 """
-easy 2021-09-07review
-双指针双向
-# https://leetcode-cn.com/problems/merge-sorted-array/solution/hua-jie-suan-fa-88-he-bing-liang-ge-you-xu-shu-zu-/
+easy 2021-09-07 同向双指针（逆序归并）
+https://leetcode-cn.com/problems/merge-sorted-array/solution/hua-jie-suan-fa-88-he-bing-liang-ge-you-xu-shu-zu-/
 难死了 easy个锤子
 思路：
 - 标签：从后向前数组遍历
@@ -10,6 +9,7 @@ easy 2021-09-07review
 - 当 len1<0 时遍历结束，此时 nums2 中还有数据未拷贝完全，将其直接拷贝到 nums1 的前面，最后得到结果数组
 - 时间复杂度：O(m+n)
 """
+# 2022-01-04 逆序的归并，这次理解了很多
 class Solution:
     def merge(self, nums1, m, nums2, n):
         p, q = m-1, n-1
@@ -26,7 +26,7 @@ class Solution:
 
         # 如果p的元素一直比q大的话，nums1先结束。nums2还没有遍历完成。
         # 直接将nums2的元素放在nums1之前
-        res = nums2[:q+1]+nums1
+        res = nums2[:q+1]+nums1 # 这里不是特别理解
         return res[:m+n]
 
 
