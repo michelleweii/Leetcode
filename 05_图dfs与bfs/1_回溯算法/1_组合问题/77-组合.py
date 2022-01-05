@@ -20,8 +20,7 @@ class Solution:
             # return # return加不加都不影响结果，所以作用是什么？
         # 横向遍历
         for i in range(start_index, n+1):
-            # 剪枝
-
+            # 剪枝?
             self.path.append(i)
             self.dfs(n,k,i+1) # 深度遍历
             self.path.pop() # 回溯，上一级

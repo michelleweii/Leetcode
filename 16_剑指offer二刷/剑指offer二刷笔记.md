@@ -1178,8 +1178,8 @@ class MaxQueue:
 
 ## 8【DFS & BFS】
 
-> bfs是存在所有可行解
-> dfs是有没有，dfs才需要回溯？
+> bfs是存在所有可行解。
+> dfs是有没有True or False，回溯是一种dfs。
 >
 > bfs每个点只能访问一次，需要维护visited数据（判重数据）。
 > bfs要维护队列。
@@ -1285,7 +1285,7 @@ class Solution:
         return res
 ```
 
-#### 38 *字符串的排列 dfs
+#### 38 *字符串的排列 dfs回溯
 
 ```python
 # 输入：s = "abc"
@@ -1296,7 +1296,7 @@ class Solution:
         res = []
         if not s: return res
         self.dfs("", res, s)
-        return list(set(res))
+        return list(set(res)) # 通过set去重
 
     def dfs(self, path, res, s):
         # 定义dfs出口
@@ -1305,6 +1305,11 @@ class Solution:
         for i in range(len(s)):
             self.dfs(path + s[i], res, s[:i] + s[i + 1:])
         return res
+      
+## 考虑不通过set()实现去重
+# "aab"，["aab","aba","aab","aba","baa","baa"]， ac: ["aba","aab","baa"]
+# https://leetcode-cn.com/problems/zi-fu-chuan-de-pai-lie-lcof/solution/dai-ma-sui-xiang-lu-jian-zhi-offer-38-zi-gwt6/
+
 ```
 
 
