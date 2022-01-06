@@ -16,7 +16,6 @@ https://leetcode-cn.com/problems/minimum-window-substring/solution/tong-su-qie-x
 # 2\right先移动,找到问题的可行解
 # 3\hash[key]>0 说明需要key，<0说明该key是多余的.
 # 所有元素的数量都小于等于0时，表示当前滑动窗口不再需要任何元素
-#
 from collections import Counter
 # sW_count, tW_count = Counter(sW), Counter(tW) # 统计字符串里每个字符的个数
 # need[] == 0，说明这个字符正好
@@ -66,15 +65,14 @@ class Solution:
             right += 1
 
         return '' if res > ls else s[start:start+res]
-
 """
 暴力解法
 - 枚举输入字符串s的所有长度>=t的子串；
 - 逐个判断这些子串中，哪些子串覆盖了字符串t的所有字符；
 - 在枚举的过程中，记录符合条件的，长度最短的那个子串。
 """
-
 if __name__ == '__main__':
     S = "ADOBECODEBANC" # "ab" #
     T = "ABC" # "a" #
+    # BANC
     print(Solution().minWindow(S, T))

@@ -1,5 +1,5 @@
 """
-middle 2021-07-16 2_dfs-递归
+middle 2021-01-07 2_dfs-递归
 https://leetcode-cn.com/problems/zi-fu-chuan-de-pai-lie-lcof/solution/dai-ma-sui-xiang-lu-jian-zhi-offer-38-zi-gwt6/
 本题是回溯算法经典题目，求全排列+去重，这道题目和 LC47.全排列II 几乎是一样的。
 """

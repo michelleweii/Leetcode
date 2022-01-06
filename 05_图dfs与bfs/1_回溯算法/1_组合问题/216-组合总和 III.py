@@ -1,6 +1,7 @@
 """
-middle
-和为 n 的 k 个数的组合, 每种组合中不存在重复的数字
+middle 2022-01-06 回溯
+和为 n 的 k 个数的组合, 组合中只允许含有 1-9 的正整数，每种组合中不存在重复的数字。
+题目：本题就是在[1,2,3,4,5,6,7,8,9]这个集合中找到和为n的k个数的组合（不重复）。
 """
 class Solution:
     def __init__(self):
@@ -14,12 +15,14 @@ class Solution:
         return self.res
 
     def dfs(self,nums,k,n,start_index,sums):
+        # 剪枝
+        if sums>n: return
         # 定义出口
         if len(self.path)==k and sums==n:
             self.res.append(self.path[:])
             return
 
-        for i in range(start_index,len(nums)):
+        for i in range(start_index, len(nums)):
             # 剪枝
             if nums[i]>n or k<0:
                 return
