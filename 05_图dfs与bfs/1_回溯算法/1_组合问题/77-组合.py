@@ -1,5 +1,6 @@
 """
 middle 2022-01-06 回溯法|组合问题
+https://programmercarl.com/0077.%E7%BB%84%E5%90%88.html#%E5%9B%9E%E6%BA%AF%E6%B3%95%E4%B8%89%E9%83%A8%E6%9B%B2
 # 给定两个整数 n 和 k，返回范围 [1, n] 中所有可能的 k 个数的组合。[[1, 2], [1, 3], [1, 4], [2, 3], [2, 4], [3, 4]]
 # 没有剪枝
 # 与LC257树的回溯对比学习
@@ -12,7 +13,7 @@ class Solution:
 
     def combine(self, n, k):
         if not k:return self.res
-        self.dfs(n, k, 1)
+        self.dfs(n, k, 1) # 返回范围 [1, n] 中所有可能的 k 个数的组合
         return self.res
 
     def dfs(self, n, k, start_index):

@@ -13,7 +13,7 @@ https://leetcode-cn.com/problems/minimum-window-substring/solution/tong-su-qie-x
 
 """
 # 1\left右移，是可行解到最优解的过程
-# 2\right先移动,找到问题的可行解
+# 2\right先移动，找到问题的可行解
 # 3\hash[key]>0 说明需要key，<0说明该key是多余的.
 # 所有元素的数量都小于等于0时，表示当前滑动窗口不再需要任何元素
 from collections import Counter
@@ -56,7 +56,7 @@ class Solution:
                     res = right-left+1
                     start = left # 再从这个位置开始向右扩展
 
-                # left向右移动后窗口肯定不能满足了,重新开始循环
+                # left向右移动后窗口肯定不能满足了，重新开始循环
                 # left是要前进一位的，开始寻找下一个满足条件的滑动窗口
                 need[s[left]] += 1 # 该元素移出了，则还需要该元素
                 left += 1

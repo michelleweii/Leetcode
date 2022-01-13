@@ -1,3 +1,7 @@
+"""
+middle 2022-01-13 回溯|组合
+# candidates 中(有重复元素！)的每个数字在每个组合中只能使用一次。
+"""
 # 给定一个数组 candidates 和一个目标数 target ，
 # 找出 candidates 中所有可以使数字和为 target 的组合。
 # candidates 中的每个数字在每个组合中只能使用一次。
@@ -27,7 +31,8 @@ class Solution:
             if sums + candidates[i] > target:
                 return
             # 要对同一树层使用过的元素进行跳过
-            if i>start_index and candidates[i] == candidates[i - 1]:continue
+            # 【核心】
+            if i>start_index and candidates[i] == candidates[i-1]:continue
 
             sums+=candidates[i]
             self.path.append(candidates[i])

@@ -1,7 +1,8 @@
 """
-middle
-求abc和def的全排列（这类不需要start_index）
-全排列就是回溯, 求最短路径也是DFS
+middle 2022-01-13 回溯|组合问题
+# 求不同集合之间的组合，而LC77\LC216是求同一个集合中的组合!
+https://programmercarl.com/0017.%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88.html#%E5%9B%9E%E6%BA%AF%E6%B3%95%E6%9D%A5%E8%A7%A3%E5%86%B3n%E4%B8%AAfor%E5%BE%AA%E7%8E%AF%E7%9A%84%E9%97%AE%E9%A2%98
+# 这个index不是之前的startIndex了。这个index是记录遍历第几个数字了，就是用来遍历digits的，同时index也表示树的深度。
 https://github.com/youngyangyang04/leetcode-master/blob/master/problems/0017.%E7%94%B5%E8%AF%9D%E5%8F%B7%E7%A0%81%E7%9A%84%E5%AD%97%E6%AF%8D%E7%BB%84%E5%90%88.md
 链接里的图很重要，有助于理解
 """
@@ -17,14 +18,19 @@ class Solution(object):
         return self.res
 
     def dfs(self,digits,index):
-        # 定义出口
+        # 回溯函数没有返回值
+
+        # 定义出口，终止条件就是如果index 等于 输入的数字个数（digits.size）了（本来index就是用来遍历digits的）
         if len(self.path) == len(digits):
             self.res.append(self.path)
             return
+        # 确定单层遍历逻辑
+        # 首先要取index指向的数字，并找到对应的字符集
+        # 然后for循环来处理这个字符集，代码如下：
         letters = self.hash_map[digits[index]]  # 取出数字对应的字符集
-        for i in range(len(letters)): # 控制树的第2层
-            self.path += letters[i]
-            self.dfs(digits,index+1) # digits的下一个字符串
+        for letter in letters: # 控制树的第2层
+            self.path += letter
+            self.dfs(digits, index+1) # digits的下一个字符串 #递归，注意index+1，下一层要处理下一个数字了
             self.path = self.path[:-1] #  回溯
 
     """
@@ -49,7 +55,6 @@ class Solution(object):
         dfs("",0,res)
         return res
     """
-
 
 
 if __name__ == '__main__':
