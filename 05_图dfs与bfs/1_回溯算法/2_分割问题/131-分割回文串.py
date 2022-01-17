@@ -1,6 +1,5 @@
 """
-# middle 2021/08/24
-回溯法-分割问题-有startindex,
+middle 2021-08-24 回溯法-分割问题-有startindex,
 startIndex，因为切割过的地方，不能重复切割，和组合问题也是保持一致的。
 """
 class Solution(object):
@@ -22,7 +21,7 @@ class Solution(object):
 
         for i in range(start_index, len(s)):
             # 是否有剪枝呢?
-            p = s[start_index:i+1]
+            p = s[start_index:i+1] # 分割问题
             if p!=p[::-1]:continue
             self.path.append(p)
             self.dfs(s,i+1)

@@ -1,10 +1,15 @@
 """
-middle 回溯法-排列问题-无重复元素
-排列问题只要树的叶子节点，两个list可以交错插入，
-所以不需要从start_index开始；
-无重复元素不需要sort；
+middle 2022-01-17 回溯法-排列问题-无重复元素
+https://www.programmercarl.com/0046.%E5%85%A8%E6%8E%92%E5%88%97.html#%E6%80%9D%E8%B7%AF
+【重点】排列问题只要树的叶子节点，两个list可以交错插入，所以不需要从start_index开始；
+(必须要有used，因为没有start_index了，所以不可以在用i>start_index来去重)
+【重点】无重复元素不需要sort；
 """
 class Solution(object):
+    '''
+    因为本题排列是有序的，这意味着同一层的元素可以重复使用，但同一树枝上不能重复使用
+    所以处理排列问题每层都需要从头搜索，故不再使用start_index
+    '''
     def __init__(self):
         self.res = []
         self.path = []
@@ -24,6 +29,7 @@ class Solution(object):
         if len(self.path)==len(nums):
             self.res.append(self.path[:])
             return
+
         # 树层遍历
         for i in range(len(nums)):
             if used[i] == 1:continue

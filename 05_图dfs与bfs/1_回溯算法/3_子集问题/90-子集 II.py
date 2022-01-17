@@ -1,6 +1,8 @@
 """
-middle-回溯法-子集问题（有重复元素）
-子集问题，树枝上的所有节点都要
+middle 2022-01-14 回溯法-子集问题（有重复元素）
+（used的使用看图）https://www.programmercarl.com/0090.%E5%AD%90%E9%9B%86II.html#_90-%E5%AD%90%E9%9B%86ii
+子集问题，树枝上的所有节点都要。
+*） nums有重复元素&解集不能包含重复元素。
 """
 class Solution(object):
     def __init__(self):

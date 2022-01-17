@@ -1,6 +1,7 @@
 """
-middle-回溯法-子集问题（无重复元素）
-子集问题，树枝上的所有节点都要
+middle 2022-01-14 回溯法-子集问题（无重复元素）
+子集问题，树枝上的所有节点都要（遍历整棵树）。解集不能包含重复的子集start_index+1。
+输入: nums = [1,2,3] 输出: [ [3], [1], [2], [1,2,3], [1,3], [2,3], [1,2], [] ]
 """
 class Solution(object):
     def __init__(self):
@@ -13,7 +14,7 @@ class Solution(object):
         return self.res
 
     def dfs(self,nums,start_index):
-        self.res.append(self.path[:])
+        self.res.append(self.path[:]) # 与出口的前后顺序不能交换，否则包含最后一位的结果不会添加至res
         # 定义出口
         if start_index>=len(nums):
             return

@@ -1,6 +1,8 @@
 """
-# middle 2021/08/24
-回溯法-分割问题-有startindex,
+middle 2021-08-24 回溯|分割
+回溯法-分割问题-有startindex
+https://www.programmercarl.com/0093.%E5%A4%8D%E5%8E%9FIP%E5%9C%B0%E5%9D%80.html
+*）需要明确是递归函数的返回值，还是for循环的返回值（剪枝）。（每次都错）
 """
 class Solution:
     def __init__(self):
@@ -22,7 +24,8 @@ class Solution:
 
         # for循环遍历树层，一个ip中的每个部分，不超过3个数字，所以min+4
         for i in range(start_index,min(start_index+4,len(s))):
-            p = s[start_index:i+1]
+            p = s[start_index:i+1]  # 分割问题
+            # print(p)
             # 定义剪枝
             # 每个整数位于 0 到 255 之间组成
             if int(p)>255 or int(p)<0:
@@ -30,8 +33,10 @@ class Solution:
             # ip不能含有前导 0
             if len(p)>1 and p[0]=='0':continue
             self.path.append(p)
+            # print("start dfs")
             # 树枝递归
             self.dfs(s,i+1)
+            # print("end dfs")
             self.path.pop()
 
 if __name__ == '__main__':

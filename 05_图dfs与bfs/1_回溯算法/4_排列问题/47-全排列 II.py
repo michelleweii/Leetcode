@@ -1,9 +1,9 @@
 """
-middle 回溯法-排列问题-有重复元素
-排列问题只要树的叶子节点，两个list可以交错插入，
-所以不需要从start_index开始；
-(必须要有used，因为没有start_index了，所以不可以在用i>start_index来去重)
-有重复元素需要sort；
+middle 2022-01-17 回溯法-排列问题-有重复元素
+https://www.programmercarl.com/0047.%E5%85%A8%E6%8E%92%E5%88%97II.html#_47-%E5%85%A8%E6%8E%92%E5%88%97-ii
+排列问题只要树的叶子节点，两个list可以交错插入，所以不需要从start_index开始；
+【重点】(必须要有used，因为没有start_index了，所以不可以在用i>start_index来去重)
+【重点】有重复元素需要sort；
 """
 class Solution:
     def __init__(self):

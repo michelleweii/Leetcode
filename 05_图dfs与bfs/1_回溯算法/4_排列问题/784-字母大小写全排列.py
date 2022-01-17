@@ -1,6 +1,48 @@
-from string import ascii_lowercase
+"""
+middle 2021-01-17 dfs-排列问题
 
+"""
+
+from string import ascii_lowercase
 class Solution(object):
+    ######## 模板 ##############
+    def muban_dfs(self, s):
+        if s.isdigit():return s
+        self.path, self.res = [],[]
+        used = [0]*len(s)
+        self.backtrace(s,used)
+        return self.res
+
+    def backtrace(self, s, used):
+        # 回溯出口
+        if len(self.path)==len(s):
+            self.res.append(''.join(self.path))
+            return
+
+        for i in range(len(s)):
+            if used[i]==1:continue
+
+            if s[i].isdigit():
+                used[i] = 1
+                self.path.append(s[i])
+                self.backtrace(s,used)
+                used[i] = 0
+                self.path.pop()
+            else:
+                used[i] = 1
+                self.path.append(s[i].lower())
+                self.backtrace(s,used)
+                used[i] = 0
+                self.path.pop()
+
+                used[i] = 1
+                self.path.append(s[i].upper())
+                self.backtrace(s,used)
+                used[i] = 0
+                self.path.pop()
+
+
+
     def letterCasePermutation(self, S):
         rs = [S]
         def flip(ch):
