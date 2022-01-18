@@ -13,7 +13,7 @@ middle 2021-01-17 dfs-排列问题
 
 # 隐藏回溯：https://leetcode-cn.com/problems/letter-case-permutation/solution/dfs-shi-jian-chao-97-by-wongdaweeee-qifq/
 # 方法二：DFS
-#
+# 
 class Solution(object):
     def letterCasePermutation(self, s):
         if s.isdigit(): return [s]  # 如果是纯数字则直接return
