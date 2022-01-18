@@ -1,6 +1,5 @@
 """
-2021-08-25
-bfs
+middle 2021-08-25 bfs遍历模板题
 """
 class Solution:
     def numIslands(self, grid):

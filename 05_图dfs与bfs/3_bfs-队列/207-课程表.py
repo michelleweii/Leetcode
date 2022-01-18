@@ -1,6 +1,6 @@
 """
-middle 2021-12-09
-拓扑排序（dfs与bfs都可以实现）https://leetcode-cn.com/problems/course-schedule/solution/course-schedule-tuo-bu-pai-xu-bfsdfsliang-chong-fa/
+middle 2021-12-09 拓扑排序（dfs与bfs都可以实现）
+https://leetcode-cn.com/problems/course-schedule/solution/course-schedule-tuo-bu-pai-xu-bfsdfsliang-chong-fa/
 题目： 课程安排图是否是 有向无环图(DAG)。即课程间规定了前置条件，但不能构成任何环路，否则课程前置条件将不成立。
 
 1、邻接表：通过结点的索引，我们能够得到这个结点的后继结点；

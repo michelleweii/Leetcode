@@ -1,6 +1,6 @@
 """
-middle
-
+middle 2019-04-01 模拟题（不属于dfs or dfs）
+https://leetcode-cn.com/problems/valid-sudoku/solution/36-jiu-an-zhao-cong-zuo-wang-you-cong-shang-wang-x/
 """
 class Solution:
     def isValidSudoku(self, board):

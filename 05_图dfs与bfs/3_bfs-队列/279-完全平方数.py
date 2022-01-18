@@ -1,4 +1,6 @@
-# 最短路径
+"""
+middle 2018-11-10 最短路径BFS遍历
+"""
 class Solution(object):
     def numSquares(self, n):
         # python开根号 num_sqrt = n**0.5

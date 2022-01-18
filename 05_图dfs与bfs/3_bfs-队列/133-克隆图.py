@@ -1,5 +1,5 @@
 """
-middle 2021-12-09
+middle 2021-12-09 bfs遍历
 这道题就是遍历整个图（bfs or dfs），所以遍历时候要记录已经访问点，用{}记录。map:{old,new} # {原图node,新图node}
 https://leetcode-cn.com/problems/clone-graph/solution/ke-long-tu-by-leetcode-solution/
 时间复杂度O(V+E)

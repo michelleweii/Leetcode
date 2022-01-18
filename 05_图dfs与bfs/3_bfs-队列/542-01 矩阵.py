@@ -1,5 +1,6 @@
 """
-middle 网易校招原题
+middle 2019-08-29 BFS模板遍历（网易校招原题）
+https://leetcode-cn.com/problems/01-matrix/solution/2chong-bfs-xiang-jie-dp-bi-xu-miao-dong-by-sweetie/
 """
 class Solution:
     def updateMatrix(self, matrix):

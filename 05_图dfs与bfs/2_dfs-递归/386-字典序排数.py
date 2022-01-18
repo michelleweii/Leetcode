@@ -1,5 +1,5 @@
 """
-middle 2021-12-15 dfs
+middle 2021-12-15 dfs递归
 # 给定一个整数 n, 返回从 1 到 n 的字典顺序。
 # 给定 n = 13，返回 [1,10,11,12,13,2,3,4,5,6,7,8,9]
 【看看树长什么样】https://leetcode-cn.com/problems/lexicographical-numbers/solution/386-zi-dian-xu-pai-shu-o1-kong-jian-fu-z-aea2/

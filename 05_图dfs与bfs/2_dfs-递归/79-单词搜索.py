@@ -1,3 +1,6 @@
+"""
+middle 2021-01-19 DFS模板题
+"""
 class Solution:
     # 往上下左右四个方向进行DFS。
     # 需要注意的就是访问一个字母后visited标识1，

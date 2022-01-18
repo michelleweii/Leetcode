@@ -1,7 +1,6 @@
 """
-easy dfs
-20210825
-# https://www.acwing.com/solution/content/545/
+easy 2021-08-25 dfs模板题
+https://www.acwing.com/solution/content/545/
 """
 class Solution:
     # 把这个方法就定义为dfs

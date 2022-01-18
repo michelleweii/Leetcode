@@ -1,5 +1,5 @@
 """
-middle
+middle 2021-01-20 dfs
 输入：n = 3
 输出：["((()))","(()())","(())()","()(())","()()
 https://leetcode-cn.com/problems/generate-parentheses/solution/cpython3java-1dfs-2hui-su-by-hanxin_hanx-690m/
@@ -21,8 +21,6 @@ class Solution(object):
             self.generate(str+"(",n-1,m+1,res)
         if m>0:
             self.generate(str+")",n,m-1,res)
-
-
 
 if __name__ == '__main__':
     n = 3
