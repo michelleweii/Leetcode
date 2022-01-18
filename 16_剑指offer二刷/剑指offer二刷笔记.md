@@ -1204,9 +1204,9 @@ class Solution:
         """
         :param word: 原始target单词
         :param board: 原始matrix数组
-        :param u: 定位target
-        :param i: 定位matrix
-        :param j: 定位matrix
+        :param u: 定位target，下标
+        :param i: 定位matrix，下标
+        :param j: 定位matrix，下标
         :return:
         """
         if board[x][y] != word[u]: return False

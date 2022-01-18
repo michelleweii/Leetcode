@@ -27,10 +27,12 @@ class Solution:
             return False
         # 这几句什么意思？？ 
         source = board[x][y]
-        board[x][y] = '\0' # 表示此位置已经访问过，‘1’也可以，访问过的元素不再访问
+        board[x][y] = '*' # 表示此位置已经访问过，‘1’也可以，访问过的元素不再访问
         # 递归变成了四个方向的递归判断 
-        exist = self.dfs(board, word, index + 1, x, y + 1) or self.dfs(board, word, index + 1, x, y - 1) or self.dfs(
-            board, word, index + 1, x + 1, y) or self.dfs(board, word, index + 1, x - 1, y)
+        exist = self.dfs(board, word, index + 1, x, y + 1) or \
+                self.dfs(board, word, index + 1, x, y - 1) or \
+                self.dfs(board, word, index + 1, x + 1, y) or \
+                self.dfs(board, word, index + 1, x - 1, y)
         board[x][y] = source  
         return exist
 

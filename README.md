@@ -533,7 +533,16 @@ print(nums[:0]) # []
 所以，nums[0:0] return 0
 ```
 
-
+```python
+# python判断字符是不是小写字母
+# 如果是小写字母，返回大写
+# 如果是大写字母，返回小写
+from string import ascii_lowercase
+if ch in ascii_lowercase:
+    return ch.upper()
+else:
+    return ch.lower() 
+```
 
 将数字807转为[8, 0, 7]，`sums_list = list(map(int, str(sums)))`。
 
