@@ -1,5 +1,8 @@
 """
-middle 2021-01-19 DFS模板题
+middle 2021-01-19 DFS四周扩散模板题（回溯）
+向每个方向去尝试。
+https://leetcode-cn.com/problems/word-search/solution/hui-su-suan-fa-zui-tong-su-yi-dong-de-ji-h2ny/
+# 将访问过的元素重置为*， 从搜索过的位置继续搜索下一层时，需要对当前位置进行标识，表示已经搜索。
 """
 class Solution:
     # 往上下左右四个方向进行DFS。
@@ -14,8 +17,35 @@ class Solution:
                     # i,j是一开始遍历的位置
                     return True
         return False
-    
-    def dfs(self, board, word, index, x, y):
+
+    def dfs(self, board, word, u, x, y):
+        # 如果不是要找的元素
+        if board[x][y] != word[u]: return False
+
+        # word遍历到结束
+        if u==len(word)-1:return True
+
+        m, n = len(board), len(board[0])
+        # visited = [[False for _ in range(n)] for _ in range(m)]
+
+        dx = [0,1,0,-1]
+        dy = [1,0,-1,0]
+        tmp = board[x][y]
+        board[x][y] = '*'
+
+        for i in range(4):
+            a = x+dx[i]
+            b = y+dy[i]
+
+            if a>=0 and a<m and b>=0 and b<n:
+                if self.dfs(board, word, u+1, a, b):
+                    return True
+
+        board[x][y] = tmp
+        return False
+
+
+    def dfs2(self, board, word, index, x, y):
         # 递归的出口
         if not board or index == len(word):
             return True
@@ -44,7 +74,6 @@ class Solution:
 接着找E，我们发现上面访问过，不再访问。接着向右查找，发现不匹配，接着向下查找，
 发现越界了，接着想做查找，OK!我们所有元素匹配成功。
 """
-
 
 if __name__ == "__main__":
     board =[['A','B','C','E'],['S','F','C','S'],['A','D','E','E']]
