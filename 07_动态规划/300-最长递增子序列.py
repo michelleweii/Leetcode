@@ -1,8 +1,8 @@
 """
-middle 2021-12-08
-一维dp, # dp[i]是以第i个元素结尾的最长上升子序列
-- 数组：要求连续i-1,i,i+1
-- 子序列：不要求连续i-3,i,i+5
+middle 2021-12-08 一维dp
+状态定义：dp[i]是以第i个元素结尾的最长上升子序列
+数组：要求连续i-1,i,i+1
+子序列：不要求连续i-3,i,i+5
 """
 class Solution:
     def lengthOfLIS(self, nums):

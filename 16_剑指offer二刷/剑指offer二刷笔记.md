@@ -1290,6 +1290,34 @@ class Solution:
 ```python
 # 输入：s = "abc"
 # 输出：["abc","acb","bac","bca","cab","cba"]
+## 考虑不通过set()实现去重
+# "aab"，["aab","aba","aab","aba","baa","baa"]， ac: ["aba","aab","baa"]
+# https://leetcode-cn.com/problems/zi-fu-chuan-de-pai-lie-lcof/solution/dai-ma-sui-xiang-lu-jian-zhi-offer-38-zi-gwt6/
+class Solution:
+    ######### 模板解法start ########
+    def muban(self,s):
+        self.res, self.path = [], []
+        if not s:return self.res
+        s = [x for x in s] # s = list(s)
+        s.sort()
+        used = [0]*len(s)
+        self.muban_dfs(s, used)
+        return self.res
+
+    def muban_dfs(self, s, used):
+        if len(self.path)==len(s):
+            self.res.append(''.join(self.path[:]))
+
+        for i in range(len(s)):
+            if i>0 and s[i-1]==s[i] and used[i-1]==0: continue # 树层上已经选过该字母充当首字母
+            if used[i]==1: continue # 当前这个位置已经选过了
+            used[i]=1
+            self.path.append(s[i])
+            self.muban_dfs(s, used)
+            used[i]=0
+            self.path.pop()
+
+# 通过set()去重
 class Solution:
     # ['acb', 'bca', 'cba', 'abc', 'bac', 'cab']
     def permutation(self, s: str):
@@ -1305,11 +1333,6 @@ class Solution:
         for i in range(len(s)):
             self.dfs(path + s[i], res, s[:i] + s[i + 1:])
         return res
-      
-## 考虑不通过set()实现去重
-# "aab"，["aab","aba","aab","aba","baa","baa"]， ac: ["aba","aab","baa"]
-# https://leetcode-cn.com/problems/zi-fu-chuan-de-pai-lie-lcof/solution/dai-ma-sui-xiang-lu-jian-zhi-offer-38-zi-gwt6/
-
 ```
 
 

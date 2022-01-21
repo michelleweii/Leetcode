@@ -1,5 +1,5 @@
 """
-middle 2018-11-24 dp
+middle 2018-11-24 dp（字节）
 """
 class Solution:
     def nthUglyNumber(self, n):
@@ -20,7 +20,6 @@ class Solution:
             if res[-1] == res[t3]*5:
                 t3 += 1
         return res[-1]
-
 
 
 if __name__ == '__main__':

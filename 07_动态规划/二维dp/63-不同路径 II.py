@@ -1,6 +1,7 @@
 """
 middle 2021-11-08 二维动态规划
-每次只能向下或者向右移动一步。https://leetcode-cn.com/problems/unique-paths-ii/solution/jian-dan-dpbi-xu-miao-dong-by-sweetiee/
+每次只能向下或者向右移动一步。
+https://leetcode-cn.com/problems/unique-paths-ii/solution/jian-dan-dpbi-xu-miao-dong-by-sweetiee/
 dp[i,j]表示从(0,0)走到(i,j)的所有不同路径的方案数。
 重点：如果网格 (i, j) 上有障碍物，则 dp[i][j] 值为 0，表示走到该格子的方案数为 0；
 """
