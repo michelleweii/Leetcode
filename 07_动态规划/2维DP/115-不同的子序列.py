@@ -1,5 +1,5 @@
 """
-hard 2021-12-06 二维dp（腾讯）
+hard 2021-12-06 2维DP（腾讯）
 https://leetcode-cn.com/problems/distinct-subsequences/solution/shou-hua-tu-jie-xiang-jie-liang-chong-ji-4r2y/
 https://leetcode-cn.com/problems/distinct-subsequences/solution/shu-ju-jie-gou-he-suan-fa-dong-tai-gui-h-6ney/
 """

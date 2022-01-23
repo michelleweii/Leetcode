@@ -1,5 +1,5 @@
 """
-hard 2021-11-09 三维dp
+hard 2021-11-09 3维DP
 区间动态规划：区间长度大的状态值可以由区间长度小的状态值递推而来
 https://leetcode-cn.com/problems/scramble-string/solution/miao-dong-de-qu-jian-xing-dpsi-lu-by-sha-yu-la-jia/
 定义：dp[i][j][len] 表示从字符串 S 中 i 开始长度为 len 的字符串是否能变换为从字符串 T 中 j 开始长度为 len 的字符串，

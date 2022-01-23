@@ -1,5 +1,5 @@
 """
-middle 2021-12-14 二维dp（腾讯、虾皮、快手）
+middle 2021-12-14 2维DP（腾讯、虾皮、快手）
 dp[i][j]表示 s1 的前i个(s1[i-1])个字符和s2的前j个(s2[j-1])字符是否能构成 s3 的前i+j个字符。
 https://leetcode-cn.com/problems/interleaving-string/solution/dong-tai-gui-hua-zhu-xing-jie-shi-python3-by-zhu-3/
 多初始化一维是为了放置空字符，看链接里的图例。

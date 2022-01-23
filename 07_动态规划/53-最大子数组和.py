@@ -1,3 +1,7 @@
+"""
+easy 2022-01-22 dp
+
+"""
 # list的每个位置都保留到目前位置，list的最大的和。
 class Solution(object):
     def maxSubArray(self, nums):

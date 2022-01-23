@@ -1,5 +1,5 @@
 """
-hard 2021-12-08 二维dp
+hard 2021-12-08 2维DP
 同剑指 Offer 19-正则表达式匹配
 状态：dp[i][j] 表示 s 的前 i 个是否能被 p 的前 j 个匹配
 https://leetcode-cn.com/problems/regular-expression-matching/solution/shou-hui-tu-jie-wo-tai-nan-liao-by-hyj8/

@@ -1,5 +1,5 @@
 """
-hard 2022-01-20 二维dp(度小满面试题20190513)
+hard 2022-01-20 2维DP(度小满面试题20190513)
 状态定义：dp[i][j] 代表 word1 中前 i 个字符，变换到 word2 中前 j 个字符，最短需要操作的次数。
 https://leetcode-cn.com/problems/edit-distance/solution/zi-di-xiang-shang-he-zi-ding-xiang-xia-by-powcai-3/
 https://leetcode-cn.com/problems/edit-distance/solution/edit-distance-by-ikaruga/（感觉这个更清晰）

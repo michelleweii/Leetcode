@@ -268,7 +268,22 @@ for(int i = 0; i < nums.size(); i++){ //for循环
 
 ## 9.2. bfs
 
+[岛屿类问题通解](https://leetcode-cn.com/problems/number-of-islands/solution/dao-yu-lei-wen-ti-de-tong-yong-jie-fa-dfs-bian-li-/)
 
+[Tree的BFS vs. 图的BFS](https://leetcode-cn.com/problems/01-matrix/solution/2chong-bfs-xiang-jie-dp-bi-xu-miao-dong-by-sweetie/)
+
+- 对于「Tree 的 BFS」（典型的「单源 BFS」）大家都已经轻车熟路了：
+	- 首先把 root 节点入队，再一层一层无脑遍历就行了。
+
+- 对于「图 的 BFS」（「多源 BFS」）做法其实也是一样滴～，与「Tree 的 BFS」的区别注意以下两条就 ok ～
+
+	- Tree 只有 1 个 root，而图可以有多个源点，所以首先需要把多个源点都入队；
+	- Tree 是有向的因此不需要标识是否访问过，而对于无向图来说，必须得标志是否访问过哦！
+	并且为了防止某个节点多次入队，需要在其入队之前就将其设置成已访问！
+
+	- 总而言之，上面一句话的含义就是原地修改 or visited数据标记已访问！
+	- 如果是原地修改矩阵，则在递归内部传参；
+	- 如果是visited数组，则需要在递归外部就传；
 
 ## 9.3. 并查集
 
@@ -547,6 +562,23 @@ else:
 将数字807转为[8, 0, 7]，`sums_list = list(map(int, str(sums)))`。
 
 字典dict删除元素用pop()
+
+
+
+字符串s转为列表 `ss=list(s)`
+
+2进制转10进制 `int("100111",2)`
+
+
+
+判断字符串s是否是本身是否是数字
+
+```python
+a = '12'
+print(a.isdigit()) # True
+```
+
+
 
 
 # top200未做题目

@@ -7,6 +7,37 @@ Fighting!
 - 数组：要求连续`i-1, i, i+1`;
 - 子序列：不要求连续`i-3, i, i+5`;
 
+dp套路，
+
+- 单个数组或者字符串要用动态规划时，可以把动态规划 `dp[i]` 定义为 `nums[0:i]` 中想要求的结果；
+- 当两个数组或者字符串要用动态规划时，可以把动态规划定义成两维的 `dp[i][j]` ，其含义是在 `A[0:i]` 与 `B[0:j]` 之间匹配得到的想要的结果。
+
+### LC53.最大子序列和
+
+
+
+### LC300.最长递增子序列
+
+
+
+### LC673.最长递增子序列的个数
+
+
+
+### LC198.打家劫舍
+
+
+
+### LC213.打家劫舍2
+
+
+
+### LC337.打家劫舍3
+
+
+
+
+
 
 
 # 二维DP
@@ -39,7 +70,7 @@ dp = [[0] * (n + 1) for _ in range(m + 1)]
 
 **考虑空字符串的因素，然后才是第一个字符到最后一个字符。**
 
-删除一个元素`dp[i][j]=dp[i-1][j]+1，
+删除一个元素`dp[i][j]=dp[i-1][j]+1`，
 
 增加一个元素`dp[i][j]=dp[i][j-1]+1，`
 
@@ -125,15 +156,74 @@ for i in range(s_len+1):
 
 ### LC10.正则表达式匹配
 
+[LC10.正则表达式匹配](https://leetcode-cn.com/problems/regular-expression-matching/solution/shou-hui-tu-jie-wo-tai-nan-liao-by-hyj8/) 题目：给你一个字符串 `s` 和一个字符规律 `p`，请你来实现一个支持 `'.'` 和 `'*'` 的正则表达式匹配。翻译一下，p能不能变成s。
 
+状态定义：`dp[i][j]`表示`s`的前`i`个字符与`p`的前`j`个字符是否能够匹配，Ture or False问题。
 
-### LC221.最大正方形
+1. p[-1] 有3种情况，`. * 字符`。
+2. `p[-1]=='*'`又有3种情况，`*`让它前面的字符出现`0/1/n`次。
 
+转移方程，
 
+```python
+# '.' 匹配任意单个字符
+# '*' 匹配零个或多个前面的那一个元素
+dp = [[False] * (p_len+1) for _ in range(s_len+1)] # 状态定义
+
+# 出口，用p的前0个字符去匹配s的前0个字符
+# 1、s为空，p为空，能匹配上
+dp[0][0] = True
+# 2、p为空，s不为空，必为false(boolean数组默认值为false，无需处理)
+# 3、s为空，p不为空，由于*可以匹配0个字符，所以有可能为true
+"""
+base case
+p为空串，s不为空串，肯定不匹配。
+- s为空串，但p不为空串，要想匹配，只可能是右端是星号，它干掉一个字符后，把 p 变为空串。
+s、p都为空串，肯定匹配。
+"""
+for j in range(1, p_len+1):
+    if p[j-1]=='*': dp[0][j] = dp[0][j-2]
+
+# 4、填表（状态转移）
+for i in range(1, s_len+1):
+    for j in range(1, p_len+1):
+        # dp[i][j]表示s的前i个字符s[0:i-1]与p的前j个字符p[0:j-1]是否匹配
+        if s[i-1]==p[j-1] or p[j-1]=='.':
+            dp[i][j] = dp[i-1][j-1]
+        # *特判, *可以让它前面的字符出现0-n次
+        if p[j-1]=='*':
+            if s[i-1]==p[j-2] or p[j-2]=='.':
+                # dp[i][j] = dp[i-1][j-2] # *让它前面的字符出现1次,  aa与a*以及 aa与.*
+                # dp[i][j] = dp[i-1][j-3] # *让它前面的字符出现0次， aa与aac*
+                # 还可以dp[i][j] = dp[i][j-2]
+                # dp[i][j] = dp[i-1][j] # *让它前面的字符出现多次， aaaaaaa与a*
+                dp[i][j] = dp[i][j-2] or dp[i-1][j-2] or dp[i-1][j]
+            elif s[i-1]!=p[j-2]: # a与ab*, 干掉b
+                dp[i][j] = dp[i][j-2]
+```
 
 ### LC1143.最长公共子序列
 
+[LC1143.最长公共子序列](https://leetcode-cn.com/problems/longest-common-subsequence/solution/fu-xue-ming-zhu-er-wei-dong-tai-gui-hua-r5ez6/)
 
+状态定义：`dp[i][j]` 表示 `text1[0:i-1]` 和 `text2[0:j-1]` 的最长公共子序列。
+
+> （注：`text1[0:i-1]` 表示的是 text1 的 第 0 个元素到第 i - 1 个元素，两端都包含）
+> 之所以 `dp[i][j]` 的定义不是 text1[0:i] 和 text2[0:j] ，是为了方便当 i = 0 或者 j = 0 的时候，`dp[i][j]`表示为空字符串和另外一个字符串的匹配，这样 `dp[i][j]` 可以初始化为 0。
+
+转移方程，
+
+```python
+for i in range(1, m+1):
+    for j in range(1, n+1):
+        # 举个例子，比如对于 ace 和 bc 而言，
+        # 他们的最长公共子序列的长度等于 ① ace 和 b 的最长公共子序列长度0;
+        # ② ac 和 bc 的最长公共子序列长度1 的最大值，即 1。
+        if text1[i-1]==text2[j-1]:
+            dp[i][j] = dp[i-1][j-1]+1
+            else:
+                dp[i][j] = max(dp[i-1][j], dp[i][j-1])
+```
 
 -----
 
@@ -168,17 +258,94 @@ for i in range(1,m):
       dp[i][j] = dp[i-1][j]+dp[i][j-1]
 ```
 
+### LC64.最小路径和
+
+状态定义，
+
+转移方程
+
 ### LC120.三角形最小路径和
 
+[LC120.三角形最小路径和](https://leetcode-cn.com/problems/triangle/solution/di-gui-ji-yi-hua-dp-bi-xu-miao-dong-by-sweetiee/) 题目：给定一个三角形 `triangle` ，找出自顶向下的最小路径和。
+
+**注意点：从下开始向上推。**
+
+状态定义：`dp[i][j]`为从点`(i,j)`到<u>底边</u>的最小路径和。
+
+转移方程，
+
+```python
+dp = [[0]*(m+1) for _ in range(m+1)] # (i,j)点到底边的最小路径和
+# [i,j]
+# [i+1,j] [i+1,j+1]
+for i in range(m-1, -1, -1):
+    for j in range(i, -1, -1):
+        # 到达[i,j]的最短路径
+        dp[i][j] = min(dp[i+1][j],dp[i+1][j+1])+triangle[i][j]
+        ## 从三角形的最后一行开始递推，如下循环也ok
+        # for (int i = n - 1; i >= 0; i--) 
+        #     for (int j = 0; j <= i; j++) 
+        return dp[0][0]
+```
+
+### LC174.地下城游戏（没做）
+
+（不是特别重要，没考过）
 
 
-### LC174.地下城游戏
 
+### LC221.最大正方形
 
+[LC221.最大正方形](https://leetcode-cn.com/problems/maximal-square/solution/li-jie-san-zhe-qu-zui-xiao-1-by-lzhlyle/) 题目：在一个由 `'0'` 和 `'1'` 组成的二维矩阵内，找到只包含 `'1'` 的最大正方形，并返回其面积。
+
+状态定义：`dp[i][j]` 以 `matrix[i][j] `为右下角的正方形的最大边长。
+
+转移方程，
+
+```python
+# dp[i][j] 以 matrix[i-1][j-1] 为右下角的正方形的最大边长
+# dp = [[0]*(n+1) for _ in range(m+1)] 
+for i in range(0, m):
+    for j in range(0, n):
+        # //base case
+        # 初始化边界值
+        if (i == 0 or j == 0):
+            dp[i][j] = int(matrix[i][j])
+            if matrix[i][j]=='1':
+                # 状态方程为什么这样呢？具体看链接里的图
+                dp[i][j] = min(dp[i-1][j],dp[i-1][j-1],dp[i][j-1])+1
+                max_side = max(max_side, dp[i][j]) # 记录最大边
+# dp[i-1][j-1] 左上也记录的原因？
+# 若形成正方形（非单 1），以当前为右下角的视角看，则需要：当前格、上、左、左上都是 1
+```
 
 ### LC647.回文子串
 
+[LC647.回文子串](https://programmercarl.com/0647.%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2.html#_647-%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2) 题目给定一个字符串，你的任务是计算这个字符串中有多少个回文子串。
 
+状态定义：`dp[i][j]`表示区间范围`[i,j]` （注意是左闭右闭）的子串是否是回文子串。
+
+输入："aaa" 输出：6 解释：6个回文子串: "a", "a", "a", "aa", "aa", "aaa"。
+
+【注意】矩阵遍历一定要从下到上，从左到右遍历，这样保证`dp[i + 1][j - 1]`都是经过计算的。
+
+转移方程：
+
+```python
+# 从下到上
+for i in range(len(s)-1, -1, -1):
+    # 从左到右
+    # 因为dp[i][j]的定义，所以j一定是大于等于i的，那么在填充dp[i][j]的时候一定是只填充右上半部分
+    for j in range(i, len(s)):
+        if s[i] == s[j]:
+            if j-i <= 1: # a, aa
+                res += 1
+                dp[i][j] = True
+             elif dp[i+1][j-1]: # cabac
+              	res += 1
+              	dp[i][j] = True
+return res
+```
 
 # 股票问题
 
