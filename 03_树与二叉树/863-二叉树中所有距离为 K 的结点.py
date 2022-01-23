@@ -1,8 +1,11 @@
 """
-middle 2022-01-21 微信、字节
+middle 2022-01-21 树回溯（微信、字节）
 # 关键词：“二叉树 双递归”，类似的题目很多 比如LC437、LC04.12、LC563
 题目：树中找到与target目标节点距离为k的节点集
+https://leetcode-cn.com/problems/all-nodes-distance-k-in-binary-tree/solution/er-cha-shu-zhong-suo-you-ju-chi-wei-kde-nlct0/
 
+# 【方法二】建图+BFS
+https://leetcode-cn.com/problems/all-nodes-distance-k-in-binary-tree/solution/gong-shui-san-xie-yi-ti-shuang-jie-jian-x6hak/
 """
 class TreeNode:
     def __init__(self, x):
@@ -42,7 +45,7 @@ class Solution:
         # 执行逻辑
         find_father(root)
         # 递归
-        dfs(root, None, k)
+        dfs(target, None, k)
         return res
 
 
