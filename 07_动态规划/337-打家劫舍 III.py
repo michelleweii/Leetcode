@@ -22,7 +22,8 @@ class Solution:
         dp = self.rob_tree(root)
         return max(dp[0],dp[1])
 
-        # 后序遍历
+    # 后序遍历
+    # 首先明确的是使用后序遍历。 因为通过递归函数的返回值来做下一步计算。
     def rob_tree(self, cur):
         if not cur:return [0, 0] # 确定终止条件，在遍历的过程中，如果遇到空节点的话，很明显，无论偷还是不偷都是0
         left = self.rob_tree(cur.left)
