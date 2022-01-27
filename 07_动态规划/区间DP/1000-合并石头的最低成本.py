@@ -1,6 +1,5 @@
 """
-hard 2021-12-....
-区间dp（3维DP）（字节）
+hard 2021-12-.... 区间dp（区间DP）（字节）
 https://leetcode-cn.com/problems/minimum-cost-to-merge-stones/solution/yi-dong-you-yi-dao-nan-yi-bu-bu-shuo-ming-si-lu-he/
 -
 - i-j前缀的和为 nums[i...j]=sum[j]-sum[i-1]

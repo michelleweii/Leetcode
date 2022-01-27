@@ -17,6 +17,7 @@ class Solution:
         # 找右边第一个比它小的元素下标、左边第一个比它小的元素下标
 #       在构建单调栈的过程中计算的方法。stk.top()所在子数组最小值是它自己，
 #       最右是马上要进栈的那个值的左边一格，最左是stk.top()出栈后的栈顶的右边一格。
+        # 求以stk.top()为矮柱的面积
         stk = []
         for i in range(len(nums)):
             while stk and nums[stk[-1]]>nums[i]: # 单调递增栈

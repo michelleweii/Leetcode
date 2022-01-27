@@ -1,5 +1,5 @@
 """
-middle 2018-11-24 dp（字节）
+middle 2022-01-28 dp（字节）
 """
 class Solution:
     def nthUglyNumber(self, n):

@@ -837,7 +837,7 @@ for i in range(0, m):
 
 输入："aaa" 输出：6 解释：6个回文子串: "a", "a", "a", "aa", "aa", "aaa"。
 
-【注意】矩阵遍历一定要从下到上，从左到右遍历，这样保证`dp[i + 1][j - 1]`都是经过计算的。
+【注意】矩阵遍历一定要从下到上，从左到右遍历，这样保证`dp[i+1][j-1]`都是经过计算的。
 
 转移方程：
 
@@ -861,21 +861,224 @@ return res
 
 [我的题解~](https://blog.csdn.net/weixin_31866177/article/details/119798636)
 
-
+[liweiwei题解](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/solution/tan-xin-suan-fa-by-liweiwei1419-2/)
 
 状态定义：
 
+- 0：持有现金，买入股票需要减钱，需要减手续费；
+- 1：持有股票，卖出股票需要加钱；
+- return dp[][][0]，最后都是一个持有现金的状态。
+
+`dp[i][j][flag] `
+
+- **i 表示第i个交易日，也就是prices的第i个节点。**
+- **j 是买入的次数，也就是记录交易次数（这里不是卖出）。**
+- **flag 是否持有股票的标志，持有为1，没有0。**
+
+转移方程，
+
+```python
+dp[i][j][0] = max(dp[i-1][j][0], dp[i-1][j][1] + prices[i]) # 不买股票，卖股票
+dp[i][j][1] = max(dp[i-1][j][1], dp[i-1][j-1][0] - prices[i]) # 不卖股票，买股票
+```
+
+### LC121.买卖股票的最佳时机（easy）
+
+> （只能买卖一次股票，求最大利润）
+
+状态定义：`dp[i]` 代表以 `prices[i]`为结尾的子数组的最大利润（以下简称为 **前 i 日的最大利润** ）。
+
+转移方程： 由于题目限定 “买卖该股票一次” ，因此前`i` 日最大利润 `dp[i]` 等于前 `i-1`日最大利润 `dp[i-1]`和第 `i` 日卖出的最大利润中的最大值。
+
+`前i日最大利润=max(前(i−1)日最大利润, 第i日价格−前i日最低价格)`
+
+`max(dp[i-1], prices[i]-min(cost, prices[i])) `
+
+```python
+class Solution(object):
+    # 只要考虑当天买和之前买哪个收益更高，当天卖和之前卖哪个收益更高
+    # dp[i]以 prices[i]为结尾的子数组的最大利润（以下简称为 前 i 日的最大利润 ）
+    # 扩展可以交易两次（买卖算一次交易）求最大值
+    def maxProfit_dp(self, prices):
+        if not prices: return 0
+        dp = [0 for _ in range(len(prices))]
+        cost = prices[0]
+        for i in range(1, len(prices)):
+            cost = min(cost, prices[i])
+            dp[i] = max(dp[i-1], prices[i]-min(cost, prices[i])) 
+        return max(dp)
+
+    def maxProfit(self, prices):
+        # 在价格最低的时候买入，差价最大的时候卖出
+        if len(prices) < 2: return 0
+        cost = prices[0] # 每日更新最低价格
+        profit = 0 # 首日利润为0
+        for price in prices:
+            cost = min(cost, price) # 找到最低那天的价格
+            profit = max(profit, price-cost)
+        return profit
+```
+
+### LC122.买卖股票的最佳时机 II（middle）
+
+> （可以买卖多次股票，求最大利润）
+
+状态定义：`dp[i][j] 表示到下标为 i 的这一天，持股状态为 j 时，我们手上拥有的最大现金数。`
+
+- 第一维 i 表示下标为 i 的那一天（ 具有前缀性质，即考虑了之前天数的交易 ）；
+- 第二维 j 表示下标为 i 的那一天是持有股票，还是持有现金。***这里 0 表示持有现金（cash），1 表示持有股票（stock）。***
+
 转移方程：
 
+```python
+# https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-ii/solution/tan-xin-suan-fa-by-liweiwei1419-2/
+dp = [[0]*2 for _ in range(n)]
+dp[0][0] = 0 # 什么都不做，持有现金
+dp[0][1] = -prices[0] # 持有股票，第一天买入股票，持有现金数为负
 
+for i in range(1, n):
+    # [0]现金状态，从持有股票的状态转来，再加上卖出股票的利润
+    dp[i][0] = max(dp[i-1][0], dp[i-1][1]+prices[i]) # 持有现金，股票要卖出
+    # [1]持股状态，从现金状态转来，再减去买入股票的价格
+    dp[i][1] = max(dp[i-1][1], dp[i-1][0]-prices[i]) # 持有股票，现金要减少
+return dp[-1][0] # 最后一天，持有现金
+```
+
+### LC309.最佳买卖股票时机含冷冻期（middle）
+
+> （可以买卖多次股票，但是卖出之后有一天冷冻期，求最大利润）
+
+状态定义：`dp[i][j]` 表示 `[0, i]` 区间内，在下标为 i 这一天状态为 j 时，我们手上拥有的金钱数。***这里 0 表示持有现金（cash），1 表示持有股票（stock）。***
+
+转移方程：
+
+```python
+# 初始化
+dp[0][0] = 0 # 第0天，持有现金为0
+dp[0][1] = -prices[0] # 第0天，持有股票-prices[0]
+dp[1][0] = max(0, prices[1]-prices[0])# 第1天，持有现金(需要第0天买入，第1天卖出)
+dp[1][1] = max(-prices[0], -prices[1])# 第1天，持有股票(第0天买股票，第1天可以不操作)
+# 状态转移
+for i in range(2, n):
+    # 股票：买股票，可以什么都不做+可以从持有现金状态转为持有股票状态
+    # 卖出 ---- 冷冻期 ----  买入
+    dp[i][1] = max(dp[i-1][1], dp[i-2][0]-prices[i])
+    # 现金：卖股票，可以什么都不做+可以从股票状态转为现金状态
+    dp[i][0] = max(dp[i-1][0], dp[i-1][1]+prices[i])
+return dp[-1][0]
+```
+
+### LC714.买卖股票的最佳时机含手续费（middle）
+
+> [（可以买卖多次股票，但是交易股票有手续费，求最大利润）](https://leetcode-cn.com/problems/best-time-to-buy-and-sell-stock-with-cooldown/solution/mai-mai-gu-piao-wen-ti-by-chen-wei-f-xvs1/)
+
+状态定义：`dp[i][j]` 表示 [0, i] 区间内，在下标为 i 这一天状态为 j 时，我们手上拥有的金钱数。
+
+转移方程：
+
+```python
+# 每次交易要支付手续费 我们定义在卖出的时候扣手续费
+dp[i][0] = max(dp[i - 1][0], dp[i - 1][1] + prices[i] - fee)
+dp[i][1] = max(dp[i - 1][1], dp[i - 1][0] - prices[i])
+```
+
+```python
+# 初始化
+dp[0][0] = 0 # 持有现金
+dp[0][1] = -prices[0] # 持有股票
+
+for i in range(1, n):
+    # 从持有现金的状态，转为持有股票的状态
+    dp[i][1] = max(dp[i-1][1], dp[i-1][0]-prices[i])
+    # 从持有股票的状态，转为持有现金的状态
+    dp[i][0] = max(dp[i-1][0], dp[i-1][1]+prices[i]-fee) # 定义在卖出的时候扣手续费
+return dp[-1][0]
+```
+
+### LC901.股票价格跨度（middle）（单调栈）
+
+### LC123.买卖股票的最佳时机 III（hard）
+
+> （可以买卖 2 次股票，求最大利润）
+
+状态定义：`dp[i][k][j]` 表示到下标为` i`的这一天，还可以交易`k`次，持股状态为`j`时，拥有的最大现金数。
+
+转移方程：
+
+```java
+dp[i][k][0] = Math.max(dp[i - 1][k][0], dp[i - 1][k][1] + prices[i])
+dp[i][k][1] = Math.max(dp[i - 1][k][1], dp[i - 1][k - 1][0] - prices[i])
+```
+
+```python
+# 结束时的最高利润=[第i天数][卖出次数][是否持有股票]
+# [i,j]第i天，j持股状态。3是交易次数（0、1、2笔）
+# int[][][] dp = new int[prices.length][3][2];
+dp = [[[0, 0] for _ in range(3)] for _ in range(n)]
+
+# 定义为-1之后初始化容易很多！！！
+# 第-1天不可能卖出 存在0\1\2笔交易数状态
+for k in range(3):
+    dp[-1][k][1] = -float("inf")
+    
+# 一次都不交易，持有股票也是不存在的状态
+for i in range(n):
+    dp[i][0][1] = -float("inf")
+
+for i in range(n):
+    for k in range(1,3):# 最多只能买卖2次
+        # 最多可以完成 两笔 交易，定义最多可以买2次股票
+        dp[i][k][0] = max(dp[i-1][k][0], dp[i-1][k][1]+prices[i]) # 卖股票变成现金状态
+        # [1]，从现金状态买入股票，转为持有股票状态
+        # 买入一次，减去一次交易机会
+        dp[i][k][1] = max(dp[i-1][k][1], dp[i-1][k-1][0]-prices[i]) # 买股票变成持股状态，买股票消耗一次机会
+return dp[-1][2][0]
+```
+
+### LC188.买卖股票的最佳时机 IV（hard）
+
+> （可以买卖 <=k 次股票，求最大利润）
+
+状态定义：`dp[i][k][j]` 表示到下标为` i`的这一天，还可以交易`k`次，持股状态为`j`时，拥有的最大现金数。
+
+转移方程：
+
+```java
+dp[i][k][0] = Math.max(dp[i - 1][k][0], dp[i - 1][k][1] + prices[i])
+dp[i][k][1] = Math.max(dp[i - 1][k][1], dp[i - 1][k - 1][0] - prices[i])
+```
+
+```python
+# 说明我可以一天买，一天卖，退化成122的贪心做法，可以交易无限次
+if k >= (n // 2):
+    sum_num = 0
+    for i in range(n-1):
+        if prices[i] < prices[i + 1]:
+            sum_num += prices[i + 1] - prices[i]
+    return sum_num
+
+dp = [[[0, 0] for _ in range(k+1)] for _ in range(n)]
+# print(dp)
+# -1天，没有开始交易，所以持股也是不存在的状态
+for m in range(k+1):
+    dp[-1][m][1] = -float("inf")
+    
+# 一次都不交易，持有股票也是不存在的状态
+for i in range(n):
+    dp[i][0][1] = -float("inf")
+
+for i in range(n):
+    for m in range(1, k+1):# 最多只能买卖k次
+        dp[i][m][0] = max(dp[i-1][m][0], dp[i-1][m][1]+prices[i])
+        # [1]，从现金状态买入股票，转为持有股票状态
+        # 买入一次，减去一次交易机会
+        dp[i][m][1] = max(dp[i-1][m][1], dp[i-1][m-1][0]-prices[i])
+return dp[-1][k][0]
+```
 
 # 丑数
 
 
-
-状态定义：
-
-转移方程：
 
 
 
@@ -883,7 +1086,7 @@ return res
 
 # 区间DP
 
-https://leetcode-cn.com/problems/burst-balloons/solution/yi-wen-tuan-mie-qu-jian-dp-by-bnrzzvnepe-2k7b/
+[【一文团灭区间DP】](https://leetcode-cn.com/problems/burst-balloons/solution/yi-wen-tuan-mie-qu-jian-dp-by-bnrzzvnepe-2k7b/)
 
 思想就是随着操作的进行，判断的范围越来越小，所以小长度开始遍历，逐步化解更大范围的问题，有分治的思想。模版：
 
@@ -891,11 +1094,11 @@ https://leetcode-cn.com/problems/burst-balloons/solution/yi-wen-tuan-mie-qu-jian
 def helper(self, ns: List[int]) :
     N = len(ns)
     dp = [[0] * N for _ in range(N+1)]
-    for l in range(N): # 长度从小到大
-        for i in range(N-l): # 以 i 为 开头
-            j = i + l           # 以 j 为 终点
+    for lens in range(N): # 长度从小到大
+        for i in range(N-lens): # 以 i 为 开头
+            j = i + lens           # 以 j 为 终点
             for k in range(i,j): # 以 k 为分割点，进行分治         
                 // Todo 业务逻辑 
 ```
 
-总结：长度固定（由小到大），在区间内枚举[i,j]，区间长度要与固定长度保持一直，然后，在[i,j]内寻找最佳分割点k。
+总结：长度固定（由小到大），在区间内枚举`[i,j]`，区间长度要与固定长度保持一直，然后，在`[i,j]`内寻找最佳分割点`k`。

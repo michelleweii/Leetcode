@@ -1,5 +1,5 @@
 """
-hard 2021-12-12 3维DP（区间dp）快手
+hard 2021-12-12 区间DP（区间dp）快手
 dp[i][j]表示气球区间i-j之间的最优结果,最大金币数。
 https://leetcode-cn.com/problems/burst-balloons/solution/yi-wen-tuan-mie-qu-jian-dp-by-bnrzzvnepe-2k7b/
 """
@@ -11,11 +11,11 @@ class Solution:
         nums = [1]+nums+[1]
         n = len(nums)
         dp = [[0]*n for _ in range(n)]
-
         # 1\对每一个区间长度进行循环
         # # 长度从3开始，n从2开始;
         # # 开区间长度会从3一直到len(nums);
         for lens in range(2, n): # 区间长度
+            print('lens', lens, n-lens)
             # # 2\对于每一个区间长度，循环区间开头的i
             for i in range(0, n-lens): # 以 i 为 开头
                 # print(i, n, lens, n-lens) # 0 6 2 4
