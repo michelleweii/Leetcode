@@ -2,8 +2,8 @@
 middle 2021-11-01 dp完全背包
 [完全背包+考虑排列顺序]，外层循环为 target ，内层循环为选择池 wordDict。
 dp[i] 表示以 i 结尾的字符串(包括i)是否可以被 wordDict 中组合而成。
-target = s
-arrs = wordDict
+- target = s
+- arrs = wordDict
 边界条件，我们定义 dp[0] = true 表示空串且合法。
 """
 # 考虑顺序，外层target，内层arrs。内循环正序。
@@ -20,10 +20,9 @@ class Solution:
                 # if i-word_len>=0:print(i, word_len, s[i-word_len: i])
                 if i-sz>=0 and s[i-sz: i] in wordDict:
                     dp[i] = dp[i] or dp[i-sz]
-                    # print(dp)
-
+                    # 选 dp[i]
+                    # 不选 dp[i-sz]
         return dp[-1]
-
 
 if __name__ == '__main__':
     # s = "leetcode"

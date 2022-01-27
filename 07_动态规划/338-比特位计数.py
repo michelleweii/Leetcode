@@ -17,7 +17,7 @@ https://leetcode-cn.com/problems/counting-bits/solution/hen-qing-xi-de-si-lu-by-
 """
 class Solution:
     def countBits(self, n): #int) -> List[int]:
-        dp = [0]*(n+1)
+        dp = [0]*(n+1) # 状态定义：数字i的二进制中含dp[i]个1。
         # 根据奇偶性开始遍历计算
         for i in range(1,n+1):
             # 如果是奇数

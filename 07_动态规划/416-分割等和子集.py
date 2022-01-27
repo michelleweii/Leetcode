@@ -16,7 +16,7 @@ class Solution:
         # 特判：如果是奇数，就不符合要求
         if sum%2==1:return False
         target = sum//2
-        # 开始01背包--dp[i][j]表示从数组的 [0, i] 这个子区间内挑选一些正整数，
+        # 01背包--dp[i][j]表示从数组的 [0, i] 这个子区间内挑选一些正整数，
         # 每个数只能用一次，使得这些数的和恰好等于 j
         dp = [False for _ in range(target+1)]
         dp[0] = True # 什么都不取 # dp[i] 表示是否存在和为 i 的 组合

@@ -1,6 +1,11 @@
 """
-hard 2021-10-26回顾 【单调递增栈】
-思路：以第i根柱子为最矮柱子所能延伸的最大面积是什么？求每个矩形所在位置的最大值，分别向左延伸、向右延伸
+hard 2021-10-26回顾 【单调递增栈】字节
+https://leetcode-cn.com/problems/largest-rectangle-in-histogram/solution/zhao-liang-bian-di-yi-ge-xiao-yu-ta-de-zhi-by-powc/
+思路：以第i根柱子为最矮柱子所能延伸的最大面积是什么？
+是以i 为中心，向左找第一个小于 heights[i] 的位置 left_i；
+向右找第一个小于 heights[i] 的位置 right_i，
+即最大面积为 heights[i] * (right_i - left_i -1)
+
 res =（该矩形的高度）*（左右边界的距离）
 注意！ 以第i个柱子为矮柱！
 """

@@ -1,6 +1,5 @@
 """
-hard 2021-12-12
-3维DP（区间dp）
+hard 2021-12-12 3维DP（区间dp）快手
 dp[i][j]表示气球区间i-j之间的最优结果,最大金币数。
 https://leetcode-cn.com/problems/burst-balloons/solution/yi-wen-tuan-mie-qu-jian-dp-by-bnrzzvnepe-2k7b/
 """

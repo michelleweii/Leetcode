@@ -1,50 +1,28 @@
 """
-middle 2019-03-10 dp完全背包
+middle 2022-01-25 dp完全背包
 完全背包问题——填满容量为amount的背包最少需要多少硬币
 [数组中的元素可重复使用并且不考虑元素之间顺序]
 """
-# 题目：
 # 给定不同面额的硬币 coins 和一个总金额 amount。编写一个函数来计算可以凑成总金额所需的
 # 最少的硬币个数。如果没有任何一种硬币组合能组成总金额，返回 -1。
 class Solution(object):
-    def coinChange1(self, coins, amount):
-        # 设dp[i]为构成金额i的最优解,即凑成总金额所需的最少的硬币个数
-        # 那么dp[1]=1,dp[2]=1,dp[5]=1,因为coins中有此金额，直接拿来用即可
-        # dp[i]=min(dp[i-1],dp[i-2],dp[i-5])+1
-        if amount<=0: return 0
-        # 初始化（这种方式初始化就不会dp越界）
-        max_int = 2<<31
-        dp = []
-        for i in range(amount+1):
-            if i not in coins:
-                dp.append(max_int)
-            else:
-                dp.append(1)
-
-        # 求最少硬币个数
-        for i in range(amount+1):
-            if i not in coins:
-                for j in range(len(coins)):
-                    if i-coins[j]>0:
-                        dp[i] = min(dp[i-coins[j]]+1,dp[i])
-
-        return dp[amount] if dp[amount]!=max_int else -1
-
-    def coinChange(self, coins, amount):
-        dp = [-1] * (amount + 1)
-        dp[0] = 0
-        for i in range(1, amount + 1):
-            for j in range(0, len(coins)):
-                if i >= coins[j] and dp[i - coins[j]] != -1:
-                    if dp[i] == -1 or dp[i] > dp[i - coins[j]] + 1:
-                        dp[i] = dp[i - coins[j]] + 1
-        return dp[amount]
-
-
+    def coinChange2022(self, coins, amount):
+        max_int = 2 << 31
+        dp = [max_int]*(amount+1) # 构成金额i的最少硬币数
+        dp[0] = 0  # 构成金额0，需要0个硬币数
+        for coin in coins: # 外层遍历arrs
+            for i in range(amount+1): # 内层遍历target
+                # 物品体积不能大于背包容量
+                if coin<=i:
+                    dp[i] = min(dp[i], dp[i-coin]+1)
+        return -1 if dp[amount]==max_int else dp[amount]
+# 设dp[i]为构成金额i的最优解,即凑成总金额所需的最少的硬币个数
+# 那么dp[1]=1,dp[2]=1,dp[5]=1,因为coins中有此金额，直接拿来用即可
+# dp[i]=min(dp[i-1],dp[i-2],dp[i-5])+1
 if __name__ == '__main__':
     coins = [1, 2, 5]
     amount = 11
-    print(Solution().coinChange(coins,amount))
+    print(Solution().coinChange2022(coins,amount))
 
 
 

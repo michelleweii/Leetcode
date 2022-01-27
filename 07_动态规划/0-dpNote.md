@@ -12,9 +12,13 @@ dp套路，
 - 单个数组或者字符串要用动态规划时，可以把动态规划 `dp[i]` 定义为 `nums[0:i]` 中想要求的结果；
 - 当两个数组或者字符串要用动态规划时，可以把动态规划定义成两维的 `dp[i][j]` ，其含义是在 `A[0:i]` 与 `B[0:j]` 之间匹配得到的想要的结果。
 
+【**小技巧**】
 
+- 求多少种 or **方案数** or 数量？状态与状态之间**相加**。
 
-求多少种？状态与状态之间相加。
+- 一般字符串的题都需要多初始化一位，`dp = [False] * (len(s)+1)`，一般都要考虑空串，然后才是1个字符、2个字符...len(s)个字符。
+
+- 如果没有任何一组解，返回-1。`return -1 if dp[amount]==max_int else dp[amount]`，先给答案赋一个大数，如果没改变就return -1，改变就返回值。
 
 --------
 
@@ -193,6 +197,16 @@ class Solution:
         return [val2, val1]
 ```
 
+### LC5.最长回文子串
+
+状态定义：
+
+转移方程：
+
+
+
+
+
 ### LC70.爬楼梯
 
 状态定义：`dp[i]`代表爬到有i个台阶的楼顶，有dp[i]种方法。
@@ -213,23 +227,328 @@ return dp[n]
 
 状态定义：以`s[i]`结尾的解码方案数。即定义 `dp[i]` 为考虑前 i 个字符的解码方案数。
 
+状态转移：
 
+```python
+f[i]=f[i−1],1⩽a≤9
+f[i]=f[i−2],10⩽b⩽26
+f[i]=f[i−1]+f[i−2],1⩽a≤9,10⩽b⩽26
+```
+
+具体代码，
+
+```python
+class Solution:
+    def numDecodings2(self, s):
+        if s[0] == '0': return 0 # 前导0为无效
+        if len(s) == 1: return 1
+        legalstr = set(str(i) for i in range(1, 27)) # 合法集合
+        # print(legalstr)
+        dp = [0] * (len(s))
+        dp[0] = 1 # s[0]只有一种方案数
+        if s[1] not in legalstr:  # s[1]为0时，只能和s[0]进行组合。
+            dp[1] = 1 if s[: 2] in legalstr else 0
+        else: # s[1]不是0时，可以组合，可以单独出结果
+            dp[1] = 2 if s[: 2] in legalstr else 1
+        # 因为要用到i-2 所以至少初始化 dp[0] dp[1]
+        for i in range(2, len(s)):
+            if s[i] not in legalstr:
+                # 向前一位组合
+                if s[i - 1: i + 1] in legalstr:
+                    dp[i] = dp[i-2]
+            else:
+                if  s[i - 1: i + 1] in legalstr:
+                    dp[i] = dp[i-1] + dp[i-2]
+                else:
+                    dp[i] = dp[i-1]
+
+        return dp[-1]
+```
+
+### LC96.不同的二叉搜索树（卡特兰数 公式）
+
+[LC96.不同的二叉搜索树](https://leetcode-cn.com/problems/unique-binary-search-trees/solution/dong-tai-gui-hua-python-bu-tong-de-er-ch-jpog/) 给定整数 n ，求恰由 n 个节点组成且节点值从 1 到 n 互不相同的 二叉搜索树 有多少种？
+
+状态定义：`f(i)`表示以第`i`个结点为根的二叉搜索树的种类。`G(n)`代表`n`个结点可以构成BST种类。
+
+假设`n`个结点可以构成`G(n)`种不同的二叉树，令`f(i)`表示以第`i`个结点为根的二叉搜索树的种类，所以有:
+`G(n) = f(1)+f(2)+f(3)+......+f(n)`
+而当`i`为根节点时，左孩子结点有`i-1`个，右孩子结点有`n-i`个，所以有
+`f(n) = G(i-1) * G(n-i)`
+两式联立可得：
+`G(n)=G(0)G(n-1) + G(1)G(n-2) + ...... + G(n-2)G(1) + G(n-1)G(0)`
+
+> 举个例子，dp[5]指的就是5个连续数字可以组成的二叉搜索树的个数
+> 这5个数字不一定是[1,2,3,4,5]，也可以是[7,8,9,10,11]，只要是i个连续的数，就一定可以排列出dp[i]个二叉搜索树。
+
+转移方程：
+
+```python
+class Solution:
+    def numTrees(self, n):
+        dp = [0]*(n+1)
+        dp[0], dp[1] = 1, 1
+        for i in range(2, n+1):
+            for j in range(i):
+                # G(n) = G(0)*G(n-1) + G(1)*(n-2) + ... + G(n-1)*G(0)
+                dp[i] += dp[j]*dp[i-1-j]
+        return dp[n]
+```
+
+### LC132.分割回文串2hard（没做）
+
+状态定义：
+
+转移方程：
+
+
+
+### LC152.乘积最大子数组
+
+[LC152.乘积最大子数组](https://leetcode-cn.com/problems/maximum-product-subarray/solution/dpfang-fa-xiang-jie-by-yang-cong-12/)输入[2,3,-2,4]，子数组 [2,3] 有最大乘积 6。
+
+> 思路：需要维护两个变量，当前的最大值，以及最小值，最小值可能为负数，
+>
+> 但没准下一步乘以一个负数，当前的最大值就变成最小值，而最小值则变成最大值了
+>
+> 注意元素为0的情况，如果A[i]为0，那么maxDP和minDP都为0，我们需要从A[i + 1]重新开始。
+
+状态定义：两个DP分别定义为【以i结尾的子数组】的最大积与最小积。
+
+转移方程：
+
+```python
+#  //最大积的可能情况有：元素i自己本身，上一个最大积与i元素累乘，上一个最小积与i元素累乘；
+#  //与i元素自己进行比较是为了处理i元素之前全都是0的情况；
+for i in range(1,n):
+  max_dp[i] = max(nums[i], max_dp[i-1]*nums[i], min_dp[i-1]*nums[i])
+  min_dp[i] = min(nums[i], max_dp[i-1]*nums[i], min_dp[i-1]*nums[i])
+  #  //记录ans；
+  res = max(res, max_dp[i])
+```
+
+### LC338.比特位计数easy
+
+[LC338.比特位计数easy](https://leetcode-cn.com/problems/counting-bits/solution/hen-qing-xi-de-si-lu-by-duadua/)计算从 0 到 n 的每个整数的二进制表示中的 1 的数目。
+
+状态定义：数字`i`的二进制中含`dp[i]`个 1。
+
+转移方程：
+
+```python
+# 0的二进制0个, dp[0]=0
+# 【二进制】性质有，
+数字分为奇数、偶数，
+针对奇数有：二进制表示中，奇数一定比前面那个偶数多一个 1，因为多的就是最低位的 1。
+#           举例：
+#          0 = 0       1 = 1
+#          2 = 10      3 = 11
+针对偶数有：二进制表示中，偶数中 1 的个数一定和除以 2 之后的那个数一样多。因为最低位是 0，
+除以 2 就是右移一位，也就是把那个 0 抹掉而已，所以 1 的个数是不变的。
+#            举例：
+#           2 = 10       4 = 100       8 = 1000
+#           3 = 11       6 = 110       12 = 1100
+
+# 根据奇偶性开始遍历计算
+for i in range(1,n+1):
+  # 如果是奇数
+  if i%2==1:
+     dp[i]= dp[i-1]+1
+  # 如果是偶数
+  else:
+      dp[i] = dp[i//2]
+```
 
 
 
 # 背包问题
 
+https://leetcode-cn.com/problems/coin-change/solution/yi-tao-kuang-jia-jie-jue-bei-bao-wen-ti-h0y40/
 
+背包问题具备的特征：是否可以根据一个 target（直接给出或间接求出），target 可以是数字也可以是字符串，再给定一个数组 arrs，问：能否使用 arrs 中的元素做各种排列组合得到 target。
+
+## 01背包
+
+> 最基本的背包问题就是 01 背包问题：一共有 N 件物品，第 i（i 从 1 开始）件物品的重量为 w[i]，价值为 v[i]。在总重量不超过背包承载上限 W 的情况下，能够装入背包的最大价值是多少？
+
+如果是 **01 背包**，即数组中的元素不可重复使用，**外循环遍历 arrs**，**内循环遍历 target**，且**内循环倒序**。
+
+**01背包要优化空间，所以内循环的背包容量target要倒序。**
+
+[一套框架解决背包问题](https://leetcode-cn.com/problems/coin-change/solution/yi-tao-kuang-jia-jie-jue-bei-bao-wen-ti-h0y40/)
+
+### LC416.分割等和子集
+
+[LC416.分割等和子集](https://leetcode-cn.com/problems/partition-equal-subset-sum/solution/0-1-bei-bao-wen-ti-xiang-jie-zhen-dui-ben-ti-de-yo/) 请你判断是否可以将`nums = [1,5,11,5]`分割成两个子集，使得两个子集的元素和相等。数组可以分割成 [1, 5, 5] 和 [11]，返回True。
+
+思路：target 是什么？sum//2。
+
+状态定义：`dp[i]` 表示是否存在和为 i 的 组合。
+
+转移方程：`dp[j] = dp[j] or dp[j-x] # 不选or选`。
+
+```python
+# 01背包--dp[i][j]表示从数组的 [0, i] 这个子区间内挑选一些正整数，
+# 每个数只能用一次，使得这些数的和恰好等于 j
+dp = [False for _ in range(target+1)]
+dp[0] = True # 什么都不取 # dp[i] 表示是否存在和为 i 的 组合
+#【模板】外循环遍历 arrs，内循环遍历 target，且内循环倒序
+for x in nums: # 遍历物品体积
+    for j in range(target, x-1, -1): # i>=x # 遍历背包容量，背包容量必然要>=物品体积
+      dp[j] = dp[j] or dp[j-x] # 不选or选
+```
+
+LC474.一和零
+
+[lc474.一和零 middle](https://leetcode-cn.com/problems/ones-and-zeroes/solution/gong-shui-san-xie-xiang-jie-ru-he-zhuan-174wv/)题目也太复杂！
+
+### LC494.目标和
+
+[LC494.目标和](https://leetcode-cn.com/problems/target-sum/solution/gong-shui-san-xie-yi-ti-si-jie-dfs-ji-yi-et5b/) 给你一个整数数组 `nums=[1,1,1,1,1]` 和一个整数 `target=3`，nums中的数字可以+ or -，运算结果为target的表达式方案数。
+
+> 【数学知识】
+>
+> 我们想要的 target = 正数和 - 负数和 = x - y；
+>
+> 已知 x 与 y 的和是数组总和：x + y = sum；
+>
+> 可以求出 x = (target + sum) / 2 ， 我们令『正值部分』的绝对值总和为x。
+>
+> 问题转换为-> **只使用 - 运算符（只做减法），从 nums 凑出 x 的方案数。**
+
+状态定义：`f[i][j]`为从 nums 凑出总和「恰好」为 `j` 的方案数。<u>优化后：`dp[i]` 表示和为 `i` 的 num 组合有 `dp[i]` 种。</u>
+
+转移方程：这道题的关键不是nums[i]的选与不选，而是nums[i]是加还是减，那么我们就可以将方程定义为，`f[i][j]=f[i−1][j]+f[i−1][j-nums[i−1]]`，优化后，`dp[i] = dp[i] + dp[i-num]`
+
+```python
+class Solution:
+    def findTargetSumWays(self, nums, target):
+        sums = sum(nums)
+        if target>sums or (sums + target) % 2 == 1: return 0
+        positive = (target+sums)//2
+        dp = [0]*(positive+1) # 表示和为 i 的 num 组合有 dp[i] 种。
+        dp[0] = 1 # 表示只有当不选取任何元素时，元素之和才为 0，因此只有 1 种方案。
+        for num in nums:
+            for i in range(positive, num-1, -1):
+                # f[i][j]=f[i−1][j]+f[i−1][j+nums[i−1]]
+                dp[i] = dp[i] + dp[i-num] # i >= num
+                # dp[i] 不选
+                # dp[i-num] 选
+        return dp[positive]
+```
+
+lc879.盈利计划 hard
 
 ## 完全背包
 
+> 完全背包与 01 背包不同就是每种物品可以有无限多个：一共有 N 种物品，每种物品有无限多个，第 i（i 从 1 开始）种物品的重量为 w[i]，价值为 v[i]。在总重量不超过背包承载上限 W 的情况下，能够装入背包的最大价值是多少？
+> 可见 01 背包问题与完全背包问题主要区别就是物品是否可以重复选取。
 
+（1）如果是完全背包，即数组中的元素可重复使用并且不考虑元素之间顺序，arrs 放在外循环（保证 arrs 按顺序），target在内循环。且内循环正序。
 
+（2）如果组合问题需考虑**元素之间的顺序**，需将 target 放在外循环，将 arrs 放在内循环，且内循环正序。
 
+### LC139.单词拆分
 
+[LC139.单词拆分](https://leetcode-cn.com/problems/coin-change/solution/yi-tao-kuang-jia-jie-jue-bei-bao-wen-ti-h0y40/)给你一个字符串 `s` 和一个字符串列表 `wordDict` 作为字典。请你判断是否可以利用字典中出现的单词拼接出 `s` 。 `s = "leetcode"`, `wordDict = ["leet", "code"]`，返回True。
 
+**注意：**不要求字典中出现的单词全部都使用，并且字典中的单词可以重复使用。-->考虑顺序的完全背包。codeleet就是False，当然是考虑顺序的。
 
+状态定义：`dp[i]` 表示以 `i` 结尾的字符串是否可以被 wordDict 中单词组合而成。
 
+转移方程：`dp[i] = dp[i] or dp[i-sz]`
+
+```python
+class Solution:
+    def wordBreak(self, s: str, wordDict):
+        # dp[i] 表示以 i 结尾的字符串是否可以被 wordDict 中组合而成
+        dp = [False] * (len(s)+1)
+        dp[0] = True
+
+        for i in range(1, len(s)+1):
+            for word in wordDict:
+                sz = len(word)
+                # if i-word_len>=0:print(i, word_len, s[i-word_len: i])
+                if i-sz>=0 and s[i-sz: i] in wordDict:
+                    dp[i] = dp[i] or dp[i-sz]
+                    # 选 dp[i]
+                    # 不选 dp[i-sz]
+        return dp[-1]
+```
+
+### LC322.零钱兑换
+
+状态定义：`dp[i]`为构成金额`i`所需的最少的硬币数。
+
+题目是『不考虑元素顺序的完全背包』，一个硬币可以重复拿。
+
+举例，`coins = [1, 2, 5]`, `amount = 11`，返回`3`，因为`11 = 5 + 5 + 1`。
+
+转移方程：`dp[i] = min(dp[i], dp[i-coin]+1)`。
+
+> 不考虑元素之间顺序，arrs 放在外循环（保证 arrs 按顺序），target在内循环。且内循环正序。
+
+```python
+class Solution(object):
+    def coinChange2022(self, coins, amount):
+        max_int = 2 << 31
+        dp = [max_int]*(amount+1) # 构成金额i的最少硬币数
+        dp[0] = 0  # 构成金额0，需要0个硬币数
+        for coin in coins: # 外层遍历arrs
+            for i in range(amount+1): # 内层遍历target
+                # 物品体积不能大于背包容量
+                if coin<=i:
+                    dp[i] = min(dp[i], dp[i-coin]+1)
+        return -1 if dp[amount]==max_int else dp[amount]
+```
+
+### LC518.零钱兑换2
+
+LC322是求构成target的硬币数，LC518是构成target的<u>***方案数***</u>（有几种）。
+
+状态定义：`dp[i]` 表示和为 i 的 coin 组合有 `dp[i]` 种。
+
+转移方程：`dp[i] = dp[i]+dp[i-coin]`。
+
+```python
+class Solution:
+    def change(self, amount, coins):
+        # dp[i] 表示和为 i 的 coin 组合有 dp[i] 种。
+        dp = [0 for _ in range(amount+1)]
+        dp[0] = 1 # 只有当不选取任何元素时，元素之和才为 0，因此只有 1 种方案
+        for coin in coins: # 外层arrs
+            for i in range(amount+1): # 内层target
+                # 物品体积不能大于背包容量
+                if i>=coin:
+                    dp[i] = dp[i]+dp[i-coin]
+        return dp[amount]
+```
+
+### LC377.组合总和
+
+从`nums = [1,2,3]`中重复挑选`num`构成`target = 4`，顺序不同的序列被视作不同的组合**<u>*（方案数）*</u>**。
+
+状态定义：`dp[i]` 表示和为 i 的 num 组合有 `dp[i]` 种。
+
+转移方程：`dp[i] += dp[i - num]`。
+
+```python
+class Solution:
+    def combinationSum4(self, nums: List[int], target: int) -> int:
+        dp = [0] * (target+1) # 和为 i 的 num 组合有 dp[i] 种
+        dp[0] = 1 # 当不选取任何元素时，元素之和才为 0，因此只有 1 种方案
+        for i in range(1, target + 1): # 外层循环target
+            for num in nums: # 内层循环arrs
+                if num <= i: # 物品体积不能大于背包容量
+                    dp[i] += dp[i - num] # 求方案数套路
+        return dp[target]
+```
+
+LC1449.数位成本和为目标值的最大数字 hard
+
+状态定义：
+
+转移方程：
 
 # 二维DP
 
@@ -510,7 +829,7 @@ for i in range(0, m):
 # 若形成正方形（非单 1），以当前为右下角的视角看，则需要：当前格、上、左、左上都是 1
 ```
 
-### LC647.回文子串
+### LC647.回文子串（矩阵遍历）
 
 [LC647.回文子串](https://programmercarl.com/0647.%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2.html#_647-%E5%9B%9E%E6%96%87%E5%AD%90%E4%B8%B2) 题目给定一个字符串，你的任务是计算这个字符串中有多少个回文子串。
 
@@ -540,7 +859,7 @@ return res
 
 # 股票问题
 
-
+[我的题解~](https://blog.csdn.net/weixin_31866177/article/details/119798636)
 
 
 
@@ -557,3 +876,26 @@ return res
 状态定义：
 
 转移方程：
+
+
+
+
+
+# 区间DP
+
+https://leetcode-cn.com/problems/burst-balloons/solution/yi-wen-tuan-mie-qu-jian-dp-by-bnrzzvnepe-2k7b/
+
+思想就是随着操作的进行，判断的范围越来越小，所以小长度开始遍历，逐步化解更大范围的问题，有分治的思想。模版：
+
+```python
+def helper(self, ns: List[int]) :
+    N = len(ns)
+    dp = [[0] * N for _ in range(N+1)]
+    for l in range(N): # 长度从小到大
+        for i in range(N-l): # 以 i 为 开头
+            j = i + l           # 以 j 为 终点
+            for k in range(i,j): # 以 k 为分割点，进行分治         
+                // Todo 业务逻辑 
+```
+
+总结：长度固定（由小到大），在区间内枚举[i,j]，区间长度要与固定长度保持一直，然后，在[i,j]内寻找最佳分割点k。
