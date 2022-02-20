@@ -1121,24 +1121,26 @@ def isMatch(self, s: str, p: str):
     return dp[-1][-1]
 ```
 
-#### 42 *连续子数组最大和
+#### 42 *[连续子数组最大和](https://leetcode-cn.com/problems/lian-xu-zi-shu-zu-de-zui-da-he-lcof/)
 
 ```python
 class Solution:
     # dp[i] 以i结尾的连续子数组的最大和
+    # 以某个数作为结尾，意思就是这个数一定会加上去，那么要看的就是这个数前面的部分要不要加上去。大于零就加，小于零就舍弃。
     def maxSubArray(self, nums) -> int:
         n = len(nums)
         dp = [0 for _ in range(n)]
-        for i in range(n):
+        dp[0] = nums[0]
+        for i in range(1,n):
             dp[i] = max(nums[i], dp[i-1]+nums[i])
-        # print(dp)
+        # print(max(dp))
         return max(dp)
 ```
 
-#### 46 把数字翻译成字符串
+#### 46 [把数字翻译成字符串](https://leetcode-cn.com/problems/ba-shu-zi-fan-yi-cheng-zi-fu-chuan-lcof/)
 
 ```python
-# 状态定义：设动态规划列表 dp ，dp[i] 代表以 nums[x_i+1] 为结尾的数字的翻译方案数量。
+# 状态定义：设动态规划列表dp，dp[i] 代表以 nums[x_i-1] 为结尾的数字的翻译方案数量。
 class Solution:
     def translateNum(self, num):
         s = str(num)
@@ -1157,10 +1159,10 @@ class Solution:
         return dp[len(s)]
 ```
 
-#### 47 礼物的最大价值
+#### 47 [礼物的最大价值](https://leetcode-cn.com/problems/li-wu-de-zui-da-jie-zhi-lcof/)
 
 ```python
-# 设 f(i, j)n为从棋盘左上角走至单元格 (i,j) 的礼物最大累计价值
+# 设 dp(i,j) 为从棋盘左上角走至单元格 (i,j) 的礼物最大累计价值
 class Solution:
     def maxValue(self, grid):
         if not grid and not grid[0]:return 0
@@ -1180,9 +1182,10 @@ class Solution:
         return dp[m-1][n-1]
 ```
 
-#### 49 丑数
+#### 49 [丑数]()
 
 ```python
+# dp[i] 代表第 i+1 个丑数
 class Solution:
     def nthUglyNumber(self, n):
         dp = [1]*n
@@ -1198,27 +1201,36 @@ class Solution:
 
 #### ~~60 n个骰子的点数 dp~~
 
-#### 63 股票的最大利润
+#### 63 [股票的最大利润](https://leetcode-cn.com/problems/gu-piao-de-zui-da-li-run-lcof/)
 
 ```python
 # dp[i] 为 第i天卖出的最大利润
 # 扩展可以交易两次（买卖算一次交易）求最大值
 class Solution:
     def maxProfit(self, prices):
-        if not prices:return 0
-        dp = [0 for _ in range(len(prices))]
-        cost = prices[0]
-        for i in range(1, len(prices)):
-            cost = min(cost, prices[i])
-            dp[i] = max(dp[i-1], prices[i]-min(cost, prices[i]))
-        return max(dp)
+        # 在价格最低的时候买入，差价最大的时候卖出
+        if len(prices) < 2: return 0
+        cost = prices[0] # 每日更新最低价格
+        profit = 0 # 首日利润为0
+        for price in prices:
+            cost = min(cost, price) # 找到最低那天的价格
+            profit = max(profit, price-cost)
+        return profit
+      
+        #if not prices:return 0
+        #dp = [0 for _ in range(len(prices))]
+        #cost = prices[0]
+        #for i in range(1, len(prices)):
+        #    cost = min(cost, prices[i])
+        #    dp[i] = max(dp[i-1], prices[i]-min(cost, prices[i]))
+        #return max(dp)
 ```
 
 
 
 ## 7【栈 & 队列】
 
-#### 09 用两个栈实现队列
+#### 09 [用两个栈实现队列](https://leetcode-cn.com/problems/yong-liang-ge-zhan-shi-xian-dui-lie-lcof/)
 
 ```python
 class CQueue:
@@ -1239,7 +1251,7 @@ class CQueue:
         return self.stk2.pop()
 ```
 
-#### 30 包含min函数的栈(单调栈)
+#### 30 [包含min函数的栈(单调栈)](https://leetcode-cn.com/problems/bao-han-minhan-shu-de-zhan-lcof/)
 
 ```python
 # 单调递减栈
@@ -1268,7 +1280,7 @@ class MinStack:
         return self.min_stk[-1]
 ```
 
-#### 31 栈的压入、弹出序列
+#### 31 [栈的压入、弹出序列](https://leetcode-cn.com/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof/)
 
 ```python
 class Solution:
@@ -1310,7 +1322,7 @@ class Solution:
         return res
 ```
 
-#### 59-2 队列的最大值
+#### 59-2 [队列的最大值](https://leetcode-cn.com/problems/dui-lie-de-zui-da-zhi-lcof/)
 
 ```python
 class MaxQueue:
@@ -1347,7 +1359,7 @@ class MaxQueue:
 > bfs每个点只能访问一次，需要维护visited数据（判重数据）。
 > bfs要维护队列。
 
-#### 12 *矩阵中的路径 
+#### 12 *[矩阵中的路径](https://leetcode-cn.com/problems/ju-zhen-zhong-de-lu-jing-lcof/)
 
 **dfs 存不存在某一个值**
 
@@ -1377,7 +1389,7 @@ class Solution:
         dx = [-1,0,1,0]
         dy = [0,1,0,-1]
         tmp = board[x][y]
-        board[x][y] = '*'
+        board[x][y] = '*' # 防止重复标记。abcc，c如果又判断了一次自己，也会使得条件成立。
         for i in range(4):
             a = x+dx[i]
             b = y+dy[i]
@@ -1387,7 +1399,7 @@ class Solution:
         return False
 ```
 
-#### 13 *机器人的运动范围 
+#### 13 *[机器人的运动范围](https://leetcode-cn.com/problems/ji-qi-ren-de-yun-dong-fan-wei-lcof/)
 
 **bfs 所有可行解**
 
@@ -1421,7 +1433,7 @@ class Solution:
         return res
 ```
 
-#### 29 顺时针打印矩阵
+#### 29 [顺时针打印矩阵](https://leetcode-cn.com/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/)
 
 ```python
 class Solution:
