@@ -20,11 +20,13 @@ class Solution:
     def dfs(self, cur):
         if not cur: return
         self.dfs(cur.left)  # 递归左子树
+
         if self.pre:  # 修改节点引用
             self.pre.right, cur.left = cur, self.pre # right、left可以修改的
         else:  # 记录头节点
             self.head = cur
         self.pre = cur  # 保存 cur
+
         self.dfs(cur.right)  # 递归右子树
 
 if __name__ == '__main__':

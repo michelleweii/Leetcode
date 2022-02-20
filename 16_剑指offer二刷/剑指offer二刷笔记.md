@@ -114,11 +114,12 @@ def lengthOfLongestSubstring(self, s):
     return res
 ```
 
-#### **40 *最小的k个数 / 最大的k个数（快速排序，分治的思想）**
+#### 40 *[最小的k个数 / 最大的k个数（快速排序，分治的思想）](https://leetcode-cn.com/problems/zui-xiao-de-kge-shu-lcof/)
 
 ```python
-# 这代码是求『前』k个大的数。
-class Solutin:
+# 这代码是求『前』k个小的数（最小的k个数）。
+# “最大的k个数”只用将arr[r]>=pivot的> and < 调换。
+class Solution:
     def getLeastNumbers(self, arr, k):
         if k>= len(arr):return arr
         return self.partition(arr, 0, len(arr)-1, k)
@@ -130,15 +131,19 @@ class Solutin:
         while l<r:
             while l<r and arr[r]>=pivot:r-=1
             arr[l] = arr[r]
+            # arr[l], arr[r] = arr[r], arr[l], 这样交换也是对的
             while l<r and arr[l]<=pivot:l+=1
             arr[r] = arr[l]
+            # arr[r], arr[l] = arr[l], arr[r], 这样交换也是对的
         arr[l] = pivot
         # return l
-        if k<l: self.partition(arr, left, l-1, k)
-        if k>l: self.partition(arr, l+1, right, k)
+        if k<l: self.partition(arr, left, l-1, k)  # 分治
+        if k>l: self.partition(arr, l+1, right, k)  # 分治
+        # print(arr) # 原地更改[1, 2, 3, 5, 6, 4]
         return arr[:k]
+
 # [3,2,1,5,6,4], 2
-# [5,6]
+# [1,2]
 ```
 
 #### 40-0 快排模板
@@ -159,7 +164,7 @@ def quick_sort(nums, left, right):
     # return i # 回待比较数据最终位置
     quick_sort(nums, left, i-1) # 每次递归结束，右边都比pivot小
     quick_sort(nums, i+1, right) # 左边都比pivot大
-    # print(nums)
+    # print(nums) 原地更改
 ```
 
 #### 40-1 堆排序模板
@@ -285,7 +290,7 @@ def merge_sort2(nums, l, r):
     return nums # nums已经实现原地更改
 ```
 
-#### 57-2 和为s的连续正数序列（同向双指针）
+#### 57-2 [和为s的连续正数序列(同向双指针)](https://leetcode-cn.com/problems/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof/https://leetcode-cn.com/problems/he-wei-sde-lian-xu-zheng-shu-xu-lie-lcof/)
 
 ```python
 def findContinuousSequence(self, target):
@@ -313,7 +318,7 @@ def findContinuousSequence(self, target):
 
 #### 二分模板
 
-当我们将区间 [l, r] 划分成 [l, mid] 和 [mid + 1, r] 时，其更新操作是 r = mid 或者 l = mid + 1 ; 计算mid时不需要加1。
+mid 在左边，当我们将区间 [l, r] 划分成 `[l, mid]` 和 `[mid + 1, r]` 时，其更新操作是 `r = mid` 或者 `l = mid + 1` ; 计算mid时不需要加1。
 
 ```c++
 int bsearch_1(int l, int r)
@@ -328,7 +333,7 @@ int bsearch_1(int l, int r)
 }
 ```
 
-当我们将区间 [l, r] 划分成 [l, mid - 1] 和 [mid, r] 时，其更新操作是 r = mid - 1 或者 l = mid ; 此时为了防止死循环，计算mid时需要加1。
+mid 在右边，当我们将区间 [l, r] 划分成 `[l, mid - 1]` 和` [mid, r]` 时，其更新操作是 `r = mid - 1` 或者 `l = mid` ; 此时为了防止死循环，计算mid时需要加1。
 
 ```c++
 int bsearch_2(int l, int r)
@@ -343,7 +348,7 @@ int bsearch_2(int l, int r)
 }
 ```
 
-如何判定check()函数？
+如何判定check()函数？都以`if`的视角。
 
 ```python
 假设有一个总区间[right, left]，经由我们的 check 函数判断后，可分成两部分，
@@ -351,22 +356,22 @@ int bsearch_2(int l, int r)
 
 如果我们的目标是下面这个v，那么就必须使用模板 1（r = mid）
 
-................vooooooooo    (False v True, r = mid, 向True靠近)
+..........vooooooooo    (False v True, v属于True那边, l = mid, 目标在右边, 向True靠近)
 
-假设经由 check 划分后，整个区间的属性与目标v如下，则我们必须使用模板 2（l = mid）
+假设经由 check 划分后，整个区间的属性与目标v如下，则我们必须使用模板（l = mid + 1）
 
-oooooooov...................  (True v False, l=mid, 向True靠近)
+oooooooov........  (True v False, v属于True那边, l = mid + 1,目标在左边,向True靠近)
 
 所以下次可以观察 check 属性再与模板1 or 2 互相搭配就不会写错啦
 ```
 
-#### 04 二维数组中的查找
+#### 04 [二维数组中的查找](https://leetcode-cn.com/problems/er-wei-shu-zu-zhong-de-cha-zhao-lcof/)
 
 ```python
 def findNumberIn2DArray(self, matrix, target):
     if not matrix or not matrix[0]:return False
-    n = len(matrix)
-    m = len(matrix[0])
+    n = len(matrix) # n行
+    m = len(matrix[0]) # m列
     i = 0
     j = m-1
     while i<n and j>=0:
@@ -376,7 +381,7 @@ def findNumberIn2DArray(self, matrix, target):
     return False
 ```
 
-#### **11 *旋转数组的最小值 / 旋转数组的最大值**
+#### 11 *[旋转数组的最小值 OR 旋转数组的最大值](https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/)
 
 ```python
 # 输入：[3,4,5,1,2]
@@ -396,7 +401,7 @@ def minArray(self, numbers):
     return numbers[l]
 ```
 
-#### 53 *在排序数组中查找数字
+#### 53 *[在排序数组中查找数字](https://leetcode-cn.com/problems/zai-pai-xu-shu-zu-zhong-cha-zhao-shu-zi-lcof/)
 
 ```python
 # 输入: nums = [5,7,7,8,8,10], target = 8
@@ -430,14 +435,14 @@ def search(self, nums, target):
     return end-start+1
 ```
 
-#### 53-2 0~n-1中缺失的数字
+#### 53-2 [0~n-1中缺失的数字](https://leetcode-cn.com/problems/que-shi-de-shu-zi-lcof/)
 
 ```python
 # 输入: [0,1,3]
 # 输出: 2
 def missingNumber1(self, nums):
     n = len(nums)+1
-    s = (0+n)*(n-1)//2
+    s = (0+n)*(n-1)//2 # 求和
     for x in nums:
         s -= x
     return s
@@ -449,9 +454,10 @@ def missingNumber(self, nums):
         if nums[mid]==mid:l=mid+1
         else:r=mid
     return l
+
+# 根据mid在左边、还是在右边，划分出模板1和模板的差别。
+# 
 ```
-
-
 
 ## 4【链表】
 
@@ -474,13 +480,13 @@ def missingNumber(self, nums):
 ```python
 def reversePrint(self, head: ListNode) -> List[int]:
 	res = []
-  while head:
-     res.append(head.val)
-     head = head.next
-  return res[::-1]
+  	while head:
+     	res.append(head.val)
+     	head = head.next
+  	return res[::-1]
 ```
 
-#### 18 删除链表的节点 easy
+#### 18 [删除链表的节点 easy](https://leetcode-cn.com/problems/shan-chu-lian-biao-de-jie-dian-lcof/)
 
 ```python
 def deleteNode(self, head: ListNode, val: int) -> ListNode:
@@ -496,9 +502,25 @@ def deleteNode(self, head: ListNode, val: int) -> ListNode:
     return dummy.next
 ```
 
-#### 22 链表中倒数第k个节点 easy
+#### 22 [链表中倒数第k个节点 easy](https://leetcode-cn.com/problems/lian-biao-zhong-dao-shu-di-kge-jie-dian-lcof/)
 
 ```python
+# 一次遍历解决问题
+def removeNthFromEnd(self, head, n):
+    if not head:return head
+    dummy = ListNode(0)
+    dummy.next = head
+    p1 = p2 = dummy
+    for i in range(n):
+        p2 = p2.next # 后一个指针
+        # print(i, p2.val) # 1 2
+    while p2.next: # 停在最后一个节点
+            p1 = p1.next # 前一个指针
+            p2 = p2.next
+    p1.next = p1.next.next
+    return dummy.next
+
+# 遍历两次
 def getKthFromEnd(self, head: ListNode, k: int) -> ListNode:
     p = head
     lens = 0
@@ -591,7 +613,7 @@ def copyRandomList(self, head):
     return res
 ```
 
-#### 52 两个链表的第一个公共节点 easy
+#### 52 [两个链表的第一个公共节点 easy](https://leetcode-cn.com/problems/liang-ge-lian-biao-de-di-yi-ge-gong-gong-jie-dian-lcof/)
 
 ```python
 def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
@@ -632,7 +654,7 @@ class Solution:
         return root
 ```
 
-#### 26 树的子结构
+#### 26 [树的子结构](https://leetcode-cn.com/problems/shu-de-zi-jie-gou-lcof/)
 
 ```python
 class Solution(object):
@@ -649,7 +671,7 @@ class Solution(object):
         return self.is_part(p1.left, p2.left) and self.is_part(p1.right, p2.right)
 ```
 
-#### 27 二叉树的镜像
+#### 27 [二叉树的镜像](https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof/)
 
 ```python
 class Solution(object):
@@ -673,7 +695,7 @@ class Solution(object):
         return root
 ```
 
-#### 28 对称的二叉树
+#### 28 [对称的二叉树](https://leetcode-cn.com/problems/dui-cheng-de-er-cha-shu-lcof/)
 
 ```python
 class Solution:
@@ -711,6 +733,7 @@ class Solution(object):
                 queue.append(tmp.right)
         return res
 
+    # 每层单独保存，层次遍历
     # [[3], [9,20], [15,7]]
     def levelOrder2(self, root):
         if not root:return []
@@ -751,7 +774,7 @@ class Solution(object):
         return res
 ```
 
-#### 33 二叉搜索树后续遍历
+#### 33 [二叉搜索树后续遍历](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-hou-xu-bian-li-xu-lie-lcof/)
 
 ```python
 class Solution:
@@ -764,12 +787,14 @@ class Solution:
     def dfs(self, l, r):
         # 定义dfs的出口
         if l >= r: return True
-        root = self.postorder[r]
+        root = self.postorder[r] # 左右根
         k = l
-        while k < r and self.postorder[k] < root: k += 1
-        mid = k
-        while self.postorder[k] > root: k += 1
+        while k < r and self.postorder[k] < root: k += 1 # 找到第一个比根节点大的元素，即为右子树
+        mid = k # m右子树开始点
+        while self.postorder[k] > root: k += 1 # 遍历右子树是否满足性质，左子树因为找mid的时候自然成立
         return k == r and self.dfs(l, mid - 1) and self.dfs(mid, r - 1)
+      # self.dfs(l, mid - 1) 递归左子树
+      # self.dfs(mid, r - 1) 递归右子树
         
 ### 方法2
     def verifyPostorder(self, postorder):
@@ -784,9 +809,39 @@ class Solution:
         return dfs(0, len(postorder) - 1)
 ```
 
-#### 34 二叉树中和为某一值的路径
+#### 34 [二叉树中和为某一值的路径](https://leetcode-cn.com/problems/er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof/)
 
 ```python
+class Solution:
+    def __init__(self):
+        self.res, self.path = [],[]
+
+    def pathSum(self, root: TreeNode, target: int) -> List[List[int]]:
+        if not root:return []
+        self.path.append(root.val)
+        self.dfs(root, target-root.val)
+        return self.res
+
+    def dfs(self, root, target):
+        # 定义dfs出口
+        if not root: return
+        # self.path.append(root.val) 
+        # target -= root.val # 这里没有办法回溯到，错误
+        # 一定要是叶子节点，才算走到了末尾。并且target为0
+        if not root.left and not root.right and target==0:
+            self.res.append(self.path[:])
+
+        if root.left: 
+            self.path.append(root.left.val)   
+            self.dfs(root.left, target-root.left.val)
+            self.path.pop()
+
+        if root.right:
+            self.path.append(root.right.val)   
+            self.dfs(root.right, target-root.right.val)
+            self.path.pop()
+
+# 简约版
 class Solution:
     def pathSum(self, root: TreeNode, target):
         res = []
@@ -808,9 +863,11 @@ class Solution:
         path.pop()
 ```
 
-#### 36 二叉搜索树与双向链表
+#### 36 [二叉搜索树与双向链表](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-yu-shuang-xiang-lian-biao-lcof/)
 
 ```python
+# https://leetcode-cn.com/problems/er-cha-sou-suo-shu-yu-shuang-xiang-lian-biao-lcof/solution/mian-shi-ti-36-er-cha-sou-suo-shu-yu-shuang-xian-5/
+# 这个题不太会
 class Solution:
     def treeToDoublyList(self, root: 'Node') -> 'Node':
         if not root: return root
@@ -830,9 +887,37 @@ class Solution:
         self.dfs(cur.right)  # 递归右子树
 ```
 
-#### 37 序列化二叉树
+#### 37 [序列化二叉树](https://leetcode-cn.com/problems/xu-lie-hua-er-cha-shu-lcof/)
 
 ```python
+# LC297
+# DFS
+class Codec:
+    # 选择前序遍历，是因为 根|左|右根∣左∣右 的打印顺序，在反序列化时更容易定位出根节点的值。
+    # 遇到 null 节点也要翻译成特定符号，反序列化时才知道这里是 null
+    def serialize(self, root):
+        if not root: return 'x' # 遍历到 null 节点
+        left = self.serialize(root.left)
+        right  = self.serialize(root.right)
+        return str(root.val)+','+str(left)+','+str(right) # 按  根,左,右  拼接字符串
+        # 看图,前序遍历序列化 1,2,x,x,3,4,x,x,5,x,x
+
+    def deserialize(self, data):
+        nodelist = data.split(',')
+        return self.build_tree(nodelist)
+
+    def build_tree(self, data):
+        root = data.pop(0)
+
+        if root=='x': # 是X，返回null节点
+            return None
+
+        root = TreeNode(root)
+        root.left = self.build_tree(data)
+        root.right = self.build_tree(data)
+        return root
+
+# 层次遍历
 class Codec:
     # 1,2,3,#,#,4,5
     def serialize(self, root): # 将树转为list(层次遍历)
@@ -876,7 +961,7 @@ class Codec:
         return root
 ```
 
-#### 54 二叉搜索树的第k大节点
+#### 54 [二叉搜索树的第k大节点](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-di-kda-jie-dian-lcof/)
 
 ```python
 class Solution:
@@ -886,17 +971,26 @@ class Solution:
         self.dfs(root)
         return self.res
     # 注意这里 k 需要是全局变量。
-    def dfs(self, root):
+    #def dfs(self, root):
+        #if not root:return
+        # 右根左遍历
+        #self.dfs(root.right)
+        #if self.k==0:return
+        #self.k-=1
+        #if self.k==0:self.res=root.val
+        #self.dfs(root.left)
+        
+        def dfs2022(self, root):
         if not root:return
         # 右根左遍历
-        self.dfs(root.right)
-        if self.k==0:return
-        self.k-=1
+        if root.right and self.k: self.dfs(root.right)
+        # if self.k==0:return
+        self.k -= 1
         if self.k==0:self.res=root.val
-        self.dfs(root.left)
+        if root.left and self.k: self.dfs(root.left)
 ```
 
-#### 55-1 二叉树的深度
+#### 55-1 [二叉树的深度](https://leetcode-cn.com/problems/er-cha-shu-de-shen-du-lcof/)
 
 ```python
 def maxDepth(self, root: TreeNode) -> int:
@@ -906,10 +1000,26 @@ def maxDepth(self, root: TreeNode) -> int:
     return max(left, right)+1
 ```
 
-#### 55-2 平衡二叉树
+#### 55-2 [平衡二叉树](https://leetcode-cn.com/problems/ping-heng-er-cha-shu-lcof/solution/mian-shi-ti-55-ii-ping-heng-er-cha-shu-cong-di-zhi/)
 
 ```python
+# LC110
 class Solution:
+    # 从下至上O(N)
+    # 思路是对二叉树做先序遍历，从底至顶返回子树最大高度，若判定某子树不是平衡树则 “剪枝” ，直接向上返回。
+    def isBalanced(self, root: TreeNode) -> bool:
+        return self.isAvl(root) != -1
+    def isAvl(self, root):
+        if not root: return 0
+        left = self.isAvl(root.left) # 左
+        if left == -1: return -1
+        right = self.isAvl(root.right) # 右
+        if right == -1: return -1
+        # 以当前节点为根节点的树的最大高度
+        return max(left, right) + 1 if abs(left - right) < 2 else -1 # 根
+  
+  
+  	# 从上到下nlogn
     def isBalanced(self, root: TreeNode) -> bool:
         if not root:return True
         return abs(self.depth(root.left) - self.depth(root.right)) <= 1 and \
@@ -924,7 +1034,7 @@ class Solution:
         return max(right, left)+1
 ```
 
-#### **68-1 二叉搜索树的最近公共祖先**
+#### 68-1 [二叉搜索树的最近公共祖先](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-de-zui-jin-gong-gong-zu-xian-lcof/)
 
 ```python
 class Solution:
@@ -938,16 +1048,17 @@ class Solution:
             return root
 ```
 
-#### 68-2 *二叉树的最近公共祖先
+#### 68-2 *[二叉树的最近公共祖先](https://leetcode-cn.com/problems/er-cha-shu-de-zui-jin-gong-gong-zu-xian-lcof/)
 
 ```python
 class Solution:
     def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
         if not root:return root
         if root==p or root==q:return root
+        # 先序遍历
         left = self.lowestCommonAncestor(root.left, p, q)
         right = self.lowestCommonAncestor(root.right, p, q)
-        if left and right:return root
+        if left and right:return root # 从底至顶回溯，当节点 p, q 在节点 root 的异侧时，节点 root 即为最近公共祖先，则向上返回 root 
         if left: return left
         return right
 ```
@@ -1172,9 +1283,10 @@ class Solution:
         return not stk
 ```
 
-#### **59 *滑动窗口最大值（单调递减栈）** lc239
+#### 59 *[滑动窗口最大值（单调递减栈） LC239](https://leetcode-cn.com/problems/hua-dong-chuang-kou-de-zui-da-zhi-lcof/)
 
 ```python
+# 单调递减栈
 class Solution:
     def maxSlidingWindow(self, nums, k):
         if not nums or not k:return []
@@ -1184,12 +1296,14 @@ class Solution:
             # 比当前元素小的数据都干掉
             while stk and nums[i]>nums[stk[-1]]:
                 stk.pop()
-
+			
+            stk.append(i)
+            
             # # 超过窗口范围，队首元素出队
             while stk and i-k>=stk[0]:
                 stk.pop(0)
 
-            stk.append(i)
+          	# 满足窗口大小，开始res开始加结果。
             # print(i, stk)
             if i+1>=k:
                 res.append(nums[stk[0]])

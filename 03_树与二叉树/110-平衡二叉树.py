@@ -13,7 +13,7 @@ class TreeNode(object):
         self.right = None
 
 class Solution(object):
-    # 2021-12-25, 从底至顶（提前阻断），后序遍历，时间复杂度 O(N)
+    # 2021-12-25, 从底至顶（提前阻断），先序遍历，时间复杂度 O(N)
     # 思路是对二叉树做先序遍历，从底至顶返回子树最大高度，若判定某子树不是平衡树则 “剪枝” ，直接向上返回。
     def isBalanced(self, root: TreeNode) -> bool:
         return self.isAvl(root) != -1

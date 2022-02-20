@@ -197,6 +197,8 @@ while fast and fast.next:
 
 https://leetcode-cn.com/problems/shortest-unsorted-continuous-subarray/solution/dan-diao-zhan-jie-fa-by-lilin-k-7096/
 
+> --栈底--------栈顶-----
+
 - 单调递减栈：从栈底到栈顶数据是从大到小；**<u>序列从大到小，比栈顶元素小直接入栈，比栈顶元素大，则将比当前元素小的所有元素都干掉，一直出栈，直到满足性质后，当前元素入栈；</u>**
 
 ​		<u>**- 找（一边）两边比cur大**</u>【核心！】

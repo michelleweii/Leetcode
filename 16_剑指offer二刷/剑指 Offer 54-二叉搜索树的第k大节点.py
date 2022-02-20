@@ -1,6 +1,5 @@
 """
-easy bst
-2021-07-18
+easy 2021-07-18 bst
 """
 """
 本文解法基于此性质：二叉搜索树的中序遍历为 递增序列 。
@@ -30,6 +29,23 @@ class Solution:
         self.k-=1
         if self.k==0:self.res=root.val
         self.dfs(root.left)
+
+    def kthLargest2022(self, root: TreeNode, k: int) -> int:
+        if not root: return 0
+        self.k = k
+        self.dfs2022(root)
+        return self.res
+
+    def dfs2022(self, root):
+        if not root:return
+        # 右根左遍历
+        if root.right and self.k: self.dfs(root.right)
+        # if self.k==0:return
+        self.k -= 1
+        if self.k==0:self.res=root.val
+        if root.left and self.k: self.dfs(root.left)
+
+
 
 if __name__ == '__main__':
     root = [3, 1, 4, None, 2]
