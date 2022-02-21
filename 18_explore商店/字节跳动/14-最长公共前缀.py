@@ -1,9 +1,7 @@
 """
-easy 2021-10-17
-# 纵向遍历
+easy 2021-10-17 纵向遍历
 # python zip特性
 """
-
 class Solution:
     # 纵向遍历
     # i 单词的每一位

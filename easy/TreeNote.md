@@ -452,6 +452,9 @@ class Solution:
         return right
 ```
 
+2022-02-22
 
+如果遍历对比，则不需要叶子变量来接收；
+如果重建树，函数返回值应该赋值给right和left。
 
 [二叉树总结篇](https://www.programmercarl.com/%E4%BA%8C%E5%8F%89%E6%A0%91%E6%80%BB%E7%BB%93%E7%AF%87.html#%E6%9C%80%E5%90%8E%E6%80%BB%E7%BB%93)

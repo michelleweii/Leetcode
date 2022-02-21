@@ -9,7 +9,7 @@
 - [ ] 56-2 数组中数字出现的次数 II middle
 - [ ] 60 n个骰子的点数 hard dp
 - [ ] 62 圆圈中最后剩下的数字 easy 约瑟夫环
-- [ ] 65 不用加减乘除做加法 easy 位运算
+- [x] 65 不用加减乘除做加法 easy 位运算
 
 # 1. 目录
 
@@ -80,7 +80,7 @@ def twoSum(self, nums, target):
 
 
 
-## 2【双指针】
+## 2【双指针】/ 【排序】
 
 #### 21 调整数组顺序使奇数在前（反向双指针）
 
@@ -221,11 +221,15 @@ class Solution:
                 break
 ```
 
-#### **51 数组中的逆序对（归并排序）**
+#### 51 [数组中的逆序对（归并排序）](https://leetcode-cn.com/problems/shu-zu-zhong-de-ni-xu-dui-lcof/)
+
+> 如果前面一个数字大于后面的数字，则这两个数字组成一个逆序对。
+>
+> `nums=[7,5,6,4]`，共5个，即（7,5）、（7,6）、（7,4）、（5,4）、（6,4）。
 
 ```python
 def reversePairs(self, nums):
-    self.res = 0
+    #self.res = 0
     return self.merge(nums, 0, len(nums)-1)
 
 def merge(self, nums, l, r):
@@ -245,7 +249,9 @@ def merge(self, nums, l, r):
         else:
             temp.append(nums[j])
             j += 1
-            res += mid-i+1
+            res += mid-i+1 # 为什么是这样的？
+            # “左子数组当前元素 > 右子数组当前元素” 时，意味着 「左子数组当前元素 至 末尾元素」 与 「右子数组当前元素」 构成了若干 「逆序对」 。
+            # 「左子数组当前元素 至 末尾元素」是递增的
     temp += nums[i:mid + 1]
     temp += nums[j:r + 1]
 
@@ -256,7 +262,10 @@ def merge(self, nums, l, r):
     # for x in temp:
     #     nums[k] = x
     #     k+=1
-    print("temp", temp)
+    # print("temp", temp)
+    # temp [5, 7]
+	# temp [4, 6]
+	# temp [4, 5, 6, 7]
     return res
 ```
 
@@ -1255,6 +1264,7 @@ class CQueue:
 
 ```python
 # 单调递减栈
+# LC155
 class MinStack:
     def __init__(self):
         self.stk, self.min_stk = [], []
@@ -1283,6 +1293,11 @@ class MinStack:
 #### 31 [栈的压入、弹出序列](https://leetcode-cn.com/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof/)
 
 ```python
+# 判断一个序列是否为合法的栈弹出序列
+# 思路：每次入栈stk一个元素，判断入栈的元素是否和出栈元素相同，如果相同stk就出栈；
+# 并将 出栈序列popped 的指针右移
+# 最终判断stk是否为空
+# https://leetcode-cn.com/problems/zhan-de-ya-ru-dan-chu-xu-lie-lcof/solution/mian-shi-ti-31-zhan-de-ya-ru-dan-chu-xu-lie-mo-n-2/
 class Solution:
     def validateStackSequences(self, pushed, popped) -> bool:
         stk = []
@@ -1337,7 +1352,7 @@ class MaxQueue:
 
     def push_back(self, value: int) -> None:
         self.q.append(value)
-        while self.max_q and value>self.max_q[-1]:
+        while self.max_q and value>self.max_q[-1]: # 单调递减
             self.max_q.pop() # 注意这里是左边
         self.max_q.append(value)
 
@@ -1356,8 +1371,10 @@ class MaxQueue:
 > bfs是存在所有可行解。
 > dfs是有没有True or False，回溯是一种dfs。
 >
-> bfs每个点只能访问一次，需要维护visited数据（判重数据）。
+> bfs每个点只能访问一次，求所有解集，需要维护visited数据（判重数据）。
 > bfs要维护队列。
+>
+> [四周扩散方向](https://blog.csdn.net/weixin_31866177/article/details/88760781)，以`matrix[0][0]`为原点，螺旋矩阵的走向记忆四周扩散方向。
 
 #### 12 *[矩阵中的路径](https://leetcode-cn.com/problems/ju-zhen-zhong-de-lu-jing-lcof/)
 
@@ -1436,45 +1453,48 @@ class Solution:
 #### 29 [顺时针打印矩阵](https://leetcode-cn.com/problems/shun-shi-zhen-da-yin-ju-zhen-lcof/)
 
 ```python
+# 螺旋矩阵
 class Solution:
     def spiralOrder(self, matrix):
         if not matrix or not matrix[0]: return matrix
+        m, n = len(matrix), len(matrix[0])
+        dx = [0,1,0,-1]
+        dy = [1,0,-1,0]
+        x,y,d = 0,0,0
         res = []
-        n = len(matrix)
-        m = len(matrix[0])
-        dx = [-1,0,1,0]
-        dy = [0,1,0,-1]
-        x,y,d = 0,0,1
-        visited = [[False for _ in range(m)] for _ in range(n)]
+        visited = [[False]*n for _ in range(m)]
         for i in range(n*m):
             res.append(matrix[x][y])
             visited[x][y] = True
             a = x+dx[d]
             b = y+dy[d]
-            if a<0 or a>=n or b<0 or b>=m or visited[a][b]:
+            # 这个方向走不通了，开始换方向
+            if a<0 or a>=m or b<0 or b>=n or visited[a][b]: 
                 d = (d+1)%4
-                a = x + dx[d]
-                b = y + dy[d]
-            x = a
-            y = b
+                a = x+dx[d]
+                b = y+dy[d]
+                    
+            x,y = a,b
         return res
 ```
 
-#### 38 *字符串的排列 dfs回溯
+#### 38 *[字符串的排列 dfs回溯](https://leetcode-cn.com/problems/zi-fu-chuan-de-pai-lie-lcof/solution/dai-ma-sui-xiang-lu-jian-zhi-offer-38-zi-gwt6/)
 
 ```python
+# LC47
 # 输入：s = "abc"
 # 输出：["abc","acb","bac","bca","cab","cba"]
 ## 考虑不通过set()实现去重
 # "aab"，["aab","aba","aab","aba","baa","baa"]， ac: ["aba","aab","baa"]
 # https://leetcode-cn.com/problems/zi-fu-chuan-de-pai-lie-lcof/solution/dai-ma-sui-xiang-lu-jian-zhi-offer-38-zi-gwt6/
+# 强调的是去重一定要对元素经行排序，这样我们才方便通过相邻的节点来判断是否重复使用
 class Solution:
     ######### 模板解法start ########
     def muban(self,s):
         self.res, self.path = [], []
         if not s:return self.res
         s = [x for x in s] # s = list(s)
-        s.sort()
+        s.sort() # nlogn
         used = [0]*len(s)
         self.muban_dfs(s, used)
         return self.res
@@ -1486,13 +1506,14 @@ class Solution:
         for i in range(len(s)):
             if i>0 and s[i-1]==s[i] and used[i-1]==0: continue # 树层上已经选过该字母充当首字母
             if used[i]==1: continue # 当前这个位置已经选过了
-            used[i]=1
+            # 如果同⼀树⽀nums[i]没使⽤过开始处理
+            used[i]=1 # # 标记已访问过
             self.path.append(s[i])
             self.muban_dfs(s, used)
             used[i]=0
             self.path.pop()
 
-# 通过set()去重
+# 通过set()去重O(1)，次优解法
 class Solution:
     # ['acb', 'bca', 'cba', 'abc', 'bac', 'cab']
     def permutation(self, s: str):
@@ -1526,6 +1547,34 @@ class Solution:
         return res
 ```
 
+#### 16 [数值的整数次方（快速幂）](https://leetcode-cn.com/problems/shu-zhi-de-zheng-shu-ci-fang-lcof/solution/mian-shi-ti-16-shu-zhi-de-zheng-shu-ci-fang-kuai-s/)
+
+> 求x^n 等价于 求 (x^2)^(n//2)。
+
+```python
+# 快速幂O(logn)，快速幂实际上是二分思想的一种应用。
+# 计算x的n次幂
+def myPow_better(self, x: float, n: int) -> float:
+    if x == 0: return 0
+    res = 1
+    if n < 0: x, n = 1 / x, -n
+    while n:
+        if n & 1: # x%2==1 
+            res *= x
+        x *= x  # x=x^2
+        n >>= 1 # n//=2
+    return res
+
+# # 一般乘法O(N)
+def myPow(self, x: float, n: int) -> float:
+    res = 1
+    for i in range(1, abs(n)+1):
+        res *= x
+    if n < 0: # 注意是负数的时候
+        res = 1 / res
+    return res
+```
+
 #### 56-1 数组中数字出现的次数2次
 
 ```python
@@ -1549,23 +1598,113 @@ def singleNumbers(self, nums):
 #### 56-2 数组中数字出现的次数3次
 
 ```python
+
 ```
 
-#### 65 不用加减乘除做加法
+#### 65 [不用加减乘除做加法](https://leetcode-cn.com/problems/bu-yong-jia-jian-cheng-chu-zuo-jia-fa-lcof/)
+
+> 利用异或、与运算。[好难python version](https://leetcode-cn.com/problems/bu-yong-jia-jian-cheng-chu-zuo-jia-fa-lcof/solution/mian-shi-ti-65-bu-yong-jia-jian-cheng-chu-zuo-ji-7/)   [nananan清晰讲解](https://leetcode-cn.com/problems/bu-yong-jia-jian-cheng-chu-zuo-jia-fa-lcof/solution/jin-zhi-tao-wa-ru-he-yong-wei-yun-suan-wan-cheng-j/)
 
 ```python
-
+# 思路：
+# ^ 亦或 ----相当于 无进位的求和
+# & 与 ----相当于求每位的进位数
+# 公式就是：（a^b) ^ ((a&b)<<1) 即：每次无进位求 + 每次得到的进位数
+# 我们需要不断重复这个过程，直到进位数为0为止；
+class Solution:
+    def add(self, a: int, b: int) -> int:
+        x = 0xffffffff # -1
+        a = a & x  # 获取负数的补码
+        b = b & x
+        while b != 0:
+          # 【注意】：交换的先后顺序重要
+            #a = (a ^ b) 
+            #b = (a & b) << 1 & x
+          #   int tempSum = a^b;
+          #   int carrySum = (a&b)<<1;
+          #   a = tempSum;
+          #   b = carrySum;
+            a, b = (a ^ b), (a & b) << 1 & x
+        return a if a <= 0x7fffffff else ~(a ^ x)
+#  ~(a ^ x) 是将 32 位以上的位取反，1 至 32 位不变
+#  若补码 a 为负数，需执行 ~(a ^ x) 操作，将补码还原至 Python 的存储格式。
 ```
 
 
 
 ## 10【其他】
 
+#### 66 [构建乘积数组（模拟题）](https://leetcode-cn.com/problems/gou-jian-cheng-ji-shu-zu-lcof/)
+
+```python
+## 美团考
+"""
+思路：双向遍历
+原数组：       [1       2       3       4]
+左部分的乘积：   1       1      1*2    1*2*3
+右部分的乘积： 2*3*4    3*4      4      1
+结果：        1*2*3*4  1*3*4   1*2*4  1*2*3*1
+----------------------------------------------------------------
+当前位置的结果就是它左部分的乘积再乘以它右部分的乘积。因此需要进行两次遍历，第一次遍历用于求左部分的乘积，
+第二次遍历在求右部分的乘积的同时，再将最后的计算结果一起求出来。
+"""
+def constructArr(self, a):
+    if not a:return a
+    p = 1
+    b = [1 for _ in range(len(a))]
+    # 计算当前元素左部分乘积
+    for i in range(len(a)):
+        b[i] = p
+        p *= a[i]
+    # print(b)
+    p = 1
+    # 计算当前元素右部分乘积
+    for j in range(len(a)-1, -1, -1):
+        # print(j)
+        b[j] *= p
+        p *= a[j]
+    # print(b)
+    return b
+```
+
+#### 45 [把数组排成最小的数（内置排序函数）](https://leetcode-cn.com/problems/ba-shu-zu-pai-cheng-zui-xiao-de-shu-lcof/)
+
+> 比较函数的定义是，传入两个待比较的元素 x, y，
+>
+> 如果 x 应该排在 y 的前面，返回 -1，
+>
+> 如果 x 应该排在 y 的后面，返回 1。
+>
+> 如果 x 和 y 相等，返回 0。
+
+```python
+# 字节题库
+# 数字转字符串，字符串字典序排序
+import functools
+class Solution:
+    """
+    若拼接字符串 x+y>y+x ，则 x “大于” y ；
+    反之，若 x+y<y+x ，则 x “小于” y ；
+    比较函数的定义是，传入两个待比较的元素 x, y，如果 x 应该排在 y 的前面，返回 -1，如果 x 应该排在 y 的后面，返回 1。如果 x 和 y 相等，返回 0。
+    """
+    def sort_rule(self,x,y):
+        a, b = x+y, y+x
+        if a>b: return 1 # 如果 a 应该排在 b 的后面，返回 1。
+        elif a<b:return -1
+        else:
+            return 0
+
+    def minNumber(self, nums):
+        strs = [str(num) for num in nums]
+        strs.sort(key=functools.cmp_to_key(self.sort_rule))
+        return ''.join(strs)
+```
+
+
+
 14 剪绳子1（）
 
 14 剪绳子2（）
-
-16 数值的整数次方（快速幂）
 
 ~~17 打印从1到最大的n位数（大数问题 模拟题）~~
 
@@ -1579,15 +1718,11 @@ def singleNumbers(self, nums):
 
 44 数字序列中某一位的数字（找规律）
 
-45 把数组排成最小的数（python内置排序函数）
-
 61 扑克牌中的顺子（）
 
 62 圆圈中最后剩下的数字（约瑟夫环）
 
 64 求1+2..+n（逻辑and or）
-
-66 构建乘积数组（模拟题）
 
 # 2. 记录
 
@@ -1656,6 +1791,7 @@ def singleNumbers(self, nums):
 53 二分，需要重做
 
 54 bst，需要重做
+
 > 排序数组中的搜索问题，首先想到 二分法 解决。
 
 55 二叉树的深度 once ok

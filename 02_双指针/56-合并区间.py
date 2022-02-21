@@ -11,7 +11,7 @@ class Solution:
         intervals.sort() # 默认先按第一个元素升序，再按第二个元素升序
         # print(intervals) # [[1, 3], [2, 6], [8, 10], [15, 18]]
         l, r = 0, 1
-        while r<len(intervals):
+        while r<len(intervals): # 这里一定要动态的变化
             x1,y1 = intervals[l]
             x2,y2 = intervals[r]
             if x2>y1:

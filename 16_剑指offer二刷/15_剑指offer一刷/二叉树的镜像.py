@@ -1,4 +1,6 @@
-# -*- coding:utf-8 -*-
+"""
+
+"""
 class TreeNode:
     def __init__(self, x):
         self.val = x
@@ -7,11 +9,11 @@ class TreeNode:
 class Solution:
     # 返回镜像树的根节点
     def Mirror(self, root):
-        # write code here
         if not root:return root
         self.Mirror(root.left)
         self.Mirror(root.right)
         root.left,root.right = root.right,root.left
+        return root
 
 if __name__ == '__main__':
     a = TreeNode(3)
