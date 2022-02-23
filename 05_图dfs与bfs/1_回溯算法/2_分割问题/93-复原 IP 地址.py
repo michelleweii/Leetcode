@@ -25,6 +25,7 @@ class Solution:
         # for循环遍历树层，一个ip中的每个部分，不超过3个数字，所以min+4
         for i in range(start_index,min(start_index+4,len(s))):
             p = s[start_index:i+1]  # 分割问题
+            # [start_index, i]就是被截取的子串
             # print(p)
             # 定义剪枝
             # 每个整数位于 0 到 255 之间组成

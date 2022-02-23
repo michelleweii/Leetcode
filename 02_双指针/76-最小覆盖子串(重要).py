@@ -27,6 +27,7 @@ class Solution:
         if not s or not t or ls < lt:
             return ''
 
+        # # 最小覆盖子串长度
         res = ls + 1 # 初始赋值为一个不可能达到的数
         left, right = 0, 0
 
@@ -53,7 +54,7 @@ class Solution:
                 # 出while循环的时候，left位于不能再右移的位置
 
                 if (right-left+1<res):
-                    res = right-left+1
+                    res = right-left+1 # 最小覆盖子串长度
                     start = left # 再从这个位置开始向右扩展
 
                 # left向右移动后窗口肯定不能满足了，重新开始循环

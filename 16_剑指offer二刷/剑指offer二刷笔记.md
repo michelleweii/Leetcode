@@ -683,6 +683,7 @@ class Solution(object):
 #### 27 [二叉树的镜像](https://leetcode-cn.com/problems/er-cha-shu-de-jing-xiang-lcof/)
 
 ```python
+# 构建二叉树的镜像
 class Solution(object):
     # 递归
     def mirrorTree(self, root):
@@ -821,6 +822,7 @@ class Solution:
 #### 34 [二叉树中和为某一值的路径](https://leetcode-cn.com/problems/er-cha-shu-zhong-he-wei-mou-yi-zhi-de-lu-jing-lcof/)
 
 ```python
+# 清晰版
 class Solution:
     def __init__(self):
         self.res, self.path = [],[]
@@ -851,6 +853,7 @@ class Solution:
             self.path.pop()
 
 # 简约版
+# 注意path.pop()的位置
 class Solution:
     def pathSum(self, root: TreeNode, target):
         res = []
@@ -873,6 +876,8 @@ class Solution:
 ```
 
 #### 36 [二叉搜索树与双向链表](https://leetcode-cn.com/problems/er-cha-sou-suo-shu-yu-shuang-xiang-lian-biao-lcof/)
+
+> 中序遍历两个节点，一个pre，一个cur。cur执行真正的中序遍历逻辑，代码都不用改。每遍历到一个节点，将pre 和 cur 按照双向链表互联。pre和cur走一步。 最后将头结点(dummy.right)和尾节点(pre)连在一起。
 
 ```python
 # https://leetcode-cn.com/problems/er-cha-sou-suo-shu-yu-shuang-xiang-lian-biao-lcof/solution/mian-shi-ti-36-er-cha-sou-suo-shu-yu-shuang-xian-5/
@@ -989,13 +994,16 @@ class Solution:
         #if self.k==0:self.res=root.val
         #self.dfs(root.left)
         
-        def dfs2022(self, root):
+    def dfs2022(self, root):
         if not root:return
         # 右根左遍历
         if root.right and self.k: self.dfs(root.right)
         # if self.k==0:return
         self.k -= 1
-        if self.k==0:self.res=root.val
+        if self.k==0:
+            self.res=root.val # 注意这里res要赋值，不能直接return root
+            # 但是，为什么这里不能直接return root.val呢？
+            return
         if root.left and self.k: self.dfs(root.left)
 ```
 
@@ -1535,15 +1543,30 @@ class Solution:
 
 ## 9【位运算】
 
-#### 15 二进制中1的个数
+> [性质1](https://leetcode-cn.com/problems/er-jin-zhi-zhong-1de-ge-shu-lcof/solution/mian-shi-ti-15-er-jin-zhi-zhong-1de-ge-shu-wei-yun/)
+>
+> 根据 与运算 定义，设二进制数字 n，则有：
+> 若 n \& 1 = 0，则 n 二进制 最右一位 为 0 （偶数）；
+> 若 n \& 1 = 1 ，则 n 二进制 最右一位 为 1 （奇数）。
+>
+> []()
+
+#### 15 [二进制中1的个数](https://leetcode-cn.com/problems/er-jin-zhi-zhong-1de-ge-shu-lcof/)
 
 ```python
 class Solution:
+    def hammingWeight(self, n: int) -> int:
+        res = 0
+        while n:
+            res += n & 1 # 判断最右一位是否是1
+            n >>= 1 # 最右位判断完了，删掉
+        return res
+
     def hammingWeight(self, n):
         res = 0
         for i in range(32):
             res += n&1
-            n = n>>1
+            n = n>>1 # # n//=2
         return res
 ```
 
@@ -1559,7 +1582,7 @@ def myPow_better(self, x: float, n: int) -> float:
     res = 1
     if n < 0: x, n = 1 / x, -n
     while n:
-        if n & 1: # x%2==1 
+        if n & 1: # n%2==1 # 如果n是奇数
             res *= x
         x *= x  # x=x^2
         n >>= 1 # n//=2

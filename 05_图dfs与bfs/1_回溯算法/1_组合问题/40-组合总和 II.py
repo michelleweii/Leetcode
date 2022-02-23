@@ -1,6 +1,8 @@
 """
 middle 2022-01-13 回溯|组合
 # candidates 中(有重复元素！)的每个数字在每个组合中只能使用一次。
+题目画重点：1）一个有重复元素的数组；2）candidates在每个组合中只能使用一次；
+https://programmercarl.com/0040.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8CII.html
 """
 # 给定一个数组 candidates 和一个目标数 target ，
 # 找出 candidates 中所有可以使数字和为 target 的组合。
@@ -25,7 +27,7 @@ class Solution:
             self.res.append(self.path[:])
             return
 
-        # 开始循环遍历
+        # 树层开始循环遍历
         for i in range(start_index,len(candidates)):
             # 剪枝
             if sums + candidates[i] > target:
