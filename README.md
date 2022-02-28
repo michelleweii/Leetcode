@@ -180,11 +180,28 @@ LC148排序链表【如何寻找一个链表的中间点】与876的差别在哪
 ```
 
 ```python
-# 利用快慢指针找到链表中点
+# 方法1
+# LC109
 slow, fast = head, head
+pre = head
 while fast and fast.next:
-  slow, fast = slow.next, fast.next.next
-  mid = slow
+     pre = slow
+     slow, fast = slow.next, fast.next.next
+mid = slow
+# 拆分左右链表
+pre.next = None # 左子树断开
+
+# 方法2
+# LC148
+# 找到中间点，并将链表分成两端，注意这里[链表寻找中间点]的方法。相关lc876
+slow, fast = head, head.next
+# 为什么fast=head.next 而不能是fast=head? 也可以
+# 因为这样长度为2的那一支链表会一直递归下去，直到栈溢出。
+while fast and fast.next:
+    fast = fast.next.next
+    slow = slow.next # 中点 slow
+mid = slow.next # 也可以mid=show, pre.next=None, 和109一样，标记pre
+slow.next = None
 ```
 
 找链表中点：109有序链表转为二叉搜索树、876链表的中间节点、148排序链表。

@@ -1,6 +1,7 @@
 """
 hard 2021-12-21 链表（优先队列）超级常考
-https://leetcode-cn.com/problems/merge-k-sorted-lists/solution/leetcode-23-he-bing-kge-pai-xu-lian-biao-by-powcai/
+【归并，分治】https://leetcode-cn.com/problems/merge-k-sorted-lists/solution/leetcode-23-he-bing-kge-pai-xu-lian-biao-by-powcai/
+代码看注释部分的
 """
 # 优先队列:nlogk, n 是所有链表中元素的总和，k 是链表个数。
 # 思路一：先把整个链表拉成一个链表，把这个链表的值全部存储在列表中，再将列表排序，新建一个链表重新一个一个指向列表的每一项
@@ -44,21 +45,49 @@ class Solution1(object):
         if l2: p.next = l2
         return head.next
 
-#     # def mergeKLists_merge(self, lists):
-#     #     if not lists: return
-#     #     if len(lists) == 1: return lists[0]
-#     #
-#     #     def mergeTwo(x: ListNode, y: ListNode) -> ListNode:
-#     #         if not x: return y
-#     #         if not y: return x
-#     #         if x.val > y.val: x, y = y, x
-#     #         x.next = mergeTwo(x.next, y)
-#     #         return x
-#     #
-#     #     mid = len(lists) // 2  # 0123->2, 012->1
-#     #     l = self.mergeKLists_merge(lists[:mid])
-#     #     r = self.mergeKLists_merge(lists[mid:])
-#     #     return mergeTwo(l, r)
+# """
+#         if not lists: return
+#         """
+#         # 将链表list中的链表两两合并改为 归并合并
+#         # 好难理解哦
+#         """
+#         n = len(lists)
+#         return self.merge_sort(lists, 0, n-1) # 记录子链表数量
+#
+#     # 归并排序 [l,mid]+[mid+1,r]
+#     def merge_sort(self, lists, l, r):
+#         if l >= r:
+#             return lists[l]
+#         mid = (l+r)//2
+#         l1 = self.merge_sort(lists, l, mid)
+#         l2 = self.merge_sort(lists, mid+1, r)
+#         #
+#         p = head = ListNode(-1)
+#         while l1 and l2:
+#             if l1.val<l2.val:
+#                 p.next,l1 = l1, l1.next
+#             else:
+#                 p.next,l2 = l2,l2.next
+#             p = p.next
+#         if l1: p.next = l1
+#         if l2: p.next = l2
+#         return head.next
+#
+# class Solution:
+#     def mergeKLists(self, lists: List[ListNode]) -> ListNode:
+#         import heapq #调用堆
+#         minHeap = []
+#         for listi in lists:
+#             while listi:
+#                 heapq.heappush(minHeap, listi.val) #把listi中的数据逐个加到堆中
+#                 listi = listi.next
+#         dummy = ListNode(0) #构造虚节点
+#         p = dummy
+#         while minHeap:
+#             p.next = ListNode(heapq.heappop(minHeap)) #依次弹出最小堆的数据
+#             p = p.next
+#         return dummy.next
+# """
 
 from queue import PriorityQueue # 方法一
 from heapq import heappush, heappop # 方法二

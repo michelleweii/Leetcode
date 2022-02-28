@@ -9,15 +9,21 @@ middle 2021-12-23 链表
 # f=s+nb (相遇时，刚好多走了n圈), =>推出：s = nb。
 # 从head结点走到入环点需要走：a+nb, 而slow已经走了nb，那么slow再走a步就是入环点了。
 # (如果让指针从链表头部一直向前走并统计步数k，那么所有 走到链表入口节点时的步数 是：k=a+nb（先走a步到入口节点，之后每绕1圈环（ b步）都会再次到入口节点）。)
-# 如何知道slow刚好走了a步？ 从head开始，和slow指针一起走，相遇时刚好就是a步。
+# 如何知道slow刚好走了a步？ 从head开始，和fast指针一起走，相遇时刚好就是a步。
 class ListNode(object):
     def __init__(self, x):
         self.val = x
         self.next = None
 
 class Solution(object):
-    # 方法二：
-    # 掌握推导过程
+    # 方法二：# 掌握推导过程
+    # 2022/02/28更新
+    """
+    假设a是head至环入口长度，b是环长度，假设fast一共走了K=a+nb;
+    有 f=2s, f=s+nb (相遇时，刚好多走了n圈), =>推出：s = nb。
+    =》fast = a+s，相遇时，s再走a即到达入口。
+    =》slow如何再走a? fast回到起始点head，走a，slow也走a，即两者再次相遇是环入口位置。
+    """
     def detectCycle(self, head):
         slow, fast = head, head
         while True:
