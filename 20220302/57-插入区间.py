@@ -1,11 +1,13 @@
 """
-middle
+middle 2022-03-02
 intervals = [[1,3],[6,9]], newInterval = [2,5]
 [[1,5],[6,9]]
 二分插入之后再套用56代码
 https://leetcode-cn.com/problems/insert-interval/solution/python3er-fen-fa-by-simpleson/
 https://mp.weixin.qq.com/s/ioUlNa4ZToCrun3qb4y4Ow
 """
+
+# https://leetcode-cn.com/problems/insert-interval/solution/57-cha-ru-qu-jian-mo-ni-cha-ru-xiang-jie-by-carlsu/
 class Solution:
     def insert(self, intervals, newInterval):
         intervals.append(newInterval)
@@ -26,28 +28,3 @@ if __name__ == '__main__':
     intervals = [[1, 3], [6, 9]]
     newInterval = [2, 5]
     print(Solution().insert(intervals,newInterval))
-
-"""
-    def insert1(self, intervals, newInterval):
-        i = 0
-        n = len(intervals)
-        while i < n and newInterval[0] > intervals[i][1]:
-            i += 1
-        left = i
-        while i < n and newInterval[1] >= intervals[i][0]:
-            i += 1
-        right = i
-        # print(left, right)
-        if left >= n:
-            res = intervals + [newInterval]
-        elif left == right:
-            # print(intervals)
-            intervals.insert(left, newInterval)
-            res = intervals
-        else:
-            res = intervals[:left] + [[min(intervals[left][0],\
-                                           newInterval[0]), max(intervals[right - 1][1],
-                                                                newInterval[1])]] + intervals[right:]
-        return res
-"""
-

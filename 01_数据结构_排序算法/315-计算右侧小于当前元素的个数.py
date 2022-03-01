@@ -1,6 +1,7 @@
-# 思路是归并排序——思路忘记了
-# 用二叉搜索树完成
-
+"""
+hard 归并排序
+https://leetcode-cn.com/problems/count-of-smaller-numbers-after-self/solution/gui-bing-pai-xu-suo-yin-shu-zu-python-dai-ma-java-/
+"""
 class TreeNode(object):
     def __init__(self, x):
         self.val = x

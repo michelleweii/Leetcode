@@ -1,5 +1,5 @@
 
-
+# 2022-02-28
 class Solution:
     def minimumTotal(self, triangle):
         if not triangle and not triangle[-1]:return 0

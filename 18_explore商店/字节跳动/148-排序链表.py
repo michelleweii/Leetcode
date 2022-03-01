@@ -1,15 +1,12 @@
 
-
-
-
-# Definition for singly-linked list.
+# 2022-02-28
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
         self.next = next
 
 class Solution:
-    def sortList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+    def sortList(self, head):
         # 归并出口
         if not head or not head.next:return head
 

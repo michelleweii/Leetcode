@@ -16,7 +16,6 @@ class Solution:
                     return strs[0][:i]
         return strs[0]
 
-
     # 利用python zip特性做
     def longestCommonPrefix_zip(self, strs):
         res = ""

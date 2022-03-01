@@ -1,3 +1,6 @@
+"""
+easy 2022-03-02
+"""
 class Solution(object):
     def merge(self, nums1, m, nums2, n):
         # nums1[m:m+n]=nums2[:n]

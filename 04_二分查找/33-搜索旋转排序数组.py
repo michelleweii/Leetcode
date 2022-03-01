@@ -1,3 +1,7 @@
+"""
+middle 2022-02-25 两次二分
+LC88的基础题
+"""
 class Solution(object):
     def search(self, nums, target):
         # 需找到自增区间、旋转区间

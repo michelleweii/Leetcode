@@ -1,19 +1,17 @@
 # 输入一个整数N，输出sqrt(N)，精度为0.001
 # 二分法
 def binarySearch(n,eps):
-    if n<0:
-        return -1
-    else:
-        low = 0
-        high = n
+    if n<0: return -1
+    low = 0
+    high = n
+    mid = (low+high)/2
+    while abs(mid*mid-n)>eps:
+        if mid*mid>n:
+            high = mid
+        else:
+            low = mid
         mid = (low+high)/2
-        while abs(mid*mid-n)>eps:
-            if mid*mid>n:
-                high = mid
-            else:
-                low = mid
-            mid = (low+high)/2
-        return mid
+    return mid
 
 # 牛顿法
 # 通项公式：x(n+1)=(x(n)+p/x(n))*0.5

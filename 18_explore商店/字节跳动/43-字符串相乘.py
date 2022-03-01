@@ -5,7 +5,6 @@ https://leetcode-cn.com/problems/multiply-strings/solution/you-hua-ban-shu-shi-d
 """
 # 普通竖式：遍历 num2 每一位与 num1 进行相乘，将每一步的结果进行累加。
 # 模拟乘法：https://leetcode-cn.com/problems/multiply-strings/solution/zui-jian-dan-de-li-jie-pythonmo-ni-cheng-1krb/
-
 class Solution:
     def multiply(self, num1: str, num2: str) -> str:
         if '0' == num1 or '0' == num2:return  '0' # is会报错

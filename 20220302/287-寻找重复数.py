@@ -1,3 +1,6 @@
+"""
+middle 2022-03-02 二分
+"""
 class Solution:
     def findDuplicate(self, nums):
         l = 1

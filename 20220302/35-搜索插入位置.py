@@ -1,4 +1,7 @@
-# 二分查找
+"""
+easy 2022-03-02 二分查找
+https://leetcode-cn.com/problems/search-insert-position/solution/te-bie-hao-yong-de-er-fen-cha-fa-fa-mo-ban-python-/
+"""
 class Solution(object):
     def searchInsert(self, nums, target):
         low = 0

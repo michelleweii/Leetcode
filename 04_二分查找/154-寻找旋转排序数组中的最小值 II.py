@@ -1,11 +1,13 @@
 """
-hard 2021-12-08
+hard 2021-12-08 二分
+https://leetcode-cn.com/problems/search-in-rotated-sorted-array/solution/leetcode-33-sou-suo-xuan-zhuan-pai-xu-sh-ga4b/
 有序数组的排序——二分（可能存在【重复】元素值的数组 nums）
 基础题153（元素值【互不相同】的数组 nums）
 """
 class Solution:
     def findMin(self, nums): #: List[int]) -> int:
         n = len(nums)-1
+        # 恢复两段性
         while (n>0 and nums[0]==nums[n]):n-=1 # 存在重复元素值的关键步骤
         if nums[0]<nums[n]:return nums[0] # 递增序列
         l, r = 0, n

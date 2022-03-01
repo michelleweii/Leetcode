@@ -1,7 +1,8 @@
+"""
+middle 2021-05-13 二分
+"""
 # mid < right 表面右边有序 否则左边有序
 # 那么mid > right 则表明最小数肯定在mid 和 right之间
-
-# 2021-05-13
 class Solution(object):
     def minArray(self, numbers) -> int:
         n = len(numbers)-1

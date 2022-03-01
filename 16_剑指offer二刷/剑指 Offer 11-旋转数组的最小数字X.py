@@ -1,7 +1,6 @@
 """
-二分 easy
+easy 2021-07-13 二分
 做几遍忘几遍！！！
-2021-07-13
 https://leetcode-cn.com/problems/xuan-zhuan-shu-zu-de-zui-xiao-shu-zi-lcof/solution/mian-shi-ti-11-xuan-zhuan-shu-zu-de-zui-xiao-shu-3/
 """
 class Solution:

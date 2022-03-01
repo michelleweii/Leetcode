@@ -305,7 +305,7 @@ class Solution:
 
 ### LC152.乘积最大子数组
 
-[LC152.乘积最大子数组](https://leetcode-cn.com/problems/maximum-product-subarray/solution/dpfang-fa-xiang-jie-by-yang-cong-12/)输入[2,3,-2,4]，子数组 [2,3] 有最大乘积 6。
+[LC152.乘积最大子数组 输入[2,3,-2,4]，子数组 [2,3] 有最大乘积 6。
 
 > 思路：需要维护两个变量，当前的最大值，以及最小值，最小值可能为负数，
 >
@@ -1075,6 +1075,16 @@ for i in range(n):
         dp[i][m][1] = max(dp[i-1][m][1], dp[i-1][m-1][0]-prices[i])
 return dp[-1][k][0]
 ```
+
+# 易混淆题目整理
+
+LC53.最大子数组和
+
+LC300.最长递增子序列->LC673.最长递增子序列的个数
+
+LC152.乘积最大子数组
+
+LC718.
 
 # 丑数
 

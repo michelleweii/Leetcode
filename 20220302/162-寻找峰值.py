@@ -1,4 +1,7 @@
 """
+middle 2022-03-02
+"""
+"""
 特点：
 # 无两段性的性质，但可以用二分来做
 # 二分95%应用于有两段性性质的区间，本题属于剩下的5%
@@ -16,7 +19,6 @@
 
 链接：https://www.acwing.com/solution/content/7955/
 """
-
 class Solution:
     def findPeakElement(self, nums) -> int:
         l = 0; r = len(nums) - 1

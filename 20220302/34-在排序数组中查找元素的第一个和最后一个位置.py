@@ -1,3 +1,7 @@
+"""
+middle 2022-03-02 二分查找
+
+"""
 class Solution(object):
     def searchRange(self, nums, target):
         result = []

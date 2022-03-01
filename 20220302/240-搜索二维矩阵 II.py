@@ -1,9 +1,9 @@
+"""
+middle 2022-03-02
+本题重点是从右上角开始二分
+注意与74题的不同之处，74是z字遍历后是一个递增的序列
+"""
 class Solution:
-    """
-    2021/01/12
-    本题重点是从右上角开始二分
-    注意与74题的不同之处，74是z字遍历后是一个递增的序列
-    """
     def searchMatrix(self, matrix, target):
         if not matrix or not matrix[0]: return False
         i, j = 0, len(matrix[0])-1
@@ -13,8 +13,6 @@ class Solution:
             if t > target: j -=1
             else: i+=1
         return False
-
-
 
 if __name__ == '__main__':
     matrix = [[1, 4, 7, 11, 15],

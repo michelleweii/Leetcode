@@ -1,4 +1,6 @@
-# 二分查找
+"""
+middle 二分查找
+"""
 # https://leetcode-cn.com/problems/heaters/solution/er-fen-cha-zhao-de-jie-fa-by-li-xian-sen/
 # 右边 >=item的最小数（可能不存在，用哨兵）
 # 左边 <=item的最大数（可能不存在，用哨兵）
