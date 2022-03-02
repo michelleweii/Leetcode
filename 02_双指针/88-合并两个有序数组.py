@@ -9,6 +9,34 @@ https://leetcode-cn.com/problems/merge-sorted-array/solution/hua-jie-suan-fa-88-
 - 当 len1<0 时遍历结束，此时 nums2 中还有数据未拷贝完全，将其直接拷贝到 nums1 的前面，最后得到结果数组
 - 时间复杂度：O(m+n)
 """
+
+"""
+easy 2022-03-02 三指针（从后向前数组遍历）
+因为 nums1 的空间都集中在后面，所以从后向前处理排序的数据会更好，节省空间，一边遍历一边将值填充进去
+"""
+class Solution(object):
+    def merge(self, nums1, m, nums2, n):
+        lens1=m-1
+        lens2=n-1
+        len=m+n-1
+        while lens1>=0 and lens2>=0:
+            if nums1[lens1]>=nums2[lens2]:
+                nums1[len]=nums1[lens1]
+                lens1-=1
+            else:
+                nums1[len]=nums2[lens2]
+                lens2-=1
+            len -= 1
+        # while lens1>=0:
+        #     nums1[len]=nums1[lens1]
+        #     len-=1
+        #     lens1-=1
+        while lens2>=0:
+            nums1[len]=nums2[lens2]
+            len-=1
+            lens2-=1
+        return nums1
+
 # 2022-01-04 逆序的归并，这次理解了很多
 class Solution:
     def merge(self, nums1, m, nums2, n):
