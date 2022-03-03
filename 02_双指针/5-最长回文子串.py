@@ -4,31 +4,30 @@ middle 2022-03-03 双指针
 [中心扩展法](https://leetcode-cn.com/problems/longest-palindromic-substring/solution/zui-chang-hui-wen-zi-chuan-by-leetcode-solution/)
 [动态规划](https://leetcode-cn.com/problems/longest-palindromic-substring/solution/zhong-xin-kuo-san-dong-tai-gui-hua-by-liweiwei1419/)
 """
-
-"""
-middle 2021-12-06 动态规划
-相关题目647、132
-# dp[i][j] 表示 s[i, j] 是否是回文串
-"""
 class Solution:
     def longestPalindrome(self, s: str) -> str:
-        n = len(s)
-        dp = [[False]*n for _ in range(n)]
-        begin, max_len = 0, 0
+        if not s or len(s)==1:return s
+        start,end=0,0
+        for i in range(len(s)):
+            # 由于存在奇数的字符串和偶数的字符串，所以我们需要从一个字符开始扩展，或者从两个字符之间开始扩展，所以总共有 n+n-1 个中心。
+            left1,right1 = self.expand(s,i,i) # a
+            left2,right2 = self.expand(s,i,i+1) # aa
+            # print(left1,right1,left2,right2)
+            # right1-left1+1 是以i为中心点的最长回文子串
+            if right1-left1>end-start:
+                start,end=left1,right1
+            if right2-left2>end-start:
+                start,end=left2,right2
+        return s[start:end+1]
 
-        for i in range(n-1, -1, -1):
-            for j in range(i, n):
-                if s[i]==s[j] and (j-i<=1 or dp[i+1][j-1]):
-                    dp[i][j] = True
-                    # 记录回文串的起始位置
-                    if j-i+1 > max_len:
-                        max_len = j-i+1
-                        begin = i
-
-        return s[begin:begin+max_len]
+    def expand(self, s, left, right):
+        while left>=0 and right<len(s) and s[left]==s[right]:
+            left-=1
+            right+=1
+        # return j-i-1
+        return left+1,right-1 # 因为最后一次循环多++,--了一次。所以真实回文的位置要恢复
 
 
-class Solution:
     # 动态规划
     #
     # 1、定义状态
@@ -69,31 +68,6 @@ class Solution:
                     maxlen = j-i+1
                     start = i
         return s[start:start+maxlen]
-
-    # 双指针（中心扩散）
-        def longestPalindrome(self, s: str) -> str:
-        if not s or len(s)==1:return s
-        start,end=0,0
-        for i in range(len(s)):
-            # 由于存在奇数的字符串和偶数的字符串，所以我们需要从一个字符开始扩展，或者从两个字符之间开始扩展，所以总共有 n+n-1 个中心。
-            left1,right1 = self.expand(s,i,i) # a
-            left2,right2 = self.expand(s,i,i+1) # aa
-            # print(left1,right1,left2,right2)
-            # right1-left1+1 是以i为中心点的最长回文子串
-            if right1-left1>end-start:
-                start,end=left1,right1
-            if right2-left2>end-start:
-                start,end=left2,right2
-        return s[start:end+1]
-
-    def expand(self, s, left, right):
-        while left>=0 and right<len(s) and s[left]==s[right]:
-            left-=1
-            right+=1
-        # return j-i-1
-        return left+1,right-1 # 因为最后一次循环多++,--了一次。所以真实回文的位置要恢复
-
-
 
 
 if __name__ == '__main__':
