@@ -1,3 +1,7 @@
+
+"""
+middle 542.01 矩阵
+"""
 def fn(n, m, matrix):
     visited = [[False for i in range(m)] for j in range(n)]
     res = []

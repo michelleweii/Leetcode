@@ -18,3 +18,5 @@ for i in range(1,len(a)):
     # print(a)
     res.add(a)
 print(len(res))
+
+# 答案是使用KMP算法，求出字符串的最小循环周期T
