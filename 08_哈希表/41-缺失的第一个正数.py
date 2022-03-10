@@ -4,6 +4,12 @@ hard 2021-12-09
 题目：给你一个未排序的整数数组 nums ，请你找出其中没有出现的最小的正整数。只能使用常数级别的额外空间
 https://leetcode-cn.com/problems/first-missing-positive/solution/tong-pai-xu-python-dai-ma-by-liweiwei1419/
 """
+# - 映射关系  nums[i]=i+1
+# - nums[nums[i]-1]≠nums[i] 如何理解？
+# - nums[i] ≠ i+1 （现在的位置不满足，i是下标）
+# - nums[i]-1 是应该要放置的index，要放置的位置也不满足nums[ num[i]-1 ] ≠ nums[i]-1+1 (nums[i]-1整体是index i )
+# - 位置交换，nums[nums[i]-1] = nums[i] 防止nums[i]改变，
+# *`nums*[*nums*[i]-1], *nums*[i] = *nums*[i], *nums*[*nums*[i]-1] # 左边的会比右边的先赋值`
 class Solution(object):
     def firstMissingPositive(self, nums):
         n = len(nums)
