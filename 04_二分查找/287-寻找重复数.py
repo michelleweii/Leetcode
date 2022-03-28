@@ -9,7 +9,7 @@ middle 2022-03-02 二分
 class Solution:
     def findDuplicate(self, nums):
         l = 1
-        r = len(nums)-1
+        r = len(nums)
         while l<r:
             # 找到对什么二分：统计原始数组中 <= mid 的元素的个数 cnt
             mid = l+r>>1
@@ -26,6 +26,24 @@ class Solution:
                 l=mid+1
         return r
 
+# 哈希做法，不符合题意，题目要求不能改变原数组
+# class Solution {
+# public:
+#     int findDuplicate(vector<int>& nums) {
+#         for(int i = 0; i < nums.size(); ){
+#             int tmp = nums[i] - 1;
+#             if(tmp != i){
+#                 if(nums[tmp] == nums[i])
+#                     return nums[i];
+#                 else
+#                     swap(nums[tmp], nums[i]);
+#             }
+#             else
+#                 i++;
+#         }
+#         return 0;
+#     }
+# };
 if __name__ == '__main__':
     nums = [1,3,4,2,2] # 2
     print(Solution().findDuplicate(nums))

@@ -24,13 +24,18 @@ class Solution(object):
     =》fast = a+s，相遇时，s再走a即到达入口。
     =》slow如何再走a? fast回到起始点head，走a，slow也走a，即两者再次相遇是环入口位置。
     """
-    def detectCycle(self, head):
+    def detectCycle(self, head: ListNode) -> ListNode:
+        # 链表相遇位置到环入口的距离
+        #=从链表开始到环入口的距离
+        # 1.求相遇点(使用快慢指针)
+        if not head or not head.next:return None
         slow, fast = head, head
-        while True:
-            if not (fast and fast.next): return # 如果链表不存在环
+        while fast and fast.next:
             slow = slow.next
             fast = fast.next.next
             if slow==fast:break # 停在了相遇节点
+        if slow!=fast:
+            return None # 如果链表不存在环
 
         fast = head # 再从head出发，走a个节点
         while fast!=slow:

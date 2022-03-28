@@ -65,6 +65,7 @@ lc113: 找到所有路径，所以递归函数不要返回值！
 # 3. 二分法
 - 153.旋转数组最小值0513
 - 162.寻找峰值0513
+- 287.寻找重复解
 
 二分刷题路线
 
@@ -464,6 +465,26 @@ if __name__ == '__main__':
 
 
 
+# 11. 哈希表
+
+[41. 缺失的第一个正数](https://leetcode-cn.com/problems/first-missing-positive/) hard
+
+- 映射关系  nums[i]=i+1
+
+- nums[nums[i]-1]≠nums[i] 如何理解？
+
+- nums[i] ≠ i+1 （现在的位置不满足，i是下标）
+
+- nums[i]-1 是应该要放置的index，要放置的位置也不满足nums[ num[i]-1 ] ≠ nums[i]-1+1 (nums[i]-1整体是index i )
+
+- 位置交换，nums[nums[i]-1] = nums[i] 防止nums[i]改变，
+
+  `nums[nums[i]-1], nums[i] = nums[i], nums[nums[i]-1] # 左边的会比右边的先赋值`
+
+[136. 只出现一次的数字](https://leetcode-cn.com/problems/single-number/) easy
+
+[448. 找到所有数组中消失的数字](https://leetcode-cn.com/problems/find-all-numbers-disappeared-in-an-array/) easy
+
 
 
 
@@ -516,9 +537,11 @@ if __name__ == '__main__':
 - 无序序列：可以使用遍历的方式，最坏的情况下时间复杂度为 O(N)。
   我们也可以使用空间换时间的方式，使用 N 的空间 换取 O(1)的时间复杂度——hashmap。
 
+[461. 汉明距离](https://leetcode-cn.com/problems/hamming-distance/)求二进制中1的个数
 
-
-
+```python
+return bin(x^y).count('1')
+```
 
 # pytrick
 

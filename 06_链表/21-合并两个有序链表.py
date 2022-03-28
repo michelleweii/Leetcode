@@ -7,6 +7,25 @@ class ListNode(object):
         self.val = x
         self.next = None
 
+# 2022/03/14
+def mergeTwoLists(self, l1, l2):
+    if not l1 and not l2: return None
+    if not l1: return l2
+    if not l2: return l1
+    dummy = cur = ListNode(-1)
+    while l1 and l2:
+        if l1.val < l2.val:
+            cur.next = l1
+            if l1: l1 = l1.next
+        else:
+            cur.next = l2
+            if l2: l2 = l2.next
+        cur = cur.next
+
+    cur.next = l1 if l1 else l2
+    return dummy.next
+
+
 class Solution(object):
     def mergeTwoLists(self, list1, list2):
         p = ListNode(-1) # 虚拟头节点

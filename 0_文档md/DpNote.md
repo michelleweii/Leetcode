@@ -199,13 +199,62 @@ class Solution:
 
 ### LC5.最长回文子串
 
-状态定义：
+状态定义：`dp[i][j]` 表示 s[i, j] 是否是回文串。
 
-转移方程：
+转移方程：`dp[i][j] = (s[i] == s[j]) and dp[i + 1][j - 1]`。
 
+```python
+# s[i..j]，所以必然有i<=j
+for j in range(1,n):
+    for i in range(0,j):
+        if s[i]!=s[j]:
+            dp[i][j]=False
+        else: # s[i]==s[j]
+            if j-i+1<=3:
+                dp[i][j]=True # aa, aba
+            else:
+                dp[i][j] = dp[i+1][j-1] # 从两边向里面
+        # 只要 dp[i][j] == true 成立，就表示子串 s[i..j] 是回文，此时记录回文长度和起始位置
+        if dp[i][j] and j-i+1>maxlen:
+            maxlen = j-i+1
+            start = i
+return s[start:start+maxlen]
+```
 
+### LC32.最长有效括号
 
+给你一个只包含 `'('` 和 `')'` 的字符串，找出最长有效（格式正确且连续）括号子串的长度。[下标图例](https://leetcode-cn.com/problems/longest-valid-parentheses/solution/dong-tai-gui-hua-si-lu-xiang-jie-c-by-zhanganan042/)
 
+状态定义：dp[i] 表示以 i 结尾的最长有效括号。
+
+转移方程：`dp[i] = dp[i-1] + 2 + dp[i-dp[i-1]-2]`
+
+思路分析：
+1. 当 s[i] 为` (`, dp[i] 必然等于 0，因为不可能组成有效的括号；
+2. 那么 s[i] 为 `)`
+    2.1 当 s[i-1] 为` (`，那么 `dp[i] = dp[i-2] + 2`；
+    2.2 当 s[i-1] 为 `)` 并且 `s[i-dp[i-1] - 1]` 为 `(`，那么 `dp[i] = dp[i-1] + 2 + dp[i-dp[i-1]-2]`；
+
+```python
+    def dp(self,s):
+        if not s: return 0
+        n = len(s)
+        dp = [0] * n
+        for i in range(n):
+            if s[i] == '(': dp[i] = 0  # <---- 虽然已经初始化过
+            if s[i] == ')' and i > 0:
+                if s[i-1] == '(':
+                    if i - 2 >= 0:  # <---- 判断 i - 2
+                        dp[i] = dp[i - 2] + 2
+                    else:
+                        dp[i] = 2
+                elif s[i-1] == ')' and s[i - dp[i-1] - 1] == '(' and i - dp[i-1] - 1 >= 0:
+                    if i - dp[i-1] - 2 >= 0:   # <---- 判断 i - dp[i-1] - 2
+                        dp[i] = dp[i-1] + 2 + dp[i - dp[i-1] - 2]
+                    else:
+                        dp[i] = dp[i-1] + 2
+        return max(dp)
+```
 
 ### LC70.爬楼梯
 
@@ -406,6 +455,10 @@ LC474.一和零
 
 [LC494.目标和](https://leetcode-cn.com/problems/target-sum/solution/gong-shui-san-xie-yi-ti-si-jie-dfs-ji-yi-et5b/) 给你一个整数数组 `nums=[1,1,1,1,1]` 和一个整数 `target=3`，nums中的数字可以+ or -，运算结果为target的表达式方案数。
 
+核心：转为 总和为某个值（求pos的值） --> 背包问题 --> 动态规划。
+
+题目转为：从nums[i]中挑选数字，只做+，这些数字满足`sumA=(sum + target)//2`。
+
 > 【数学知识】
 >
 > 我们想要的 target = 正数和 - 负数和 = x - y；
@@ -415,8 +468,26 @@ LC474.一和零
 > 可以求出 x = (target + sum) / 2 ， 我们令『正值部分』的绝对值总和为x。
 >
 > 问题转换为-> **只使用 - 运算符（只做减法），从 nums 凑出 x 的方案数。**
+>
+> [详细推导](https://leetcode-cn.com/problems/target-sum/solution/hen-xiang-xi-de-zhuan-hua-wei-0-1bei-bao-irvy/)
+>
+> 每个数字都有两种状态：被进行“+”， 或者被进行“-”，因此可以将数组*<u>分成</u>*A和B两个部分：
+> A部分的数字全部进行“+”操作，B部分的数字全部进行“-”操作。
+>
+> 设数组的和为sum，A部分的和为sumA，B部分的和为sumB
+> 根据上面的分析，我们可以得出： sumA + sumB = sum (1)
+> 同时有： sumA - sumB = target (2)
+> 将(1)式与(2)式相加，可以得到： 2sumA = sum + target (3)
+>
+> 即：sumA = (sum + target) / 2 ，自此，原问题可以转化为0-1背包问题：
+> 有一些物品，第i个物品的重量为nums[i]， 背包的容量为sumA，问：有多少种方式将背包【恰好填满】
+>
+> 这里需要注意的是，由于每个数字都是非负整数，因此sumA, sumB, sum都是非负整数。
+> 根据(3)， 2sumA一定为偶数(自然数的性质，2n是偶数)，因此sum + target也应该是偶数。如果计算出的sum + target不是偶数，则与推导过程矛盾，本题无解。
 
-状态定义：`f[i][j]`为从 nums 凑出总和「恰好」为 `j` 的方案数。<u>优化后：`dp[i]` 表示和为 `i` 的 num 组合有 `dp[i]` 种。</u>
+状态定义：`f[i][j]`为从 nums 凑出总和「恰好」为 `j` 的方案数。
+
+<u>优化后：`dp[i]` 表示和为 `i` 的 num 组合有 `dp[i]` 种。</u>
 
 转移方程：这道题的关键不是nums[i]的选与不选，而是nums[i]是加还是减，那么我们就可以将方程定义为，`f[i][j]=f[i−1][j]+f[i−1][j-nums[i−1]]`，优化后，`dp[i] = dp[i] + dp[i-num]`
 
@@ -428,16 +499,17 @@ class Solution:
         positive = (target+sums)//2
         dp = [0]*(positive+1) # 表示和为 i 的 num 组合有 dp[i] 种。
         dp[0] = 1 # 表示只有当不选取任何元素时，元素之和才为 0，因此只有 1 种方案。
-        for num in nums:
-            for i in range(positive, num-1, -1):
+        for num in nums: # 物品体积
+            for i in range(positive, num-1, -1): # 背包容量
                 # f[i][j]=f[i−1][j]+f[i−1][j+nums[i−1]]
-                dp[i] = dp[i] + dp[i-num] # i >= num
+                dp[i] = dp[i] + dp[i-num] # i >= num，
+                # 背包容量i要大于物品体积num
                 # dp[i] 不选
                 # dp[i-num] 选
         return dp[positive]
 ```
 
-lc879.盈利计划 hard
+879.盈利计划 hard
 
 ## 完全背包
 
@@ -522,6 +594,37 @@ class Solution:
                 if i>=coin:
                     dp[i] = dp[i]+dp[i-coin]
         return dp[amount]
+```
+
+### LC279.完全平方数
+
+[题意](https://leetcode-cn.com/problems/perfect-squares/solution/gong-shui-san-xie-xiang-jie-wan-quan-bei-nqes/) 给你一个整数 `n` ，返回 *和为 `n` 的完全平方数的最少数量* 。
+
+状态定义：dp[i] 表示完全平方数和为i的 最小个数。
+
+转移方程：`dp[j] = min(dp[j],dp[j-curr]+1)`
+
+```python
+def numSquares(self, n: int) -> int:
+    # 不要求顺序的完全背包13=4+9，13=9+4
+    # 初始化一个大值（不能达到的）
+    dp = [0] + [n] * n # [0, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13, 13]
+    rg = int(n**0.5) # 开根
+    # 遍历arrs
+    for i in range(1, rg + 1): # 1.2.3
+        curr = i * i # 1.4.9
+        # 遍历target
+        for j in range(curr,n+1):
+            dp[j] = min(dp[j],dp[j-curr]+1)
+    return dp[n]
+"""
+    # dp[i]：表示完全平方数和为i的 最小个数
+    # 初始状态dp[i]均取最大值i，即 1+1+...+1，i个1; dp[0] = 0
+    # dp[i] = min(dp[i], dp[i-j*j]+1)，其中, j是平方数, j=1~k,其中k*k要保证 <= i
+    # 意思就是：完全平方数和为i的 最小个数 等于 当前完全平方数和为i的 最大个数
+    #   与 （完全平方数和为 i - j * j 的 最小个数 + 完全平方数和为 j * j的 最小个数）
+    #   可以看到 dp[j*j] 是等于1的
+"""
 ```
 
 ### LC377.组合总和

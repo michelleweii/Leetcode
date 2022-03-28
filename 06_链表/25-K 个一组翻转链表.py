@@ -1,5 +1,5 @@
 """
-hard 2021-10-13 考察频次蛮高
+hard 2021-10-13 高频题（必会）
 https://leetcode-cn.com/problems/reverse-nodes-in-k-group/solution/tu-jie-kge-yi-zu-fan-zhuan-lian-biao-by-user7208t/
 1、链表分区为已翻转部分+待翻转部分+未翻转部分
 2、每次翻转前，要确定翻转链表的范围，这个必须通过 k 此循环来确定
@@ -11,7 +11,6 @@ https://leetcode-cn.com/problems/reverse-nodes-in-k-group/solution/tu-jie-kge-yi
 8、时间复杂度为 O(n*K)最好的情况为O(n) 最差的情况未 O(n^2)
 9、空间复杂度为 O(1)除了几个必须的节点指针外，我们并没有占用其他空间
 """
-##
 # 需要4个指针，pre->start->end->post；
 # pre：待翻转区前一个；指向已翻转最后一个；
 # start：待翻转区开始；
@@ -34,7 +33,7 @@ class Solution:
         while post: # post代表有下一个新的开始
             # 据k找到end 注意链表是否结束
             for i in range(1, k): # 注意要从1开始
-                if end:end = end.next
+                if end: end = end.next
             # 如果链表的尾部没有被k整除, 跳出while循环
             # 不满足k个一组的翻转条件，剩余节点保持原有顺序
             if end is None: break
@@ -45,7 +44,7 @@ class Solution:
             start = self.reverse(start) # 这里，end-start的关系注意！
             # 与原链表接上
             end.next = post
-            pre.next = start
+            pre.next = start #2
 
             # 重新指定pre，start，end
             pre = end

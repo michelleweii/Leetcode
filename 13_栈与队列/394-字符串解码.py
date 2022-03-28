@@ -1,6 +1,8 @@
 """
 middle 2021-12-15 栈【字节面试题】
 要实现分配律的规则：如3[a2[c]b] 使用一次分配律-> 3[accb] 再使用一次分配律->accbaccbaccb
+https://leetcode-cn.com/problems/decode-string/solution/decode-string-fu-zhu-zhan-fa-di-gui-fa-by-jyd/
+https://leetcode-cn.com/problems/decode-string/solution/zhan-de-ji-yi-nei-ceng-de-jie-ma-liao-bie-wang-lia/
 还要重做呀~！
 """
 class Solution:

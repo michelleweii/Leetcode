@@ -9,11 +9,9 @@
 
 
 - 如果原数组有重复数字，且要求解集不重复，需要使用used标记。
-- 如果题目没有要求不能使用sort，那么用used就用sort()。例如LC491就不能sort()。
+- 如果题目没有要求不能使用sort，那么用used就用sort()。例如LC491[递增子序列](https://leetcode-cn.com/problems/increasing-subsequences/)就不能sort()。
 - <u>***全排列必有used***</u>，因为第一轮选2之后，第二轮要标记选过的位置，否则同一个位置的元素被重复选。一般来说，全排列才出现used，其他的问题视情况而定。
-- 如果要求数组里使用过的数组，不能再使用，需要有sort()。
-
-
+- 如果要求数组里使用过的数字不能再使用，需要有sort()。
 
 ## 组合、分割、子集
 
@@ -22,7 +20,7 @@
 > 选2，余3&5
 > 选3，余5
 > 选5，余空
-> 这是for i in range(start_index,n-1)的逻辑
+> 这是`for i in range(start_index,n-1)`的逻辑
 > ***<u>因为组合问题里 [2,3]和 [3,2]是一样的***</u>
 
 [LC40 组合总和](https://programmercarl.com/0040.%E7%BB%84%E5%90%88%E6%80%BB%E5%92%8CII.html#%E5%9B%9E%E6%BA%AF%E4%B8%89%E9%83%A8%E6%9B%B2) candidates 中的每个数字在每个组合中只能使用一次。 解集不能包含重复的组合。

@@ -22,7 +22,7 @@ class Solution:
         dp[0] = True # 什么都不取 # dp[i] 表示是否存在和为 i 的 组合
         # 【模板】外循环遍历 arrs，内循环遍历 target，且内循环倒序
         for x in nums: # 遍历物品体积
-            for j in range(target, x-1, -1): #i>=x # 遍历背包容量，背包容量必然要>=物品体积
+            for j in range(target, x-1, -1): #j>=x # 遍历背包容量，背包容量必然要>=物品体积
                 dp[j] = dp[j] or dp[j-x] # 不选or选
         return dp[target]
 """

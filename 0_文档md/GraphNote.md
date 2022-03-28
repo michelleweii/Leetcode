@@ -126,3 +126,51 @@ LC210
 - 未做题
 
 LC51, LC52,  
+
+
+
+
+
+# BFS
+
+[BFS套路代码](https://leetcode-cn.com/problems/perfect-squares/solution/python3zui-ji-chu-de-bfstao-lu-dai-ma-gua-he-ru-me/)
+
+1. BFS 算法组成的 3 元素：队列，入队出队的节点，已访问的集合。
+
+   - 队列：先入先出的容器；
+   - 节点：最好写成单独的类，比如本例写成 (value,step) 元组。也可写成 (value,visited)，看自己喜好和题目；
+   - 已访问集合：为了避免队列中插入重复的值
+
+2. BFS算法组成的套路：
+
+   - 初始化三元素：
+
+   ```python
+   Node = node(n) 
+   queue = [Node] 
+   visited = set([Node.value])
+   ```
+
+   - 操作队列 —— 弹出队首节点：
+     `vertex = queue.pop(0)`
+
+   - 操作弹出的节点 —— 根据业务生成子节点（一个或多个）：
+     `[node(vertex.value - n*n, Node.step+1) for n in range(1,int(vertex.value**.5)+1)]`
+
+   - 判断这些节点 —— 符合业务条件，则return，不符合业务条件，且不在已访问集合，则追加到队尾，并加入已访问集合：
+
+   ```
+   if i==0:                   
+       return new_vertex.step
+   elif i not in visited:
+       queue.append(new_vertex)
+       visited.add(i) 
+   ```
+
+   - 若以上遍历完成仍未return，下面操作返回未找到代码：`return -1`。
+
+
+
+> 关于时间复杂度
+>
+> visited用<u>列表，not in 是线性复杂度O(n)</u>，用set是O(1)。

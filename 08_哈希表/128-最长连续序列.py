@@ -28,7 +28,8 @@ class Solution:
         for x in nums:hashmap[x] = x
         res = 0
         for x in hashmap:
-            if not hashmap.get(x-1,0):
+            # if not hashmap.get(x-1,0):
+            if (x-1) not in hashmap:
                 y = x # 以当前数x向后枚举
                 while (y+1) in hashmap: # 如果x+1存在，y++
                     y+=1

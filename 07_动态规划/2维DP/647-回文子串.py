@@ -12,6 +12,29 @@ dp[i][j]：表示区间范围[i,j] （注意是左闭右闭）的子串是否是
     那么aba的区间就是 i+1 与 j-1区间，这个区间是不是回文就看dp[i + 1][j - 1]是否为true。
 【注意】：矩阵遍历一定要从下到上，从左到右遍历，这样保证dp[i + 1][j - 1]都是经过计算的。
 """
+# 2022/03/14 myself
+#     def countSubstrings(self, s: str) -> int:
+#         n = len(s)
+#         if n==1:return n
+#         dp=[[False]*n for _ in range(n)]
+#
+#         res=0
+#         for i in range(n):
+#             dp[i][i]=True
+#             res+=1
+#
+#         for j in range(1,n):
+#             for i in range(0,j):
+#                 if s[i]!=s[j]:dp[i][j]=False
+#                 else:
+#                     if j-i+1<=3 and j-i+1>1:
+#                         dp[i][j]=True
+#                     else:
+#                         dp[i][j]=dp[i+1][j-1]
+#                     if dp[i][j]:res+=1
+#
+#         return res
+
 class Solution(object):
     def countSubstrings(self, s):
         dp = [[False] * len(s) for _ in range(len(s))]

@@ -16,7 +16,6 @@ class Solution(object):
     def canJump(self, nums):
         cover = 0
         if len(nums) <= 1:return True # 只有一个元素，就是能达到
-
         i = 0  # python不支持动态修改for循环中变量,使用while循环代替
         while i<= cover: # cover一直在变化
             cover = max(i+nums[i], cover) # i+nums[i] 当前位置最远能去的地方

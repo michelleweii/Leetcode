@@ -3,7 +3,7 @@ hard 2021-11-14 递归遍历（字节/虾皮/美团）
 任意节点出发到任意节点结束所构成的最大路径。
 图解有助于理解 https://leetcode-cn.com/problems/binary-tree-maximum-path-sum/solution/shou-hui-tu-jie-hen-you-ya-de-yi-dao-dfsti-by-hyj8/
 1、用这个node做根，它能不能成为答案的最大值？max(maxsum, inmax)
-2、这个node不做根，当其他node的路径，那么它提供它左or右子树的最大值。=》每个节点都有做根和不做根两种选择
+2、这个node不做根，当其他node的路径，那么它提供 它左or右子树的最大值。=》每个节点都有做根和不做根两种选择
 【核心在于计算结果的时候要计算左右子树，递归返回的时候只能返回较大的一边】
 """
 class TreeNode:

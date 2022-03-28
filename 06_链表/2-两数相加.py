@@ -33,8 +33,8 @@ class Solution(object):
                 l1 = l1.next
             if l2 is not None:
                 l2 = l2.next
-        # 如果两个链表全部遍历完毕后，进位值为 11，
-        # 则在新链表最前方添加节点 11
+        # 如果两个链表全部遍历完毕后，进位值为 1，
+        # 则在新链表最前方添加节点 1
         if carry==1:
             cur.next = ListNode(carry)
 
