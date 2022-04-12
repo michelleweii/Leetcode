@@ -6,6 +6,7 @@ hard 2021-11-14 递归遍历（字节/虾皮/美团）
 2、这个node不做根，当其他node的路径，那么它提供 它左or右子树的最大值。=》每个节点都有做根和不做根两种选择
 【核心在于计算结果的时候要计算左右子树，递归返回的时候只能返回较大的一边】
 """
+# 先理解LC543更容易一点
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):
         self.val = val

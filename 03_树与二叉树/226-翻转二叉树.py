@@ -1,5 +1,7 @@
 """
 easy 2021-12-26 bitree前序遍历
+# 先左右子树交换
+# 再对左右子树进行递归
 """
 class TreeNode(object):
     def __init__(self, x):

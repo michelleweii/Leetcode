@@ -12,7 +12,16 @@ class TreeNode:
 # 1、终止条件：树 1 的节点为 null，或者树 2 的节点为 null
 # 2、递归函数内：将两个树的节点相加后，再赋给树 1 的节点。再递归的执行两个树的左节点，递归执行两个树的右节点
 class Solution:
+    def mergeTrees_mine(self, root1: TreeNode, root2: TreeNode) -> TreeNode:
+        if not root2:return root1
+        if not root1:return root2
+        root1.val=root1.val+root2.val
+        root1.left=self.mergeTrees(root1.left,root2.left)
+        root1.right=self.mergeTrees(root1.right,root2.right)
+        return root1
+
     def mergeTrees(self, root1: TreeNode, root2: TreeNode): #-> TreeNode:
+
         if root1 is None: return root2
         if root2 is None: return root1
 

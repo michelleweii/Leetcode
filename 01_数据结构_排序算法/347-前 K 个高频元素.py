@@ -17,7 +17,6 @@ class Solution:
         hashmap = {}
         for x in nums:
             hashmap[x] = hashmap.get(x,0)+1
-
         # 2. 维护小顶堆
         heap  = [] # 默认第一个元素的小顶堆
         for ch,freq in hashmap.items():
@@ -27,7 +26,6 @@ class Solution:
                     heapq.heapreplace(heap, (freq,ch))
             else:
                 heapq.heappush(heap, (freq,ch))
-
         # heap中只存了k个元素，按照第一个元素升序排的
         # for x in heap:
         #     print(x)

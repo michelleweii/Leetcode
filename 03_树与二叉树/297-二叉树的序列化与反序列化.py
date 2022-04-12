@@ -21,6 +21,7 @@ class Codec:
         left = self.serialize(root.left)
         right  = self.serialize(root.right)
         return str(root.val)+','+str(left)+','+str(right) # 按  根,左,右  拼接字符串
+        # return str(root.val)+','+left+','+right
         # 看图,前序遍历序列化 1,2,x,x,3,4,x,x,5,x,x
 
     def deserialize(self, data):

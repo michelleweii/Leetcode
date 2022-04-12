@@ -1,6 +1,6 @@
 """
 middle 2021-06-09 反向双指针（字节）
-快排的思想
+快排的思想(1不管，0和2进行安排)
 双指针[荷兰国旗问题] left,right指向边界，cur用来遍历
 https://leetcode-cn.com/problems/sort-colors/solution/kuai-su-pai-xu-partition-guo-cheng-she-ji-xun-huan/
 """

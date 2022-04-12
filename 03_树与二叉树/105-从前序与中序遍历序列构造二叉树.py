@@ -36,9 +36,9 @@ class Solution:
         # 遍历节点，开始递归
         root = TreeNode(self.preorder[pl])
         k = self.hashmap[self.preorder[pl]]
-        # k-il+1 中序遍历中，左子树的长度
+        # k-il 中序遍历中，左子树的长度
         # ir-k 中序遍历中，右子树的长度
-        # 得到 pl+k-il+1 前序遍历中，左子树的长度
+        # 得到 pl+k-il 前序遍历中，左子树的长度
         # 不断找左子树、找右子树
         root.left = self.dfs(pl+1, pl+k-il, il, k-1)
         root.right = self.dfs(pl+k-il+1, pr, k+1, ir)

@@ -1,5 +1,6 @@
 """
 middle 2022-01-04 同向双指针|滑动窗口+数组哈希表（与567，76相似）
+LC3.无重复字符的最长子串
 https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/solution/438-zhao-dao-zi-fu-chuan-zhong-suo-you-z-nx6b/
 ---------------------------------
 解题思路
@@ -24,8 +25,8 @@ class Solution(object):
 
         while right < n: # 遍历长的字符串
             window_map[s[right]] = window_map.get(s[right], 0) + 1
-            # 通过窗口左边界的右移，把所有多余的字符移出去
-            while window_map.get(s[right], 0) > p_map.get(s[right], 0):
+            # 通过窗口左边界的右移left++，把所有多余的字符移出去
+            while window_map.get(s[right], 0) > p_map.get(s[right], 0): # 与L3不同，这里是与map做比较
                 window_map[s[left]] = window_map.get(s[left], 0) - 1 # 类似LC3，重复的只可能是right新入的
                 left += 1
             if right-left+1 == m:

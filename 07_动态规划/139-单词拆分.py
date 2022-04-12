@@ -18,10 +18,10 @@ class Solution:
             for word in wordDict:
                 sz = len(word)
                 # if i-word_len>=0:print(i, word_len, s[i-word_len: i])
-                if i-sz>=0 and s[i-sz: i] in wordDict:
+                if i-sz>=0 and s[i-sz: i]==word:  #in wordDict:
                     dp[i] = dp[i] or dp[i-sz]
-                    # 选 dp[i]
-                    # 不选 dp[i-sz]
+                    # 不选word dp[i]
+                    # 选word dp[i-sz]
         return dp[-1]
 
 if __name__ == '__main__':

@@ -36,6 +36,19 @@ class Solution:
                 # 4、考虑下一个节点（案例由1移动到2）
                 root = root.right
         return
+
+    def rec_flatten(self,root):
+        if root is None:
+            return
+        self.flatten(root.left)
+        self.flatten(root.right)
+        if root.left:
+            pre = root.left
+            while pre.right:
+                pre = pre.right
+            pre.right = root.right
+            root.right = root.left
+            root.left = None
 """
         while (root != None):
             if root.left != None:

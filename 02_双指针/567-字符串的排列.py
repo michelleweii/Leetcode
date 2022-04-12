@@ -16,6 +16,7 @@ flag：记录窗口中满足条件的字符个数
 """
 from collections import Counter
 class Solution:
+    # 同LC76模板
     # s1是短的， s2是长的
     def checkInclusion(self, s1, s2):
         n, m = len(s2), len(s1)
@@ -34,7 +35,6 @@ class Solution:
                 # 如果这个字符和t_map中一样了，说明有一个字符满足要求了
                 if window_map.get(s2[right],0) == t_map.get(s2[right],0):
                     flag += 1
-
             # 寻找最优解
             # 窗口大小 "等于" 字符串 t 的长度时移动 left 缩小窗口
             while right-left+1 == m:
@@ -52,6 +52,34 @@ class Solution:
                 left += 1
             # 扩大窗口
             right += 1
+        return False
+
+    def check_ori(self,s1,s2):
+        lens1, lens2 = len(s1), len(s2)
+        if not s1 or not s2 or lens1 > lens2: return False
+
+        needmap = Counter(s1)
+        need_cnt = len(needmap) # 有多少个字母需要满足, {字母:字母个数}
+        windowmap = {}
+
+        i = 0
+        for j in range(lens2):
+            if s2[j] in needmap:
+                windowmap[s2[j]] = windowmap.get(s2[j], 0) + 1 # 当前窗口只记录需要的字符
+                if needmap.get(s2[j],0)==windowmap.get(s2[j],0): # 有一个字符满足条件了
+                    need_cnt-=1
+
+            # 寻找最优解
+            while j-i+1 == lens1:
+                if need_cnt == 0: return True
+
+                # 【这里】破坏窗口性质
+                if s2[i] in needmap:
+                    if windowmap.get(s2[i],0)==needmap.get(s2[i],0):
+                        need_cnt+=1
+                    windowmap[s2[i]] = windowmap.get(s2[i],0)-1
+                i+=1
+
         return False
 
 if __name__ == '__main__':

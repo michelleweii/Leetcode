@@ -10,16 +10,15 @@ https://leetcode-cn.com/problems/minimum-window-substring/solution/tong-su-qie-x
 当滑动窗口扩展或者收缩的时候，去维护这个need字典，例如当滑动窗口包含某个元素，我们就让need中这个元素的数量减1，代表所需元素减少了1个；
 当滑动窗口移除某个元素，就让need中这个元素的数量加1。
 记住一点：need始终记录着当前滑动窗口下，我们还需要的元素数量，我们在改变i,j时，需同步维护need。
-
 """
 # 1\left右移，是可行解到最优解的过程
 # 2\right先移动，找到问题的可行解
 # 3\hash[key]>0 说明需要key，<0说明该key是多余的.
-# 所有元素的数量都小于等于0时，表示当前滑动窗口不再需要任何元素
+# 所有元素的数量都<=0时，表示当前滑动窗口不再需要任何元素
 from collections import Counter
 # sW_count, tW_count = Counter(sW), Counter(tW) # 统计字符串里每个字符的个数
 # need[] == 0，说明这个字符正好
-# need[] <0,说明这个字符多余了
+# need[]<0，说明这个字符多余了
 class Solution:
     def minWindow(self, s, t):
         ls = len(s)
@@ -45,8 +44,9 @@ class Solution:
             # s[right] 右指针看见的元素
             if need[s[right]] > 0: # 如果需要这个元素
                 need_cnt -= 1
-            need[s[right]] -= 1 # 把右边的字符加入窗口
+            need[s[right]] -= 1 # 把右边的字符加入窗口，不需要的就{R:-1}即可
 
+            # 寻找最优解
             if need_cnt == 0: # 步骤一：滑动窗口包含了所有T元素
                 while (left<right and need[s[left]]<0):  # 步骤二：增加left，排除多余元素，<0说明是多余元素
                     need[s[left]] += 1
@@ -57,6 +57,7 @@ class Solution:
                     res = right-left+1 # 最小覆盖子串长度
                     start = left # 再从这个位置开始向右扩展
 
+                #【这里】破坏窗口性质，寻找下一个最优解
                 # left向右移动后窗口肯定不能满足了，重新开始循环
                 # left是要前进一位的，开始寻找下一个满足条件的滑动窗口
                 need[s[left]] += 1 # 该元素移出了，则还需要该元素

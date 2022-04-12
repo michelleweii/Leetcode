@@ -181,3 +181,14 @@ LC27.移出元素 & 283.移动零 ：不等于0就交换，且slow++,fast++；�
 
 
 https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/solution/gong-shui-san-xie-shuang-zhi-zhen-shi-xi-t5hc/
+
+
+
+
+
+# 套路题
+
+76、438、567
+
+
+
