@@ -1,11 +1,12 @@
 """
-middle 2021-12-15 带权并查集
+middle 2021-12-15 带权并查集、Floyd算法
 核心思想：被除数当作子节点，除数当作父节点
-https://leetcode-cn.com/problems/evaluate-division/solution/pythonbing-cha-ji-fu-mo-ban-by-milomusia-kfsu/
+并查集：https://leetcode-cn.com/problems/evaluate-division/solution/pythonbing-cha-ji-fu-mo-ban-by-milomusia-kfsu/
 基础题：lc547（不带权并查集）
 
 # who和who有关系？ 除数与被除数有关系，两者有个边
 """
+# Floyd:https://leetcode-cn.com/problems/evaluate-division/solution/tu-lun-wen-ti-floydsuan-fa-by-jun-heng-jpxo/
 # 首先默写并查集
 class unionFind:
     def __init__(self):

@@ -1,6 +1,7 @@
 """
 middle 2022-01-04 同向双指针|滑动窗口+数组哈希表（与567，76相似）
 LC3.无重复字符的最长子串
+（与567字符串的排列+76最小覆盖子串+438找到字符串中所有字母异位词相似）
 https://leetcode-cn.com/problems/find-all-anagrams-in-a-string/solution/438-zhao-dao-zi-fu-chuan-zhong-suo-you-z-nx6b/
 ---------------------------------
 解题思路
@@ -29,6 +30,7 @@ class Solution(object):
             while window_map.get(s[right], 0) > p_map.get(s[right], 0): # 与L3不同，这里是与map做比较
                 window_map[s[left]] = window_map.get(s[left], 0) - 1 # 类似LC3，重复的只可能是right新入的
                 left += 1
+            # print(window_map)
             if right-left+1 == m:
                 res.append(left)
             right += 1 # 扩充右边界
@@ -57,8 +59,10 @@ class Solution(object):
 
 
 if __name__ == '__main__':
-    s = "baa"
-    p = "aa"
+    # s = "baa"
+    # p = "aa"
+    s="cbae"
+    p="abc"
     myResult = Solution()
     print(myResult.findAnagrams(s, p))
-    print(myResult.findAnagrams2(s, p))
+    # print(myResult.findAnagrams2(s, p))

@@ -1,7 +1,7 @@
 """
 middle 2021-06-09 反向双指针（字节）
 快排的思想(1不管，0和2进行安排)
-双指针[荷兰国旗问题] left,right指向边界，cur用来遍历
+3指针[荷兰国旗问题] left,right指向边界，cur用来遍历
 https://leetcode-cn.com/problems/sort-colors/solution/kuai-su-pai-xu-partition-guo-cheng-she-ji-xun-huan/
 """
 class Solution(object):
@@ -12,7 +12,7 @@ class Solution(object):
         # all in [left, cur) = 1
         # all in [right, len - 1] = 2
         # https://leetcode-cn.com/problems/sort-colors/solution/kuai-su-pai-xu-partition-guo-cheng-she-ji-xun-huan/
-        left = 0
+        left = 0 # left位于不是0的位置上
         right = len(nums)
         cur = 0
         # 只移动0,2。 1自然会处于该处于的位置

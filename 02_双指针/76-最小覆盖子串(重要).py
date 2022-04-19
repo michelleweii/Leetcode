@@ -1,5 +1,6 @@
 """
 hard 2021-06-10 同向双指针
+（与567字符串的排列+76最小覆盖子串+438找到字符串中所有字母异位词相似）
 子串是连续的；T可能包含重复字符（下面连接的图例有助于理解）
 https://leetcode-cn.com/problems/minimum-window-substring/solution/tong-su-qie-xiang-xi-de-miao-shu-hua-dong-chuang-k/
 如何判断S的子串包含了T中的所有字符？
@@ -42,6 +43,7 @@ class Solution:
         # 右指针向右扩展，遍历s，长的那个字符串
         while right < ls:
             # s[right] 右指针看见的元素
+            # 先后顺序不能变化 比如aa
             if need[s[right]] > 0: # 如果需要这个元素
                 need_cnt -= 1
             need[s[right]] -= 1 # 把右边的字符加入窗口，不需要的就{R:-1}即可

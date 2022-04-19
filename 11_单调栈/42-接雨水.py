@@ -20,7 +20,6 @@ class Solution:
                 stk.pop() # 删掉栈顶元素index
                 # 可以加哨兵解决该问题
                 if not stk: break # 必须左边还有，才能计算红色部分的体积
-
                 # left和i取min
                 left = stk[-1]
                 h = min(height[i],height[left])-height[cur]

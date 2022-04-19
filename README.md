@@ -22,6 +22,24 @@
 
 
 
+判断是否是有效的括号
+
+右括号一定是比左括号多的，`if left>right:return`
+
+```
+# 前置知识：统计左括号、右括号数量是否平衡;
+# 在任意一个时刻，右括号数量一定是<=左括号数量的,如果>说明左边至少一个右括号无法匹配
+# count')'<=count'(', i<n-1
+# count')'==count'(', i=n-1
+def is_valid(self, s):
+    count = 0
+    for ch in s:
+        if ch =='(': count+=1  # 相当于左括号先入栈
+        elif ch ==')': count-=1 # 遇到右括号，左括号弹栈
+        if count<0:return False
+    return count==0
+```
+
 # 1. 排序算法
 
 - 归并排序：时间复杂度O(nlogn)，从上到下(我学习的那种)，空间复杂度O(n); 从下到上，空间复杂度O(1)，应用题目LC148。
@@ -37,6 +55,10 @@
 [bitree题目集合](https://leetcode-cn.com/problems/convert-bst-to-greater-tree/solution/yi-tao-quan-fa-shua-diao-nge-bian-li-shu-de-wen-5/)
 
 [树的遍历（递归+迭代）](https://leetcode-cn.com/problems/binary-tree-inorder-traversal/solution/die-dai-fa-by-jason-2/)
+
+
+
+最大深度：从根节点到叶节点最长的那条路径，上的节点数。最大路径：任意两个节点最长的那条路径，上的边数。
 
 ## 2.1. 层次遍历
 - 102.二叉树的层序遍历（已完成）

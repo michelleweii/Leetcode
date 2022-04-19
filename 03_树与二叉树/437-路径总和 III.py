@@ -68,18 +68,29 @@ class Solution:
     # 具体操作细节退化到lc560
     # key: 前缀和
     # value: key 对应的前缀和的个数
+    # 快速找到满足以 cur=b 为「路径结尾」的、使得路径总和为 targetSum的目标「路径起点」有多少个。
     def dfs(self, root, sums):
-        # 为啥子没有出口？
+        # 为啥子没有出口？ if left, if right, 就会结束dfs
         # if not root:return # 加不加都会过？为什么？前序遍历不加会报错
+        # 以 当前节点 b 为 终点
         self.count += self.hashmap.get(sums-self.target, 0)
         # 有多少节点 a 满足 sum[a...b] = targetSum，
-        # b 是当前的sums
+        # b 是当前的sums, 结尾节点的值
+        # 维护，这个节点值共出现几次
         self.hashmap[sums] = self.hashmap.get(sums, 0) + 1
-        # 开始回溯
-        if root.left:self.dfs(root.left, sums+root.left.val)
+        # 开始回溯 ; 以 当前节点 b 为路径的一部分
+        if root.left:self.dfs(root.left, sums+root.left.val) # 以root.left为结尾，更新路径上的值
         # sums+root.left.val 自带回溯效果
         if root.right:self.dfs(root.right, sums+root.right.val)
+        # 当子树结束时，应当把子树从哈希表中移除 (回溯：将一切复原，然后结束)
         self.hashmap[sums] = self.hashmap.get(sums,0)-1
+
+    #### 2022-04 递推关系
+    # presum[a..b]=target
+    #             =nums[b]-nums[a-1]
+    # => target=cur当前结尾的值-nums[a-1]
+    # => nums[a-1]=cur当前结果的值-target
+    # => 求nums[a-1]共出现几次？
 
 if __name__ == '__main__':
     pass

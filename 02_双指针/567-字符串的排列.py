@@ -1,6 +1,6 @@
 """
 middle 2022-01-04 同向双指针|滑动窗口
-（与76+438.找到字符串中所有字母异位词相似）
+（与567字符串的排列+76最小覆盖子串+438找到字符串中所有字母异位词相似）
 https://leetcode-cn.com/problems/permutation-in-string/solution/zi-fu-chuan-de-pai-lie-hua-dong-chuang-k-sos8/
 思路：
 flag：记录窗口中满足条件的字符个数

@@ -29,9 +29,9 @@ class Solution:
         right_depth = self.depth(root.right)
         # 每个结点都要去判断左子树 + 右子树的高度是否大于self.max，更新最大值
         # 上层的深度更新
-        self.res = max(self.res, left_depth+right_depth)
+        self.res = max(self.res, left_depth+right_depth) # 求边的数量
         # 返回给更上一层的深度
-        return max(left_depth, right_depth)+1 # 求左右子树高度
+        return max(left_depth, right_depth)+1 # 求左右子树高度，求节点的数量
 
 
 if __name__ == '__main__':

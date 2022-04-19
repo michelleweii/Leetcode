@@ -7,7 +7,7 @@ hard 2021-12-13 DFS回溯
 【解题视频】https://www.bilibili.com/video/BV15f4y137c5?from=search&seid=9116545148168630233&spm_id_from=333.337.0.0
 1、计算删除括号数,lr左括号，rr右括号。
 2、回溯，当lr==rr==0，s就有可能是有效括号。
-3、判断s是否有效，例如)(，lc20判断是否是有效的括号。
+3、判断s是否有效，例如)(，lc20判断是否是有效的括号（其实和LC20不一样）。
 """
 class Solution:
     def __init__(self):
@@ -23,9 +23,11 @@ class Solution:
             else: # left_remove>0,与右括号抵消
                 left_remove -= (ch==')')
         self.back_trace(0, left_remove, right_remove, s)
+        # ()())(), 需要移出的右括号有1个，需要移出的左括号0个
         return self.res
 
     # 2、回溯，移出括号
+    # 这算是什么问题呢
     def back_trace(self, start_index, left_remove, right_remove, s):
         # 完成条件
         if left_remove==0 and right_remove==0 and self.is_valid(s):
@@ -36,7 +38,7 @@ class Solution:
         # 回溯
         # 撤销选择
         for i in range(start_index, len(s)):
-            if i>start_index and s[i]==s[i-1]:continue
+            if i>start_index and s[i]==s[i-1]: continue # 剪枝
             if s[i]=='(' and left_remove > 0:
                 # 出了下面的函数，s没有变，所以自动回溯
                 # 因此传入函数的s少了index=i, 所以start_index不用+1，因为传入i相当于自动+1

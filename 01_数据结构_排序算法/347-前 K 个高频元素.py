@@ -25,6 +25,7 @@ class Solution:
                 if freq>heap[0][0]:
                     heapq.heapreplace(heap, (freq,ch))
             else:
+
                 heapq.heappush(heap, (freq,ch))
         # heap中只存了k个元素，按照第一个元素升序排的
         # for x in heap:
@@ -33,7 +34,18 @@ class Solution:
         # (2, 2)
         # (3, 1)
         return [item[1] for item in heap]
-
+# """
+#         import heapq
+#         q = []
+#         hashmap = Counter(nums)
+#
+#         for ch,freq in hashmap.items():
+#             heapq.heappush(q, (freq,ch))
+#             if len(q)>k:
+#                 heapq.heappop(q)
+#
+#         return [x[1] for x in q]
+# """
     # """
     # 快排
     # 时间复杂度：平均O(n)

@@ -16,7 +16,7 @@ class Solution:
         # [i,j]第i天，j持股状态。3是交易次数（0、1、2笔）
         # int[][][] dp = new int[prices.length][3][2];
         dp = [[[0, 0] for _ in range(3)] for _ in range(n)]
-        #  # 第0天不可能卖出 存在0\1\2笔交易数状态
+        # # 第0天不可能卖出 存在0\1\2笔交易数状态
         for k in range(3):
             dp[-1][k][1] = -float("inf")
         # 一次都不交易，持有股票也是不存在的状态
