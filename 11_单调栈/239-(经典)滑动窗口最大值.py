@@ -11,10 +11,10 @@ class Solution(object):
             # 把比当前插入元素小的都干掉
             while q and nums[i]>nums[q[-1]]:
                 q.pop()
+            q.append(i)
 
             while q and i - k >= q[0]:
                 q.pop(0)  # 超过窗口范围，队首元素出队
-            q.append(i)
 
             # 每次返回队头元素
             if i+1>=k:res.append(nums[q[0]])

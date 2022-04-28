@@ -2,7 +2,7 @@
 middle 2021-12-10 二叉树构造
 从前序与中序遍历序列构造二叉树
 
-# 树里面return None是啥含义？
+# 树里面return None是啥含义？就是空节点
 # 猜测：叶子节点下的就是None
 """
 class TreeNode:

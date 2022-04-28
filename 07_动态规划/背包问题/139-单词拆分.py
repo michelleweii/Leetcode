@@ -14,8 +14,8 @@ class Solution:
         dp = [False] * (len(s)+1)
         dp[0] = True
 
-        for i in range(1, len(s)+1):
-            for word in wordDict:
+        for i in range(1, len(s)+1): # target
+            for word in wordDict: # arrs
                 sz = len(word)
                 # if i-word_len>=0:print(i, word_len, s[i-word_len: i])
                 if i-sz>=0 and s[i-sz: i]==word:  #in wordDict:

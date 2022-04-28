@@ -8,6 +8,10 @@ https://leetcode-cn.com/problems/regular-expression-matching/solution/shou-hui-t
 # s = "ab" p = ".*" True（.是任意字符，不是说选定一个字符就不会变了，*只是增加.的个数，看作..之后再转化为ab）
 # s = ""  p = ".*" True（*可以匹配0到多个前一个字母）
 # *必须和字母或者'.'配合使用，不能独立存在
+
+# *前出现0次，dp[i][j]=dp[i][j-2]
+# *前出现1次，dp[i][j]=dp[i-1][j-2]
+# *前出现多次，dp[i][j]=dp[i-1][j]
 class Solution(object):
     def isMatch(self, s, p):
         if not s or not p:return False
@@ -38,8 +42,8 @@ class Solution(object):
                 # *特判, *可以让它前面的字符出现0-n次
                 if p[j-1]=='*':
                     if s[i-1]==p[j-2] or p[j-2]=='.':
-                        # dp[i][j] = dp[i-1][j-2] # *让它前面的字符出现1次,  aa与a*以及 aa与.*
-                        # dp[i][j] = dp[i-1][j-3] # *让它前面的字符出现0次， aa与aac*
+                        # dp[i][j] = dp[i-1][j-2] # *让它前面的字符出现1次,  aa与a*以及 aa与.* ,dp[i-1][j-2]
+                        # dp[i][j] = dp[i-1][j-3] # *让它前面的字符出现0次， aa与aac* ,dp[i][j-2]
                         # 还可以dp[i][j] = dp[i][j-2]
                         # dp[i][j] = dp[i-1][j] # *让它前面的字符出现多次， aaaaaaa与a*
                         dp[i][j] = dp[i][j-2] or dp[i-1][j-2] or dp[i-1][j]

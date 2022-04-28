@@ -28,3 +28,7 @@ else:
 # a < 20
 # a < 30
 # 满足条件的都会在走
+
+hashmap={"a":1, "b":2}
+hashmap.pop("a") # hashmap的删除操作pop
+print(hashmap)

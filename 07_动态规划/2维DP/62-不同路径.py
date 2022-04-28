@@ -5,14 +5,14 @@ https://leetcode-cn.com/problems/unique-paths/solution/62-bu-tong-lu-jing-tu-jie
 """
 class Solution:
     def uniquePaths(self, m: int, n: int) -> int:
-        dp = [[0 for j in range(n)] for i in range(m)]
+        dp = [[0 for j in range(n)] for i in range(m)] # m*n
         # dp[0][0] = 1，从(0,0)到达(0,0)只有一条路径
         dp[0][0] = 1
         # 初始化 dp[0][j] 和 dp[i][0]
-        # 边界，行
+        # 边界，列
         for i in range(1, m):
             dp[i][0] = 1 # dp[i][0] = dp[i-1][0]+1
-        # 边界，列
+        # 边界，行
         for j in range(1, n):
             dp[0][j] = 1 # dp[0][j] = dp[0][j-1]+1
 

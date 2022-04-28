@@ -26,6 +26,26 @@ class Solution:
                 l=mid+1
         return r
 
+    def find(self,nums):
+        # 快慢指针
+        # https://leetcode-cn.com/problems/find-the-duplicate-number/solution/287xun-zhao-zhong-fu-shu-by-kirsche/
+        # 重点理解映射关系，index->nums[index]->nums[nums[index]]
+        # 1、先找到相遇节点
+        slow,fast=0,0
+        slow,fast=nums[slow],nums[nums[fast]]
+        while slow!=fast:
+            slow=nums[slow]
+            fast=nums[nums[fast]]
+        # 2、再从起点出发，同时进行
+        fast=0
+        while slow!=fast:
+            slow=nums[slow]
+            fast=nums[fast]
+
+        return slow
+
+
+
 # 哈希做法，不符合题意，题目要求不能改变原数组
 # class Solution {
 # public:
@@ -47,3 +67,4 @@ class Solution:
 if __name__ == '__main__':
     nums = [1,3,4,2,2] # 2
     print(Solution().findDuplicate(nums))
+    print(Solution().find(nums))

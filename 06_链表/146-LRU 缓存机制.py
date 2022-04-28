@@ -12,9 +12,12 @@ https://leetcode-cn.com/problems/lru-cache/solution/shu-ju-jie-gou-fen-xi-python
 # 更新/添加/访问->移到链表末尾；超过capacity则删除链表头部元素；
 # hashmap便于快速定位是否存在一个节点；
 # 定义双向链表
+# [看图]https://leetcode-cn.com/problems/lru-cache/solution/lru-ce-lue-xiang-jie-he-shi-xian-by-labuladong/
+# get o(1) hashmap
+# put o(1) node移到末尾,双向链表
 class ListNode:
     def __init__(self, key=None, value=None):
-        self.key = key
+        self.key = key # 不加key没有办法删除最后一个node。因为链表只存了value，不知道它对应的key是多少。
         self.value = value
         self.prev = None
         self.next = None

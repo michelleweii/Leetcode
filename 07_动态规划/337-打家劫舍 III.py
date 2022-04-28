@@ -19,6 +19,7 @@ class Solution:
         if not root.right and not root.left: return root.val # 只有一个根节点时
         # dp = # 注意这里没有dp数组，遍历树的时候记录结果
         # 长度为2的数组，0：不偷，1：偷
+        # 当前节点，不偷所能获得的最大金额，偷所能获得的最大金额
         dp = self.rob_tree(root)
         return max(dp[0],dp[1])
 

@@ -1,6 +1,6 @@
 """
 hard 2021-10-26回顾 【单调递增栈】字节
-https://leetcode-cn.com/problems/largest-rectangle-in-histogram/solution/bao-li-jie-fa-zhan-by-liweiwei1419/
+[这个好理解]https://leetcode-cn.com/problems/largest-rectangle-in-histogram/solution/bao-li-jie-fa-zhan-by-liweiwei1419/
 https://leetcode-cn.com/problems/largest-rectangle-in-histogram/solution/zhao-liang-bian-di-yi-ge-xiao-yu-ta-de-zhi-by-powc/
 思路：枚举以每个柱形(栈顶元素)为高度的最大矩形的面积
 是以i 为中心，向左找第一个小于 heights[i] 的位置 left_i；

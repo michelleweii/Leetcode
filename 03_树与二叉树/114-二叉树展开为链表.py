@@ -2,6 +2,7 @@
 middle 2021-11-02 （快手实习）
 https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/solution/xiang-xi-tong-su-de-si-lu-fen-xi-duo-jie-fa-by--26/
 解法1的图解比较容易理解
+https://leetcode-cn.com/problems/flatten-binary-tree-to-linked-list/solution/by-lfool-yq9n/
 """
 class TreeNode:
     def __init__(self, val=0, left=None, right=None):

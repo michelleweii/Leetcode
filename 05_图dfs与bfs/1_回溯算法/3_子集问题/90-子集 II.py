@@ -42,11 +42,11 @@ class Solution(object):
             return
 
         for i in range(start_index, len(nums)):
-            # i是控制树层，取过的元素不再重复取
+            # i是控制树层，取过的元素不再重复取，避免重复解
             if i>start_index and nums[i]==nums[i-1]:
                 continue
             self.path.append(nums[i])
-            self.dfs(nums,i+1)
+            self.dfs(nums,i+1) # i+1,取过的元素不能重复取
             self.path.pop()
 
 if __name__ == '__main__':

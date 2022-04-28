@@ -179,7 +179,7 @@ class Solution:
         n = len(nums)-1
         # 将数组整理成堆（堆有序）
         # 从第一个非叶子节点开始构建初始堆
-        # 只需要从 i=(len-1)/2 这个位置开始逐层下移
+        # 只需要从 i=(len-1)/2 这个位置开始逐层上移
         for i in range(n//2, -1, -1):
             self.Sift(nums, i, n)
             

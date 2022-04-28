@@ -12,7 +12,7 @@ middle 2021-08-19 dp 01背包
 # 我们想要的 target = 正数和 - 负数和 = x - y
 # 已知 x 与 y 的和是数组总和：x + y = sum
 # 可以求出 x = (target + sum) / 2 # 令『正值部分』的绝对值总和为x。
-# 问题转换为：只使用 - 运算符，从 nums 凑出 x 的方案数。
+# 问题转换为：只使用 + 运算符，从 nums 凑出 x 的方案数。
 class Solution:
     def findTargetSumWays(self, nums, target):
         sums = sum(nums)

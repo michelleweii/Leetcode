@@ -9,7 +9,7 @@ https://leetcode-cn.com/problems/perfect-squares/solution/python3zui-ji-chu-de-b
     / \    \
    5   2    2
   / \   \    \
-1    4   1    1
+ 4   1   1    1
 """
 class Solution(object):
     def numSquares(self, n):
@@ -65,5 +65,5 @@ class Solution(object):
 #                         visited.add(res)
 #             count += 1
 if __name__ == '__main__':
-    n = 12
+    n = 7
     print(Solution().numSquares(n))
